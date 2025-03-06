@@ -1,0 +1,841 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "",
+    "text": "This class covers using Python and other technologies for data analysis and data science. We will focus on programming with Python and a selection of its libraries: NumPy, Pandas, Matplotlib, and others for the purpose of data processing, data cleaning, data analysis, etc. Other technologies covered will include Quarto, VSCode, Jupyter, and Git. This course is intended for Data Theory majors as an introduction to the Python language and libraries most frequently used in data science. No prior experience with Python is assumed.\n\n\n\n\n\n\n\nCourse Information\nMore Information\n\n\n\n\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\n\n\nContact Info:  Please e-mail through BruinLearn\nOffice Hours: W 2:00pm-5:00pm (my office)  and you are always welcome to schedule appointment(s), evenings & weekends too\n\n\nMeeting Times and Locations: \nMW 2:00pm-3:15pm (Lect 1 - Math Sciences 4000A)\n\n\nTAs: Joseph Resch (1A 8am, 1B 9am)  and Lan Tao (1C 8am, 1D 9am)\nSection location Mathematical Sciences 5128 (1A, 1B)  Physics and Astronomy Building 1749 (1C, 1D)  Office Hours TBD",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#introduction",
+    "href": "syllabus.html#introduction",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "",
+    "text": "This class covers using Python and other technologies for data analysis and data science. We will focus on programming with Python and a selection of its libraries: NumPy, Pandas, Matplotlib, and others for the purpose of data processing, data cleaning, data analysis, etc. Other technologies covered will include Quarto, VSCode, Jupyter, and Git. This course is intended for Data Theory majors as an introduction to the Python language and libraries most frequently used in data science. No prior experience with Python is assumed.\n\n\n\n\n\n\n\nCourse Information\nMore Information\n\n\n\n\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\n\n\nContact Info:  Please e-mail through BruinLearn\nOffice Hours: W 2:00pm-5:00pm (my office)  and you are always welcome to schedule appointment(s), evenings & weekends too\n\n\nMeeting Times and Locations: \nMW 2:00pm-3:15pm (Lect 1 - Math Sciences 4000A)\n\n\nTAs: Joseph Resch (1A 8am, 1B 9am)  and Lan Tao (1C 8am, 1D 9am)\nSection location Mathematical Sciences 5128 (1A, 1B)  Physics and Astronomy Building 1749 (1C, 1D)  Office Hours TBD",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#proposed-learning-outcomes",
+    "href": "syllabus.html#proposed-learning-outcomes",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Proposed Learning Outcomes",
+    "text": "Proposed Learning Outcomes\nUpon completion of this course, students:\n\nwill be comfortable with some of the software tools associated with Python\n\nwill be able to read, write, and improve intermediate level code in Python\n\nwill be able to create, load, transform, and analyze data with Python\n\nwill be able to create and publish data visualizations in Python",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#grades",
+    "href": "syllabus.html#grades",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Grades",
+    "text": "Grades\nLetter grades are assigned on a straight scale as follows:\n\n50% and below: F\n\n51.0 - 76.9%: C, 77.0 - 79.9%: C+\n\n80.0 - 82.9%: B-, 83.0 - 86.9%: B, 87.0 - 89.9%: B+\n\n90.0 - 92.9%: A-, 93.0% and up A\n\nI do not assign C-, D+, D, or D-. If you are a Data Theory major please take the class for a letter grade. Taking the course pass/no-pass will not fulfill the requirements for completing the major.\n\nClass attendance and participation\nThe learning process of this class is based on in-person discussion and participation during lecture and attending and participating during discussion section with your TAs. The lecture is not broadcast (please check with your TA about section) instead a weekly recorded recap lecture will be uploaded to BruinLearn. If you are unable to attend lecture in person because you have a documented accommodation with UCLA, please let me know via e-mail sent from BruinLearn so we can work out a different arrangement.\n\n\nGrading\n\n20% Attending and participating in team activities during lecture\n\n10% Attending and participating during section (TA will determine the specifics)\n\n10% End of quarter project for TA/discussion (TA will determine the specifics)\n\n20% Python Homework (6 assignments - drop your lowest score)\n15% Python journal pages (upload 3x per week - drop 3 lowest)\n10% Python Teaching Video (due by the end of the quarter)\n15% Final exam (in-person only, bring a pencil, no electronic devices allowed and no internet access)\n\n\n\nCourse Grade Changes\nAfter course grades have been submitted to the registrar, grades are final. Grade changes will only be considered if there has been a clerical or procedural mistake. Students have one quarter to make requests for a grade change. Graded exams and other materials are kept for one quarter. After one quarter, course grade changes cannot be made.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-materials",
+    "href": "syllabus.html#course-materials",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Course Materials",
+    "text": "Course Materials\nAll course related materials are posted to BruinLearn, all assignments are uploaded to that site as well typically in the form of PDF files, photographs or recordings. Official course grades are found online on myUCLA only. Other materials:\n\nBill Lubanovic (2019 or 2025) Introducing Python\nWes McKinney (2022) Python for Data Analysis\n\nThe two texts are available free via access with UCLA’s library to O’Reilly.\n\nSuggested Tech for this course\n\nPython 3.13 minor version differences (e.g., 3.11, 3.12, 3.14) are fine.\n\nQuarto, or JupyterLab, or Google Colab.\n\npip (visit ChatGPT and ask it something like ‘How can I check if I have pip installed on my computer?’) or Anaconda\n\nVS Code you need some kind of source editor but Jupyter & Colab are perfectly acceptable\n\nA GitHub account (free) if you do not already have one and you should consider it (not required) also download and install git on your local computer\n\n\n\nPosting Policy\nAll course materials posted on the course website or distributed in class (including but not limited to lecture slides, homework assignments, lecture videos, quizzes, exams) are intended for personal use only by students enrolled in Stats 21 Lecture 1. It is a violation of course policy to post, share, or distribute any course material electronically or physically without permission from the instructor, even after the course is over.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-outline-this-is-subject-to-change",
+    "href": "syllabus.html#course-outline-this-is-subject-to-change",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Course Outline (this is subject to change)",
+    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic (T ; Th)\n\n\n\n\nWeek 1 4/1 & 4/3\nFirst Day business, Tech Checklist; base Python I\n\n\nWeek 2 4/8 & 4/10\nbase Python II; writing functions, working with data\n\n\nWeek 3 4/15 & 4/17\nObject-Oriented Programming Classes and objects, methods, inheritance\n\n\nWeek 4 4/22 & 4/24\nNumPy: Arrays, Broadcasting, Vectorization, Indexing, Math Functions\n\n\nWeek 5 4/29 & 5/1\nPandas: DataFrames, Filtering, GroupBy, Aggregation, Handling Missing Data\n\n\nWeek 6 5/6 & 5/8\nPandas: More Pandas\n\n\nWeek 7 5/13 & 5/15\nMatplotlib & Seaborn\n\n\nWeek 8 5/20 & 5/22\nSciPy & Scikit-learn\n\n\nWeek 9 5/27 & 5/29\nsome SQL\n\n\nWeek 10 6/3 & 6/5\nTBD; Review for Final Exam\n\n\nFinal 6/11\nWednesday June 11, 12:00pm - 1:30pm",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#academic-dishonesty",
+    "href": "syllabus.html#academic-dishonesty",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Academic Dishonesty",
+    "text": "Academic Dishonesty\nAs Bruins, we uphold the UCLA Student Code of Conduct. Academic dishonesty means activities like plagiarism, unauthorized material used on exams, unauthorized collaborations etc. According to Senate Regulation A-306, if an instructor encounters a problem, the instructor is required to report it to the Dean of Students.\n\nhttps://www.deanofstudents.ucla.edu/Student-Conduct#10690514-student-conduct-code\nhttps://ucla.app.box.com/s/8xq1jyrvqhs9343e4rzyvporx9lt8u1g\n\n\nAI policy\nYour instructor’s belief is AI should be used – wisely – as if it were an amazingly clever tutor or friend. But copying and pasting the code is not learning and chances are, you will not retain the skill (this is the greater concern). Writing well crafted AI prompts with the goal of developing correct scaffolding of programming skills will help you retain the knowledge long after this course is over.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#accessible-education",
+    "href": "syllabus.html#accessible-education",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Accessible Education",
+    "text": "Accessible Education\nStudents with accessibility issues are welcome and encouraged to seek accommodation. Students needing academic accommodations based on a documented disability should contact the Center for Accessible Education (CAE) at (310)825-1501 or in person at Murphy Hall A255. In order to ensure accommodations, students need to contact CAE within the first two weeks of the term.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#covid-19-health-and-safety",
+    "href": "syllabus.html#covid-19-health-and-safety",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "COVID-19 health and safety",
+    "text": "COVID-19 health and safety\nIn compliance with Los Angeles County policies effective January 6 2023, UCLA strongly recommends indoor masking, regardless of vaccination status. Testing is also strongly encouraged. See\n\nhttps://covid-19.ucla.edu/covid-protocols-at-a-glance/\nhttp://publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid=4220\n\nSome of us might feel more comfortable wearing masks and continuing to social distance, for example, during small-group work in class or section. All of our preferences are reasonable, and it is important that we treat each others’ preferences with respect and care so that we each feel comfortable and prepared to learn in class. You can find the most current policies on campus requirements on the UCLA COVID-19 resources site https://covid-19.ucla.edu/.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#psychological-health-well-being-and-resilience",
+    "href": "syllabus.html#psychological-health-well-being-and-resilience",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Psychological Health, Well-Being and Resilience",
+    "text": "Psychological Health, Well-Being and Resilience\nUCLA is renowned for academic excellence, and yet we know that many students feel overwhelmed at times by demands to succeed academically, socially and personally. Our campus community is committed to helping all students thrive, learn to cope with stress, and build resilience. Remember, self-care is a skill that is critical to your long-term success. Here are some of the many resources available at UCLA to support you:\n\nCounseling and Psychological Services (CAPS): Provides counseling and other psychological/mental health services to students. Walk-in hours are Monday-Thursday 8am-4:30pm and Friday 9am-4:30pm in John Wooden Center West. Crisis counseling is also available 24 hours/day at (310) 825-0768.\nAshe Student Health and Wellness Center: Provides high quality and accessible ambulatory healthcare and education by caring professionals to support the academic success and personal development of all UCLA students.\nHealthy Campus Initiative (HCI): Provides links to a wide variety of resources for enhancing physical and psychological well-being, positive social interactions, healthy sleep, healthy eating, healthy physical activity and more.\nCampus and Student Resilience: Provides programs to promote resilience and trains students to help support their peers.\nUCLA Recreation: Offers a broad array of services and programs including fitness, yoga, dance, martial arts, meditation, sports, and much more.\nEquity, Diversity and Inclusion: Committed to providing an equal learning, working and living environment at UCLA and supports a range of programs to promote these goals campus-wide.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "href": "syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Resources for Students Dealing with Financial Stress",
+    "text": "Resources for Students Dealing with Financial Stress\nLife is unpredictable and can create financial emergencies. If you find yourself in this situation, please seek assistance:\n\nBruin Shelter: Provides a safe, supportive environment for fellow college students experiencing homelessness by fostering a collaborative effort between universities, community-based organizations, and service providers.\nThe CPO Food Shelter: Provides free food for any UCLA student who may be experiencing hunger and/or struggling to attain food due to financial hardships.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#title-ix-resources",
+    "href": "syllabus.html#title-ix-resources",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Title IX Resources",
+    "text": "Title IX Resources\nUCLA prohibits gender discrimination, including sexual harassment, domestic and dating violence, sexual assault, and stalking. If you have experienced sexual harassment or sexual violence, there are a variety of resources to assist you.\n\nCONFIDENTIAL RESOURCES: You can receive confidential support and advocacy at the CARE Advocacy Office for Sexual and Gender-Based Violence, 1st Floor Wooden Center West, (310) 206-2465. Counseling and Psychological Services (CAPS) also provides confidential counseling to all students and can be reached 24/7 at (310) 825-0768.\nNON-CONFIDENTIAL RESOURCES: You can also report sexual violence or sexual harassment directly to the University’s Title IX Coordinator, 2241 Murphy Hall, titleix@conet.ucla.edu, (310) 206-3417. Reports to law enforcement can be made to UCPD at (310) 825-1491. These offices may be required to pursue an official investigation.",
+    "crumbs": [
+      "Start Here",
+      "Spring 2025 Syllabus"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#technical-skills",
+    "href": "lec/Lecture01.html#technical-skills",
+    "title": "Week 1, Meeting 1",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nR (Stats 20)\nPython (here)\nadd a little bit of SQL (here)\nData Wrangling & Cleaning (some here)\nData Visualization (some here)\nFeature Engineering (some here)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#analytical-statistical-skills",
+    "href": "lec/Lecture01.html#analytical-statistical-skills",
+    "title": "Week 1, Meeting 1",
+    "section": "Analytical & Statistical Skills",
+    "text": "Analytical & Statistical Skills\n\nProbability & Statistics (not here)\nData Exploration (some here)\nExperimental Design (not here)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#problem-solving-soft-skills",
+    "href": "lec/Lecture01.html#problem-solving-soft-skills",
+    "title": "Week 1, Meeting 1",
+    "section": "Problem-Solving & Soft Skills",
+    "text": "Problem-Solving & Soft Skills\n\nPython will force you to break down complex problems into smaller, manageable steps,\nAlso think logically to design solutions,\n\nYou will learn to think like a computer scientist\nand work on Communication & Storytelling skills",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#todays-first-topic-stats-21-tools",
+    "href": "lec/Lecture01.html#todays-first-topic-stats-21-tools",
+    "title": "Week 1, Meeting 1",
+    "section": "Today’s First Topic: Stats 21 Tools",
+    "text": "Today’s First Topic: Stats 21 Tools\n\nPlease check your Python installation where is yours?\nPlease check for the installation of a proper source code editor (I use VS Code, free + awesome and works on multiple platforms)\nPlease something interactive such as Jupyter Notebook or Quarto installed (for homework, presentations, webpages, etc.)\nand (suggested) check for git and GitHub (do you have an account?)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#terminal-macos-or-powershellcmd-windows",
+    "href": "lec/Lecture01.html#terminal-macos-or-powershellcmd-windows",
+    "title": "Week 1, Meeting 1",
+    "section": "terminal (MacOS) or powershell/cmd (Windows)",
+    "text": "terminal (MacOS) or powershell/cmd (Windows)\n\nterminal on a mac",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#check-for-python-1",
+    "href": "lec/Lecture01.html#check-for-python-1",
+    "title": "Week 1, Meeting 1",
+    "section": "Check for Python",
+    "text": "Check for Python\nTry this at your terminal prompt or powershell/cmd prompt\npython --version\n\npython version",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#checking-in-windows",
+    "href": "lec/Lecture01.html#checking-in-windows",
+    "title": "Week 1, Meeting 1",
+    "section": "Checking in Windows",
+    "text": "Checking in Windows\n\npython version use cmd or vscode",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#visual-studio-code-vs-code",
+    "href": "lec/Lecture01.html#visual-studio-code-vs-code",
+    "title": "Week 1, Meeting 1",
+    "section": "Visual Studio Code (VS Code)",
+    "text": "Visual Studio Code (VS Code)\n\nfree,\nlightweight (easy on resources),\npowerful source code editor",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#show-you-some-of-the-ways",
+    "href": "lec/Lecture01.html#show-you-some-of-the-ways",
+    "title": "Week 1, Meeting 1",
+    "section": "Show you (some of) the ways",
+    "text": "Show you (some of) the ways\n\nInteractive Python REPL (Read-Eval-Print Loop) environment (it’s the OG)\nA Python Script (like an R script, reusable, for production)\nJupyter Notebook (interactive like R Markdown, reusable, for homework and reports, presentations)\nQuarto (like a Jupyter Notebook on roids, reusable, for reports and presentations)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#but-first-checking-installations",
+    "href": "lec/Lecture01.html#but-first-checking-installations",
+    "title": "Week 1, Meeting 1",
+    "section": "But first… Checking Installations",
+    "text": "But first… Checking Installations\n\nChecking Installations in the shell",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#python-repl-read-eval-print-loop",
+    "href": "lec/Lecture01.html#python-repl-read-eval-print-loop",
+    "title": "Week 1, Meeting 1",
+    "section": "Python REPL (read-eval-print loop)",
+    "text": "Python REPL (read-eval-print loop)\n\nPython REPL - just type python at the terminal or cmd prompt",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#code-from-documentation",
+    "href": "lec/Lecture01.html#code-from-documentation",
+    "title": "Week 1, Meeting 1",
+    "section": "Code from Documentation",
+    "text": "Code from Documentation\n\nExample Code from Documentationfrom https://docs.python.org/3/reference/compound_stmts.html#the-for-statement",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#result",
+    "href": "lec/Lecture01.html#result",
+    "title": "Week 1, Meeting 1",
+    "section": "Result",
+    "text": "Result\n\nExample Code Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#result---note-functions-use",
+    "href": "lec/Lecture01.html#result---note-functions-use",
+    "title": "Week 1, Meeting 1",
+    "section": "Result - note functions use ( )",
+    "text": "Result - note functions use ( )\n\nExample Code Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#result---note-pythons-zero-index",
+    "href": "lec/Lecture01.html#result---note-pythons-zero-index",
+    "title": "Week 1, Meeting 1",
+    "section": "Result - note Python’s zero index",
+    "text": "Result - note Python’s zero index\n\nExample Code Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#result---blank-line-return-execute",
+    "href": "lec/Lecture01.html#result---blank-line-return-execute",
+    "title": "Week 1, Meeting 1",
+    "section": "Result - blank line & return (execute)",
+    "text": "Result - blank line & return (execute)\n\nExample Code Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#interactive-python-pros-and-cons",
+    "href": "lec/Lecture01.html#interactive-python-pros-and-cons",
+    "title": "Week 1, Meeting 1",
+    "section": "Interactive Python Pros and Cons",
+    "text": "Interactive Python Pros and Cons\n\n\n\nquickly write and test (Python REPL) interactively, which is great for debugging or quick calculations.\nit can do most anything\nhas access to all libraries and modules\nworks on any operating system\n\n\n\ncannot save easily, quitting may mean loss\nclumsy with large programs or large data\nnot well suited for visualizations and tables\nbasic editor (no highlighting, colors etc.)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#another-example",
+    "href": "lec/Lecture01.html#another-example",
+    "title": "Week 1, Meeting 1",
+    "section": "Another example",
+    "text": "Another example\n\nBird Age Calculator",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#python-script-.py-vscode-example",
+    "href": "lec/Lecture01.html#python-script-.py-vscode-example",
+    "title": "Week 1, Meeting 1",
+    "section": "Python script (.py) VSCode Example",
+    "text": "Python script (.py) VSCode Example\n\nExample .py script",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#python-script-.py-run-at-the-command-line",
+    "href": "lec/Lecture01.html#python-script-.py-run-at-the-command-line",
+    "title": "Week 1, Meeting 1",
+    "section": "Python script (.py) run at the command line",
+    "text": "Python script (.py) run at the command line\n\nRunning the .py script",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#python-script-pros-and-cons",
+    "href": "lec/Lecture01.html#python-script-pros-and-cons",
+    "title": "Week 1, Meeting 1",
+    "section": "Python Script Pros and Cons",
+    "text": "Python Script Pros and Cons\n\n\n\nbest for large programs\nused for production\nwell suited for modular programming\ndoes everything\nhave access to all libraries and modules\nworks on any operating system\nworks well with Git\nruns all at once\ncan be automated\nscalable\nis used to write your own libraries or modules\n\n\n\nnot ideal for small programs (but works)\nnot ideal for visualizations and tables\nno immediate feedback\nmust run the entire script to test changes\nrequires an editor or an IDE",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#by-the-way",
+    "href": "lec/Lecture01.html#by-the-way",
+    "title": "Week 1, Meeting 1",
+    "section": "By the way",
+    "text": "By the way\nPython modules are collections of scripts. We can see this with our little example:\n\nImport a .py script - bit of a don’t do this…",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#jupyter-notebook",
+    "href": "lec/Lecture01.html#jupyter-notebook",
+    "title": "Week 1, Meeting 1",
+    "section": "Jupyter Notebook",
+    "text": "Jupyter Notebook\nAn interactive document that can mix code and text and create web pages and related, great for homework\n\nJupyter Example",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#this-presentation-and-the-code-below-were-written-using-quarto",
+    "href": "lec/Lecture01.html#this-presentation-and-the-code-below-were-written-using-quarto",
+    "title": "Week 1, Meeting 1",
+    "section": "This presentation and the code below were written using Quarto",
+    "text": "This presentation and the code below were written using Quarto\n\n\nCode\n# write a function to calculate human equivalent\ndef bird_to_human_years(bird_age):\n    return bird_age * 5\n\n# generate a sequence perhaps, starts at 1 and excludes 11\nages = range(1,11)\n\nfor age in ages:\n    print(f\"If your bird's age is {age}, in human years your bird is {bird_to_human_years(age)}\")\n\n\nIf your bird's age is 1, in human years your bird is 5\nIf your bird's age is 2, in human years your bird is 10\nIf your bird's age is 3, in human years your bird is 15\nIf your bird's age is 4, in human years your bird is 20\nIf your bird's age is 5, in human years your bird is 25\nIf your bird's age is 6, in human years your bird is 30\nIf your bird's age is 7, in human years your bird is 35\nIf your bird's age is 8, in human years your bird is 40\nIf your bird's age is 9, in human years your bird is 45\nIf your bird's age is 10, in human years your bird is 50",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#jupyter-notebookquarto-pros-and-cons",
+    "href": "lec/Lecture01.html#jupyter-notebookquarto-pros-and-cons",
+    "title": "Week 1, Meeting 1",
+    "section": "Jupyter Notebook/Quarto Pros and Cons",
+    "text": "Jupyter Notebook/Quarto Pros and Cons\n\n\n\ndoes everything\nhas access to all libraries and modules\nworks on any operating system\nworks OK with Git\ninteractive and incremental with immediate feedback\ncan generate beautiful visualizations and tables\ncode and documentation allows us to create notebooks and presentations\nsaves easily\n\n\n\nrequires an editor or IDE\nnot great for large programs\nnot typically used for production\nnot used for writing libraries or modules\nnot well suited for modular programming\nslower and uses more memory",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#optional-a-little-bit-about-git",
+    "href": "lec/Lecture01.html#optional-a-little-bit-about-git",
+    "title": "Week 1, Meeting 1",
+    "section": "Optional: A little bit about git",
+    "text": "Optional: A little bit about git\nTry this at your terminal prompt (MacOS) powershell prompt (Windows)\ngit --version\n\ngit version\nGit is a version control system. GitHub is a hosting platform.\nGit is primarily used for tracking changes in code by software developers\nBut anyone who can benefit from sharing and tracking changes in code can use it.",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#optional-git-on-windows",
+    "href": "lec/Lecture01.html#optional-git-on-windows",
+    "title": "Week 1, Meeting 1",
+    "section": "Optional: git on Windows",
+    "text": "Optional: git on Windows\n\ngit windows version",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#optional-github",
+    "href": "lec/Lecture01.html#optional-github",
+    "title": "Week 1, Meeting 1",
+    "section": "Optional: GitHub",
+    "text": "Optional: GitHub\nGitHub is a collection of tools and services used by software developers which uses git for version control\n\nGitHub",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#optional-using-github-the-git-hosting-platform",
+    "href": "lec/Lecture01.html#optional-using-github-the-git-hosting-platform",
+    "title": "Week 1, Meeting 1",
+    "section": "Optional: Using GitHub the Git hosting platform",
+    "text": "Optional: Using GitHub the Git hosting platform\n\nThis quarter I will post some material to GitHub\nYou could point and click and download\nBUT it would be better if you knew how to use git on your device to check for updates and download modified versions\nAnd that you should learn to keep your own repositories\nbut git is highly recommended but optional for Stats 21",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#optional-quick-dirty-git-github",
+    "href": "lec/Lecture01.html#optional-quick-dirty-git-github",
+    "title": "Week 1, Meeting 1",
+    "section": "Optional: Quick & Dirty Git & GitHub",
+    "text": "Optional: Quick & Dirty Git & GitHub\n\nPull\nAdd\nCommit\nPush",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#whats-in-a-name",
+    "href": "lec/Lecture01.html#whats-in-a-name",
+    "title": "Week 1, Meeting 1",
+    "section": "What’s in a name?",
+    "text": "What’s in a name?\n\nPlease gather together in small groups, please make sure at least one member has a laptop\nminimum group size 3, maximum group size 6\nintroduce yourselves, try to learn a new name today\ntake a group photo, annotate with with names or add names as a comment\nupload it for attendance credit",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#what-to-do-in-your-group-10-15-minutes",
+    "href": "lec/Lecture01.html#what-to-do-in-your-group-10-15-minutes",
+    "title": "Week 1, Meeting 1",
+    "section": "What to do in your group (10-15 minutes)",
+    "text": "What to do in your group (10-15 minutes)\n\ntry to determine whether Python, some kind of code editor (like VS Code) and git exist on your team’s computers\njust take some notes for your own personal use if you do not already have these installed (mental or otherwise)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#lets-back-up-a-little",
+    "href": "lec/Lecture01.html#lets-back-up-a-little",
+    "title": "Week 1, Meeting 1",
+    "section": "Let’s Back up a little",
+    "text": "Let’s Back up a little\n\nWhere do we start?\nMaybe an overview using the “Zen of Python” (PEP 20) https://peps.python.org/pep-0020/\nThen an example\nThen objects, naming, reserved keywords, the print function, iterators",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#opening-words-of-pep-20",
+    "href": "lec/Lecture01.html#opening-words-of-pep-20",
+    "title": "Week 1, Meeting 1",
+    "section": "Opening words of PEP 20",
+    "text": "Opening words of PEP 20\n\n\nBeautiful is better than ugly.\n\nExplicit is better than implicit.\n\nSimple is better than complex.\n\nComplex is better than complicated.\n\nFlat is better than nested.\n\nSparse is better than dense.\n\nReadability counts.",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#readable-beautiful-self-evident",
+    "href": "lec/Lecture01.html#readable-beautiful-self-evident",
+    "title": "Week 1, Meeting 1",
+    "section": "Readable, beautiful, self-evident",
+    "text": "Readable, beautiful, self-evident\nPython is like poetry and every word, symbol, and especially indentation matter. An example.\n\nEx 1Ex 2Ex 3\n\n\n\n\nCode\nfor count in 0, 1, 2, 3, 4, 5:\n    print(count)\n\n\n0\n1\n2\n3\n4\n5\n\n\nrecall (in Stats 20) for takes an instruction (code) and applies it to each item in the iterable, same in Python. A colon denotes the start of an indented code block after which all of the code must be indented by the same amount until the end of the block.\n\n\n\n\nCode\nfor spell in \"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \"Confundo\",  \"Finite Incantatem\", \"Incarcerous\":\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nSame general structure, “spell” is the loop variable and the “in” connects it to the interable. The iterable in this example is a data structure known as a tuple but it is not at all clear to a new user.\n\n\nspells is a list (much more about those later) it is a data structure. We could also call it a container object. A list holds other objects.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nspell is the loop variable and in connects it to spells which is an iterable. We can see that setting up the iterable in this way is more scalable than the other ways. spells can also be reused in other ways and places.",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#why-more-readable-more-beautiful-more-self-evident",
+    "href": "lec/Lecture01.html#why-more-readable-more-beautiful-more-self-evident",
+    "title": "Week 1, Meeting 1",
+    "section": "Why more readable, more beautiful, more self-evident?",
+    "text": "Why more readable, more beautiful, more self-evident?\nPreviously our iterable object was a data structure called a tuple (implied). An iterable is any object that can be looped over, meaning you can access its elements one by one. While it ran without error, the fact that it is a tuple could have been made more obvious for readability:\n\n\nCode\nfor spell in (\"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \n              \"Confundo\",  \"Finite Incantatem\", \"Incarcerous\"):\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nThere are many other spells mentioned in the Harry Potter series of books. The iterable here doesn’t scale well. It also isn’t reusable (we cannot easily call it again later in a program)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#noteaside",
+    "href": "lec/Lecture01.html#noteaside",
+    "title": "Week 1, Meeting 1",
+    "section": "NOTE/ASIDE",
+    "text": "NOTE/ASIDE\n\nWe value readable code\nWe value reusable code\nWe value scalable code (e.g., can add more spells easily)\nWe value easy-to-maintain code\nWe value correct code",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#there-is-an-ending-maybe",
+    "href": "lec/Lecture01.html#there-is-an-ending-maybe",
+    "title": "Week 1, Meeting 1",
+    "section": "There is an ending (maybe)",
+    "text": "There is an ending (maybe)\nBUT we can re-use the existing list object spells AND we can avoid the for loop structure. ‘\\n’ is interpreted as “new line” . In this context ‘\\n’ is a separator and is also a string (note the single quotes). .join() is a string method.\nOur code is now very “Pythonic”.\n\n\nCode\nprint('\\n'.join(spells))\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nUnderstanding the progression from a simple self-contained for loop, to a one-line implicit iteration using a string joining method is not for today (if you are just starting out). It’s what you are working towards as an end goal. (Hint read it from it inside out - spells, join, newline)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#what-is-pythonic",
+    "href": "lec/Lecture01.html#what-is-pythonic",
+    "title": "Week 1, Meeting 1",
+    "section": "What is Pythonic?",
+    "text": "What is Pythonic?\n\nI don’t think there is an official definition but review PEP 20 if you have the time.\nPEP describes writing your code in a manner that incorporates the principles and characteristics of the Python programming language.\nUtilizing the concise, expressive, and readable features of Python to write efficient, clear and pretty code\nI would also add “easy to modify code”",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#objects-more-later",
+    "href": "lec/Lecture01.html#objects-more-later",
+    "title": "Week 1, Meeting 1",
+    "section": "Objects (more later)",
+    "text": "Objects (more later)\n\nEverything in Python is an object – numbers, strings, lists, tuples, and functions, these are all objects.\nConceptually, an object is like a container or a box\nPython is at heart an object oriented language but it supports multiple programming models (OOP, Procedural, and Functional)\n\n(note) R is a functional programming language at heart\n\nEvery object is created from some class (more later). A class is a set of instructions or a template for creating objects.\nObjects have a type and they also have attributes and methods (functions specific to that object).\nThe object oriented nature of Python makes the language very flexible.\nBut also a little tricky coming from R as Python has a different programming model really.",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#example-object-creation",
+    "href": "lec/Lecture01.html#example-object-creation",
+    "title": "Week 1, Meeting 1",
+    "section": "Example: Object Creation",
+    "text": "Example: Object Creation\nName and assign values. Very R-like:\n\n\nCode\nx = 5\ny = 5\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\",\n    \"Finite Incantatem\",\n    \"Incarcerous\",\n]\n\nz = range(6) # note this is a comment\n\nprint(f\"This is x: {x}\")\nprint(f\"This is y: {y}\")\nprint(f\"This is the second spell: {spells[1]}\") # Python is zero indexed\nprint(f\"This is z: {z}\") # Python is zero indexed\n\n\nThis is x: 5\nThis is y: 5\nThis is the second spell: Colloshoo\nThis is z: range(0, 6)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#objects-have-among-other-things",
+    "href": "lec/Lecture01.html#objects-have-among-other-things",
+    "title": "Week 1, Meeting 1",
+    "section": "Objects have… (among other things)",
+    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4320534856\nThis is the result of id(y): 4320534856\nThis is the result of id(spells): 4365235840\nThis is the result of id(z): 4936401184\n\nThis is the result of id(print): 4320308432\nThis is the result of changing y now id(y): 4365402592",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#example-object-type-value",
+    "href": "lec/Lecture01.html#example-object-type-value",
+    "title": "Week 1, Meeting 1",
+    "section": "Example: Object Type & Value",
+    "text": "Example: Object Type & Value\n\nChecking typeChecking ValueWhy range(0, 6)\n\n\n\n\nCode\nprint(type(x))\nprint(type(y))\nprint(type(spells))\nprint(type(z))\nprint(type(print))\n\n\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;\n&lt;class 'list'&gt;\n&lt;class 'range'&gt;\n&lt;class 'builtin_function_or_method'&gt;\n\n\n\n\n\n\nCode\nprint(x)\nprint(y)\nprint(spells[1])\nprint(z)\n\n\n5\nUCLA\nColloshoo\nrange(0, 6)\n\n\n\n\nThis is a range object, the values are not generated until the range object is used.\n\n\nCode\nfor count in z:\n    print(count)\n\n\n0\n1\n2\n3\n4\n5",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#rules-for-variable-names",
+    "href": "lec/Lecture01.html#rules-for-variable-names",
+    "title": "Week 1, Meeting 1",
+    "section": "Rules for Variable Names",
+    "text": "Rules for Variable Names\nThey can have:\n- Lowercase letters (a through z)\n- Uppercase letters (A through Z)\n- Digits (0 through 9)\n- The Underscore (_)\nThey are case-sensitive\nThey can begin with a letter or an underscore but not a digit.\nThey cannot be one of Python’s reserved keywords.",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#reserved-keywords",
+    "href": "lec/Lecture01.html#reserved-keywords",
+    "title": "Week 1, Meeting 1",
+    "section": "Reserved Keywords",
+    "text": "Reserved Keywords\n\nPlease avoid using reserved keyword names as object names.\nKeywords have specific and predefined meanings.\nUsing them as object names causes confusion and syntax errors.\n\n\n\nCode\nimport keyword\n\nkeywords = keyword.kwlist\n\nfor kw in keywords:\n    print(kw)\n\n\nFalse      await      else       import     pass\nNone       break      except     in         raise\nTrue       class      finally    is         return\nand        continue   for        lambda     try\nas         def        from       nonlocal   while\nassert     del        global     not        with\nasync      elif       if         or         yield",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#commonly-seen-keywords",
+    "href": "lec/Lecture01.html#commonly-seen-keywords",
+    "title": "Week 1, Meeting 1",
+    "section": "Commonly seen keywords",
+    "text": "Commonly seen keywords\nWe have already seem some of these on our first day. By the end of the quarter, you should be very familiar with these.\nif, else, for, while, \nTrue, False, def, return, \nimport, from, as,\nand, elif, in, not, or, pass\nclass, self, None\nhttps://docs.python.org/3/reference/lexical_analysis.html#keywords",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#a-little-more-advanced",
+    "href": "lec/Lecture01.html#a-little-more-advanced",
+    "title": "Week 1, Meeting 1",
+    "section": "a little more advanced",
+    "text": "a little more advanced\nWe might see a few of these much later in the course.\ntry, except, finally, raise,  \n del, lambda, with, yield\nWe will work with the common keywords and try to give you the scaffolding to move to the less common if you need it beyond Stats 21.",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#naming-pep-8",
+    "href": "lec/Lecture01.html#naming-pep-8",
+    "title": "Week 1, Meeting 1",
+    "section": "Naming (PEP 8)",
+    "text": "Naming (PEP 8)\n\nSee PEP 8\nThese are the coding conventions for Python for the standard library in the main Python distribution.\nA worthy code editor will implement most of the rules for you\nBUT naming is something special to you",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#some-suggestions-for-stats-21",
+    "href": "lec/Lecture01.html#some-suggestions-for-stats-21",
+    "title": "Week 1, Meeting 1",
+    "section": "Some suggestions for Stats 21",
+    "text": "Some suggestions for Stats 21\n\nNever use the characters ‘l’ (lowercase letter el), ‘O’ (uppercase letter oh), or ‘I’ (uppercase letter eye) as single character variable names.\nFunction names should be lowercase, with words separated by underscores as necessary to improve readability.\nVariable names follow the same convention as function names.\nPlease capitalize the first letter when defining a Class (e.g., CapitalizedWords)\nIf you create a Python constant please use snake case with all caps\n\n DATA_FILE = \"data/weather_data.csv\"  # a Global constant (file path)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#please-try-creating-some-variables",
+    "href": "lec/Lecture01.html#please-try-creating-some-variables",
+    "title": "Week 1, Meeting 1",
+    "section": "Please try creating some variables",
+    "text": "Please try creating some variables\n\nStart the interactive interpreter, and type print(42).\n\nIt should echo 42 on the next line.\n\nIf you’re still in the interactive interpreter, type 43. It should print 43 on the next line. This is a feature of the interactive interpreter only, and won’t print anything if you’re executing a Python file.\nTry assigning a value to a variable. Trying printing the value of the variable.\nTry some illegal names to see what error messages Python tosses back to you.",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#more-about-type",
+    "href": "lec/Lecture01.html#more-about-type",
+    "title": "Week 1, Meeting 1",
+    "section": "More about type",
+    "text": "More about type\n\nSome of the basic types\n\n\nName\nType\nMutable?\nExample\n\n\n\n\nBoolean\nbool\nno\nTrue; False\n\n\nInteger\nint\nno\n3; -256\n\n\nFloating Point\nfloat\nno\n1e5; 2.718\n\n\nComplex\ncomplex\nno\n10j; 2 + 1j\n\n\nText\nstr\nno\n“UCLA”; “The quick brown fox”\n\n\nList\nlist\nyes\n[“Expelliarmus”, “Confundo”]\n\n\nTuple\ntuple\nno\n(0, 2, 4, 6)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#bool",
+    "href": "lec/Lecture01.html#bool",
+    "title": "Week 1, Meeting 1",
+    "section": "Bool",
+    "text": "Bool\n\nThe boolean data type values are True and False.\nIn Stats 21 we may use the values directly as data.\nWe may also use them as the evaluation result\n\n\n\nCode\nanswers = [True, True, False, True, False, False, False, True, True, True\n]\n\nprint(f'This is answers: {answers} \\n ' ) # F-strings or formatted string literals\n\nprint(f'Is answers a list object? {isinstance(answers, list)} \\n')\n\nprint(f'Is False a bool? {isinstance(False, bool)} \\n')\n\nprint(f'Example: Is 5 &lt; 2? {5 &lt; 2}')\n\n\nThis is answers: [True, True, False, True, False, False, False, True, True, True] \n \nIs answers a list object? True \n\nIs False a bool? True \n\nExample: Is 5 &lt; 2? False",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#integers",
+    "href": "lec/Lecture01.html#integers",
+    "title": "Week 1, Meeting 1",
+    "section": "Integers",
+    "text": "Integers\n\nIntegers are whole numbers, no decimal, no fraction, no comma (use an underscore if you must)\ncould have + or -\n\n\n\nCode\nx = 7\ny = -7\nz = +7\na = 100_000\n\nprint(f'x = {x} \\n')\nprint(f'y = {y} \\n')\nprint(f'z = {z} \\n')\nprint(f'a = {a} \\n')\n\n\nx = 7 \n\ny = -7 \n\nz = 7 \n\na = 100000",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#common-operations",
+    "href": "lec/Lecture01.html#common-operations",
+    "title": "Week 1, Meeting 1",
+    "section": "Common Operations",
+    "text": "Common Operations\n\n\n\nOperator\nDescription\n\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nFloating-point division\n\n\n//\nInteger division\n\n\n%\nModulus division\n\n\n**\nExponentiation",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#examples",
+    "href": "lec/Lecture01.html#examples",
+    "title": "Week 1, Meeting 1",
+    "section": "Examples",
+    "text": "Examples\n\n\nCode\nx = 3 + 4 + 5\ny = 4 - 1 - 2\nz = 2 * 3 * 4 * 5\na = 15/4\nb = 15//4\nc = 15%4\nd = 2**5\n\nprint(f'x = 3 + 4 + 5 result is: {x} \\n')\nprint(f'y = 4 - 1 - 2 result is: {y} \\n')\nprint(f'z = 2 * 3 * 4 * 5 result is: {z} \\n')\nprint(f'a = 15/4 result is: {a} \\n')\nprint(f'b = 15//4 result is: {b} \\n')\nprint(f'c = 15%4 result is: {c} \\n')\nprint(f'd = 2**5 result is: {d} \\n')\n\n\nx = 3 + 4 + 5 result is: 12 \n\ny = 4 - 1 - 2 result is: 1 \n\nz = 2 * 3 * 4 * 5 result is: 120 \n\na = 15/4 result is: 3.75 \n\nb = 15//4 result is: 3 \n\nc = 15%4 result is: 3 \n\nd = 2**5 result is: 32",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#notes-on-operations",
+    "href": "lec/Lecture01.html#notes-on-operations",
+    "title": "Week 1, Meeting 1",
+    "section": "Notes on operations",
+    "text": "Notes on operations\n\nYou can combine literal integers with variables that have been assigned integer values\nYou can modify a variable but you will need to reassign it to store the modification\nYou could use a compound operation e.g., +=, -= to operate and modify at the same time\nPython uses PEMDAS (Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#examples-1",
+    "href": "lec/Lecture01.html#examples-1",
+    "title": "Week 1, Meeting 1",
+    "section": "Examples",
+    "text": "Examples\n\n\nCode\nprint(f'The result of x + y is: {x + y} \\n')\nprint(f'The result of z/5 is: {z/5} \\n')\nprint(f'But z remains unchanged: {z} \\n')\nprint(f'The current value of y is: {y} \\n')\ny += 20\nprint(f'The new value of y is: {y} \\n')\n\n\nThe result of x + y is: 13 \n\nThe result of z/5 is: 24.0 \n\nBut z remains unchanged: 120 \n\nThe current value of y is: 1 \n\nThe new value of y is: 21",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#floats",
+    "href": "lec/Lecture01.html#floats",
+    "title": "Week 1, Meeting 1",
+    "section": "Floats",
+    "text": "Floats\n\nfloats in Python have decimal points even if its only zeroes after the decimal\nfloats can include a decimal integer exponent after the letter e\nThe operators work in the same manners as with integers\nfloats are not exact see https://docs.python.org/3/tutorial/floatingpoint.html\n\n\n\nCode\n2e10\n\n\n20000000000.0",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#complex-optional",
+    "href": "lec/Lecture01.html#complex-optional",
+    "title": "Week 1, Meeting 1",
+    "section": "Complex (optional)",
+    "text": "Complex (optional)\n\nshould you need this in the future (not here) Python can work with complex values, they are represented by a j\n\n\n\nCode\nx = 2j\ny = 10j\nz = y/x\n\nprint(f'x is {x} \\n')\nprint(f'y is {y} \\n')\nprint(f'y/x = {z} \\n')\n\n\nx is 2j \n\ny is 10j \n\ny/x = (5+0j)",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#import",
+    "href": "lec/Lecture01.html#import",
+    "title": "Week 1, Meeting 1",
+    "section": "Import",
+    "text": "Import\nIt is the equivalent of library(packagename) in R, it gives us access to helpful extensions. There are different ways\n\nYou are bringing the entire pandas library into your code. If you want to use something from pandas, you need to write pandas. before it for example\n\nimport pandas\nmy_df = pandas.read_csv('mydata.csv')\n\nStill importing the whole pandas library, but using an alias (pd) to save typing. This is most common.\n\nimport pandas as pd\nmy_df = pd.read_csv('mydata.csv')\n\nimporting one specific function (read_csv) from pandas You can use read_csv directly without typing pandas. or pd.\n\nfrom pandas import read_csv\nmy_df = read_csv('mydata.csv')",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#extra-using-pip-and-file-system-commands",
+    "href": "lec/Lecture01.html#extra-using-pip-and-file-system-commands",
+    "title": "Week 1, Meeting 1",
+    "section": "(extra) Using pip and file system commands",
+    "text": "(extra) Using pip and file system commands\n\npip is a package-management system written in Python.\nI use it to install and manage Python packages but you can use whatever you want.\n\nI run pip in the “shell” (terminal on a Mac). The ! allows me to exit Quarto and run commands.\n\n\n\nCode\n!pip show numpy\n\n\nName: numpy\nVersion: 2.2.3\nSummary: Fundamental package for array computing in Python\nHome-page: https://numpy.org\nAuthor: Travis E. Oliphant et al.\nAuthor-email: \nLicense: Copyright (c) 2005-2024, NumPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are\n met:\n\n     * Redistributions of source code must retain the above copyright\n        notice, this list of conditions and the following disclaimer.\n\n     * Redistributions in binary form must reproduce the above\n        copyright notice, this list of conditions and the following\n        disclaimer in the documentation and/or other materials provided\n        with the distribution.\n\n     * Neither the name of the NumPy Developers nor the names of any\n        contributors may be used to endorse or promote products derived\n        from this software without specific prior written permission.\n\n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n ----\n\n The NumPy repository and source distributions bundle several libraries that are\n compatibly licensed.  We list these here.\n\n Name: lapack-lite\n Files: numpy/linalg/lapack_lite/*\n License: BSD-3-Clause\n   For details, see numpy/linalg/lapack_lite/LICENSE.txt\n\n Name: dragon4\n Files: numpy/_core/src/multiarray/dragon4.c\n License: MIT\n   For license text, see numpy/_core/src/multiarray/dragon4.c\n\n Name: libdivide\n Files: numpy/_core/include/numpy/libdivide/*\n License: Zlib\n   For license text, see numpy/_core/include/numpy/libdivide/LICENSE.txt\n\n\n Note that the following files are vendored in the repository and sdist but not\n installed in built numpy packages:\n\n Name: Meson\n Files: vendored-meson/meson/*\n License: Apache 2.0\n   For license text, see vendored-meson/meson/COPYING\n\n Name: spin\n Files: .spin/cmds.py\n License: BSD-3\n   For license text, see .spin/LICENSE\n\n Name: tempita\n Files: numpy/_build_utils/tempita/*\n License: MIT\n   For details, see numpy/_build_utils/tempita/LICENCE.txt\n\n ----\n\n This binary distribution of NumPy also bundles the following software:\n\n Name: OpenBLAS\n Files: numpy/.dylibs/libscipy_openblas*.so\n Description: bundled as a dynamically linked library\n Availability: https://github.com/OpenMathLib/OpenBLAS/\n License: BSD-3-Clause\n   Copyright (c) 2011-2014, The OpenBLAS Project\n   All rights reserved.\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n      1. Redistributions of source code must retain the above copyright\n         notice, this list of conditions and the following disclaimer.\n\n      2. Redistributions in binary form must reproduce the above copyright\n         notice, this list of conditions and the following disclaimer in\n         the documentation and/or other materials provided with the\n         distribution.\n      3. Neither the name of the OpenBLAS project nor the names of\n         its contributors may be used to endorse or promote products\n         derived from this software without specific prior written\n         permission.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE\n   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n   DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n   SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n   CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n   OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE\n   USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n Name: LAPACK\n Files: numpy/.dylibs/libscipy_openblas*.so\n Description: bundled in OpenBLAS\n Availability: https://github.com/OpenMathLib/OpenBLAS/\n License: BSD-3-Clause-Attribution\n   Copyright (c) 1992-2013 The University of Tennessee and The University\n                           of Tennessee Research Foundation.  All rights\n                           reserved.\n   Copyright (c) 2000-2013 The University of California Berkeley. All\n                           rights reserved.\n   Copyright (c) 2006-2013 The University of Colorado Denver.  All rights\n                           reserved.\n\n   $COPYRIGHT$\n\n   Additional copyrights may follow\n\n   $HEADER$\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n   - Redistributions of source code must retain the above copyright\n     notice, this list of conditions and the following disclaimer.\n\n   - Redistributions in binary form must reproduce the above copyright\n     notice, this list of conditions and the following disclaimer listed\n     in this license in the documentation and/or other materials\n     provided with the distribution.\n\n   - Neither the name of the copyright holders nor the names of its\n     contributors may be used to endorse or promote products derived from\n     this software without specific prior written permission.\n\n   The copyright holders provide no reassurances that the source code\n   provided does not infringe any patent, copyright, or any other\n   intellectual property rights of third parties.  The copyright holders\n   disclaim any liability to any recipient for claims brought against\n   recipient by any third party for infringement of that parties\n   intellectual property rights.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n Name: GCC runtime library\n Files: numpy/.dylibs/libgfortran*, numpy/.dylibs/libgcc*\n Description: dynamically linked to files compiled with gcc\n Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libgfortran\n License: GPL-3.0-with-GCC-exception\n   Copyright (C) 2002-2017 Free Software Foundation, Inc.\n\n   Libgfortran is free software; you can redistribute it and/or modify\n   it under the terms of the GNU General Public License as published by\n   the Free Software Foundation; either version 3, or (at your option)\n   any later version.\n\n   Libgfortran is distributed in the hope that it will be useful,\n   but WITHOUT ANY WARRANTY; without even the implied warranty of\n   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n   GNU General Public License for more details.\n\n   Under Section 7 of GPL version 3, you are granted additional\n   permissions described in the GCC Runtime Library Exception, version\n   3.1, as published by the Free Software Foundation.\n\n   You should have received a copy of the GNU General Public License and\n   a copy of the GCC Runtime Library Exception along with this program;\n   see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see\n   &lt;http://www.gnu.org/licenses/&gt;.\n\n ----\n\n Full text of license texts referred to above follows (that they are\n listed below does not necessarily imply the conditions apply to the\n present binary release):\n\n ----\n\n GCC RUNTIME LIBRARY EXCEPTION\n\n Version 3.1, 31 March 2009\n\n Copyright (C) 2009 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;\n\n Everyone is permitted to copy and distribute verbatim copies of this\n license document, but changing it is not allowed.\n\n This GCC Runtime Library Exception (\"Exception\") is an additional\n permission under section 7 of the GNU General Public License, version\n 3 (\"GPLv3\"). It applies to a given file (the \"Runtime Library\") that\n bears a notice placed by the copyright holder of the file stating that\n the file is governed by GPLv3 along with this Exception.\n\n When you use GCC to compile a program, GCC may combine portions of\n certain GCC header files and runtime libraries with the compiled\n program. The purpose of this Exception is to allow compilation of\n non-GPL (including proprietary) programs to use, in this way, the\n header files and runtime libraries covered by this Exception.\n\n 0. Definitions.\n\n A file is an \"Independent Module\" if it either requires the Runtime\n Library for execution after a Compilation Process, or makes use of an\n interface provided by the Runtime Library, but is not otherwise based\n on the Runtime Library.\n\n \"GCC\" means a version of the GNU Compiler Collection, with or without\n modifications, governed by version 3 (or a specified later version) of\n the GNU General Public License (GPL) with the option of using any\n subsequent versions published by the FSF.\n\n \"GPL-compatible Software\" is software whose conditions of propagation,\n modification and use would permit combination with GCC in accord with\n the license of GCC.\n\n \"Target Code\" refers to output from any compiler for a real or virtual\n target processor architecture, in executable form or suitable for\n input to an assembler, loader, linker and/or execution\n phase. Notwithstanding that, Target Code does not include data in any\n format that is used as a compiler intermediate representation, or used\n for producing a compiler intermediate representation.\n\n The \"Compilation Process\" transforms code entirely represented in\n non-intermediate languages designed for human-written code, and/or in\n Java Virtual Machine byte code, into Target Code. Thus, for example,\n use of source code generators and preprocessors need not be considered\n part of the Compilation Process, since the Compilation Process can be\n understood as starting with the output of the generators or\n preprocessors.\n\n A Compilation Process is \"Eligible\" if it is done using GCC, alone or\n with other GPL-compatible software, or if it is done without using any\n work based on GCC. For example, using non-GPL-compatible Software to\n optimize any GCC intermediate representations would not qualify as an\n Eligible Compilation Process.\n\n 1. Grant of Additional Permission.\n\n You have permission to propagate a work of Target Code formed by\n combining the Runtime Library with Independent Modules, even if such\n propagation would otherwise violate the terms of GPLv3, provided that\n all Target Code was generated by Eligible Compilation Processes. You\n may then convey such a combination under terms of your choice,\n consistent with the licensing of the Independent Modules.\n\n 2. No Weakening of GCC Copyleft.\n\n The availability of this Exception does not imply any general\n presumption that third-party software is unaffected by the copyleft\n requirements of the license of GCC.\n\n ----\n\n                     GNU GENERAL PUBLIC LICENSE\n                        Version 3, 29 June 2007\n\n  Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;\n  Everyone is permitted to copy and distribute verbatim copies\n  of this license document, but changing it is not allowed.\n\n                             Preamble\n\n   The GNU General Public License is a free, copyleft license for\n software and other kinds of works.\n\n   The licenses for most software and other practical works are designed\n to take away your freedom to share and change the works.  By contrast,\n the GNU General Public License is intended to guarantee your freedom to\n share and change all versions of a program--to make sure it remains free\n software for all its users.  We, the Free Software Foundation, use the\n GNU General Public License for most of our software; it applies also to\n any other work released this way by its authors.  You can apply it to\n your programs, too.\n\n   When we speak of free software, we are referring to freedom, not\n price.  Our General Public Licenses are designed to make sure that you\n have the freedom to distribute copies of free software (and charge for\n them if you wish), that you receive source code or can get it if you\n want it, that you can change the software or use pieces of it in new\n free programs, and that you know you can do these things.\n\n   To protect your rights, we need to prevent others from denying you\n these rights or asking you to surrender the rights.  Therefore, you have\n certain responsibilities if you distribute copies of the software, or if\n you modify it: responsibilities to respect the freedom of others.\n\n   For example, if you distribute copies of such a program, whether\n gratis or for a fee, you must pass on to the recipients the same\n freedoms that you received.  You must make sure that they, too, receive\n or can get the source code.  And you must show them these terms so they\n know their rights.\n\n   Developers that use the GNU GPL protect your rights with two steps:\n (1) assert copyright on the software, and (2) offer you this License\n giving you legal permission to copy, distribute and/or modify it.\n\n   For the developers' and authors' protection, the GPL clearly explains\n that there is no warranty for this free software.  For both users' and\n authors' sake, the GPL requires that modified versions be marked as\n changed, so that their problems will not be attributed erroneously to\n authors of previous versions.\n\n   Some devices are designed to deny users access to install or run\n modified versions of the software inside them, although the manufacturer\n can do so.  This is fundamentally incompatible with the aim of\n protecting users' freedom to change the software.  The systematic\n pattern of such abuse occurs in the area of products for individuals to\n use, which is precisely where it is most unacceptable.  Therefore, we\n have designed this version of the GPL to prohibit the practice for those\n products.  If such problems arise substantially in other domains, we\n stand ready to extend this provision to those domains in future versions\n of the GPL, as needed to protect the freedom of users.\n\n   Finally, every program is threatened constantly by software patents.\n States should not allow patents to restrict development and use of\n software on general-purpose computers, but in those that do, we wish to\n avoid the special danger that patents applied to a free program could\n make it effectively proprietary.  To prevent this, the GPL assures that\n patents cannot be used to render the program non-free.\n\n   The precise terms and conditions for copying, distribution and\n modification follow.\n\n                        TERMS AND CONDITIONS\n\n   0. Definitions.\n\n   \"This License\" refers to version 3 of the GNU General Public License.\n\n   \"Copyright\" also means copyright-like laws that apply to other kinds of\n works, such as semiconductor masks.\n\n   \"The Program\" refers to any copyrightable work licensed under this\n License.  Each licensee is addressed as \"you\".  \"Licensees\" and\n \"recipients\" may be individuals or organizations.\n\n   To \"modify\" a work means to copy from or adapt all or part of the work\n in a fashion requiring copyright permission, other than the making of an\n exact copy.  The resulting work is called a \"modified version\" of the\n earlier work or a work \"based on\" the earlier work.\n\n   A \"covered work\" means either the unmodified Program or a work based\n on the Program.\n\n   To \"propagate\" a work means to do anything with it that, without\n permission, would make you directly or secondarily liable for\n infringement under applicable copyright law, except executing it on a\n computer or modifying a private copy.  Propagation includes copying,\n distribution (with or without modification), making available to the\n public, and in some countries other activities as well.\n\n   To \"convey\" a work means any kind of propagation that enables other\n parties to make or receive copies.  Mere interaction with a user through\n a computer network, with no transfer of a copy, is not conveying.\n\n   An interactive user interface displays \"Appropriate Legal Notices\"\n to the extent that it includes a convenient and prominently visible\n feature that (1) displays an appropriate copyright notice, and (2)\n tells the user that there is no warranty for the work (except to the\n extent that warranties are provided), that licensees may convey the\n work under this License, and how to view a copy of this License.  If\n the interface presents a list of user commands or options, such as a\n menu, a prominent item in the list meets this criterion.\n\n   1. Source Code.\n\n   The \"source code\" for a work means the preferred form of the work\n for making modifications to it.  \"Object code\" means any non-source\n form of a work.\n\n   A \"Standard Interface\" means an interface that either is an official\n standard defined by a recognized standards body, or, in the case of\n interfaces specified for a particular programming language, one that\n is widely used among developers working in that language.\n\n   The \"System Libraries\" of an executable work include anything, other\n than the work as a whole, that (a) is included in the normal form of\n packaging a Major Component, but which is not part of that Major\n Component, and (b) serves only to enable use of the work with that\n Major Component, or to implement a Standard Interface for which an\n implementation is available to the public in source code form.  A\n \"Major Component\", in this context, means a major essential component\n (kernel, window system, and so on) of the specific operating system\n (if any) on which the executable work runs, or a compiler used to\n produce the work, or an object code interpreter used to run it.\n\n   The \"Corresponding Source\" for a work in object code form means all\n the source code needed to generate, install, and (for an executable\n work) run the object code and to modify the work, including scripts to\n control those activities.  However, it does not include the work's\n System Libraries, or general-purpose tools or generally available free\n programs which are used unmodified in performing those activities but\n which are not part of the work.  For example, Corresponding Source\n includes interface definition files associated with source files for\n the work, and the source code for shared libraries and dynamically\n linked subprograms that the work is specifically designed to require,\n such as by intimate data communication or control flow between those\n subprograms and other parts of the work.\n\n   The Corresponding Source need not include anything that users\n can regenerate automatically from other parts of the Corresponding\n Source.\n\n   The Corresponding Source for a work in source code form is that\n same work.\n\n   2. Basic Permissions.\n\n   All rights granted under this License are granted for the term of\n copyright on the Program, and are irrevocable provided the stated\n conditions are met.  This License explicitly affirms your unlimited\n permission to run the unmodified Program.  The output from running a\n covered work is covered by this License only if the output, given its\n content, constitutes a covered work.  This License acknowledges your\n rights of fair use or other equivalent, as provided by copyright law.\n\n   You may make, run and propagate covered works that you do not\n convey, without conditions so long as your license otherwise remains\n in force.  You may convey covered works to others for the sole purpose\n of having them make modifications exclusively for you, or provide you\n with facilities for running those works, provided that you comply with\n the terms of this License in conveying all material for which you do\n not control copyright.  Those thus making or running the covered works\n for you must do so exclusively on your behalf, under your direction\n and control, on terms that prohibit them from making any copies of\n your copyrighted material outside their relationship with you.\n\n   Conveying under any other circumstances is permitted solely under\n the conditions stated below.  Sublicensing is not allowed; section 10\n makes it unnecessary.\n\n   3. Protecting Users' Legal Rights From Anti-Circumvention Law.\n\n   No covered work shall be deemed part of an effective technological\n measure under any applicable law fulfilling obligations under article\n 11 of the WIPO copyright treaty adopted on 20 December 1996, or\n similar laws prohibiting or restricting circumvention of such\n measures.\n\n   When you convey a covered work, you waive any legal power to forbid\n circumvention of technological measures to the extent such circumvention\n is effected by exercising rights under this License with respect to\n the covered work, and you disclaim any intention to limit operation or\n modification of the work as a means of enforcing, against the work's\n users, your or third parties' legal rights to forbid circumvention of\n technological measures.\n\n   4. Conveying Verbatim Copies.\n\n   You may convey verbatim copies of the Program's source code as you\n receive it, in any medium, provided that you conspicuously and\n appropriately publish on each copy an appropriate copyright notice;\n keep intact all notices stating that this License and any\n non-permissive terms added in accord with section 7 apply to the code;\n keep intact all notices of the absence of any warranty; and give all\n recipients a copy of this License along with the Program.\n\n   You may charge any price or no price for each copy that you convey,\n and you may offer support or warranty protection for a fee.\n\n   5. Conveying Modified Source Versions.\n\n   You may convey a work based on the Program, or the modifications to\n produce it from the Program, in the form of source code under the\n terms of section 4, provided that you also meet all of these conditions:\n\n     a) The work must carry prominent notices stating that you modified\n     it, and giving a relevant date.\n\n     b) The work must carry prominent notices stating that it is\n     released under this License and any conditions added under section\n     7.  This requirement modifies the requirement in section 4 to\n     \"keep intact all notices\".\n\n     c) You must license the entire work, as a whole, under this\n     License to anyone who comes into possession of a copy.  This\n     License will therefore apply, along with any applicable section 7\n     additional terms, to the whole of the work, and all its parts,\n     regardless of how they are packaged.  This License gives no\n     permission to license the work in any other way, but it does not\n     invalidate such permission if you have separately received it.\n\n     d) If the work has interactive user interfaces, each must display\n     Appropriate Legal Notices; however, if the Program has interactive\n     interfaces that do not display Appropriate Legal Notices, your\n     work need not make them do so.\n\n   A compilation of a covered work with other separate and independent\n works, which are not by their nature extensions of the covered work,\n and which are not combined with it such as to form a larger program,\n in or on a volume of a storage or distribution medium, is called an\n \"aggregate\" if the compilation and its resulting copyright are not\n used to limit the access or legal rights of the compilation's users\n beyond what the individual works permit.  Inclusion of a covered work\n in an aggregate does not cause this License to apply to the other\n parts of the aggregate.\n\n   6. Conveying Non-Source Forms.\n\n   You may convey a covered work in object code form under the terms\n of sections 4 and 5, provided that you also convey the\n machine-readable Corresponding Source under the terms of this License,\n in one of these ways:\n\n     a) Convey the object code in, or embodied in, a physical product\n     (including a physical distribution medium), accompanied by the\n     Corresponding Source fixed on a durable physical medium\n     customarily used for software interchange.\n\n     b) Convey the object code in, or embodied in, a physical product\n     (including a physical distribution medium), accompanied by a\n     written offer, valid for at least three years and valid for as\n     long as you offer spare parts or customer support for that product\n     model, to give anyone who possesses the object code either (1) a\n     copy of the Corresponding Source for all the software in the\n     product that is covered by this License, on a durable physical\n     medium customarily used for software interchange, for a price no\n     more than your reasonable cost of physically performing this\n     conveying of source, or (2) access to copy the\n     Corresponding Source from a network server at no charge.\n\n     c) Convey individual copies of the object code with a copy of the\n     written offer to provide the Corresponding Source.  This\n     alternative is allowed only occasionally and noncommercially, and\n     only if you received the object code with such an offer, in accord\n     with subsection 6b.\n\n     d) Convey the object code by offering access from a designated\n     place (gratis or for a charge), and offer equivalent access to the\n     Corresponding Source in the same way through the same place at no\n     further charge.  You need not require recipients to copy the\n     Corresponding Source along with the object code.  If the place to\n     copy the object code is a network server, the Corresponding Source\n     may be on a different server (operated by you or a third party)\n     that supports equivalent copying facilities, provided you maintain\n     clear directions next to the object code saying where to find the\n     Corresponding Source.  Regardless of what server hosts the\n     Corresponding Source, you remain obligated to ensure that it is\n     available for as long as needed to satisfy these requirements.\n\n     e) Convey the object code using peer-to-peer transmission, provided\n     you inform other peers where the object code and Corresponding\n     Source of the work are being offered to the general public at no\n     charge under subsection 6d.\n\n   A separable portion of the object code, whose source code is excluded\n from the Corresponding Source as a System Library, need not be\n included in conveying the object code work.\n\n   A \"User Product\" is either (1) a \"consumer product\", which means any\n tangible personal property which is normally used for personal, family,\n or household purposes, or (2) anything designed or sold for incorporation\n into a dwelling.  In determining whether a product is a consumer product,\n doubtful cases shall be resolved in favor of coverage.  For a particular\n product received by a particular user, \"normally used\" refers to a\n typical or common use of that class of product, regardless of the status\n of the particular user or of the way in which the particular user\n actually uses, or expects or is expected to use, the product.  A product\n is a consumer product regardless of whether the product has substantial\n commercial, industrial or non-consumer uses, unless such uses represent\n the only significant mode of use of the product.\n\n   \"Installation Information\" for a User Product means any methods,\n procedures, authorization keys, or other information required to install\n and execute modified versions of a covered work in that User Product from\n a modified version of its Corresponding Source.  The information must\n suffice to ensure that the continued functioning of the modified object\n code is in no case prevented or interfered with solely because\n modification has been made.\n\n   If you convey an object code work under this section in, or with, or\n specifically for use in, a User Product, and the conveying occurs as\n part of a transaction in which the right of possession and use of the\n User Product is transferred to the recipient in perpetuity or for a\n fixed term (regardless of how the transaction is characterized), the\n Corresponding Source conveyed under this section must be accompanied\n by the Installation Information.  But this requirement does not apply\n if neither you nor any third party retains the ability to install\n modified object code on the User Product (for example, the work has\n been installed in ROM).\n\n   The requirement to provide Installation Information does not include a\n requirement to continue to provide support service, warranty, or updates\n for a work that has been modified or installed by the recipient, or for\n the User Product in which it has been modified or installed.  Access to a\n network may be denied when the modification itself materially and\n adversely affects the operation of the network or violates the rules and\n protocols for communication across the network.\n\n   Corresponding Source conveyed, and Installation Information provided,\n in accord with this section must be in a format that is publicly\n documented (and with an implementation available to the public in\n source code form), and must require no special password or key for\n unpacking, reading or copying.\n\n   7. Additional Terms.\n\n   \"Additional permissions\" are terms that supplement the terms of this\n License by making exceptions from one or more of its conditions.\n Additional permissions that are applicable to the entire Program shall\n be treated as though they were included in this License, to the extent\n that they are valid under applicable law.  If additional permissions\n apply only to part of the Program, that part may be used separately\n under those permissions, but the entire Program remains governed by\n this License without regard to the additional permissions.\n\n   When you convey a copy of a covered work, you may at your option\n remove any additional permissions from that copy, or from any part of\n it.  (Additional permissions may be written to require their own\n removal in certain cases when you modify the work.)  You may place\n additional permissions on material, added by you to a covered work,\n for which you have or can give appropriate copyright permission.\n\n   Notwithstanding any other provision of this License, for material you\n add to a covered work, you may (if authorized by the copyright holders of\n that material) supplement the terms of this License with terms:\n\n     a) Disclaiming warranty or limiting liability differently from the\n     terms of sections 15 and 16 of this License; or\n\n     b) Requiring preservation of specified reasonable legal notices or\n     author attributions in that material or in the Appropriate Legal\n     Notices displayed by works containing it; or\n\n     c) Prohibiting misrepresentation of the origin of that material, or\n     requiring that modified versions of such material be marked in\n     reasonable ways as different from the original version; or\n\n     d) Limiting the use for publicity purposes of names of licensors or\n     authors of the material; or\n\n     e) Declining to grant rights under trademark law for use of some\n     trade names, trademarks, or service marks; or\n\n     f) Requiring indemnification of licensors and authors of that\n     material by anyone who conveys the material (or modified versions of\n     it) with contractual assumptions of liability to the recipient, for\n     any liability that these contractual assumptions directly impose on\n     those licensors and authors.\n\n   All other non-permissive additional terms are considered \"further\n restrictions\" within the meaning of section 10.  If the Program as you\n received it, or any part of it, contains a notice stating that it is\n governed by this License along with a term that is a further\n restriction, you may remove that term.  If a license document contains\n a further restriction but permits relicensing or conveying under this\n License, you may add to a covered work material governed by the terms\n of that license document, provided that the further restriction does\n not survive such relicensing or conveying.\n\n   If you add terms to a covered work in accord with this section, you\n must place, in the relevant source files, a statement of the\n additional terms that apply to those files, or a notice indicating\n where to find the applicable terms.\n\n   Additional terms, permissive or non-permissive, may be stated in the\n form of a separately written license, or stated as exceptions;\n the above requirements apply either way.\n\n   8. Termination.\n\n   You may not propagate or modify a covered work except as expressly\n provided under this License.  Any attempt otherwise to propagate or\n modify it is void, and will automatically terminate your rights under\n this License (including any patent licenses granted under the third\n paragraph of section 11).\n\n   However, if you cease all violation of this License, then your\n license from a particular copyright holder is reinstated (a)\n provisionally, unless and until the copyright holder explicitly and\n finally terminates your license, and (b) permanently, if the copyright\n holder fails to notify you of the violation by some reasonable means\n prior to 60 days after the cessation.\n\n   Moreover, your license from a particular copyright holder is\n reinstated permanently if the copyright holder notifies you of the\n violation by some reasonable means, this is the first time you have\n received notice of violation of this License (for any work) from that\n copyright holder, and you cure the violation prior to 30 days after\n your receipt of the notice.\n\n   Termination of your rights under this section does not terminate the\n licenses of parties who have received copies or rights from you under\n this License.  If your rights have been terminated and not permanently\n reinstated, you do not qualify to receive new licenses for the same\n material under section 10.\n\n   9. Acceptance Not Required for Having Copies.\n\n   You are not required to accept this License in order to receive or\n run a copy of the Program.  Ancillary propagation of a covered work\n occurring solely as a consequence of using peer-to-peer transmission\n to receive a copy likewise does not require acceptance.  However,\n nothing other than this License grants you permission to propagate or\n modify any covered work.  These actions infringe copyright if you do\n not accept this License.  Therefore, by modifying or propagating a\n covered work, you indicate your acceptance of this License to do so.\n\n   10. Automatic Licensing of Downstream Recipients.\n\n   Each time you convey a covered work, the recipient automatically\n receives a license from the original licensors, to run, modify and\n propagate that work, subject to this License.  You are not responsible\n for enforcing compliance by third parties with this License.\n\n   An \"entity transaction\" is a transaction transferring control of an\n organization, or substantially all assets of one, or subdividing an\n organization, or merging organizations.  If propagation of a covered\n work results from an entity transaction, each party to that\n transaction who receives a copy of the work also receives whatever\n licenses to the work the party's predecessor in interest had or could\n give under the previous paragraph, plus a right to possession of the\n Corresponding Source of the work from the predecessor in interest, if\n the predecessor has it or can get it with reasonable efforts.\n\n   You may not impose any further restrictions on the exercise of the\n rights granted or affirmed under this License.  For example, you may\n not impose a license fee, royalty, or other charge for exercise of\n rights granted under this License, and you may not initiate litigation\n (including a cross-claim or counterclaim in a lawsuit) alleging that\n any patent claim is infringed by making, using, selling, offering for\n sale, or importing the Program or any portion of it.\n\n   11. Patents.\n\n   A \"contributor\" is a copyright holder who authorizes use under this\n License of the Program or a work on which the Program is based.  The\n work thus licensed is called the contributor's \"contributor version\".\n\n   A contributor's \"essential patent claims\" are all patent claims\n owned or controlled by the contributor, whether already acquired or\n hereafter acquired, that would be infringed by some manner, permitted\n by this License, of making, using, or selling its contributor version,\n but do not include claims that would be infringed only as a\n consequence of further modification of the contributor version.  For\n purposes of this definition, \"control\" includes the right to grant\n patent sublicenses in a manner consistent with the requirements of\n this License.\n\n   Each contributor grants you a non-exclusive, worldwide, royalty-free\n patent license under the contributor's essential patent claims, to\n make, use, sell, offer for sale, import and otherwise run, modify and\n propagate the contents of its contributor version.\n\n   In the following three paragraphs, a \"patent license\" is any express\n agreement or commitment, however denominated, not to enforce a patent\n (such as an express permission to practice a patent or covenant not to\n sue for patent infringement).  To \"grant\" such a patent license to a\n party means to make such an agreement or commitment not to enforce a\n patent against the party.\n\n   If you convey a covered work, knowingly relying on a patent license,\n and the Corresponding Source of the work is not available for anyone\n to copy, free of charge and under the terms of this License, through a\n publicly available network server or other readily accessible means,\n then you must either (1) cause the Corresponding Source to be so\n available, or (2) arrange to deprive yourself of the benefit of the\n patent license for this particular work, or (3) arrange, in a manner\n consistent with the requirements of this License, to extend the patent\n license to downstream recipients.  \"Knowingly relying\" means you have\n actual knowledge that, but for the patent license, your conveying the\n covered work in a country, or your recipient's use of the covered work\n in a country, would infringe one or more identifiable patents in that\n country that you have reason to believe are valid.\n\n   If, pursuant to or in connection with a single transaction or\n arrangement, you convey, or propagate by procuring conveyance of, a\n covered work, and grant a patent license to some of the parties\n receiving the covered work authorizing them to use, propagate, modify\n or convey a specific copy of the covered work, then the patent license\n you grant is automatically extended to all recipients of the covered\n work and works based on it.\n\n   A patent license is \"discriminatory\" if it does not include within\n the scope of its coverage, prohibits the exercise of, or is\n conditioned on the non-exercise of one or more of the rights that are\n specifically granted under this License.  You may not convey a covered\n work if you are a party to an arrangement with a third party that is\n in the business of distributing software, under which you make payment\n to the third party based on the extent of your activity of conveying\n the work, and under which the third party grants, to any of the\n parties who would receive the covered work from you, a discriminatory\n patent license (a) in connection with copies of the covered work\n conveyed by you (or copies made from those copies), or (b) primarily\n for and in connection with specific products or compilations that\n contain the covered work, unless you entered into that arrangement,\n or that patent license was granted, prior to 28 March 2007.\n\n   Nothing in this License shall be construed as excluding or limiting\n any implied license or other defenses to infringement that may\n otherwise be available to you under applicable patent law.\n\n   12. No Surrender of Others' Freedom.\n\n   If conditions are imposed on you (whether by court order, agreement or\n otherwise) that contradict the conditions of this License, they do not\n excuse you from the conditions of this License.  If you cannot convey a\n covered work so as to satisfy simultaneously your obligations under this\n License and any other pertinent obligations, then as a consequence you may\n not convey it at all.  For example, if you agree to terms that obligate you\n to collect a royalty for further conveying from those to whom you convey\n the Program, the only way you could satisfy both those terms and this\n License would be to refrain entirely from conveying the Program.\n\n   13. Use with the GNU Affero General Public License.\n\n   Notwithstanding any other provision of this License, you have\n permission to link or combine any covered work with a work licensed\n under version 3 of the GNU Affero General Public License into a single\n combined work, and to convey the resulting work.  The terms of this\n License will continue to apply to the part which is the covered work,\n but the special requirements of the GNU Affero General Public License,\n section 13, concerning interaction through a network will apply to the\n combination as such.\n\n   14. Revised Versions of this License.\n\n   The Free Software Foundation may publish revised and/or new versions of\n the GNU General Public License from time to time.  Such new versions will\n be similar in spirit to the present version, but may differ in detail to\n address new problems or concerns.\n\n   Each version is given a distinguishing version number.  If the\n Program specifies that a certain numbered version of the GNU General\n Public License \"or any later version\" applies to it, you have the\n option of following the terms and conditions either of that numbered\n version or of any later version published by the Free Software\n Foundation.  If the Program does not specify a version number of the\n GNU General Public License, you may choose any version ever published\n by the Free Software Foundation.\n\n   If the Program specifies that a proxy can decide which future\n versions of the GNU General Public License can be used, that proxy's\n public statement of acceptance of a version permanently authorizes you\n to choose that version for the Program.\n\n   Later license versions may give you additional or different\n permissions.  However, no additional obligations are imposed on any\n author or copyright holder as a result of your choosing to follow a\n later version.\n\n   15. Disclaimer of Warranty.\n\n   THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY\n APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT\n HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM \"AS IS\" WITHOUT WARRANTY\n OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,\n THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\n PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM\n IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF\n ALL NECESSARY SERVICING, REPAIR OR CORRECTION.\n\n   16. Limitation of Liability.\n\n   IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING\n WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS\n THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY\n GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE\n USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF\n DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD\n PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\n EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF\n SUCH DAMAGES.\n\n   17. Interpretation of Sections 15 and 16.\n\n   If the disclaimer of warranty and limitation of liability provided\n above cannot be given local legal effect according to their terms,\n reviewing courts shall apply local law that most closely approximates\n an absolute waiver of all civil liability in connection with the\n Program, unless a warranty or assumption of liability accompanies a\n copy of the Program in return for a fee.\n\n                      END OF TERMS AND CONDITIONS\n\n             How to Apply These Terms to Your New Programs\n\n   If you develop a new program, and you want it to be of the greatest\n possible use to the public, the best way to achieve this is to make it\n free software which everyone can redistribute and change under these terms.\n\n   To do so, attach the following notices to the program.  It is safest\n to attach them to the start of each source file to most effectively\n state the exclusion of warranty; and each file should have at least\n the \"copyright\" line and a pointer to where the full notice is found.\n\n     &lt;one line to give the program's name and a brief idea of what it does.&gt;\n     Copyright (C) &lt;year&gt;  &lt;name of author&gt;\n\n     This program is free software: you can redistribute it and/or modify\n     it under the terms of the GNU General Public License as published by\n     the Free Software Foundation, either version 3 of the License, or\n     (at your option) any later version.\n\n     This program is distributed in the hope that it will be useful,\n     but WITHOUT ANY WARRANTY; without even the implied warranty of\n     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n     GNU General Public License for more details.\n\n     You should have received a copy of the GNU General Public License\n     along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.\n\n Also add information on how to contact you by electronic and paper mail.\n\n   If the program does terminal interaction, make it output a short\n notice like this when it starts in an interactive mode:\n\n     &lt;program&gt;  Copyright (C) &lt;year&gt;  &lt;name of author&gt;\n     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.\n     This is free software, and you are welcome to redistribute it\n     under certain conditions; type `show c' for details.\n\n The hypothetical commands `show w' and `show c' should show the appropriate\n parts of the General Public License.  Of course, your program's commands\n might be different; for a GUI interface, you would use an \"about box\".\n\n   You should also get your employer (if you work as a programmer) or school,\n if any, to sign a \"copyright disclaimer\" for the program, if necessary.\n For more information on this, and how to apply and follow the GNU GPL, see\n &lt;http://www.gnu.org/licenses/&gt;.\n\n   The GNU General Public License does not permit incorporating your program\n into proprietary programs.  If your program is a subroutine library, you\n may consider it more useful to permit linking proprietary applications with\n the library.  If this is what you want to do, use the GNU Lesser General\n Public License instead of this License.  But first, please read\n &lt;http://www.gnu.org/philosophy/why-not-lgpl.html&gt;.\n\n Name: libquadmath\n Files: numpy/.dylibs/libquadmath*.so\n Description: dynamically linked to files compiled with gcc\n Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libquadmath\n License: LGPL-2.1-or-later\n\n     GCC Quad-Precision Math Library\n     Copyright (C) 2010-2019 Free Software Foundation, Inc.\n     Written by Francois-Xavier Coudert  &lt;fxcoudert@gcc.gnu.org&gt;\n\n     This file is part of the libquadmath library.\n     Libquadmath is free software; you can redistribute it and/or\n     modify it under the terms of the GNU Library General Public\n     License as published by the Free Software Foundation; either\n     version 2.1 of the License, or (at your option) any later version.\n\n     Libquadmath is distributed in the hope that it will be useful,\n     but WITHOUT ANY WARRANTY; without even the implied warranty of\n     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n     Lesser General Public License for more details.\n     https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html\n\n ----\n\n The NumPy repository and source distributions bundle several libraries that are\n compatibly licensed.  We list these here.\n\n Name: lapack-lite\n Files: numpy/linalg/lapack_lite/*\n License: BSD-3-Clause\n   For details, see numpy/linalg/lapack_lite/LICENSE.txt\n\n Name: dragon4\n Files: numpy/_core/src/multiarray/dragon4.c\n License: MIT\n   For license text, see numpy/_core/src/multiarray/dragon4.c\n\n Name: libdivide\n Files: numpy/_core/include/numpy/libdivide/*\n License: Zlib\n   For license text, see numpy/_core/include/numpy/libdivide/LICENSE.txt\n\n\n Note that the following files are vendored in the repository and sdist but not\n installed in built numpy packages:\n\n Name: Meson\n Files: vendored-meson/meson/*\n License: Apache 2.0\n   For license text, see vendored-meson/meson/COPYING\n\n Name: spin\n Files: .spin/cmds.py\n License: BSD-3\n   For license text, see .spin/LICENSE\n\n Name: tempita\n Files: numpy/_build_utils/tempita/*\n License: MIT\n   For details, see numpy/_build_utils/tempita/LICENCE.txt\n\n ----\n\n This binary distribution of NumPy also bundles the following software:\n\n Name: OpenBLAS\n Files: numpy/.dylibs/libscipy_openblas*.so\n Description: bundled as a dynamically linked library\n Availability: https://github.com/OpenMathLib/OpenBLAS/\n License: BSD-3-Clause\n   Copyright (c) 2011-2014, The OpenBLAS Project\n   All rights reserved.\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n      1. Redistributions of source code must retain the above copyright\n         notice, this list of conditions and the following disclaimer.\n\n      2. Redistributions in binary form must reproduce the above copyright\n         notice, this list of conditions and the following disclaimer in\n         the documentation and/or other materials provided with the\n         distribution.\n      3. Neither the name of the OpenBLAS project nor the names of\n         its contributors may be used to endorse or promote products\n         derived from this software without specific prior written\n         permission.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE\n   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n   DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n   SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n   CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n   OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE\n   USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n Name: LAPACK\n Files: numpy/.dylibs/libscipy_openblas*.so\n Description: bundled in OpenBLAS\n Availability: https://github.com/OpenMathLib/OpenBLAS/\n License: BSD-3-Clause-Attribution\n   Copyright (c) 1992-2013 The University of Tennessee and The University\n                           of Tennessee Research Foundation.  All rights\n                           reserved.\n   Copyright (c) 2000-2013 The University of California Berkeley. All\n                           rights reserved.\n   Copyright (c) 2006-2013 The University of Colorado Denver.  All rights\n                           reserved.\n\n   $COPYRIGHT$\n\n   Additional copyrights may follow\n\n   $HEADER$\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n   - Redistributions of source code must retain the above copyright\n     notice, this list of conditions and the following disclaimer.\n\n   - Redistributions in binary form must reproduce the above copyright\n     notice, this list of conditions and the following disclaimer listed\n     in this license in the documentation and/or other materials\n     provided with the distribution.\n\n   - Neither the name of the copyright holders nor the names of its\n     contributors may be used to endorse or promote products derived from\n     this software without specific prior written permission.\n\n   The copyright holders provide no reassurances that the source code\n   provided does not infringe any patent, copyright, or any other\n   intellectual property rights of third parties.  The copyright holders\n   disclaim any liability to any recipient for claims brought against\n   recipient by any third party for infringement of that parties\n   intellectual property rights.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n Name: GCC runtime library\n Files: numpy/.dylibs/libgfortran*, numpy/.dylibs/libgcc*\n Description: dynamically linked to files compiled with gcc\n Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libgfortran\n License: GPL-3.0-with-GCC-exception\n   Copyright (C) 2002-2017 Free Software Foundation, Inc.\n\n   Libgfortran is free software; you can redistribute it and/or modify\n   it under the terms of the GNU General Public License as published by\n   the Free Software Foundation; either version 3, or (at your option)\n   any later version.\n\n   Libgfortran is distributed in the hope that it will be useful,\n   but WITHOUT ANY WARRANTY; without even the implied warranty of\n   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n   GNU General Public License for more details.\n\n   Under Section 7 of GPL version 3, you are granted additional\n   permissions described in the GCC Runtime Library Exception, version\n   3.1, as published by the Free Software Foundation.\n\n   You should have received a copy of the GNU General Public License and\n   a copy of the GCC Runtime Library Exception along with this program;\n   see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see\n   &lt;http://www.gnu.org/licenses/&gt;.\n\n ----\n\n Full text of license texts referred to above follows (that they are\n listed below does not necessarily imply the conditions apply to the\n present binary release):\n\n ----\n\n GCC RUNTIME LIBRARY EXCEPTION\n\n Version 3.1, 31 March 2009\n\n Copyright (C) 2009 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;\n\n Everyone is permitted to copy and distribute verbatim copies of this\n license document, but changing it is not allowed.\n\n This GCC Runtime Library Exception (\"Exception\") is an additional\n permission under section 7 of the GNU General Public License, version\n 3 (\"GPLv3\"). It applies to a given file (the \"Runtime Library\") that\n bears a notice placed by the copyright holder of the file stating that\n the file is governed by GPLv3 along with this Exception.\n\n When you use GCC to compile a program, GCC may combine portions of\n certain GCC header files and runtime libraries with the compiled\n program. The purpose of this Exception is to allow compilation of\n non-GPL (including proprietary) programs to use, in this way, the\n header files and runtime libraries covered by this Exception.\n\n 0. Definitions.\n\n A file is an \"Independent Module\" if it either requires the Runtime\n Library for execution after a Compilation Process, or makes use of an\n interface provided by the Runtime Library, but is not otherwise based\n on the Runtime Library.\n\n \"GCC\" means a version of the GNU Compiler Collection, with or without\n modifications, governed by version 3 (or a specified later version) of\n the GNU General Public License (GPL) with the option of using any\n subsequent versions published by the FSF.\n\n \"GPL-compatible Software\" is software whose conditions of propagation,\n modification and use would permit combination with GCC in accord with\n the license of GCC.\n\n \"Target Code\" refers to output from any compiler for a real or virtual\n target processor architecture, in executable form or suitable for\n input to an assembler, loader, linker and/or execution\n phase. Notwithstanding that, Target Code does not include data in any\n format that is used as a compiler intermediate representation, or used\n for producing a compiler intermediate representation.\n\n The \"Compilation Process\" transforms code entirely represented in\n non-intermediate languages designed for human-written code, and/or in\n Java Virtual Machine byte code, into Target Code. Thus, for example,\n use of source code generators and preprocessors need not be considered\n part of the Compilation Process, since the Compilation Process can be\n understood as starting with the output of the generators or\n preprocessors.\n\n A Compilation Process is \"Eligible\" if it is done using GCC, alone or\n with other GPL-compatible software, or if it is done without using any\n work based on GCC. For example, using non-GPL-compatible Software to\n optimize any GCC intermediate representations would not qualify as an\n Eligible Compilation Process.\n\n 1. Grant of Additional Permission.\n\n You have permission to propagate a work of Target Code formed by\n combining the Runtime Library with Independent Modules, even if such\n propagation would otherwise violate the terms of GPLv3, provided that\n all Target Code was generated by Eligible Compilation Processes. You\n may then convey such a combination under terms of your choice,\n consistent with the licensing of the Independent Modules.\n\n 2. No Weakening of GCC Copyleft.\n\n The availability of this Exception does not imply any general\n presumption that third-party software is unaffected by the copyleft\n requirements of the license of GCC.\n\n ----\n\n                     GNU GENERAL PUBLIC LICENSE\n                        Version 3, 29 June 2007\n\n  Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;\n  Everyone is permitted to copy and distribute verbatim copies\n  of this license document, but changing it is not allowed.\n\n                             Preamble\n\n   The GNU General Public License is a free, copyleft license for\n software and other kinds of works.\n\n   The licenses for most software and other practical works are designed\n to take away your freedom to share and change the works.  By contrast,\n the GNU General Public License is intended to guarantee your freedom to\n share and change all versions of a program--to make sure it remains free\n software for all its users.  We, the Free Software Foundation, use the\n GNU General Public License for most of our software; it applies also to\n any other work released this way by its authors.  You can apply it to\n your programs, too.\n\n   When we speak of free software, we are referring to freedom, not\n price.  Our General Public Licenses are designed to make sure that you\n have the freedom to distribute copies of free software (and charge for\n them if you wish), that you receive source code or can get it if you\n want it, that you can change the software or use pieces of it in new\n free programs, and that you know you can do these things.\n\n   To protect your rights, we need to prevent others from denying you\n these rights or asking you to surrender the rights.  Therefore, you have\n certain responsibilities if you distribute copies of the software, or if\n you modify it: responsibilities to respect the freedom of others.\n\n   For example, if you distribute copies of such a program, whether\n gratis or for a fee, you must pass on to the recipients the same\n freedoms that you received.  You must make sure that they, too, receive\n or can get the source code.  And you must show them these terms so they\n know their rights.\n\n   Developers that use the GNU GPL protect your rights with two steps:\n (1) assert copyright on the software, and (2) offer you this License\n giving you legal permission to copy, distribute and/or modify it.\n\n   For the developers' and authors' protection, the GPL clearly explains\n that there is no warranty for this free software.  For both users' and\n authors' sake, the GPL requires that modified versions be marked as\n changed, so that their problems will not be attributed erroneously to\n authors of previous versions.\n\n   Some devices are designed to deny users access to install or run\n modified versions of the software inside them, although the manufacturer\n can do so.  This is fundamentally incompatible with the aim of\n protecting users' freedom to change the software.  The systematic\n pattern of such abuse occurs in the area of products for individuals to\n use, which is precisely where it is most unacceptable.  Therefore, we\n have designed this version of the GPL to prohibit the practice for those\n products.  If such problems arise substantially in other domains, we\n stand ready to extend this provision to those domains in future versions\n of the GPL, as needed to protect the freedom of users.\n\n   Finally, every program is threatened constantly by software patents.\n States should not allow patents to restrict development and use of\n software on general-purpose computers, but in those that do, we wish to\n avoid the special danger that patents applied to a free program could\n make it effectively proprietary.  To prevent this, the GPL assures that\n patents cannot be used to render the program non-free.\n\n   The precise terms and conditions for copying, distribution and\n modification follow.\n\n                        TERMS AND CONDITIONS\n\n   0. Definitions.\n\n   \"This License\" refers to version 3 of the GNU General Public License.\n\n   \"Copyright\" also means copyright-like laws that apply to other kinds of\n works, such as semiconductor masks.\n\n   \"The Program\" refers to any copyrightable work licensed under this\n License.  Each licensee is addressed as \"you\".  \"Licensees\" and\n \"recipients\" may be individuals or organizations.\n\n   To \"modify\" a work means to copy from or adapt all or part of the work\n in a fashion requiring copyright permission, other than the making of an\n exact copy.  The resulting work is called a \"modified version\" of the\n earlier work or a work \"based on\" the earlier work.\n\n   A \"covered work\" means either the unmodified Program or a work based\n on the Program.\n\n   To \"propagate\" a work means to do anything with it that, without\n permission, would make you directly or secondarily liable for\n infringement under applicable copyright law, except executing it on a\n computer or modifying a private copy.  Propagation includes copying,\n distribution (with or without modification), making available to the\n public, and in some countries other activities as well.\n\n   To \"convey\" a work means any kind of propagation that enables other\n parties to make or receive copies.  Mere interaction with a user through\n a computer network, with no transfer of a copy, is not conveying.\n\n   An interactive user interface displays \"Appropriate Legal Notices\"\n to the extent that it includes a convenient and prominently visible\n feature that (1) displays an appropriate copyright notice, and (2)\n tells the user that there is no warranty for the work (except to the\n extent that warranties are provided), that licensees may convey the\n work under this License, and how to view a copy of this License.  If\n the interface presents a list of user commands or options, such as a\n menu, a prominent item in the list meets this criterion.\n\n   1. Source Code.\n\n   The \"source code\" for a work means the preferred form of the work\n for making modifications to it.  \"Object code\" means any non-source\n form of a work.\n\n   A \"Standard Interface\" means an interface that either is an official\n standard defined by a recognized standards body, or, in the case of\n interfaces specified for a particular programming language, one that\n is widely used among developers working in that language.\n\n   The \"System Libraries\" of an executable work include anything, other\n than the work as a whole, that (a) is included in the normal form of\n packaging a Major Component, but which is not part of that Major\n Component, and (b) serves only to enable use of the work with that\n Major Component, or to implement a Standard Interface for which an\n implementation is available to the public in source code form.  A\n \"Major Component\", in this context, means a major essential component\n (kernel, window system, and so on) of the specific operating system\n (if any) on which the executable work runs, or a compiler used to\n produce the work, or an object code interpreter used to run it.\n\n   The \"Corresponding Source\" for a work in object code form means all\n the source code needed to generate, install, and (for an executable\n work) run the object code and to modify the work, including scripts to\n control those activities.  However, it does not include the work's\n System Libraries, or general-purpose tools or generally available free\n programs which are used unmodified in performing those activities but\n which are not part of the work.  For example, Corresponding Source\n includes interface definition files associated with source files for\n the work, and the source code for shared libraries and dynamically\n linked subprograms that the work is specifically designed to require,\n such as by intimate data communication or control flow between those\n subprograms and other parts of the work.\n\n   The Corresponding Source need not include anything that users\n can regenerate automatically from other parts of the Corresponding\n Source.\n\n   The Corresponding Source for a work in source code form is that\n same work.\n\n   2. Basic Permissions.\n\n   All rights granted under this License are granted for the term of\n copyright on the Program, and are irrevocable provided the stated\n conditions are met.  This License explicitly affirms your unlimited\n permission to run the unmodified Program.  The output from running a\n covered work is covered by this License only if the output, given its\n content, constitutes a covered work.  This License acknowledges your\n rights of fair use or other equivalent, as provided by copyright law.\n\n   You may make, run and propagate covered works that you do not\n convey, without conditions so long as your license otherwise remains\n in force.  You may convey covered works to others for the sole purpose\n of having them make modifications exclusively for you, or provide you\n with facilities for running those works, provided that you comply with\n the terms of this License in conveying all material for which you do\n not control copyright.  Those thus making or running the covered works\n for you must do so exclusively on your behalf, under your direction\n and control, on terms that prohibit them from making any copies of\n your copyrighted material outside their relationship with you.\n\n   Conveying under any other circumstances is permitted solely under\n the conditions stated below.  Sublicensing is not allowed; section 10\n makes it unnecessary.\n\n   3. Protecting Users' Legal Rights From Anti-Circumvention Law.\n\n   No covered work shall be deemed part of an effective technological\n measure under any applicable law fulfilling obligations under article\n 11 of the WIPO copyright treaty adopted on 20 December 1996, or\n similar laws prohibiting or restricting circumvention of such\n measures.\n\n   When you convey a covered work, you waive any legal power to forbid\n circumvention of technological measures to the extent such circumvention\n is effected by exercising rights under this License with respect to\n the covered work, and you disclaim any intention to limit operation or\n modification of the work as a means of enforcing, against the work's\n users, your or third parties' legal rights to forbid circumvention of\n technological measures.\n\n   4. Conveying Verbatim Copies.\n\n   You may convey verbatim copies of the Program's source code as you\n receive it, in any medium, provided that you conspicuously and\n appropriately publish on each copy an appropriate copyright notice;\n keep intact all notices stating that this License and any\n non-permissive terms added in accord with section 7 apply to the code;\n keep intact all notices of the absence of any warranty; and give all\n recipients a copy of this License along with the Program.\n\n   You may charge any price or no price for each copy that you convey,\n and you may offer support or warranty protection for a fee.\n\n   5. Conveying Modified Source Versions.\n\n   You may convey a work based on the Program, or the modifications to\n produce it from the Program, in the form of source code under the\n terms of section 4, provided that you also meet all of these conditions:\n\n     a) The work must carry prominent notices stating that you modified\n     it, and giving a relevant date.\n\n     b) The work must carry prominent notices stating that it is\n     released under this License and any conditions added under section\n     7.  This requirement modifies the requirement in section 4 to\n     \"keep intact all notices\".\n\n     c) You must license the entire work, as a whole, under this\n     License to anyone who comes into possession of a copy.  This\n     License will therefore apply, along with any applicable section 7\n     additional terms, to the whole of the work, and all its parts,\n     regardless of how they are packaged.  This License gives no\n     permission to license the work in any other way, but it does not\n     invalidate such permission if you have separately received it.\n\n     d) If the work has interactive user interfaces, each must display\n     Appropriate Legal Notices; however, if the Program has interactive\n     interfaces that do not display Appropriate Legal Notices, your\n     work need not make them do so.\n\n   A compilation of a covered work with other separate and independent\n works, which are not by their nature extensions of the covered work,\n and which are not combined with it such as to form a larger program,\n in or on a volume of a storage or distribution medium, is called an\n \"aggregate\" if the compilation and its resulting copyright are not\n used to limit the access or legal rights of the compilation's users\n beyond what the individual works permit.  Inclusion of a covered work\n in an aggregate does not cause this License to apply to the other\n parts of the aggregate.\n\n   6. Conveying Non-Source Forms.\n\n   You may convey a covered work in object code form under the terms\n of sections 4 and 5, provided that you also convey the\n machine-readable Corresponding Source under the terms of this License,\n in one of these ways:\n\n     a) Convey the object code in, or embodied in, a physical product\n     (including a physical distribution medium), accompanied by the\n     Corresponding Source fixed on a durable physical medium\n     customarily used for software interchange.\n\n     b) Convey the object code in, or embodied in, a physical product\n     (including a physical distribution medium), accompanied by a\n     written offer, valid for at least three years and valid for as\n     long as you offer spare parts or customer support for that product\n     model, to give anyone who possesses the object code either (1) a\n     copy of the Corresponding Source for all the software in the\n     product that is covered by this License, on a durable physical\n     medium customarily used for software interchange, for a price no\n     more than your reasonable cost of physically performing this\n     conveying of source, or (2) access to copy the\n     Corresponding Source from a network server at no charge.\n\n     c) Convey individual copies of the object code with a copy of the\n     written offer to provide the Corresponding Source.  This\n     alternative is allowed only occasionally and noncommercially, and\n     only if you received the object code with such an offer, in accord\n     with subsection 6b.\n\n     d) Convey the object code by offering access from a designated\n     place (gratis or for a charge), and offer equivalent access to the\n     Corresponding Source in the same way through the same place at no\n     further charge.  You need not require recipients to copy the\n     Corresponding Source along with the object code.  If the place to\n     copy the object code is a network server, the Corresponding Source\n     may be on a different server (operated by you or a third party)\n     that supports equivalent copying facilities, provided you maintain\n     clear directions next to the object code saying where to find the\n     Corresponding Source.  Regardless of what server hosts the\n     Corresponding Source, you remain obligated to ensure that it is\n     available for as long as needed to satisfy these requirements.\n\n     e) Convey the object code using peer-to-peer transmission, provided\n     you inform other peers where the object code and Corresponding\n     Source of the work are being offered to the general public at no\n     charge under subsection 6d.\n\n   A separable portion of the object code, whose source code is excluded\n from the Corresponding Source as a System Library, need not be\n included in conveying the object code work.\n\n   A \"User Product\" is either (1) a \"consumer product\", which means any\n tangible personal property which is normally used for personal, family,\n or household purposes, or (2) anything designed or sold for incorporation\n into a dwelling.  In determining whether a product is a consumer product,\n doubtful cases shall be resolved in favor of coverage.  For a particular\n product received by a particular user, \"normally used\" refers to a\n typical or common use of that class of product, regardless of the status\n of the particular user or of the way in which the particular user\n actually uses, or expects or is expected to use, the product.  A product\n is a consumer product regardless of whether the product has substantial\n commercial, industrial or non-consumer uses, unless such uses represent\n the only significant mode of use of the product.\n\n   \"Installation Information\" for a User Product means any methods,\n procedures, authorization keys, or other information required to install\n and execute modified versions of a covered work in that User Product from\n a modified version of its Corresponding Source.  The information must\n suffice to ensure that the continued functioning of the modified object\n code is in no case prevented or interfered with solely because\n modification has been made.\n\n   If you convey an object code work under this section in, or with, or\n specifically for use in, a User Product, and the conveying occurs as\n part of a transaction in which the right of possession and use of the\n User Product is transferred to the recipient in perpetuity or for a\n fixed term (regardless of how the transaction is characterized), the\n Corresponding Source conveyed under this section must be accompanied\n by the Installation Information.  But this requirement does not apply\n if neither you nor any third party retains the ability to install\n modified object code on the User Product (for example, the work has\n been installed in ROM).\n\n   The requirement to provide Installation Information does not include a\n requirement to continue to provide support service, warranty, or updates\n for a work that has been modified or installed by the recipient, or for\n the User Product in which it has been modified or installed.  Access to a\n network may be denied when the modification itself materially and\n adversely affects the operation of the network or violates the rules and\n protocols for communication across the network.\n\n   Corresponding Source conveyed, and Installation Information provided,\n in accord with this section must be in a format that is publicly\n documented (and with an implementation available to the public in\n source code form), and must require no special password or key for\n unpacking, reading or copying.\n\n   7. Additional Terms.\n\n   \"Additional permissions\" are terms that supplement the terms of this\n License by making exceptions from one or more of its conditions.\n Additional permissions that are applicable to the entire Program shall\n be treated as though they were included in this License, to the extent\n that they are valid under applicable law.  If additional permissions\n apply only to part of the Program, that part may be used separately\n under those permissions, but the entire Program remains governed by\n this License without regard to the additional permissions.\n\n   When you convey a copy of a covered work, you may at your option\n remove any additional permissions from that copy, or from any part of\n it.  (Additional permissions may be written to require their own\n removal in certain cases when you modify the work.)  You may place\n additional permissions on material, added by you to a covered work,\n for which you have or can give appropriate copyright permission.\n\n   Notwithstanding any other provision of this License, for material you\n add to a covered work, you may (if authorized by the copyright holders of\n that material) supplement the terms of this License with terms:\n\n     a) Disclaiming warranty or limiting liability differently from the\n     terms of sections 15 and 16 of this License; or\n\n     b) Requiring preservation of specified reasonable legal notices or\n     author attributions in that material or in the Appropriate Legal\n     Notices displayed by works containing it; or\n\n     c) Prohibiting misrepresentation of the origin of that material, or\n     requiring that modified versions of such material be marked in\n     reasonable ways as different from the original version; or\n\n     d) Limiting the use for publicity purposes of names of licensors or\n     authors of the material; or\n\n     e) Declining to grant rights under trademark law for use of some\n     trade names, trademarks, or service marks; or\n\n     f) Requiring indemnification of licensors and authors of that\n     material by anyone who conveys the material (or modified versions of\n     it) with contractual assumptions of liability to the recipient, for\n     any liability that these contractual assumptions directly impose on\n     those licensors and authors.\n\n   All other non-permissive additional terms are considered \"further\n restrictions\" within the meaning of section 10.  If the Program as you\n received it, or any part of it, contains a notice stating that it is\n governed by this License along with a term that is a further\n restriction, you may remove that term.  If a license document contains\n a further restriction but permits relicensing or conveying under this\n License, you may add to a covered work material governed by the terms\n of that license document, provided that the further restriction does\n not survive such relicensing or conveying.\n\n   If you add terms to a covered work in accord with this section, you\n must place, in the relevant source files, a statement of the\n additional terms that apply to those files, or a notice indicating\n where to find the applicable terms.\n\n   Additional terms, permissive or non-permissive, may be stated in the\n form of a separately written license, or stated as exceptions;\n the above requirements apply either way.\n\n   8. Termination.\n\n   You may not propagate or modify a covered work except as expressly\n provided under this License.  Any attempt otherwise to propagate or\n modify it is void, and will automatically terminate your rights under\n this License (including any patent licenses granted under the third\n paragraph of section 11).\n\n   However, if you cease all violation of this License, then your\n license from a particular copyright holder is reinstated (a)\n provisionally, unless and until the copyright holder explicitly and\n finally terminates your license, and (b) permanently, if the copyright\n holder fails to notify you of the violation by some reasonable means\n prior to 60 days after the cessation.\n\n   Moreover, your license from a particular copyright holder is\n reinstated permanently if the copyright holder notifies you of the\n violation by some reasonable means, this is the first time you have\n received notice of violation of this License (for any work) from that\n copyright holder, and you cure the violation prior to 30 days after\n your receipt of the notice.\n\n   Termination of your rights under this section does not terminate the\n licenses of parties who have received copies or rights from you under\n this License.  If your rights have been terminated and not permanently\n reinstated, you do not qualify to receive new licenses for the same\n material under section 10.\n\n   9. Acceptance Not Required for Having Copies.\n\n   You are not required to accept this License in order to receive or\n run a copy of the Program.  Ancillary propagation of a covered work\n occurring solely as a consequence of using peer-to-peer transmission\n to receive a copy likewise does not require acceptance.  However,\n nothing other than this License grants you permission to propagate or\n modify any covered work.  These actions infringe copyright if you do\n not accept this License.  Therefore, by modifying or propagating a\n covered work, you indicate your acceptance of this License to do so.\n\n   10. Automatic Licensing of Downstream Recipients.\n\n   Each time you convey a covered work, the recipient automatically\n receives a license from the original licensors, to run, modify and\n propagate that work, subject to this License.  You are not responsible\n for enforcing compliance by third parties with this License.\n\n   An \"entity transaction\" is a transaction transferring control of an\n organization, or substantially all assets of one, or subdividing an\n organization, or merging organizations.  If propagation of a covered\n work results from an entity transaction, each party to that\n transaction who receives a copy of the work also receives whatever\n licenses to the work the party's predecessor in interest had or could\n give under the previous paragraph, plus a right to possession of the\n Corresponding Source of the work from the predecessor in interest, if\n the predecessor has it or can get it with reasonable efforts.\n\n   You may not impose any further restrictions on the exercise of the\n rights granted or affirmed under this License.  For example, you may\n not impose a license fee, royalty, or other charge for exercise of\n rights granted under this License, and you may not initiate litigation\n (including a cross-claim or counterclaim in a lawsuit) alleging that\n any patent claim is infringed by making, using, selling, offering for\n sale, or importing the Program or any portion of it.\n\n   11. Patents.\n\n   A \"contributor\" is a copyright holder who authorizes use under this\n License of the Program or a work on which the Program is based.  The\n work thus licensed is called the contributor's \"contributor version\".\n\n   A contributor's \"essential patent claims\" are all patent claims\n owned or controlled by the contributor, whether already acquired or\n hereafter acquired, that would be infringed by some manner, permitted\n by this License, of making, using, or selling its contributor version,\n but do not include claims that would be infringed only as a\n consequence of further modification of the contributor version.  For\n purposes of this definition, \"control\" includes the right to grant\n patent sublicenses in a manner consistent with the requirements of\n this License.\n\n   Each contributor grants you a non-exclusive, worldwide, royalty-free\n patent license under the contributor's essential patent claims, to\n make, use, sell, offer for sale, import and otherwise run, modify and\n propagate the contents of its contributor version.\n\n   In the following three paragraphs, a \"patent license\" is any express\n agreement or commitment, however denominated, not to enforce a patent\n (such as an express permission to practice a patent or covenant not to\n sue for patent infringement).  To \"grant\" such a patent license to a\n party means to make such an agreement or commitment not to enforce a\n patent against the party.\n\n   If you convey a covered work, knowingly relying on a patent license,\n and the Corresponding Source of the work is not available for anyone\n to copy, free of charge and under the terms of this License, through a\n publicly available network server or other readily accessible means,\n then you must either (1) cause the Corresponding Source to be so\n available, or (2) arrange to deprive yourself of the benefit of the\n patent license for this particular work, or (3) arrange, in a manner\n consistent with the requirements of this License, to extend the patent\n license to downstream recipients.  \"Knowingly relying\" means you have\n actual knowledge that, but for the patent license, your conveying the\n covered work in a country, or your recipient's use of the covered work\n in a country, would infringe one or more identifiable patents in that\n country that you have reason to believe are valid.\n\n   If, pursuant to or in connection with a single transaction or\n arrangement, you convey, or propagate by procuring conveyance of, a\n covered work, and grant a patent license to some of the parties\n receiving the covered work authorizing them to use, propagate, modify\n or convey a specific copy of the covered work, then the patent license\n you grant is automatically extended to all recipients of the covered\n work and works based on it.\n\n   A patent license is \"discriminatory\" if it does not include within\n the scope of its coverage, prohibits the exercise of, or is\n conditioned on the non-exercise of one or more of the rights that are\n specifically granted under this License.  You may not convey a covered\n work if you are a party to an arrangement with a third party that is\n in the business of distributing software, under which you make payment\n to the third party based on the extent of your activity of conveying\n the work, and under which the third party grants, to any of the\n parties who would receive the covered work from you, a discriminatory\n patent license (a) in connection with copies of the covered work\n conveyed by you (or copies made from those copies), or (b) primarily\n for and in connection with specific products or compilations that\n contain the covered work, unless you entered into that arrangement,\n or that patent license was granted, prior to 28 March 2007.\n\n   Nothing in this License shall be construed as excluding or limiting\n any implied license or other defenses to infringement that may\n otherwise be available to you under applicable patent law.\n\n   12. No Surrender of Others' Freedom.\n\n   If conditions are imposed on you (whether by court order, agreement or\n otherwise) that contradict the conditions of this License, they do not\n excuse you from the conditions of this License.  If you cannot convey a\n covered work so as to satisfy simultaneously your obligations under this\n License and any other pertinent obligations, then as a consequence you may\n not convey it at all.  For example, if you agree to terms that obligate you\n to collect a royalty for further conveying from those to whom you convey\n the Program, the only way you could satisfy both those terms and this\n License would be to refrain entirely from conveying the Program.\n\n   13. Use with the GNU Affero General Public License.\n\n   Notwithstanding any other provision of this License, you have\n permission to link or combine any covered work with a work licensed\n under version 3 of the GNU Affero General Public License into a single\n combined work, and to convey the resulting work.  The terms of this\n License will continue to apply to the part which is the covered work,\n but the special requirements of the GNU Affero General Public License,\n section 13, concerning interaction through a network will apply to the\n combination as such.\n\n   14. Revised Versions of this License.\n\n   The Free Software Foundation may publish revised and/or new versions of\n the GNU General Public License from time to time.  Such new versions will\n be similar in spirit to the present version, but may differ in detail to\n address new problems or concerns.\n\n   Each version is given a distinguishing version number.  If the\n Program specifies that a certain numbered version of the GNU General\n Public License \"or any later version\" applies to it, you have the\n option of following the terms and conditions either of that numbered\n version or of any later version published by the Free Software\n Foundation.  If the Program does not specify a version number of the\n GNU General Public License, you may choose any version ever published\n by the Free Software Foundation.\n\n   If the Program specifies that a proxy can decide which future\n versions of the GNU General Public License can be used, that proxy's\n public statement of acceptance of a version permanently authorizes you\n to choose that version for the Program.\n\n   Later license versions may give you additional or different\n permissions.  However, no additional obligations are imposed on any\n author or copyright holder as a result of your choosing to follow a\n later version.\n\n   15. Disclaimer of Warranty.\n\n   THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY\n APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT\n HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM \"AS IS\" WITHOUT WARRANTY\n OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,\n THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\n PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM\n IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF\n ALL NECESSARY SERVICING, REPAIR OR CORRECTION.\n\n   16. Limitation of Liability.\n\n   IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING\n WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS\n THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY\n GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE\n USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF\n DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD\n PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\n EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF\n SUCH DAMAGES.\n\n   17. Interpretation of Sections 15 and 16.\n\n   If the disclaimer of warranty and limitation of liability provided\n above cannot be given local legal effect according to their terms,\n reviewing courts shall apply local law that most closely approximates\n an absolute waiver of all civil liability in connection with the\n Program, unless a warranty or assumption of liability accompanies a\n copy of the Program in return for a fee.\n\n                      END OF TERMS AND CONDITIONS\n\n             How to Apply These Terms to Your New Programs\n\n   If you develop a new program, and you want it to be of the greatest\n possible use to the public, the best way to achieve this is to make it\n free software which everyone can redistribute and change under these terms.\n\n   To do so, attach the following notices to the program.  It is safest\n to attach them to the start of each source file to most effectively\n state the exclusion of warranty; and each file should have at least\n the \"copyright\" line and a pointer to where the full notice is found.\n\n     &lt;one line to give the program's name and a brief idea of what it does.&gt;\n     Copyright (C) &lt;year&gt;  &lt;name of author&gt;\n\n     This program is free software: you can redistribute it and/or modify\n     it under the terms of the GNU General Public License as published by\n     the Free Software Foundation, either version 3 of the License, or\n     (at your option) any later version.\n\n     This program is distributed in the hope that it will be useful,\n     but WITHOUT ANY WARRANTY; without even the implied warranty of\n     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n     GNU General Public License for more details.\n\n     You should have received a copy of the GNU General Public License\n     along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.\n\n Also add information on how to contact you by electronic and paper mail.\n\n   If the program does terminal interaction, make it output a short\n notice like this when it starts in an interactive mode:\n\n     &lt;program&gt;  Copyright (C) &lt;year&gt;  &lt;name of author&gt;\n     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.\n     This is free software, and you are welcome to redistribute it\n     under certain conditions; type `show c' for details.\n\n The hypothetical commands `show w' and `show c' should show the appropriate\n parts of the General Public License.  Of course, your program's commands\n might be different; for a GUI interface, you would use an \"about box\".\n\n   You should also get your employer (if you work as a programmer) or school,\n if any, to sign a \"copyright disclaimer\" for the program, if necessary.\n For more information on this, and how to apply and follow the GNU GPL, see\n &lt;http://www.gnu.org/licenses/&gt;.\n\n   The GNU General Public License does not permit incorporating your program\n into proprietary programs.  If your program is a subroutine library, you\n may consider it more useful to permit linking proprietary applications with\n the library.  If this is what you want to do, use the GNU Lesser General\n Public License instead of this License.  But first, please read\n &lt;http://www.gnu.org/philosophy/why-not-lgpl.html&gt;.\n\n Name: libquadmath\n Files: numpy/.dylibs/libquadmath*.so\n Description: dynamically linked to files compiled with gcc\n Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libquadmath\n License: LGPL-2.1-or-later\n\n     GCC Quad-Precision Math Library\n     Copyright (C) 2010-2019 Free Software Foundation, Inc.\n     Written by Francois-Xavier Coudert  &lt;fxcoudert@gcc.gnu.org&gt;\n\n     This file is part of the libquadmath library.\n     Libquadmath is free software; you can redistribute it and/or\n     modify it under the terms of the GNU Library General Public\n     License as published by the Free Software Foundation; either\n     version 2.1 of the License, or (at your option) any later version.\n\n     Libquadmath is distributed in the hope that it will be useful,\n     but WITHOUT ANY WARRANTY; without even the implied warranty of\n     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n     Lesser General Public License for more details.\n     https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html\n\nLocation: /Users/vivian/my_venv313/lib/python3.13/site-packages\nRequires: \nRequired-by: contourpy, matplotlib, opencv-python, pandas, pydeck, pyogrio, scikit-learn, scipy, seaborn, streamlit",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#extra-using-pip-and-file-system-commands-contd",
+    "href": "lec/Lecture01.html#extra-using-pip-and-file-system-commands-contd",
+    "title": "Week 1, Meeting 1",
+    "section": "(extra) Using pip and file system commands cont’d",
+    "text": "(extra) Using pip and file system commands cont’d\nusing file system commands (not Python) to calculate size\n\n\nCode\n!du -sh /Users/vivian/my_venv313/lib/python3.13/site-packages/numpy\n!du -sh /Users/vivian/my_venv313/lib/python3.13/site-packages/pandas\n!du -sh /Users/vivian/my_venv313/lib/python3.13/site-packages/matplotlib\n\n\n 57M    /Users/vivian/my_venv313/lib/python3.13/site-packages/numpy\n 70M    /Users/vivian/my_venv313/lib/python3.13/site-packages/pandas\n 29M    /Users/vivian/my_venv313/lib/python3.13/site-packages/matplotlib",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#extra-using-a-virtual-environment-recommended",
+    "href": "lec/Lecture01.html#extra-using-a-virtual-environment-recommended",
+    "title": "Week 1, Meeting 1",
+    "section": "(extra) Using a virtual environment (recommended)",
+    "text": "(extra) Using a virtual environment (recommended)\n\nWhat I revealed in the previous slide is that I’m running Python in a virtual environment\nSimply, a virtual environment is a self-contained directory (folder) that is a different version/installation of Python\nI have 4 different versions of Python on my laptop\nYou could have a version of Python just for this class\nI use pip and venv, but you can use anything see https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/\nA virtual environment primer",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "pyodide_test.html",
+    "href": "pyodide_test.html",
+    "title": "Pyodide in Quarto HTML Documents",
+    "section": "",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
+  }
+]
