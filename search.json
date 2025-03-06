@@ -136,7 +136,7 @@
     "href": "index.html",
     "title": "Welcome to Statistics 21",
     "section": "",
-    "text": "This site was produced with Quarto and Pyodide in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about Pyodide please visit https://pyodide.org/en/stable/\nAnd about it’s Quarto extension visit https://github.com/coatless-quarto/pyodide\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
+    "text": "This site was produced with Quarto and Pyodide using VS Code and is currently hosted by GitHub. It was created for the students of Statistics 21 for use inside and outside of the classroom.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about Pyodide please visit https://pyodide.org/en/stable/\nAnd about its Quarto extension visit https://github.com/coatless-quarto/pyodide\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
     "crumbs": [
       "Start Here",
       "Overview"
@@ -838,9 +838,9 @@
   {
     "objectID": "pyodide_test.html",
     "href": "pyodide_test.html",
-    "title": "Pyodide in Quarto HTML Documents",
+    "title": "Pyodide and Quarto HTML Documents",
     "section": "",
-    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Start Here",
       "Pyodide"
@@ -851,6 +851,6 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
+    "text": "This site was produced with Pyodide and Quarto in VS Code and is currently hosted by GitHub. It was created for the students of Statistics 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
   }
 ]
