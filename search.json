@@ -840,7 +840,7 @@
     "href": "pyodide_test.html",
     "title": "Pyodide in Quarto HTML Documents",
     "section": "",
-    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas:\n```bzadqecpkzuuunfa #| label: stats-pandas #| fig-cap: “Simple stats example”\nimport pandas as pd\ndata = {‘Name’: [‘Alice’, ‘Bob’, ‘Charlie’], ‘Age’: [25, 30, 35]}\ndf = pd.DataFrame(data)\nmean_age = df[‘Age’].mean()\nprint(f”Mean Age: {mean_age}“)",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Start Here",
       "Pyodide"

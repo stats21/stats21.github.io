@@ -229,7 +229,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"n = 5\nwhile n > 0:\n  print(n)\n  n = n - 1\n\nprint('Blastoff!')","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"A line plot on a polar axis","fig-height":5,"fig-width":7,"label":"fig-polar","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"n = 5\nwhile n > 0:\n  print(n)\n  n = n - 1\n\nprint('Blastoff!')","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"A line plot on a polar axis","fig-height":5,"fig-width":7,"label":"fig-polar","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"\nimport pandas as pd\n\ndata = {'Name': ['Alice', 'Bob', 'Charlie'],\n        'Age': [25, 30, 35]}\n\ndf = pd.DataFrame(data)\n\nmean_age = df['Age'].mean()\n\nprint(f\"Mean Age: {mean_age}\")","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"Simple stats example","fig-height":5,"fig-width":7,"label":"stats-pandas","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"\nimport pyodide.http\n\n# Fetch CSV data from a URL\nURL = \"https://raw.githubusercontent.com/stats422/stats422.github.io/refs/heads/gh-pages/lectures/movies.csv\"\n\ncsv_data = pyodide.http.open_url(URL)\n\n# Read it into a pandas DataFrame\ndf = pd.read_csv(csv_data)\n\n# Display first few rows\nprint(df.head())","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"Reading Data from a different location","fig-height":5,"fig-width":7,"label":"read-pandas","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -557,12 +557,10 @@ globalThis._qpyodideGetInstance = function() {
 <div id="qpyodide-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Let’s try pandas:</p>
-<p>```bzadqecpkzuuunfa #| label: stats-pandas #| fig-cap: “Simple stats example”</p>
-<p>import pandas as pd</p>
-<p>data = {‘Name’: [‘Alice’, ‘Bob’, ‘Charlie’], ‘Age’: [25, 30, 35]}</p>
-<p>df = pd.DataFrame(data)</p>
-<p>mean_age = df[‘Age’].mean()</p>
-<p>print(f”Mean Age: {mean_age}“)</p>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qpyodide-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
 
