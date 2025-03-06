@@ -840,7 +840,7 @@
     "href": "pyodide_test.html",
     "title": "Pyodide in Quarto HTML Documents",
     "section": "",
-    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Start Here",
       "Pyodide"
