@@ -136,7 +136,7 @@
     "href": "index.html",
     "title": "Welcome to Statistics 21",
     "section": "",
-    "text": "This site was produced with Quarto and Pyodide in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about Pyodide please visit https://pyodide.org/en/stable/\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
+    "text": "This site was produced with Quarto and Pyodide in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about Pyodide please visit https://pyodide.org/en/stable/\nAnd about it’s Quarto extension visit https://github.com/coatless-quarto/pyodide\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
     "crumbs": [
       "Start Here",
       "Overview"
@@ -840,7 +840,7 @@
     "href": "pyodide_test.html",
     "title": "Pyodide in Quarto HTML Documents",
     "section": "",
-    "text": "This is a pyodide-enabled code cell in a Quarto HTML document.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Start Here",
       "Pyodide"
