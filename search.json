@@ -345,7 +345,7 @@
     "href": "lec/Lecture01.html#python-script-.py-vscode-example",
     "title": "Week 1, Meeting 1",
     "section": "Python script (.py) VSCode Example",
-    "text": "Python script (.py) VSCode Example\n\nExample .py script",
+    "text": "Python script (.py) VSCode Example\n\nExample .py script, moving away from the REPL",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -378,7 +378,7 @@
     "href": "lec/Lecture01.html#by-the-way",
     "title": "Week 1, Meeting 1",
     "section": "By the way",
-    "text": "By the way\nPython modules are collections of scripts. We can see this with our little example:\n\nImport a .py script - bit of a don’t do this…",
+    "text": "By the way\nPython modules are collections of scripts. We can see this with our little example:\n\nImport a .py script - but don’t do this, just making a point",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -389,7 +389,7 @@
     "href": "lec/Lecture01.html#jupyter-notebook",
     "title": "Week 1, Meeting 1",
     "section": "Jupyter Notebook",
-    "text": "Jupyter Notebook\nAn interactive document that can mix code and text and create web pages and related, great for homework\n\nJupyter Example",
+    "text": "Jupyter Notebook\nAn interactive document that can mix code and text and create web pages and presentations, great for homework\n\nJupyter Example",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -400,7 +400,18 @@
     "href": "lec/Lecture01.html#this-presentation-and-the-code-below-were-written-using-quarto",
     "title": "Week 1, Meeting 1",
     "section": "This presentation and the code below were written using Quarto",
-    "text": "This presentation and the code below were written using Quarto\n\n\nCode\n# write a function to calculate human equivalent\ndef bird_to_human_years(bird_age):\n    return bird_age * 5\n\n# generate a sequence perhaps, starts at 1 and excludes 11\nages = range(1,11)\n\nfor age in ages:\n    print(f\"If your bird's age is {age}, in human years your bird is {bird_to_human_years(age)}\")\n\n\nIf your bird's age is 1, in human years your bird is 5\nIf your bird's age is 2, in human years your bird is 10\nIf your bird's age is 3, in human years your bird is 15\nIf your bird's age is 4, in human years your bird is 20\nIf your bird's age is 5, in human years your bird is 25\nIf your bird's age is 6, in human years your bird is 30\nIf your bird's age is 7, in human years your bird is 35\nIf your bird's age is 8, in human years your bird is 40\nIf your bird's age is 9, in human years your bird is 45\nIf your bird's age is 10, in human years your bird is 50",
+    "text": "This presentation and the code below were written using Quarto\nQuarto is not quite as interactive as Jupyter but it can mix code and text and create documents, web pages and presentations, great for homework\n\n\nCode\n# write a function to calculate human equivalent\ndef bird_to_human_years(bird_age):\n    return bird_age * 5\n\n# generate a sequence perhaps, starts at 1 and excludes 11\nages = range(1,11)\n\nfor age in ages:\n    print(f\"If your bird's age is {age}, in human years your bird is {bird_to_human_years(age)}\")\n\n\nIf your bird's age is 1, in human years your bird is 5\nIf your bird's age is 2, in human years your bird is 10\nIf your bird's age is 3, in human years your bird is 15\nIf your bird's age is 4, in human years your bird is 20\nIf your bird's age is 5, in human years your bird is 25\nIf your bird's age is 6, in human years your bird is 30\nIf your bird's age is 7, in human years your bird is 35\nIf your bird's age is 8, in human years your bird is 40\nIf your bird's age is 9, in human years your bird is 45\nIf your bird's age is 10, in human years your bird is 50",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#what-a-quarto-document-looks-like-in-vs-code",
+    "href": "lec/Lecture01.html#what-a-quarto-document-looks-like-in-vs-code",
+    "title": "Week 1, Meeting 1",
+    "section": "What a Quarto Document looks like in VS Code",
+    "text": "What a Quarto Document looks like in VS Code\n\nQuarto is like RMarkdown",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -521,7 +532,7 @@
     "href": "lec/Lecture01.html#readable-beautiful-self-evident",
     "title": "Week 1, Meeting 1",
     "section": "Readable, beautiful, self-evident",
-    "text": "Readable, beautiful, self-evident\nIn Python every word, symbol, and especially indentation matters. An example.\n\nEx 1Ex 2Ex 3\n\n\n\n\nCode\nfor count in 0, 1, 2, 3, 4, 5:\n    print(count) # Python recommends 4 spaces\n\n\n0\n1\n2\n3\n4\n5\n\n\nIf that print is not indented an IndentationError will be generated.\nrecall (in Stats 20) for takes an instruction (code) and applies it to each item in the iterable, same in Python. A colon denotes the start of an indented code block after which all of the code must be indented by the same amount until the end of the block.\n\n\n\n\nCode\nfor spell in \"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \\\n             \"Confundo\", \"Finite Incantatem\", \"Incarcerous\":\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nSame general structure, “spell” is the loop variable and the “in” connects it to the interable. The iterable in this example is a data structure known as a tuple but it is not at all clear to a new user.\n\n\nspells is a list (much more about those later) it is a data structure. We could also call it a container object. A list holds other objects.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nspell is the loop variable and in connects it to spells which is an iterable. We can see that setting up the iterable in this way is more scalable than the other ways. spells can also be reused in other ways and places.",
+    "text": "Readable, beautiful, self-evident\nIn Python every word, symbol, and especially indentation matters. An example.\n\nEx 1Ex 2Ex 3\n\n\n\n\nCode\nfor count in 0, 1, 2, 3, 4, 5:\n    print(count) # Python recommends 4 spaces\n\n\n0\n1\n2\n3\n4\n5\n\n\nIf that print(count) is not indented an IndentationError will be generated.\nrecall (in Stats 20) for takes an instruction (code) and applies it to each item in the iterable, same in Python. A colon denotes the start of an indented code block after which all of the code must be indented by the same amount until the end of the block.\n\n\n\n\nCode\nfor spell in \"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \\\n             \"Confundo\", \"Finite Incantatem\", \"Incarcerous\":\n    print(spell)\nprint(\"This print() is not in the code block\")\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\nThis print() is not in the code block\n\n\nSame general structure, “spell” is the loop variable and the in connects it to the interable. The iterable in this example is a data structure known as a tuple but it is not at all clear to a new user.\n\n\nspells here is a list (much more about those later) it is another type of data structure. We could also call a list a container object. A list holds other objects.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nspell is the loop variable and in connects it to spells which is an iterable. We can see that setting up the iterable in this third way is more scalable than the other ways. The object spells can also be reused in other ways and places.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -532,7 +543,7 @@
     "href": "lec/Lecture01.html#why-more-readable-more-beautiful-more-self-evident",
     "title": "Week 1, Meeting 1",
     "section": "Why more readable, more beautiful, more self-evident?",
-    "text": "Why more readable, more beautiful, more self-evident?\nPreviously our iterable object was a data structure called a tuple (implied). An iterable is any object that can be looped over, meaning you can access its elements one by one. While it ran without error, the fact that it is a tuple could have been made more obvious for readability:\n\n\nCode\nfor spell in (\"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \n              \"Confundo\",  \"Finite Incantatem\", \"Incarcerous\"):\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nThere are many other spells mentioned in the Harry Potter series of books. The iterable here doesn’t scale well. It also isn’t reusable (we cannot easily call it again later in a program)",
+    "text": "Why more readable, more beautiful, more self-evident?\nPreviously our iterable object (Ex 1 & 2) was a data structure called a tuple (by implication, not explicit though). An iterable is any object that can be looped over, meaning you can access its elements one by one. While it ran without error, the fact that it is a tuple could have been made more obvious for readability:\n\n\nCode\nfor spell in (\"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \n              \"Confundo\",  \"Finite Incantatem\", \"Incarcerous\"):\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nThere are many other spells mentioned in the Harry Potter series of books. The iterable here doesn’t scale well. It also isn’t reusable (we cannot easily call it again later in a program)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -550,11 +561,11 @@
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#there-is-an-ending-maybe",
-    "href": "lec/Lecture01.html#there-is-an-ending-maybe",
+    "objectID": "lec/Lecture01.html#there-is-point-to-this-maybe",
+    "href": "lec/Lecture01.html#there-is-point-to-this-maybe",
     "title": "Week 1, Meeting 1",
-    "section": "There is an ending (maybe)",
-    "text": "There is an ending (maybe)\nBUT we can re-use the existing list object spells AND we can avoid the for loop structure. ‘\\n’ is interpreted as “new line” . In this context ‘\\n’ is a separator and is also a string (note the single quotes). .join() is a string method.\nOur code is now very “Pythonic”.\n\n\nCode\nprint('\\n'.join(spells))\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nUnderstanding the progression from a simple self-contained for loop, to a one-line implicit iteration using a string joining method is not for today (if you are just starting out). It’s what you are working towards as an end goal. (Hint read it from it inside out - spells, join, newline)",
+    "section": "There is point to this (maybe)",
+    "text": "There is point to this (maybe)\nBUT we can re-use the existing list object spells AND we can also avoid the for loop structure (it is slow). ‘\\n’ is interpreted as “new line” . In this context ‘\\n’ is a separator and is also a string (note the single quotes). The .join() is a string method.\nOur code is now very “Pythonic”.\n\n\nCode\nprint('\\n'.join(spells))\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nUnderstanding the progression from a simple self-contained for loop, to a one-line implicit iteration using a string joining method is not for today (if you are just starting out). This approach is what you are working towards as an end goal. (Hint read it from it inside out - spells, join, newline)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -565,7 +576,7 @@
     "href": "lec/Lecture01.html#what-is-pythonic",
     "title": "Week 1, Meeting 1",
     "section": "What is Pythonic?",
-    "text": "What is Pythonic?\n\nI don’t think there is an official definition but review PEP 20 if you have the time.\nPEP describes writing your code in a manner that incorporates the principles and characteristics of the Python programming language.\nUtilizing the concise, expressive, and readable features of Python to write efficient, clear and pretty code\nI would also add “easy to modify code”",
+    "text": "What is Pythonic?\n\nI see it alot, but I don’t think there is an official definition but review PEP 20 if you have the time.\nPEP 20 describes writing your code in a manner that incorporates the principles and characteristics of the Python programming language.\nEncourage you to use the concise, expressive, and readable features of Python to write efficient, clear and pretty code\nI would also add “easy to modify code”",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -576,7 +587,7 @@
     "href": "lec/Lecture01.html#objects-more-later",
     "title": "Week 1, Meeting 1",
     "section": "Objects (more later)",
-    "text": "Objects (more later)\n\nEverything in Python is an object – numbers, strings, lists, tuples, and functions, these are all objects.\nConceptually, an object is like a container or a box\nPython is at heart an object oriented language but it supports multiple programming models (OOP, Procedural, and Functional)\n\n(note) R is a functional programming language at heart\n\nEvery object is created from some class (more later). A class is a set of instructions or a template for creating objects.\nObjects have a type and they also have attributes and methods (functions specific to that object).\nThe object oriented nature of Python makes the language very flexible.\nBut also a little tricky coming from R as Python has a different programming model really.",
+    "text": "Objects (more later)\n\nEverything in Python is an object – numbers, strings, lists, tuples, and functions, these are all objects.\nConceptually, an object is like a container or a box with a label on it.\nPython is at heart an object oriented language but it supports multiple programming models (OOP, Procedural, and Functional)\n\n(note) R is a functional programming language at heart\n\nEvery object is created from some class (more later). A class is a set of instructions or a template for creating objects.\nObjects have a type and they also have attributes and methods (functions specific to that object).\nThe object oriented nature of Python makes the language very flexible.\nBut also a little tricky coming from R as Python at heart has a very different programming model.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -587,7 +598,7 @@
     "href": "lec/Lecture01.html#example-object-creation",
     "title": "Week 1, Meeting 1",
     "section": "Example: Object Creation",
-    "text": "Example: Object Creation\nName and assign values. Very R-like:\n\n\nCode\nx = 5\ny = 5\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\",\n    \"Finite Incantatem\",\n    \"Incarcerous\",\n]\n\nz = range(6) # note this is a comment\n\nprint(f\"This is x: {x}\")\nprint(f\"This is y: {y}\")\nprint(f\"This is the second spell: {spells[1]}\") # Python is zero indexed\nprint(f\"This is z: {z}\") # Python is zero indexed\n\n\nThis is x: 5\nThis is y: 5\nThis is the second spell: Colloshoo\nThis is z: range(0, 6)",
+    "text": "Example: Object Creation\nName and assign values. Very R-like in basic Python:\n\n\nCode\nx = 5\ny = 5\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\",\n    \"Finite Incantatem\",\n    \"Incarcerous\",\n]\n\nz = range(6) # note this is a comment\n\nprint(f\"This is x: {x}\")\nprint(f\"This is y: {y}\")\nprint(f\"This is the second spell: {spells[1]}\") # Python is zero indexed\nprint(f\"This is z: {z}\") # Python is zero indexed\n\n\nThis is x: 5\nThis is y: 5\nThis is the second spell: Colloshoo\nThis is z: range(0, 6)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -598,7 +609,7 @@
     "href": "lec/Lecture01.html#objects-have-among-other-things",
     "title": "Week 1, Meeting 1",
     "section": "Objects have… (among other things)",
-    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4352827720\nThis is the result of id(y): 4352827720\nThis is the result of id(spells): 4397774400\nThis is the result of id(z): 4397417408\n\nThis is the result of id(print): 4352601296\nThis is the result of changing y now id(y): 4397418656",
+    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4345192776\nThis is the result of id(y): 4345192776\nThis is the result of id(spells): 4389926784\nThis is the result of id(z): 4792821552\n\nThis is the result of id(print): 4344966352\nThis is the result of changing y now id(y): 4389978400",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -609,7 +620,7 @@
     "href": "lec/Lecture01.html#example-object-type-value",
     "title": "Week 1, Meeting 1",
     "section": "Example: Object Type & Value",
-    "text": "Example: Object Type & Value\n\nChecking typeChecking ValueWhy range(0, 6)\n\n\n\n\nCode\nprint(type(x))\nprint(type(y))\nprint(type(spells))\nprint(type(z))\nprint(type(print))\n\n\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;\n&lt;class 'list'&gt;\n&lt;class 'range'&gt;\n&lt;class 'builtin_function_or_method'&gt;\n\n\n\n\n\n\nCode\nprint(x)\nprint(y)\nprint(spells[1])\nprint(z)\n\n\n5\nUCLA\nColloshoo\nrange(0, 6)\n\n\n\n\nThis is a range object, the values are not generated until the range object is used.\n\n\nCode\nfor count in z:\n    print(count)\n\n\n0\n1\n2\n3\n4\n5",
+    "text": "Example: Object Type & Value\n\nChecking typeChecking ValueWhy range(0, 6)?\n\n\n\n\nCode\nprint(f\"This is the result of type(x): {type(x)}\")\nprint(f\"This is the result of type(y): {type(y)}\")\nprint(f\"This is the result of type(spells): {type(spells)}\")\nprint(f\"This is the result of type(z): {type(z)}\")\nprint(f\"This is the result of type(print): {type(print)}\")\n\n\nThis is the result of type(x): &lt;class 'int'&gt;\nThis is the result of type(y): &lt;class 'str'&gt;\nThis is the result of type(spells): &lt;class 'list'&gt;\nThis is the result of type(z): &lt;class 'range'&gt;\nThis is the result of type(print): &lt;class 'builtin_function_or_method'&gt;\n\n\n\n\n\n\nCode\nprint(x)\nprint(y)\nprint(spells[1])\nprint(z)\n\n\n5\nUCLA\nColloshoo\nrange(0, 6)\n\n\n\n\nThis is a range object, the values are not generated until the range object is used.\n\n\nCode\nfor count in z:\n    print(count)\n\n\n0\n1\n2\n3\n4\n5",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -620,7 +631,7 @@
     "href": "lec/Lecture01.html#rules-for-variable-names",
     "title": "Week 1, Meeting 1",
     "section": "Rules for Variable Names",
-    "text": "Rules for Variable Names\nThey can have:\n- Lowercase letters (a through z)\n- Uppercase letters (A through Z)\n- Digits (0 through 9)\n- The Underscore (_)\nThey are case-sensitive\nThey can begin with a letter or an underscore but not a digit.\nThey cannot be one of Python’s reserved keywords.",
+    "text": "Rules for Variable Names\n\nThey can only consist of:\n\nLowercase letters (a through z)\n\nUppercase letters (A through Z)\n\nDigits (0 through 9)\n\nThe Underscore (_)\n\nThey are case-sensitive\nThey can begin with a letter or an underscore but not a digit.\nThey cannot be one of Python’s reserved keywords.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -649,11 +660,11 @@
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#a-little-more-advanced",
-    "href": "lec/Lecture01.html#a-little-more-advanced",
+    "objectID": "lec/Lecture01.html#a-bit-more-advanced-keywords",
+    "href": "lec/Lecture01.html#a-bit-more-advanced-keywords",
     "title": "Week 1, Meeting 1",
-    "section": "a little more advanced",
-    "text": "a little more advanced\nWe might see a few of these much later in the course.\ntry, except, finally, raise,  \n del, lambda, with, yield\nWe will work with the common keywords and try to give you the scaffolding to move to the less common if you need it beyond Stats 21.",
+    "section": "a bit more advanced keywords",
+    "text": "a bit more advanced keywords\nWe might see a few of these much later in the course.\ntry, except, finally, raise,  \n del, lambda, with, yield\nWe will work with the common keywords and try to give you the scaffolding to move to the less common if you need it beyond Stats 21.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -675,7 +686,7 @@
     "href": "lec/Lecture01.html#some-suggestions-for-stats-21",
     "title": "Week 1, Meeting 1",
     "section": "Some suggestions for Stats 21",
-    "text": "Some suggestions for Stats 21\n\nNever use the characters ‘l’ (lowercase letter el), ‘O’ (uppercase letter oh), or ‘I’ (uppercase letter eye) as single character variable names.\nFunction names should be lowercase, with words separated by underscores as necessary to improve readability.\nVariable names follow the same convention as function names.\nPlease capitalize the first letter when defining a Class (e.g., CapitalizedWords)\nIf you create a Python constant please use snake case with all caps\n\n DATA_FILE = \"data/weather_data.csv\"  # a Global constant (file path)",
+    "text": "Some suggestions for Stats 21\n\nNever use the characters ‘l’ (lowercase letter el), ‘O’ (uppercase letter oh), or ‘I’ (uppercase letter eye) as single character variable names.\nFunction names should be lowercase, with words separated by underscores as necessary to improve readability.\nVariable names follow the same convention as function names.\nPlease capitalize the first letter when defining a Class (e.g., CapitalizedWords)\nIf you create a Python constant please use snake case with all caps (e.g., WEB_ADDRESS)\n\n DATA_FILE = \"data/weather_data.csv\"  # a Global constant (file path)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -708,7 +719,7 @@
     "href": "lec/Lecture01.html#bool",
     "title": "Week 1, Meeting 1",
     "section": "Bool",
-    "text": "Bool\n\nThe boolean data type values are True and False.\nIn Stats 21 we may use the values directly as data.\nWe may also use them as the evaluation result\n\n\n\nCode\nanswers = [True, True, False, True, False, False, False, True, True, True\n]\n\nprint(f'This is answers: {answers} \\n ' ) # F-strings or formatted string literals\n\nprint(f'Is answers a list object? {isinstance(answers, list)} \\n')\n\nprint(f'Is False a bool? {isinstance(False, bool)} \\n')\n\nprint(f'Example: Is 5 &lt; 2? {5 &lt; 2}')\n\n\nThis is answers: [True, True, False, True, False, False, False, True, True, True] \n \nIs answers a list object? True \n\nIs False a bool? True \n\nExample: Is 5 &lt; 2? False",
+    "text": "Bool\n\nThe boolean data type values are True and False.\nIn Stats 21 we may use the values directly as data.\nWe may also use them as the evaluation result\n\n\n\nCode\nanswers = [\n    True, True, False, True, False, False, False, True, True, True\n    ]\n\nprint(f'This is answers: {answers} \\n ' ) # F-strings AKA formatted string literals\n\nprint(f'Is answers a list object? {isinstance(answers, list)} \\n')\n\nprint(f'Is False a bool? {isinstance(False, bool)} \\n')\n\nprint(f'Is 5 &lt; 2? {5 &lt; 2} \\n')\n\nprint(f'Is Trump &gt; Jesus? {\"Trump\" &gt; \"Jesus\"} \\n') \n# Strings can be evaluated\n# But not in the way you think when the question is nuanced.\n\nprint(f'Is UCLA &gt; USC? {\"UCLA\" &gt; \"USC\"}\\n')\n\nprint(f'Is 小 &gt; 大? {\"小\" &gt; \"大\"} \\n') \n# Computers lack a contextual understanding.\n\nprint(f'Unicode of T: {ord(\"T\")}') # how Python evaluates\nprint(f'Unicode of J: {ord(\"J\")}') # and orders strings\n\nprint(f'Unicode of C: {ord(\"C\")}') # U is tied\nprint(f'Unicode of S: {ord(\"S\")}') # so Python moves to the next letter\n\nprint(f'Unicode of 小: {ord(\"小\")}')\nprint(f'Unicode of 大: {ord(\"大\")}')\n\n\nThis is answers: [True, True, False, True, False, False, False, True, True, True] \n \nIs answers a list object? True \n\nIs False a bool? True \n\nIs 5 &lt; 2? False \n\nIs Trump &gt; Jesus? True \n\nIs UCLA &gt; USC? False\n\nIs 小 &gt; 大? True \n\nUnicode of T: 84\nUnicode of J: 74\nUnicode of C: 67\nUnicode of S: 83\nUnicode of 小: 23567\nUnicode of 大: 22823",
     "crumbs": [
       "Lectures",
       "Lecture01"
