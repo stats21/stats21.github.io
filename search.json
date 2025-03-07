@@ -169,7 +169,7 @@
     "href": "lec/Lecture01.html#problem-solving-soft-skills",
     "title": "Week 1, Meeting 1",
     "section": "Problem-Solving & Soft Skills",
-    "text": "Problem-Solving & Soft Skills\n\nPython will force you to break down complex problems into smaller, manageable steps,\nAlso think logically to design solutions,\n\nYou will learn to think like a computer scientist\nand work on Communication & Storytelling skills",
+    "text": "Problem-Solving & Soft Skills\n\nPython will force you to break down complex problems into smaller more manageable steps,\nYou will also practice thinking logically about designing solutions\n\nYou will learn to think more like a computer scientist\nand will also work on data communication & storytelling skills",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -180,7 +180,7 @@
     "href": "lec/Lecture01.html#todays-first-topic-stats-21-tools",
     "title": "Week 1, Meeting 1",
     "section": "Today’s First Topic: Stats 21 Tools",
-    "text": "Today’s First Topic: Stats 21 Tools\n\nPlease check your Python installation where is yours?\nPlease check for the installation of a proper source code editor (I use VS Code, free + awesome and works on multiple platforms)\nPlease something interactive such as Jupyter Notebook or Quarto installed (for homework, presentations, webpages, etc.)\nand (suggested) check for git and GitHub (do you have an account?)",
+    "text": "Today’s First Topic: Stats 21 Tools\n\nPlease check your Python installation where is yours?\nPlease check for the installation of a proper source code editor (I use VS Code, free + awesome and works on multiple platforms) there are many choices\nPlease install something interactive such as Jupyter Notebook or Lab or Quarto(for homework, presentations, webpages, etc.)\nand (strongly suggested) check for git and GitHub (do you have an account?)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -191,7 +191,7 @@
     "href": "lec/Lecture01.html#terminal-macos-or-powershellcmd-windows",
     "title": "Week 1, Meeting 1",
     "section": "terminal (MacOS) or powershell/cmd (Windows)",
-    "text": "terminal (MacOS) or powershell/cmd (Windows)\n\nterminal on a mac",
+    "text": "terminal (MacOS) or powershell/cmd (Windows)\nIf you don’t know where to find terminal on a Mac, use the magnifying glass and type terminal.\n\n\n\nterminal on a mac\n\n\n\n\n\npowershell in windows",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -202,7 +202,7 @@
     "href": "lec/Lecture01.html#check-for-python-1",
     "title": "Week 1, Meeting 1",
     "section": "Check for Python",
-    "text": "Check for Python\nTry this at your terminal prompt or powershell/cmd prompt\npython --version\n\npython version",
+    "text": "Check for Python\nTry this at your terminal prompt or powershell/cmd prompt\n\n\nCode\npython --version\n\n\n\npython version",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -455,7 +455,7 @@
     "href": "lec/Lecture01.html#optional-using-github-the-git-hosting-platform",
     "title": "Week 1, Meeting 1",
     "section": "Optional: Using GitHub the Git hosting platform",
-    "text": "Optional: Using GitHub the Git hosting platform\n\nThis quarter I will post some material to GitHub\nYou could point and click and download\nBUT it would be better if you knew how to use git on your device to check for updates and download modified versions\nAnd that you should learn to keep your own repositories\nbut git is highly recommended but optional for Stats 21",
+    "text": "Optional: Using GitHub the Git hosting platform\n\nThis quarter I will post some material, such as this lecture, to GitHub\nYou could point and click and download\nBUT it would be better if you knew how to use git on your device to check for updates and download modified versions\nAnd that you should learn to manage your own repositories\nso git is highly recommended but optional for Stats 21",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -466,7 +466,7 @@
     "href": "lec/Lecture01.html#optional-quick-dirty-git-github",
     "title": "Week 1, Meeting 1",
     "section": "Optional: Quick & Dirty Git & GitHub",
-    "text": "Optional: Quick & Dirty Git & GitHub\n\nPull\nAdd\nCommit\nPush",
+    "text": "Optional: Quick & Dirty Git & GitHub\nIf you have your own account with a respository on GitHub, you can modify your repository and access other repositories. You can also keep a copy of the repository on your local computer and interact with the repository stored remotely on GitHub. You really only need 4 commands once your local repository is established\n\nPull (update the local with changes from the remote)\nAdd (stages local updates)\nCommit (creates a “snapshot” of your repositories just before uploading)\nPush (uploads the staged and commited changes)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -477,7 +477,7 @@
     "href": "lec/Lecture01.html#whats-in-a-name",
     "title": "Week 1, Meeting 1",
     "section": "What’s in a name?",
-    "text": "What’s in a name?\n\nPlease gather together in small groups, please make sure at least one member has a laptop\nminimum group size 3, maximum group size 6\nintroduce yourselves, try to learn a new name today\ntake a group photo, annotate with with names or add names as a comment\nupload it for attendance credit",
+    "text": "What’s in a name?\n\nPlease gather together in small groups, please make sure at least one member has a laptop\nfor credit: minimum group size 3, maximum group size 6\nplease introduce yourselves and try to learn a new name today\nplease take a group photo, annotate with with names or add names as a comment during upload\nupload a photo individually for attendance credit",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -488,7 +488,7 @@
     "href": "lec/Lecture01.html#what-to-do-in-your-group-10-15-minutes",
     "title": "Week 1, Meeting 1",
     "section": "What to do in your group (10-15 minutes)",
-    "text": "What to do in your group (10-15 minutes)\n\ntry to determine whether Python, some kind of code editor (like VS Code) and git exist on your team’s computers\njust take some notes for your own personal use if you do not already have these installed (mental or otherwise)",
+    "text": "What to do in your group (10-15 minutes)\n\ntry to determine whether (a) Python, (b) some kind of code editor (like VS Code, Jupyter Notebook) and git exist on your team’s computers\nplease take some notes for your own personal use if you do not already have these installed (mental note or other)\njust take a moment to enjoy your time at UCLA",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -499,7 +499,7 @@
     "href": "lec/Lecture01.html#lets-back-up-a-little",
     "title": "Week 1, Meeting 1",
     "section": "Let’s Back up a little",
-    "text": "Let’s Back up a little\n\nWhere do we start?\nMaybe an overview using the “Zen of Python” (PEP 20) https://peps.python.org/pep-0020/\nThen an example\nThen objects, naming, reserved keywords, the print function, iterators",
+    "text": "Let’s Back up a little\n\nWhere do we start?\nMaybe an overview using the “Zen of Python” (PEP 20) https://peps.python.org/pep-0020/\nThen an example\nThen objects, naming, reserved keywords, etc. see how far we get today.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -510,7 +510,7 @@
     "href": "lec/Lecture01.html#opening-words-of-pep-20",
     "title": "Week 1, Meeting 1",
     "section": "Opening words of PEP 20",
-    "text": "Opening words of PEP 20\n\n\nBeautiful is better than ugly.\n\nExplicit is better than implicit.\n\nSimple is better than complex.\n\nComplex is better than complicated.\n\nFlat is better than nested.\n\nSparse is better than dense.\n\nReadability counts.",
+    "text": "Opening words of PEP 20\n\n\nBeautiful is better than ugly.\n\nExplicit is better than implicit.\n\nSimple is better than complex.\n\nComplex is better than complicated.\n\nFlat is better than nested.\n\nSparse is better than dense.\n\nReadability counts.\n\n\n\nTo understand some decisions regarding “the way” Python does things, understanding their philosophy can help.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -521,7 +521,7 @@
     "href": "lec/Lecture01.html#readable-beautiful-self-evident",
     "title": "Week 1, Meeting 1",
     "section": "Readable, beautiful, self-evident",
-    "text": "Readable, beautiful, self-evident\nPython is like poetry and every word, symbol, and especially indentation matter. An example.\n\nEx 1Ex 2Ex 3\n\n\n\n\nCode\nfor count in 0, 1, 2, 3, 4, 5:\n    print(count)\n\n\n0\n1\n2\n3\n4\n5\n\n\nrecall (in Stats 20) for takes an instruction (code) and applies it to each item in the iterable, same in Python. A colon denotes the start of an indented code block after which all of the code must be indented by the same amount until the end of the block.\n\n\n\n\nCode\nfor spell in \"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \"Confundo\",  \"Finite Incantatem\", \"Incarcerous\":\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nSame general structure, “spell” is the loop variable and the “in” connects it to the interable. The iterable in this example is a data structure known as a tuple but it is not at all clear to a new user.\n\n\nspells is a list (much more about those later) it is a data structure. We could also call it a container object. A list holds other objects.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nspell is the loop variable and in connects it to spells which is an iterable. We can see that setting up the iterable in this way is more scalable than the other ways. spells can also be reused in other ways and places.",
+    "text": "Readable, beautiful, self-evident\nIn Python every word, symbol, and especially indentation matters. An example.\n\nEx 1Ex 2Ex 3\n\n\n\n\nCode\nfor count in 0, 1, 2, 3, 4, 5:\n    print(count) # Python recommends 4 spaces\n\n\n0\n1\n2\n3\n4\n5\n\n\nIf that print is not indented an IndentationError will be generated.\nrecall (in Stats 20) for takes an instruction (code) and applies it to each item in the iterable, same in Python. A colon denotes the start of an indented code block after which all of the code must be indented by the same amount until the end of the block.\n\n\n\n\nCode\nfor spell in \"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \\\n             \"Confundo\", \"Finite Incantatem\", \"Incarcerous\":\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nSame general structure, “spell” is the loop variable and the “in” connects it to the interable. The iterable in this example is a data structure known as a tuple but it is not at all clear to a new user.\n\n\nspells is a list (much more about those later) it is a data structure. We could also call it a container object. A list holds other objects.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nspell is the loop variable and in connects it to spells which is an iterable. We can see that setting up the iterable in this way is more scalable than the other ways. spells can also be reused in other ways and places.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -598,7 +598,7 @@
     "href": "lec/Lecture01.html#objects-have-among-other-things",
     "title": "Week 1, Meeting 1",
     "section": "Objects have… (among other things)",
-    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4346863944\nThis is the result of id(y): 4346863944\nThis is the result of id(spells): 4391481600\nThis is the result of id(z): 4391732256\n\nThis is the result of id(print): 4346637520\nThis is the result of changing y now id(y): 4391733600",
+    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4352827720\nThis is the result of id(y): 4352827720\nThis is the result of id(spells): 4397774400\nThis is the result of id(z): 4397417408\n\nThis is the result of id(print): 4352601296\nThis is the result of changing y now id(y): 4397418656",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -796,7 +796,7 @@
     "href": "lec/Lecture01.html#import",
     "title": "Week 1, Meeting 1",
     "section": "Import",
-    "text": "Import\nIt is the equivalent of library(packagename) in R, it gives us access to helpful extensions. There are different ways\n\nYou are bringing the entire pandas library into your code. If you want to use something from pandas, you need to write pandas. before it for example\n\nimport pandas\nmy_df = pandas.read_csv('mydata.csv')\n\nStill importing the whole pandas library, but using an alias (pd) to save typing. This is most common.\n\nimport pandas as pd\nmy_df = pd.read_csv('mydata.csv')\n\nimporting one specific function (read_csv) from pandas You can use read_csv directly without typing pandas. or pd.\n\nfrom pandas import read_csv\nmy_df = read_csv('mydata.csv')",
+    "text": "Import\nIt is the equivalent of library(packagename) in R, it gives us access to helpful extensions. There are different ways\n\nYou are bringing the entire pandas library into your code. If you want to use a function from pandas, you will need to write “pandas.” before it for example\n\nimport pandas\nmy_df = pandas.read_csv('mydata.csv')\n\nStill importing the whole pandas library, but using an alias (pd) to save typing. This is most common and accepted way.\n\nimport pandas as pd\nmy_df = pd.read_csv('mydata.csv')\n\nimporting one specific function (read_csv) from pandas You can use read_csv directly without typing pandas. or pd. but this is also not commonly seen.\n\nfrom pandas import read_csv\nmy_df = read_csv('mydata.csv')",
     "crumbs": [
       "Lectures",
       "Lecture01"
