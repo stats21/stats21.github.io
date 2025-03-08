@@ -858,11 +858,11 @@
     ]
   },
   {
-    "objectID": "resources/chalkboard_template.html#any-thoughts",
-    "href": "resources/chalkboard_template.html#any-thoughts",
+    "objectID": "resources/chalkboard_template.html#any-more-thoughts",
+    "href": "resources/chalkboard_template.html#any-more-thoughts",
     "title": "Activity",
-    "section": "Any Thoughts?",
-    "text": "Any Thoughts?",
+    "section": "Any More Thoughts?",
+    "text": "Any More Thoughts?",
     "crumbs": [
       "Resources",
       "Chalkboard"
