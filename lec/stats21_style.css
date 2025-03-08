@@ -1,0 +1,63 @@
+/* Code blocks */
+pre {
+  background-color: #e9ecef;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 1em;
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+/* Inline code */
+code {
+  background-color: #e9ecef;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #e83e8c;
+}
+
+/* Code cell output    border-radius: 4px; */
+.cell-output {
+  background-color: #2774AE;
+  border: none !important;  /* Remove any border */
+  box-shadow: none !important; /* Remove any shadow */
+  /* border: 1px solid #e9ecef; */
+  /* padding: 1em; */
+  /* margin-top: 0.5em; */
+}
+
+.custom-code-block {
+    background-color: #ffffff; /* white */
+    border: none !important;  /* Remove any border */
+    box-shadow: none !important; /* Remove any shadow */
+    /* border: 1px solid #FFD100;  Optional border */
+    /* padding: 1px;  Optional padding */
+     border-radius: 1px;  /*   Rounded corners */
+    /* margin-bottom: 0.5em; */
+}
+
+.custom-code-block pre {
+    background-color: #DAEBFE !important; /* Same light blue */
+    border: none !important;  /* Remove any border */
+    box-shadow: none !important; /* Remove any shadow */
+    border-radius: 1px;  /*   Rounded corners */
+    /* padding: 0.5em; */
+}
+
+
+/* Headings */
+h1 {
+  color: #2774AE;
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.2em;
+}
+h2 {
+  color: #2774AE;
+  font-size: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+

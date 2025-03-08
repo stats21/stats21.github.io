@@ -143,17 +143,6 @@
     ]
   },
   {
-    "objectID": "resources/pyodide_test.html",
-    "href": "resources/pyodide_test.html",
-    "title": "Pyodide and Quarto HTML Documents",
-    "section": "",
-    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Resources",
-      "Pyodide"
-    ]
-  },
-  {
     "objectID": "lec/Lecture01.html#technical-skills",
     "href": "lec/Lecture01.html#technical-skills",
     "title": "Week 1, Meeting 1",
@@ -620,7 +609,7 @@
     "href": "lec/Lecture01.html#objects-have-among-other-things",
     "title": "Week 1, Meeting 1",
     "section": "Objects have… (among other things)",
-    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4345192776\nThis is the result of id(y): 4345192776\nThis is the result of id(spells): 4389926784\nThis is the result of id(z): 4792821552\n\nThis is the result of id(print): 4344966352\nThis is the result of changing y now id(y): 4389978400",
+    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4308853064\nThis is the result of id(y): 4308853064\nThis is the result of id(spells): 4353472832\nThis is the result of id(z): 4903020336\n\nThis is the result of id(print): 4308626640\nThis is the result of changing y now id(y): 4353820496",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -858,36 +847,14 @@
     ]
   },
   {
-    "objectID": "resources/chalkboard_template.html#any-more-thoughts",
-    "href": "resources/chalkboard_template.html#any-more-thoughts",
-    "title": "Activity",
-    "section": "Any More Thoughts?",
-    "text": "Any More Thoughts?\n\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous",
+    "objectID": "resources/pyodide_test.html",
+    "href": "resources/pyodide_test.html",
+    "title": "Pyodide and Quarto HTML Documents",
+    "section": "",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Resources",
-      "Chalkboard"
-    ]
-  },
-  {
-    "objectID": "resources/chalkboard_template.html#just-reason-it-through",
-    "href": "resources/chalkboard_template.html#just-reason-it-through",
-    "title": "Activity",
-    "section": "Just reason it through",
-    "text": "Just reason it through",
-    "crumbs": [
-      "Resources",
-      "Chalkboard"
-    ]
-  },
-  {
-    "objectID": "resources/chalkboard_template.html#for-your-consideration",
-    "href": "resources/chalkboard_template.html#for-your-consideration",
-    "title": "Activity",
-    "section": "For your consideration",
-    "text": "For your consideration",
-    "crumbs": [
-      "Resources",
-      "Chalkboard"
+      "Pyodide"
     ]
   },
   {
