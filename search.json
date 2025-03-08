@@ -862,21 +862,33 @@
     "href": "resources/chalkboard_template.html#thoughts",
     "title": "Activity",
     "section": "Thoughts?",
-    "text": "Thoughts?"
+    "text": "Thoughts?",
+    "crumbs": [
+      "Resources",
+      "Chalkboard"
+    ]
   },
   {
     "objectID": "resources/chalkboard_template.html#just-reason-it-through",
     "href": "resources/chalkboard_template.html#just-reason-it-through",
     "title": "Activity",
     "section": "Just reason it through",
-    "text": "Just reason it through"
+    "text": "Just reason it through",
+    "crumbs": [
+      "Resources",
+      "Chalkboard"
+    ]
   },
   {
     "objectID": "resources/chalkboard_template.html#for-your-consideration",
     "href": "resources/chalkboard_template.html#for-your-consideration",
     "title": "Activity",
     "section": "For your consideration",
-    "text": "For your consideration"
+    "text": "For your consideration",
+    "crumbs": [
+      "Resources",
+      "Chalkboard"
+    ]
   },
   {
     "objectID": "about.html",
