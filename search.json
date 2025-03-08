@@ -862,7 +862,7 @@
     "href": "resources/chalkboard_template.html#any-more-thoughts",
     "title": "Activity",
     "section": "Any More Thoughts?",
-    "text": "Any More Thoughts?",
+    "text": "Any More Thoughts?\n\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous",
     "crumbs": [
       "Resources",
       "Chalkboard"
