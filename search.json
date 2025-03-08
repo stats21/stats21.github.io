@@ -143,6 +143,17 @@
     ]
   },
   {
+    "objectID": "resources/pyodide_test.html",
+    "href": "resources/pyodide_test.html",
+    "title": "Pyodide and Quarto HTML Documents",
+    "section": "",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Resources",
+      "Pyodide"
+    ]
+  },
+  {
     "objectID": "lec/Lecture01.html#technical-skills",
     "href": "lec/Lecture01.html#technical-skills",
     "title": "Week 1, Meeting 1",
@@ -847,15 +858,25 @@
     ]
   },
   {
-    "objectID": "resources/pyodide_test.html",
-    "href": "resources/pyodide_test.html",
-    "title": "Pyodide and Quarto HTML Documents",
-    "section": "",
-    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Resources",
-      "Pyodide"
-    ]
+    "objectID": "resources/chalkboard_template.html#thoughts",
+    "href": "resources/chalkboard_template.html#thoughts",
+    "title": "Activity",
+    "section": "Thoughts?",
+    "text": "Thoughts?"
+  },
+  {
+    "objectID": "resources/chalkboard_template.html#just-reason-it-through",
+    "href": "resources/chalkboard_template.html#just-reason-it-through",
+    "title": "Activity",
+    "section": "Just reason it through",
+    "text": "Just reason it through"
+  },
+  {
+    "objectID": "resources/chalkboard_template.html#for-your-consideration",
+    "href": "resources/chalkboard_template.html#for-your-consideration",
+    "title": "Activity",
+    "section": "For your consideration",
+    "text": "For your consideration"
   },
   {
     "objectID": "about.html",
