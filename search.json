@@ -235,7 +235,7 @@
     "href": "lec/Lecture01.html#show-you-some-of-the-ways",
     "title": "Week 1, Meeting 1",
     "section": "Show you (some of) the ways",
-    "text": "Show you (some of) the ways\n\nInteractive Python REPL (Read-Eval-Print Loop) environment (it’s the OG)\nA Python Script (like an R script, reusable, for production)\nJupyter Notebook (interactive like R Markdown, reusable, for homework and reports, presentations)\nQuarto (like a Jupyter Notebook on roids, reusable, for reports and presentations)",
+    "text": "Show you (some of) the ways\n\nInteractive Python REPL (Read-Eval-Print Loop) environment (it’s the OG)\nA Python Script (like an R script, reusable, for production)\nJupyter Notebook (interactive like R Markdown, reusable, for homework and reports, presentations, nice cells)\nQuarto (like RMarkdown on PEDs, reusable, for reports and presentations)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -477,7 +477,7 @@
     "href": "lec/Lecture01.html#optional-quick-dirty-git-github",
     "title": "Week 1, Meeting 1",
     "section": "Optional: Quick & Dirty Git & GitHub",
-    "text": "Optional: Quick & Dirty Git & GitHub\nIf you have your own account with a respository on GitHub, you can modify your repository and access other repositories. You can also keep a copy of the repository on your local computer and interact with the repository stored remotely on GitHub. You really only need 4 commands once your local repository is established\n\nPull (update the local with changes from the remote)\nAdd (stages local updates)\nCommit (creates a “snapshot” of your repositories just before uploading)\nPush (uploads the staged and commited changes)",
+    "text": "Optional: Quick & Dirty Git & GitHub\nIf you have your own account with a respository on GitHub, you can modify your repository and access other repositories. You can also keep a copy of the repository on your local computer and interact with the repository stored remotely on GitHub. You really only need 4 commands once your local repository is established\n\nPull (update the local with changes from the remote)\nAdd (stages local updates)\nCommit (creates a “snapshot” of your repositories just before uploading)\nPush (uploads the staged and commited changes)\n\nOf course the professionals use many more, but with a sound foundation, you could continue acquiring git skills should you need them.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -495,11 +495,11 @@
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#what-to-do-in-your-group-10-15-minutes",
-    "href": "lec/Lecture01.html#what-to-do-in-your-group-10-15-minutes",
+    "objectID": "lec/Lecture01.html#what-to-do-in-your-group-1015-minutes",
+    "href": "lec/Lecture01.html#what-to-do-in-your-group-1015-minutes",
     "title": "Week 1, Meeting 1",
-    "section": "What to do in your group (10-15 minutes)",
-    "text": "What to do in your group (10-15 minutes)\n\ntry to determine whether (a) Python, (b) some kind of code editor (like VS Code, Jupyter Notebook) and git exist on your team’s computers\nplease take some notes for your own personal use if you do not already have these installed (mental note or other)\njust take a moment to enjoy your time at UCLA",
+    "section": "What to do in your group (10*15 minutes)",
+    "text": "What to do in your group (10*15 minutes)\n\ntry to determine whether (a) Python, (b) some kind of code editor (like VS Code, Jupyter Notebook) and git exist on your team’s computers\nplease take some notes for your own personal use if you do not already have these installed (mental note or other)\njust take a moment to enjoy your time at UCLA",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -510,7 +510,7 @@
     "href": "lec/Lecture01.html#lets-back-up-a-little",
     "title": "Week 1, Meeting 1",
     "section": "Let’s Back up a little",
-    "text": "Let’s Back up a little\n\nWhere do we start?\nMaybe an overview using the “Zen of Python” (PEP 20) https://peps.python.org/pep-0020/\nThen an example\nThen objects, naming, reserved keywords, etc. see how far we get today.",
+    "text": "Let’s Back up a little\n\nWhere do we start?\nMaybe an overview using the “Zen of Python” (PEP 20) https://peps.python.org/pep-0020/\nThen an example\nThen objects, naming, reserved keywords, etc. see how far we get today.\nYou may also want to examine https://docs.python.org/3/library/functions.html these are Python’s built-in functions and always available, anywhere, anytime.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -532,7 +532,7 @@
     "href": "lec/Lecture01.html#readable-beautiful-self-evident",
     "title": "Week 1, Meeting 1",
     "section": "Readable, beautiful, self-evident",
-    "text": "Readable, beautiful, self-evident\nIn Python every word, symbol, and especially indentation matters. An example:\n\nEx 1Ex 2Ex 3\n\n\n\n\nCode\nfor count in 0, 1, 2, 3, 4, 5:\n    print(count) # Python recommends 4 spaces\n\n\n0\n1\n2\n3\n4\n5\n\n\nIf that print(count) is not indented an IndentationError will be generated.\nrecall (in Stats 20) for takes an instruction (code) and applies it to each item in the iterable, same in Python. A colon denotes the start of an indented code block after which all of the code must be indented by the same amount until the end of the block.\n\n\n\n\nCode\nfor spell in \"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \\\n             \"Confundo\", \"Finite Incantatem\", \"Incarcerous\":\n    print(spell)\nprint(\"This print() is not in the code block\")\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\nThis print() is not in the code block\n\n\nSame general structure, “spell” is the loop variable and the in connects it to the iterable. The iterable in this example is a data structure known as a tuple but it is not at all clear to a new user.\n\n\nspells in this example is a list (much more about those later) it is yet another type of data structure. We could also call a list a container object. A list holds other objects.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell)\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\n\n\nspell is the loop variable and in connects it to spells which is an iterable. We can see that setting up the iterable in this third way is more scalable than the other ways. The object spells can also be reused in other ways and places.",
+    "text": "Readable, beautiful, self-evident\nIn Python every word, symbol, and especially indentation matters. An example:\n\nEx 1Ex 2Ex 3\n\n\n\n\nCode\nfor count in 0, 1, 2, 3, 4, 5:\n    print(count) # Python recommends 4 spaces\n\n\n0\n1\n2\n3\n4\n5\n\n\nIf that print(count) is not indented an IndentationError will be generated.\nrecall (in Stats 20) for takes an instruction (code) and applies it to each item in the iterable, same in Python. A colon denotes the start of an indented code block after which all of the code must be indented by the same amount until the end of the block.\n\n\n\n\nCode\nfor spell in \"Expelliarmus\", \"Colloshoo\", \"Legilimens\", \"Impedimenta\", \\\n             \"Confundo\", \"Finite Incantatem\", \"Incarcerous\":\n    print(spell) # this print is in the code block\nprint(\"This print() is not in the code block\")\n\n\nExpelliarmus\nColloshoo\nLegilimens\nImpedimenta\nConfundo\nFinite Incantatem\nIncarcerous\nThis print() is not in the code block\n\n\nSame general structure, “spell” is the loop variable and the in connects it to the iterable. The iterable in this example is a data structure known as a tuple (more on this later) but it is not at all clear to a new user.\n\n\nspells in this example is a list (much more about those later) it is yet another type of data structure. We could also call a list a container object. A list holds other objects.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\nfor spell in spells:\n    print(spell+\"!\")\n\nprint(spell) # please explain\n\nprint(spells) # please explain\n\n\nExpelliarmus!\nColloshoo!\nLegilimens!\nImpedimenta!\nConfundo!\nFinite Incantatem!\nIncarcerous!\nIncarcerous\n['Expelliarmus', 'Colloshoo', 'Legilimens', 'Impedimenta', 'Confundo', 'Finite Incantatem', 'Incarcerous']\n\n\nspell is the loop variable and in connects it to spells which is an iterable. We can see that setting up the iterable in this third way is more scalable than the other ways. The object spells can also be reused in other ways and places.",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -598,7 +598,7 @@
     "href": "lec/Lecture01.html#example-object-creation",
     "title": "Week 1, Meeting 1",
     "section": "Example: Object Creation",
-    "text": "Example: Object Creation\nName and assign values to objects. Very R-like in basic Python:\n\n\nCode\nx = 5\ny = 5\n\n# spells is a list object, a data structure\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\",\n    \"Finite Incantatem\",\n    \"Incarcerous\",\n]\n\nz = range(6) # note this is a comment\n\nprint(f\"This is x: {x}\")\nprint(f\"This is y: {y}\")\nprint(f\"This is the second spell: {spells[1]}\") # Python is zero indexed\nprint(f\"This is z: {z}\") # Python is zero indexed\n\n\nThis is x: 5\nThis is y: 5\nThis is the second spell: Colloshoo\nThis is z: range(0, 6)",
+    "text": "Example: Object Creation\nName and assign values to objects. Very R-like in basic Python for simple objects:\n\n\nCode\nx = 5\ny = 5\n\n# spells is a list object, a data structure\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\",\n    \"Finite Incantatem\",\n    \"Incarcerous\",\n]\n\nz = range(6) # note this is a comment\n\nprint(f\"This is x: {x}\")\nprint(f\"This is y: {y}\")\nprint(f\"This is the second spell: {spells[1]}\") # Python is zero indexed\nprint(f\"This is z: {z}\") # Python is zero indexed\n\n\nThis is x: 5\nThis is y: 5\nThis is the second spell: Colloshoo\nThis is z: range(0, 6)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -609,18 +609,18 @@
     "href": "lec/Lecture01.html#objects-have-among-other-things",
     "title": "Week 1, Meeting 1",
     "section": "Objects have… (among other things)",
-    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4347535688\nThis is the result of id(y): 4347535688\nThis is the result of id(spells): 4392286336\nThis is the result of id(z): 4798841120\n\nThis is the result of id(print): 4347309264\nThis is the result of changing y now id(y): 4799913856",
+    "text": "Objects have… (among other things)\n\nID\ntype\nvalue\nreference count (the number of variables that point to an object in memory)\n\nWe can use built-in functions to examine these characteristics",
     "crumbs": [
       "Lectures",
       "Lecture01"
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#example-object-type-value",
-    "href": "lec/Lecture01.html#example-object-type-value",
+    "objectID": "lec/Lecture01.html#example-checking-object-id-type-value",
+    "href": "lec/Lecture01.html#example-checking-object-id-type-value",
     "title": "Week 1, Meeting 1",
-    "section": "Example: Object Type & Value",
-    "text": "Example: Object Type & Value\n\nChecking typeChecking ValueWhy range(0, 6)?\n\n\n\n\nCode\nprint(f\"This is the result of type(x): {type(x)}\")\nprint(f\"This is the result of type(y): {type(y)}\")\nprint(f\"This is the result of type(spells): {type(spells)}\")\nprint(f\"This is the result of type(z): {type(z)}\")\nprint(f\"This is the result of type(print): {type(print)}\")\n\n\nThis is the result of type(x): &lt;class 'int'&gt;\nThis is the result of type(y): &lt;class 'str'&gt;\nThis is the result of type(spells): &lt;class 'list'&gt;\nThis is the result of type(z): &lt;class 'range'&gt;\nThis is the result of type(print): &lt;class 'builtin_function_or_method'&gt;\n\n\n\n\n\n\nCode\nprint(x)\nprint(y)\nprint(spells[1])\nprint(z)\n\n\n5\nUCLA\nColloshoo\nrange(0, 6)\n\n\n\n\nThis is a range object, the values are not generated until the range object is used.\n\n\nCode\nfor count in z:\n    print(count)\n\n\n0\n1\n2\n3\n4\n5",
+    "section": "Example: Checking Object ID, Type & Value",
+    "text": "Example: Checking Object ID, Type & Value\n\nid()type()Valuerange(0, 6)?\n\n\nAn object’s ID is an integer and it is the object’s memory address.\n\n\nCode\nprint(f\"This is the result of id(x): {id(x)}\")\nprint(f\"This is the result of id(y): {id(y)}\")\nprint(f\"This is the result of id(spells): {id(spells)}\")\nprint(f\"This is the result of id(z): {id(z)}\")\nprint(f\"This is the result of id(print): {id(print())}\")\n\ny = \"UCLA\"\nprint(f\"This is the result of changing y now id(y): {id(y)}\")\n\n\nThis is the result of id(x): 4347486536\nThis is the result of id(y): 4347486536\nThis is the result of id(spells): 4391688640\nThis is the result of id(z): 4790370592\n\nThis is the result of id(print): 4347260112\nThis is the result of changing y now id(y): 4806267872\n\n\n\n\n\n\nCode\nprint(f\"This is the result of type(x): {type(x)}\")\nprint(f\"This is the result of type(y): {type(y)}\")\nprint(f\"This is the result of type(spells): {type(spells)}\")\nprint(f\"This is the result of type(z): {type(z)}\")\nprint(f\"This is the result of type(print): {type(print)}\")\n\n\nThis is the result of type(x): &lt;class 'int'&gt;\nThis is the result of type(y): &lt;class 'str'&gt;\nThis is the result of type(spells): &lt;class 'list'&gt;\nThis is the result of type(z): &lt;class 'range'&gt;\nThis is the result of type(print): &lt;class 'builtin_function_or_method'&gt;\n\n\n\n\nA print() is sufficient\n\n\nCode\nprint(x)\nprint(y)\nprint(spells[1])\nprint(z)\n\n\n5\nUCLA\nColloshoo\nrange(0, 6)\n\n\n\n\nThis is a range object, the values are not generated until the range object is used.\n\n\nCode\nfor count in z:\n    print(count, end= \" \")\n\n\n0 1 2 3 4 5",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -686,7 +686,7 @@
     "href": "lec/Lecture01.html#some-suggestions-for-stats-21",
     "title": "Week 1, Meeting 1",
     "section": "Some suggestions for Stats 21",
-    "text": "Some suggestions for Stats 21\n\nNever use the characters ‘l’ (lowercase letter el), ‘O’ (uppercase letter oh), or ‘I’ (uppercase letter eye) as single character variable names.\nFunction names should be lowercase, with words separated by underscores as necessary to improve readability.\nVariable names follow the same convention as function names.\nPlease capitalize the first letter when defining a Class (e.g., CapitalizedWords)\nIf you create a Python constant please use snake case with all caps (e.g., WEB_ADDRESS)\n\n DATA_FILE = \"data/weather_data.csv\"  # a Global constant (file path)",
+    "text": "Some suggestions for Stats 21\n\nAvoid using the characters ‘l’ (lowercase letter el), ‘O’ (uppercase letter oh), or ‘I’ (uppercase letter eye) as single character variable names.\nFunction names should be lowercase, with words separated by underscores as necessary to improve readability.\nVariable names follow the same convention as function names.\nPlease capitalize the first letter when defining a Class (e.g., CapitalizedWords)\nIf you create a Python constant please use snake case with all caps (e.g., WEB_ADDRESS)\n\n DATA_FILE = \"data/weather_data.csv\"  # a Global constant (file path)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -697,106 +697,73 @@
     "href": "lec/Lecture01.html#please-try-creating-some-variables",
     "title": "Week 1, Meeting 1",
     "section": "Please try creating some variables",
-    "text": "Please try creating some variables\n\nStart the interactive interpreter, and type print(42).\n\nIt should echo 42 on the next line.\n\nIf you’re still in the interactive interpreter, type 43. It should print 43 on the next line. This is a feature of the interactive interpreter only, and won’t print anything if you’re executing a Python file.\nTry assigning a value to a variable. Trying printing the value of the variable.\nTry some illegal names to see what error messages Python tosses back to you.",
+    "text": "Please try creating some variables\n\nStart the interactive interpreter, and type print(42).\n\nIt should echo 42 on the next line.\n\nTry assigning a value to a variable. Trying printing the value of the variable.\nTry some illegal names to see what error messages Python tosses back to you.",
     "crumbs": [
       "Lectures",
       "Lecture01"
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#more-about-data-type",
-    "href": "lec/Lecture01.html#more-about-data-type",
+    "objectID": "lec/Lecture01.html#built-in-functions",
+    "href": "lec/Lecture01.html#built-in-functions",
     "title": "Week 1, Meeting 1",
-    "section": "More about data type",
-    "text": "More about data type\n\nSome of the basic types\n\n\nName\nType\nMutable?\nExample\n\n\n\n\nBoolean\nbool\nno\nTrue; False\n\n\nInteger\nint\nno\n3; -256\n\n\nFloating Point\nfloat\nno\n1e5; 2.718\n\n\nComplex\ncomplex\nno\n10j; 2 + 1j\n\n\nText\nstr\nno\n“UCLA”; “The quick brown fox”",
+    "section": "Built-In Functions",
+    "text": "Built-In Functions\n\nPython has a number of functions and types built into it that are always available.\nWe have seen range(), id(), type(), float(), input(), isinstance()\nWe are about to examine print() in greater detail\nSee https://docs.python.org/3/library/functions.html",
     "crumbs": [
       "Lectures",
       "Lecture01"
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#bool",
-    "href": "lec/Lecture01.html#bool",
+    "objectID": "lec/Lecture01.html#print",
+    "href": "lec/Lecture01.html#print",
     "title": "Week 1, Meeting 1",
-    "section": "Bool",
-    "text": "Bool\n\nThe boolean data type values are True and False.\nIn Stats 21 we may use the values directly as data.\nWe may also use them as the evaluation result\n\n\n\nCode\nanswers = [\n    True, True, False, True, False, False, False, True, True, True\n    ]\n\nprint(f'This is answers: {answers} \\n ' ) # F-strings AKA formatted string literals\n\nprint(f'Is answers a list object? {isinstance(answers, list)} \\n')\n\nprint(f'Is False a bool? {isinstance(False, bool)} \\n')\n\nprint(f'Is 5 &lt; 2? {5 &lt; 2} \\n')\n\nprint(f'Is Trump &gt; Jesus? {\"Trump\" &gt; \"Jesus\"} \\n') \n# Strings can be evaluated\n# But not in the way you think when the question is nuanced.\n\nprint(f'Is UCLA &gt; USC? {\"UCLA\" &gt; \"USC\"}\\n')\n\nprint(f'Is 小 &gt; 大? {\"小\" &gt; \"大\"} \\n') \n# Computers lack a contextual understanding.\n\nprint(f'Unicode of T: {ord(\"T\")}') # how Python evaluates\nprint(f'Unicode of J: {ord(\"J\")}') # and orders strings\n\nprint(f'Unicode of C: {ord(\"C\")}') # U is tied\nprint(f'Unicode of S: {ord(\"S\")}') # so Python moves to the next letter\n\nprint(f'Unicode of 小: {ord(\"小\")}')\nprint(f'Unicode of 大: {ord(\"大\")}')\n\n\nThis is answers: [True, True, False, True, False, False, False, True, True, True] \n \nIs answers a list object? True \n\nIs False a bool? True \n\nIs 5 &lt; 2? False \n\nIs Trump &gt; Jesus? True \n\nIs UCLA &gt; USC? False\n\nIs 小 &gt; 大? True \n\nUnicode of T: 84\nUnicode of J: 74\nUnicode of C: 67\nUnicode of S: 83\nUnicode of 小: 23567\nUnicode of 大: 22823",
+    "section": "Print",
+    "text": "Print\n\nThe print() function is a built-in function used to display output\nIt adds a newline () at the end unless specified otherwise.\n\n\n\n\n\n\n\n\n\nParameter\nDescription\nExample\n\n\n\n\nsep\nSeparator between multiple arguments\nprint(‘A’, ‘B’, ‘C’, sep=‘-’) # A-B-C\n\n\nend\nString to print at the end instead of a newline\nprint(‘Hello’, end=‘!’) # Hello!\n\n\nfile\nOutput to a file\nprint(‘Hello’, file=open(‘output.txt’, ‘w’))",
     "crumbs": [
       "Lectures",
       "Lecture01"
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#integers",
-    "href": "lec/Lecture01.html#integers",
+    "objectID": "lec/Lecture01.html#printing-with-f-strings-formatted-string-literals",
+    "href": "lec/Lecture01.html#printing-with-f-strings-formatted-string-literals",
     "title": "Week 1, Meeting 1",
-    "section": "Integers",
-    "text": "Integers\n\nIntegers are whole numbers, no decimal, no fraction, no comma (use an underscore if you must)\ncould have + or -\n\n\n\nCode\nx = 7\ny = -7\nz = +7\na = 100_000\n\nprint(f'x = {x} \\n')\nprint(f'y = {y} \\n')\nprint(f'z = {z} \\n')\nprint(f'a = {a} \\n')\n\n\nx = 7 \n\ny = -7 \n\nz = 7 \n\na = 100000",
+    "section": "Printing with f-strings (formatted string literals)",
+    "text": "Printing with f-strings (formatted string literals)\nThese are incredibly useful and simple:\nExample\n\n\nCode\nname = 'Joe Bruin'\nbirth = 1963\nus_pop = 346573585\nprint(f'My name is {name} and I was born in the year {birth}.')\nprint(f'pi is roughly {22/7:.4f}.')\nprint(f'If I had a dollar for every American, I\\'d have ${us_pop:,}')\n\n\nMy name is Joe Bruin and I was born in the year 1963.\npi is roughly 3.1429.\nIf I had a dollar for every American, I'd have $346,573,585\n\n\nsee https://docs.python.org/3/library/string.html#formatspec for other formats",
     "crumbs": [
       "Lectures",
       "Lecture01"
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#common-operations",
-    "href": "lec/Lecture01.html#common-operations",
+    "objectID": "lec/Lecture01.html#comments-and-docstrings",
+    "href": "lec/Lecture01.html#comments-and-docstrings",
     "title": "Week 1, Meeting 1",
-    "section": "Common Operations",
-    "text": "Common Operations\n\n\n\nOperator\nDescription\n\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nFloating-point division\n\n\n//\nInteger division\n\n\n%\nModulus division\n\n\n**\nExponentiation",
+    "section": "Comments and docstrings",
+    "text": "Comments and docstrings\n\nComments improve code readability and maintainability. You should use them liberally.\n\nTo create a single-line comment, place the # symbol at the beginning of the line or after the code on the same line.\nTo create a multi-line comment, use triple quotes (’’’ or “““) at the beginning and end of the comment\n\ndocstrings are used to document a function, class, or module (library) and are accessible with help( )",
     "crumbs": [
       "Lectures",
       "Lecture01"
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#examples",
-    "href": "lec/Lecture01.html#examples",
+    "objectID": "lec/Lecture01.html#example-with-comments-docstrings-f-strings",
+    "href": "lec/Lecture01.html#example-with-comments-docstrings-f-strings",
     "title": "Week 1, Meeting 1",
-    "section": "Examples",
-    "text": "Examples\n\n\nCode\nx = 3 + 4 + 5\ny = 4 - 1 - 2\nz = 2 * 3 * 4 * 5\na = 15/4\nb = 15//4\nc = 15%4\nd = 2**5\n\nprint(f'x = 3 + 4 + 5 result is: {x} \\n')\nprint(f'y = 4 - 1 - 2 result is: {y} \\n')\nprint(f'z = 2 * 3 * 4 * 5 result is: {z} \\n')\nprint(f'a = 15/4 result is: {a} \\n')\nprint(f'b = 15//4 result is: {b} \\n')\nprint(f'c = 15%4 result is: {c} \\n')\nprint(f'd = 2**5 result is: {d} \\n')\n\n\nx = 3 + 4 + 5 result is: 12 \n\ny = 4 - 1 - 2 result is: 1 \n\nz = 2 * 3 * 4 * 5 result is: 120 \n\na = 15/4 result is: 3.75 \n\nb = 15//4 result is: 3 \n\nc = 15%4 result is: 3 \n\nd = 2**5 result is: 32",
+    "section": "Example with comments, docstrings, f-strings",
+    "text": "Example with comments, docstrings, f-strings\n\n\nCode\n def factorial(n):\n    \"\"\"\n    Calculates the factorial of a number.\n\n    Args:\n        n (int): The number to compute factorial for.\n\n    Returns:\n        int: The factorial of the number.\n    \"\"\"\n    \n    # This function calculates the factorial of a number using iteration.\n    # It starts with a base value of 1 and multiplies by each number \n    # from 1 to n to get the final result.\n    # If n is negative, it returns None.\n    \n    if n &lt; 0:\n        raise ValueError(\"Please choose a non-negative number\") # this will stop the function\n\n    result = 1  # covers 0 and 1\n    for i in range(2, n + 1): \n        result *= i  # Multiply result by i in each step\n\n    return result\n\n# Let's test it\n# factorial(-1)\nprint(f\"The factorial of 0 is: {factorial(0)} \\n\")\nprint(f\"The factorial of 1 is: {factorial(1)} \\n\")\nprint(factorial(5))\nprint()\nhelp(factorial)\n\n\nThe factorial of 0 is: 1 \n\nThe factorial of 1 is: 1 \n\n120\n\nHelp on function factorial in module __main__:\n\nfactorial(n)\n    Calculates the factorial of a number.\n\n    Args:\n        n (int): The number to compute factorial for.\n\n    Returns:\n        int: The factorial of the number.",
     "crumbs": [
       "Lectures",
       "Lecture01"
     ]
   },
   {
-    "objectID": "lec/Lecture01.html#notes-on-operations",
-    "href": "lec/Lecture01.html#notes-on-operations",
+    "objectID": "lec/Lecture01.html#aside",
+    "href": "lec/Lecture01.html#aside",
     "title": "Week 1, Meeting 1",
-    "section": "Notes on operations",
-    "text": "Notes on operations\n\nYou can combine literal integers with variables that have been assigned integer values\nYou can modify a variable but you will need to reassign it to store the modification\nYou could use a compound operation e.g., +=, -= to operate and modify at the same time\nPython uses PEMDAS (Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction)",
-    "crumbs": [
-      "Lectures",
-      "Lecture01"
-    ]
-  },
-  {
-    "objectID": "lec/Lecture01.html#examples-1",
-    "href": "lec/Lecture01.html#examples-1",
-    "title": "Week 1, Meeting 1",
-    "section": "Examples",
-    "text": "Examples\n\n\nCode\nprint(f'The result of x + y is: {x + y} \\n')\nprint(f'The result of z/5 is: {z/5} \\n')\nprint(f'But z remains unchanged: {z} \\n')\nprint(f'The current value of y is: {y} \\n')\ny += 20\nprint(f'The new value of y is: {y} \\n')\n\n\nThe result of x + y is: 13 \n\nThe result of z/5 is: 24.0 \n\nBut z remains unchanged: 120 \n\nThe current value of y is: 1 \n\nThe new value of y is: 21",
-    "crumbs": [
-      "Lectures",
-      "Lecture01"
-    ]
-  },
-  {
-    "objectID": "lec/Lecture01.html#floats",
-    "href": "lec/Lecture01.html#floats",
-    "title": "Week 1, Meeting 1",
-    "section": "Floats",
-    "text": "Floats\n\nfloats in Python have decimal points even if its only zeroes after the decimal\nfloats can include a decimal integer exponent after the letter e\nThe operators work in the same manners as with integers\nfloats are not exact see https://docs.python.org/3/tutorial/floatingpoint.html\n\n\n\nCode\n2e10\n\n\n20000000000.0",
-    "crumbs": [
-      "Lectures",
-      "Lecture01"
-    ]
-  },
-  {
-    "objectID": "lec/Lecture01.html#complex-optional",
-    "href": "lec/Lecture01.html#complex-optional",
-    "title": "Week 1, Meeting 1",
-    "section": "Complex (optional)",
-    "text": "Complex (optional)\n\nshould you need this in the future (not here) Python can work with complex values, they are represented by a j\n\n\n\nCode\nx = 2j\ny = 10j\nz = y/x\n\nprint(f'x is {x} \\n')\nprint(f'y is {y} \\n')\nprint(f'y/x = {z} \\n')\n\n\nx is 2j \n\ny is 10j \n\ny/x = (5+0j)",
+    "section": "Aside",
+    "text": "Aside\n\nThat is the programming of a function in Python (next week, don’t worry about it today)\nkeywords to make note of now: def, if, for, in, return\nand operators to recognize &lt; (comparison operator) *= (augmented assignment operator: multiplication)",
     "crumbs": [
       "Lectures",
       "Lecture01"
@@ -841,6 +808,17 @@
     "title": "Week 1, Meeting 1",
     "section": "(extra) Using a virtual environment (recommended)",
     "text": "(extra) Using a virtual environment (recommended)\n\nWhat I revealed in the previous slide is that I’m running Python in a virtual environment\nSimply, a virtual environment is a self-contained directory (folder) that is a different version/installation of Python\nI have 4 different versions of Python on my laptop\nYou could have a version of Python just for this class\nI use pip and venv, but you can use anything see https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/\nA virtual environment primer",
+    "crumbs": [
+      "Lectures",
+      "Lecture01"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture01.html#extra-last-slide-practice-reading-some-python",
+    "href": "lec/Lecture01.html#extra-last-slide-practice-reading-some-python",
+    "title": "Week 1, Meeting 1",
+    "section": "(extra) Last slide, practice reading some Python",
+    "text": "(extra) Last slide, practice reading some Python\nJust for fun and practice see if you can figure out what is happening here. If you want to see if you were correct, see and try running the original script (find it here): https://ucla.box.com/s/hy7bsxaqj4lw17a51jyp5b777o7xim09\n\n\nCode\n#!/usr/bin/env python3\n\n\n## Importing two functions from two libraries\nfrom pathlib import Path\nfrom pytubefix import YouTube\n\n## Ask for a YouTube URL, input() is a built-in function\nMY_URL = input('What is the URL of your YouTube video? ')\nMY_PATH = Path.cwd()  # will save to the current working directory\n\n## Create the custom function \"get_filename\" to allow the use to input their own name \ndef get_filename(default=None):\n    \"\"\"Prompt the user for a filename with no extension\"\"\"\n    while True:\n        user_input = input(\"Enter a new name for the saved file (without extension) or press enter for its default name: \").strip() # removes whitespace\n        if user_input == '':  # User pressed Enter without input\n            return default\n        elif Path(user_input).suffix.lower() != '.mp4':  \n            user_input +=  '.mp4'\n        return user_input\n\n## Go out and get a video\nyt = YouTube(MY_URL, 'WEB') # need 'WEB' or something comparable\nys = yt.streams.get_highest_resolution()\n\n## use the get_filename() we wrote for this script\nvideo_filename = get_filename()\n\n## download the video\nys.download(output_path = MY_PATH, filename = video_filename, skip_existing = False)",
     "crumbs": [
       "Lectures",
       "Lecture01"
