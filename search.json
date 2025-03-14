@@ -37,7 +37,7 @@
     "href": "syllabus.html#grades",
     "title": "STATS 21 Spring 2025 Syllabus",
     "section": "Grades",
-    "text": "Grades\nLetter grades are assigned on a straight scale as follows:\n\n50% and below: F\n\n51.0 - 76.9%: C, 77.0 - 79.9%: C+\n\n80.0 - 82.9%: B-, 83.0 - 86.9%: B, 87.0 - 89.9%: B+\n\n90.0 - 92.9%: A-, 93.0% and up A\n\nI do not assign C-, D+, D, or D-. If you are a Data Theory major please take the class for a letter grade. Taking the course pass/no-pass will not fulfill the requirements for completing the major.\n\nClass attendance and participation\nThe learning process of this class is based on in-person discussion and participation during lecture and attending and participating during discussion section with your TAs. The lecture is not broadcast (please check with your TA about section) instead a weekly recorded recap lecture will be uploaded to BruinLearn. If you are unable to attend lecture in person because you have a documented accommodation with UCLA, please let me know via e-mail sent from BruinLearn so we can work out a different arrangement.\n\n\nGrading\n\n20% Attending and participating in team activities during lecture\n\n10% Attending and participating during section (TA will determine the specifics)\n\n10% End of quarter project for TA/discussion (TA will determine the specifics)\n\n20% Python Homework (6 assignments - drop your lowest score)\n15% Python journal pages (upload 3x per week - drop 3 lowest)\n10% Python Teaching Video (due by the end of the quarter)\n15% Final exam (in-person only, bring a pencil, no electronic devices allowed and no internet access)\n\n\n\nCourse Grade Changes\nAfter course grades have been submitted to the registrar, grades are final. Grade changes will only be considered if there has been a clerical or procedural mistake. Students have one quarter to make requests for a grade change. Graded exams and other materials are kept for one quarter. After one quarter, course grade changes cannot be made.",
+    "text": "Grades\nLetter grades are assigned on a straight scale as follows:\n\n50% and below: F\n\n51.0 - 76.9%: C, 77.0 - 79.9%: C+\n\n80.0 - 82.9%: B-, 83.0 - 86.9%: B, 87.0 - 89.9%: B+\n\n90.0 - 92.9%: A-, 93.0% and up A\n\nI do not assign C-, D+, D, or D-. If you are a Data Theory major please take the class for a letter grade. Taking the course pass/no-pass will not fulfill the requirements for completing the major.\n\nClass attendance and participation\nThe learning process of this class is based on in-person discussion and participation during lecture and attending and participating during discussion section with your TAs. The lecture is not broadcast (please check with your TA about section) instead a weekly recorded recap lecture will be uploaded to BruinLearn. If you are unable to attend lecture in person because you have a documented accommodation with UCLA, please let me know via e-mail sent from BruinLearn so we can work out a different arrangement.\n\n\nGrading\n\n20% Attending and participating in team activities during lecture\n\n10% Attending and participating during section (TA will determine the specifics)\n\n10% End of quarter project for TA/discussion (TA will determine the specifics)\n\n25% Python Homework (6 assignments - drop your lowest score)\n15% Python journal pages (upload 3x per week - drop 3 lowest)\n20% Final exam (in-person only, bring a pencil, no electronic devices allowed and no internet access)\n\n\n\nCourse Grade Changes\nAfter course grades have been submitted to the registrar, grades are final. Grade changes will only be considered if there has been a clerical or procedural mistake. Students have one quarter to make requests for a grade change. Graded exams and other materials are kept for one quarter. After one quarter, course grade changes cannot be made.",
     "crumbs": [
       "Start Here",
       "Spring 2025 Syllabus"
@@ -132,14 +132,538 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Statistics 21",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This site was produced with Quarto and Pyodide using VS Code and is currently hosted by GitHub. It was created for the students of Statistics 21 for use inside and outside of the classroom.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about Pyodide please visit https://pyodide.org/en/stable/\nAnd about its Quarto extension visit https://github.com/coatless-quarto/pyodide\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
+    "text": "This site was produced with Pyodide and Quarto in VS Code and is currently hosted by GitHub. It was created for the students of Statistics 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
+  },
+  {
+    "objectID": "resources/pyodide_test.html",
+    "href": "resources/pyodide_test.html",
+    "title": "Pyodide and Quarto HTML Documents",
+    "section": "",
+    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
-      "Start Here",
-      "Overview"
+      "Resources",
+      "Pyodide"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#last-time",
+    "href": "lec/Lecture02.html#last-time",
+    "title": "Week 1, Meeting 2",
+    "section": "Last time",
+    "text": "Last time\n\n\n\nSyllabus\nTools of the trade\nThe Python “way”\nObjects\nNames, Naming\nBuilt-In Functions",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#second-part-of-week-1",
+    "href": "lec/Lecture02.html#second-part-of-week-1",
+    "title": "Week 1, Meeting 2",
+    "section": "Second Part of Week 1",
+    "text": "Second Part of Week 1\n\nTrying to get us to the first steps of programming in Python\nBut we need to cover additional fundamentals first\nSo Stats 21 may seem a little scattered at the moment\nComparable to gathering up the ingredients to use in a complex recipe\nToday: Data Types, Basic Sequences, Creating & Running Scripts, Flow Control",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#basic-data-types",
+    "href": "lec/Lecture02.html#basic-data-types",
+    "title": "Week 1, Meeting 2",
+    "section": "Basic Data Types",
+    "text": "Basic Data Types\n\nSome of the basic types\n\n\nName\nType\nMutable?\nExample\n\n\n\n\nBoolean\nbool\nno\nTrue; False\n\n\nInteger\nint\nno\n3; -256\n\n\nFloating Point\nfloat\nno\n1e5; 2.718\n\n\nComplex\ncomplex\nno\n10j; 2 + 1j\n\n\nText\nstr\nno\n“UCLA”; “The quick brown fox”",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#bool",
+    "href": "lec/Lecture02.html#bool",
+    "title": "Week 1, Meeting 2",
+    "section": "Bool",
+    "text": "Bool\n\nThe boolean data type values are True and False.\nIn Stats 21 we may use the values directly as data.\nWe might also use them as an evaluation result\n\n\nEx 1Ex 2Why isinstance()?Notes\n\n\n\n\nCode\nanswers = [\n    True, True, False, True, False, False, False, True, True, True\n    ]\n\nprint(f'This is answers: {answers} \\n ' ) # F-strings AKA formatted string literals\n\nprint(f'Is answers a list object? {isinstance(answers, list)} \\n')\n\nprint(f'Is False a bool? {isinstance(False, bool)} \\n')\n\nprint(f'Are Computers Smart? {\"Computers\" == \"Smart\"}\\n')\n\nprint(f'Is 5 &lt; 2? {5 &lt; 2} \\n')\n\nprint(f'Is Trump &gt; Jesus? {\"Trump\" &gt; \"Jesus\"} \\n') \n\n\nThis is answers: [True, True, False, True, False, False, False, True, True, True] \n \nIs answers a list object? True \n\nIs False a bool? True \n\nAre Computers Smart? False\n\nIs 5 &lt; 2? False \n\nIs Trump &gt; Jesus? True \n\n\n\n\n\n\n\nCode\n# Strings can be evaluated\n# But not in the way you think when the question is nuanced.\n\nprint(f'Is UCLA &gt; USC? {\"UCLA\" &gt; \"USC\"}\\n')\n\nprint(f'Is 小 &gt; 大? {\"小\" &gt; \"大\"} \\n') \n# Computers lack a contextual understanding.\n\nprint(f'Unicode of T: {ord(\"T\")}') # how Python evaluates\nprint(f'Unicode of J: {ord(\"J\")}') # and orders strings\n\nprint(f'Unicode of C: {ord(\"C\")}') # U is tied\nprint(f'Unicode of S: {ord(\"S\")}') # so Python moves to the next letter\n\nprint(f'Unicode of 小: {ord(\"小\")}')\nprint(f'Unicode of 大: {ord(\"大\")}')\n\n\nIs UCLA &gt; USC? False\n\nIs 小 &gt; 大? True \n\nUnicode of T: 84\nUnicode of J: 74\nUnicode of C: 67\nUnicode of S: 83\nUnicode of 小: 23567\nUnicode of 大: 22823\n\n\n\n\n\nAn instance is a concrete realization of an object based on a “blueprint” known as a class (more on this in two weeks or so)\nRecall, Python is at heart an object oriented language but it supports multiple programming models\nFalse then is type bool and is a instance of the bool class which is also a built-in (sub)class.\n\n\n\nCode\nb1 = bool(1)  # True\nb2 = bool(0)  # False\n\nprint(f\"This is b1: {b1}\")\nprint(f\"This is b2: {b2}\")\n\nprint(True * 3 + (True/4))\n\n\nThis is b1: True\nThis is b2: False\n3.25\n\n\n\n\n\nhttps://docs.python.org/3/library/stdtypes.html#typebool\nhttps://docs.python.org/3/library/functions.html#bool\nhttps://docs.python.org/3/library/stdtypes.html",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#integers",
+    "href": "lec/Lecture02.html#integers",
+    "title": "Week 1, Meeting 2",
+    "section": "Integers",
+    "text": "Integers\n\nIntegers are whole numbers, no decimal, no fraction, no comma (use an underscore if you must)\ncould have + or -\n\n\n\nCode\nx = 7\ny = -7\nz = +7\na = 100_000\n\nprint(f'x = {x} \\n')\nprint(f'y = {y} \\n')\nprint(f'z = {z} \\n')\nprint(f'a = {a} \\n')\n\n\nx = 7 \n\ny = -7 \n\nz = 7 \n\na = 100000",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#common-operations-by-precedence",
+    "href": "lec/Lecture02.html#common-operations-by-precedence",
+    "title": "Week 1, Meeting 2",
+    "section": "Common Operations by precedence",
+    "text": "Common Operations by precedence\n\n\n\nOperator\nDescription\n\n\n\n\n**\nExponentiation\n\n\n%\nModulus division\n\n\n//\nInteger division\n\n\n/\nFloating-point division\n\n\n*\nMultiplication\n\n\n+\nAddition\n\n\n-\nSubtraction",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#examples",
+    "href": "lec/Lecture02.html#examples",
+    "title": "Week 1, Meeting 2",
+    "section": "Examples",
+    "text": "Examples\n\n\nCode\nx = 3 + 4 * 5\ny = 4 + 1 - 2 + 10\nz = 3 * 4 / 2 * 5\na = 15/4\nb = 15//4\nc = 15%4\nd = 2**5\n\nprint(f'x = 3 + 4 * 5 result is: {x} \\n')\nprint(f'y = 4 + 1 - 2 + 10 result is: {y} \\n')\nprint(f'z = 3 * 4 / 2 * 5 result is: {z} \\n')\nprint(f'a = 15/4 result is: {a} \\n')\nprint(f'b = 15//4 result is: {b} \\n')\nprint(f'c = 15%4 result is: {c} \\n')\nprint(f'd = 2**5 result is: {d} \\n')\n\n\nx = 3 + 4 * 5 result is: 23 \n\ny = 4 + 1 - 2 + 10 result is: 13 \n\nz = 3 * 4 / 2 * 5 result is: 30.0 \n\na = 15/4 result is: 3.75 \n\nb = 15//4 result is: 3 \n\nc = 15%4 result is: 3 \n\nd = 2**5 result is: 32",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#notes-on-operations",
+    "href": "lec/Lecture02.html#notes-on-operations",
+    "title": "Week 1, Meeting 2",
+    "section": "Notes on operations",
+    "text": "Notes on operations\n\nYou can combine literal integers with variables that have been assigned integer values\nYou can modify a variable but you will need to reassign it to store the modification\nOR You could use a compound operation e.g., +=, *= to operate and modify at the same time\nPython employs operator precedence.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#examples-1",
+    "href": "lec/Lecture02.html#examples-1",
+    "title": "Week 1, Meeting 2",
+    "section": "Examples",
+    "text": "Examples\n\n\nCode\nprint(f'The result of x + y is: {x + y} \\n')\nprint(f'The result of z/5 is: {z/5} \\n')\nprint(f'But z remains unchanged: {z} \\n')\nprint(f'The current value of y is: {y} \\n')\ny += 20\nprint(f'The new value of y is: {y} \\n')\n\n\nThe result of x + y is: 36 \n\nThe result of z/5 is: 6.0 \n\nBut z remains unchanged: 30.0 \n\nThe current value of y is: 13 \n\nThe new value of y is: 33",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#floats",
+    "href": "lec/Lecture02.html#floats",
+    "title": "Week 1, Meeting 2",
+    "section": "Floats",
+    "text": "Floats\n\nfloats in Python have decimal points even if its only zeroes after the decimal\nfloats can include a decimal integer exponent after the letter e\nThe operators work in the same manners as with integers\nfloats are not exact see https://docs.python.org/3/tutorial/floatingpoint.html\n\n\n\nCode\nprint(2.7e-4)\nprint(-3.87e6)\n\n\n0.00027\n-3870000.0",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#complex-optional",
+    "href": "lec/Lecture02.html#complex-optional",
+    "title": "Week 1, Meeting 2",
+    "section": "Complex (optional)",
+    "text": "Complex (optional)\n\nshould you need this in the future (not here) Python can work with complex values, they are represented by a j\n\n\n\nCode\nx = 2j\ny = 10j\nz = y/x\n\nprint(f'x is {x} \\n')\nprint(f'y is {y} \\n')\nprint(f'y/x = {z} \\n')\n\n\nx is 2j \n\ny is 10j \n\ny/x = (5+0j)",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#more-operators",
+    "href": "lec/Lecture02.html#more-operators",
+    "title": "Week 1, Meeting 2",
+    "section": "More Operators",
+    "text": "More Operators\nOther Comparison (relational) Operators\nThese are used to compare values and return Boolean results (True or False).\n\n\n\n&gt; (greater than)\n&lt;= (less than or equal to)\n&gt;= (greater than or equal to)\n== (equal to)\n!= (not equal to)\n\n\n\nis (identity operator)\nis not (identity operator)\nin (membership operator)\nnot in (membership operator)",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#section",
+    "href": "lec/Lecture02.html#section",
+    "title": "Week 1, Meeting 2",
+    "section": "",
+    "text": "Other Augmented assignment operators\nThese will use math and modify the value of a variable in place instead of requiring reassignment to a different variable. Equivalents are on the right.\n\n\n\nx **= 2 (exponentiation assignment)\nx %= 2 (modulus assignment)\nx //= 2 (floor division assignment)\nx /= 2 (division assignment)\nx *= 2 (multiplication assignment)\nx -= 2 (subtraction assignment)\nx += 2 (addition assignment)\n\n\n\nsame as x = x**2\nsame as x = x % 2\nsame as x = x // 2\nsame as x = x / 2\nsame as x = x * 2\nsame as x = x - 2\nsame as x = x + 2",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#sequences",
+    "href": "lec/Lecture02.html#sequences",
+    "title": "Week 1, Meeting 2",
+    "section": "Sequences",
+    "text": "Sequences\n\nSequences in Python are ordered, iterable collections of items. They are data structures.\n\nMaintain the order in which elements are added\nZero-based indexing\nAllow access to individual items by index numbers and slicing\nAllow concatenation, repetition, length checking, membership testing, iteration\nThere are several built-in sequence types that have specific characteristics and uses (do learn what the sequences are and how they differ)\n\nSequences are part of a larger discussion of type\nAll sequences are iterables, but not all iterables are sequences (later)",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#the-common-sequence-operations",
+    "href": "lec/Lecture02.html#the-common-sequence-operations",
+    "title": "Week 1, Meeting 2",
+    "section": "The Common Sequence Operations",
+    "text": "The Common Sequence Operations\n\nsequence operationshttps://docs.python.org/3/library/stdtypes.html#typesseq-common",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#indexing-slicing-rules-of-built-in-sequences",
+    "href": "lec/Lecture02.html#indexing-slicing-rules-of-built-in-sequences",
+    "title": "Week 1, Meeting 2",
+    "section": "Indexing & Slicing rules of (built-in) Sequences",
+    "text": "Indexing & Slicing rules of (built-in) Sequences\n\nhttps://docs.python.org/3/reference/datamodel.html#sequences",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#application",
+    "href": "lec/Lecture02.html#application",
+    "title": "Week 1, Meeting 2",
+    "section": "Application",
+    "text": "Application\n\nLet’s examine\n\nindexing a[i]\nslicing a[i:j] this is all k such that i &lt;= k &lt; j\nextended slicing a[i:j:k]\n\n(selects all items of a with index x where x = i + n*k, n &gt;= 0 and i &lt;= x &lt; j)\n\n\nbecause indexing & slicing sequences are useful\nStrings, (Ranges), Lists and Tuples",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#strings-are-a-data-type-and-are-sequences",
+    "href": "lec/Lecture02.html#strings-are-a-data-type-and-are-sequences",
+    "title": "Week 1, Meeting 2",
+    "section": "Strings are a data type and are sequences",
+    "text": "Strings are a data type and are sequences\n\nStrings are sequences of characters and symbols, representing text\nStrings are immutable (more later), does not allow modification after creation.\nStrings are defined using single quotes ’’ or double quotes “”\nThe common sequence operations apply to strings",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#string-indexing-and-slicing-example",
+    "href": "lec/Lecture02.html#string-indexing-and-slicing-example",
+    "title": "Week 1, Meeting 2",
+    "section": "String Indexing and Slicing Example",
+    "text": "String Indexing and Slicing Example\n\n\nCode\ntext = 'Malayalam' # a language of Kerala \n\n# Indexing\nprint(text[1])  # Output: 'a' Python is 0 indexed\n\n# Indexing with a function\nprint(text[-1]) # Output: last letter\n\n# Slicing\nprint(text[1:4])  # Output: 'ala' (i &lt;= k &lt; j)\n\n# Slicing with steps\nprint(text[::2])  # Output: 'Mlylm'\n\n# Reversing a string\nprint(text[::-1])  # Output: 'malayalaM'\n\n\na\nm\nala\nMlylm\nmalayalaM",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#additional-string-operations",
+    "href": "lec/Lecture02.html#additional-string-operations",
+    "title": "Week 1, Meeting 2",
+    "section": "Additional String Operations",
+    "text": "Additional String Operations\nconcatenation, repetition, length checking, membership testing, iteration\n\n\nCode\ntext = 'UCLA' \n\nprint(f'Concatenating {text + \" #1 Public University\"}')\nprint(f'Yes you can multiply by 3 for repetition: {(text + \" \") * 3}')\nprint(f'According to USC students, {text} is a {len(text)}-letter word')\nprint(f'Is there a Z in {text}? {\"Z\" in text}')\n\nfor things in text: # text becomes an iterable\n    print(things)\n\nprint(\"fight! \" * 3)\n\n\nConcatenating UCLA #1 Public University\nYes you can multiply by 3 for repetition: UCLA UCLA UCLA \nAccording to USC students, UCLA is a 4-letter word\nIs there a Z in UCLA? False\nU\nC\nL\nA\nfight! fight! fight!",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#range-a-lazy-sequence-a-data-structure",
+    "href": "lec/Lecture02.html#range-a-lazy-sequence-a-data-structure",
+    "title": "Week 1, Meeting 2",
+    "section": "Range: a (lazy) sequence & a data structure",
+    "text": "Range: a (lazy) sequence & a data structure\n\nImmutable sequence of numbers\nTypical use: iterating a specific number of times in loops.\nrange() becomes concrete when iterated or simply operated upon\n\n\n\nCode\nr = range(6) # stop value\n\nprint(r)  \nprint(len(r))\nprint(type(r))\n\nfor junk in r:\n    print(junk, end = \" \")\nprint()\n\ns = range(1, 100, 2) # start, stop, step\nprint(s)  \nprint(len(s)) \nfor stuff in s:\n    print(stuff, end = \" \") # ran off the page use enumerate()\n\n\nrange(0, 6)\n6\n&lt;class 'range'&gt;\n0 1 2 3 4 5 \nrange(1, 100, 2)\n50\n1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#section-1",
+    "href": "lec/Lecture02.html#section-1",
+    "title": "Week 1, Meeting 2",
+    "section": "",
+    "text": "(optional) Aside, getting output to stay in tidy rows\n\n\nCode\nN = 10\nfor i, stuff in enumerate(s, start = 1):\n    print(stuff, end = \" \") # first print\n    if i % N == 0:  # check then at every N numbers\n        print()  # print a new line\n\n\n1 3 5 7 9 11 13 15 17 19 \n21 23 25 27 29 31 33 35 37 39 \n41 43 45 47 49 51 53 55 57 59 \n61 63 65 67 69 71 73 75 77 79 \n81 83 85 87 89 91 93 95 97 99",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#section-2",
+    "href": "lec/Lecture02.html#section-2",
+    "title": "Week 1, Meeting 2",
+    "section": "",
+    "text": "(optional) Character sequences\nWe could do this for letters like A through Z but let’s try something different.\n\n\nCode\ncharacters = []\nfor i in range(ord('ᚠ'), ord('ᚾ') + 1):\n    characters.append(chr(i))\n\nprint(characters)\n\n\n['ᚠ', 'ᚡ', 'ᚢ', 'ᚣ', 'ᚤ', 'ᚥ', 'ᚦ', 'ᚧ', 'ᚨ', 'ᚩ', 'ᚪ', 'ᚫ', 'ᚬ', 'ᚭ', 'ᚮ', 'ᚯ', 'ᚰ', 'ᚱ', 'ᚲ', 'ᚳ', 'ᚴ', 'ᚵ', 'ᚶ', 'ᚷ', 'ᚸ', 'ᚹ', 'ᚺ', 'ᚻ', 'ᚼ', 'ᚽ', 'ᚾ']\n\n\nord( ) converts to numeric and chr() converts back to character. characters starts as an empty list in this example and we can append each new character to the existing list.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#section-3",
+    "href": "lec/Lecture02.html#section-3",
+    "title": "Week 1, Meeting 2",
+    "section": "",
+    "text": "(optional for now) Character sequences & list comprehension\nWe will circle back to this in a month. Better that you should see list comprehension now because it may need time to be fully understood. Pythonic & typically done this way:\n\n\nCode\ncharacters_comp = [chr(i) for i in range(ord('ᚠ'), ord('ᚾ') + 1)]\n\nprint(characters_comp)\n\n\n['ᚠ', 'ᚡ', 'ᚢ', 'ᚣ', 'ᚤ', 'ᚥ', 'ᚦ', 'ᚧ', 'ᚨ', 'ᚩ', 'ᚪ', 'ᚫ', 'ᚬ', 'ᚭ', 'ᚮ', 'ᚯ', 'ᚰ', 'ᚱ', 'ᚲ', 'ᚳ', 'ᚴ', 'ᚵ', 'ᚶ', 'ᚷ', 'ᚸ', 'ᚹ', 'ᚺ', 'ᚻ', 'ᚼ', 'ᚽ', 'ᚾ']\n\n\n\n\nCode\nfor i in range(ord('ᚠ'), ord('ᚾ') + 1):\n        print(chr(i), end = \" \")\n\nprint() # but not stored, purely printed\n\n\nᚠ ᚡ ᚢ ᚣ ᚤ ᚥ ᚦ ᚧ ᚨ ᚩ ᚪ ᚫ ᚬ ᚭ ᚮ ᚯ ᚰ ᚱ ᚲ ᚳ ᚴ ᚵ ᚶ ᚷ ᚸ ᚹ ᚺ ᚻ ᚼ ᚽ ᚾ \n\n\n\nCompare list comprehension with the previous slide.\nList comprehension implicitly constructs a list (here characters_comp) by applying an expression (here chr(i)) to each item in the range (the iterable) while it is iterating with a list [ ].\n\nList comprehension creates, iterates, and collects the results all in one line.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#built-in-data-structures",
+    "href": "lec/Lecture02.html#built-in-data-structures",
+    "title": "Week 1, Meeting 2",
+    "section": "Built-in Data Structures",
+    "text": "Built-in Data Structures\n\n\n\n\n\n\n\n\n\n\nName\nType\nMutable?\nSequence?\nExample\n\n\n\n\nList\nlist\nyes\nyes\n[‘Expelliarmus’, ‘Confundo’]\n\n\nTuple\ntuple\nno\nyes\n(0, 2, 4, 6)\n\n\nDictionary\ndict\nyes\nno (mapping, cannot be indexed but it is iterable)\n{‘name’: ‘Bob’, ‘age’: 31, ‘job’: ‘Builder’}\n\n\nSet\nset\nyes\nno (unordered collection, cannot be indexed or sliced but it is iterable)\n{‘cherry’, ‘apple’, ‘orange’}",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#but-is-it-iterable",
+    "href": "lec/Lecture02.html#but-is-it-iterable",
+    "title": "Week 1, Meeting 2",
+    "section": "But is it iterable?",
+    "text": "But is it iterable?\n\n\nCode\nfrom collections.abc import Iterable\n\nprint(isinstance([], Iterable))  # True (list)\nprint(isinstance((), Iterable))  # True (tuple)\nprint(isinstance(\"\", Iterable))  # True (string)\nprint(isinstance(range(5), Iterable))  # True\nprint(isinstance(set(), Iterable))  # True\nprint(isinstance({}, Iterable))  # True (dictionary keys)\n\nprint(isinstance(10, Iterable))  # False (integer)\nprint(isinstance(3.14, Iterable))  # False (float)\nprint(isinstance(None, Iterable))  # False\n\n\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nFalse\nFalse\nFalse",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#data-structures-lists-tuples",
+    "href": "lec/Lecture02.html#data-structures-lists-tuples",
+    "title": "Week 1, Meeting 2",
+    "section": "Data Structures: Lists & Tuples",
+    "text": "Data Structures: Lists & Tuples\n\n\n\nLists are:\n\nMutable sequences that allow modification after creation\n\nDefined using square brackets []\n\nCommas separate items\n\nCan contain items of different data types (e.g., text, int, float)\n\nRelatively high resource use due to mutability\n\nUse: storing data that is dynamic\n\n\n\n\n\nTuples are:\n\nImmutable sequences, their items cannot be changed after creation.\n\nFor readability, define them using parentheses () – some other ways:\n\nUsing a trailing comma for a singleton tuple: a, or (a,)\n\nSeparating items with commas: a, b, c or (a, b, c)\n\n\nCommas separate items\n\nCan contain items of different data types (e.g., text, int, float)\n\nHave lower resource usage than lists\n\nUse: storing related data that should be unchanging",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#the-meaning-of-mutability-immutablility",
+    "href": "lec/Lecture02.html#the-meaning-of-mutability-immutablility",
+    "title": "Week 1, Meeting 2",
+    "section": "The meaning of Mutability & Immutablility",
+    "text": "The meaning of Mutability & Immutablility\n\nStringsListsList mutability recapTuplesMore Tuples\n\n\nStrings are immutable, to change a string is a reassignment in memory.\n\n\nCode\na = 'UCB'  # UC Berkeley\nb = 'UCB'  # UC Berkeley\nprint(f'The value of a is {a} and id = {id(a)} \\n')\nprint(f'The value of b is {b} and id = {id(b)} \\n')\n\na = a + 'C' # concatenation\nprint(f'The value of a is now {a} and id = {id(a)} \\n')\nprint(f'The value of b is now {b} and id = {id(b)} \\n')\n\na = 'UCBC' \nprint(f'The value of a is now {a} and id = {id(a)} \\n')\nprint(f'The value of b is now {b} and id = {id(b)} \\n')\n\n\nThe value of a is UCB and id = 5338829648 \n\nThe value of b is UCB and id = 5338829648 \n\nThe value of a is now UCBC and id = 5338830704 \n\nThe value of b is now UCB and id = 5338829648 \n\nThe value of a is now UCBC and id = 5338832576 \n\nThe value of b is now UCB and id = 5338829648 \n\n\n\n\n\nLists are mutable data structures, notice the differences\n\n\nCode\na = ['UCB']\nb = a\nprint(f'The value of a is {a} and id = {id(a)} \\n')\nprint(f'The value of b is {b} and id = {id(b)} \\n')\n\na[0]= 'UCBC'\nprint(f'The value of a is now {a} and id = {id(a)} \\n')\nprint(f'The value of b is now {b} and id = {id(b)} \\n')\n\na = ['UCBC']\nprint(f'The value of a is now {a} and id = {id(a)} \\n')\nprint(f'The value of b is now {b} and id = {id(b)} \\n')\n\n\nThe value of a is ['UCB'] and id = 4826202432 \n\nThe value of b is ['UCB'] and id = 4826202432 \n\nThe value of a is now ['UCBC'] and id = 4826202432 \n\nThe value of b is now ['UCBC'] and id = 4826202432 \n\nThe value of a is now ['UCBC'] and id = 5326527936 \n\nThe value of b is now ['UCBC'] and id = 4826202432 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAction\nOperation\na ID\nb ID\na Value\nb Value\n\n\n\n\nAssign b = a\nBoth reference the same list\nSame\nSame\n[‘UCB’]\n[‘UCB’]\n\n\nModify a[0]\nList is modified in place\nSame\nSame\n[‘UCBC’]\n[‘UCBC’]\n\n\nReassign a = [‘UCBC’]\na now points to a new list\nChanged\nUnchanged\n[‘UCBC’] (new list)\n[‘UCBC’] (old list)\n\n\n\nTo avoid the copy of list referencing the same list, there exists a method (more on list methods later) ‘b = a.copy()’\n\n\nTuples are immutable data structures.\n\n\nCode\na = ('UCB','UCLA')\nb = a\nprint(f'The value of a is {a} and id = {id(a)} \\n')\nprint(f'The value of b is {b} and id = {id(b)} \\n')\n\na[0] = ('UCBC',)\n\n\nThe value of a is ('UCB', 'UCLA') and id = 4449285248 \n\nThe value of b is ('UCB', 'UCLA') and id = 4449285248 \n\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[19], line 6\n      3 print(f'The value of a is {a} and id = {id(a)} \\n')\n      4 print(f'The value of b is {b} and id = {id(b)} \\n')\n----&gt; 6 a[0] = ('UCBC',)\n\nTypeError: 'tuple' object does not support item assignment\n\n\n\n\n\nTuples are immutable.\n\n\nCode\na = ('UCBC','UCLA') \nprint(f'The value of a is now {a} and id = {id(a)} \\n')\nprint(f'The value of b is now {b} and id = {id(b)} \\n')\n\nb = a\na = a + (\"UCI\",)\nprint(f'The value of a is now {a} and id = {id(a)} \\n')\nprint(f'The value of b is now {b} and id = {id(b)} \\n')\n\n\nThe value of a is now ('UCBC', 'UCLA') and id = 5353105344 \n\nThe value of b is now ('UCB', 'UCLA') and id = 4449285248 \n\nThe value of a is now ('UCBC', 'UCLA', 'UCI') and id = 5353015296 \n\nThe value of b is now ('UCBC', 'UCLA') and id = 5353105344",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#sequence-operations-recap",
+    "href": "lec/Lecture02.html#sequence-operations-recap",
+    "title": "Week 1, Meeting 2",
+    "section": "Sequence operations recap",
+    "text": "Sequence operations recap\nSequences support various operations, including:\n\nIndexing: Accessing individual elements using their position (starting from 0).\nSlicing: Extracting a subsequence of elements.\nConcatenation: Combining sequences using the + operator.\nRepetition: Repeating a sequence multiple times using the * operator.\nMembership testing: Checking if an element exists in a sequence using the in operator.\nIteration: Looping through the elements of a sequence using a for loop.\nLength: Determining the number of elements in a sequence using the len() function.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#whats-in-a-name",
+    "href": "lec/Lecture02.html#whats-in-a-name",
+    "title": "Week 1, Meeting 2",
+    "section": "What’s in a name?",
+    "text": "What’s in a name?\n\nPlease gather together in small groups, please make sure at least one member has a laptop\nfor credit: minimum group size 3, maximum group size 6 & at least one classmate who wasn’t on your previous team\nplease introduce yourselves and try to learn a new name today\nplease take a group photo, annotate with with names or add names as a comment during upload\nupload a photo individually for attendance credit",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#what-to-do-in-your-group-10-15-minutes",
+    "href": "lec/Lecture02.html#what-to-do-in-your-group-10-15-minutes",
+    "title": "Week 1, Meeting 2",
+    "section": "What to do in your group (10-15 minutes)",
+    "text": "What to do in your group (10-15 minutes)\n\nYou could do it all as one or do things separately and then share what you tried\nUsing either the REPL, a Python Script, a Jupyter Notebook or a Quarto Document\nTry to create at least one of the following:\n\ndocstring or comment of f-string\ntry an operation (comparison, simple, or augmented operators)\ncreate a sequence(s), slice, concatenate, iterate?\ncreate a longer string, or a list, tuple, range\ntry slicing or indexing etc.\ntry my question on the next slide",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#please-explain",
+    "href": "lec/Lecture02.html#please-explain",
+    "title": "Week 1, Meeting 2",
+    "section": "Please explain",
+    "text": "Please explain\nYour friend is trying to teach himself Python by watching videos on YouTube. He has a question for you:\nHe wants the last letter of every spell extracted, when he runs his code, it runs without error, but only an “s” is printed.\n\n\nCode\nspells = [\n    \"Expelliarmus\",\n    \"Colloshoo\",\n    \"Legilimens\",\n    \"Impedimenta\",\n    \"Confundo\", \n    \"Finite Incantatem\",\n    \"Incarcerous\"\n]\n\nfor spell in spells:\n    first = spell[-1]\n    \nprint(first, end = \" \")\n\n\ns \n\n\n\nPlease explain to him why he is only getting an “s”\nPlease tell him what he needs to change to get all of the last letters.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#programming-stages",
+    "href": "lec/Lecture02.html#programming-stages",
+    "title": "Week 1, Meeting 2",
+    "section": "Programming stages",
+    "text": "Programming stages\n\nVariables are things we use to store data\nIteration operates on items sequentially, standard Python isn’t vectorized like R but libraries like NumPy and Pandas do utilize vectorization\nControl structures (if, while, for) let us decide when to execute statements\n(next week) Functions allow us to express and enclose our problem solving logic and reuse it elsewhere\n\nLike individual ingredients in cooking, the real power of these different stages is revealed when they are combined. The result is greater than the “sum” of its individual parts.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#coding-for-efficiency-productivity",
+    "href": "lec/Lecture02.html#coding-for-efficiency-productivity",
+    "title": "Week 1, Meeting 2",
+    "section": "Coding for Efficiency & Productivity",
+    "text": "Coding for Efficiency & Productivity\n\nIt is never too early to start thinking about becoming an efficient and productive Python programmer\n\nHave an eye which focuses on breaking down larger tasks into smaller components (task analysis)\nUse Python’s huge library to its fullest, e.g. NumPy, Pandas\nMake it a goal to practice writing clear, concise, and well organized code. It will make debugging and collaboration easier and improve productivity as a result\nAsk yourself (and others) if your code is optimal/efficient\nWork towards being “Pythonic” in your coding",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#default-execution-order-in-python",
+    "href": "lec/Lecture02.html#default-execution-order-in-python",
+    "title": "Week 1, Meeting 2",
+    "section": "Default Execution Order in Python",
+    "text": "Default Execution Order in Python\n\nAt its simplest, Python code works in the following way\n\nTop to bottom: Python reads and executes code line by line\nLeft to right (within a code line): Python evaluates expressions from left to right, following operator precedence.\n\nRestated: in a simple .py script, Python follows a strict “top to bottom, left to right” execution order.\nThis strict execution order can be changed when we introduce control flow statements (if, for, while, match, etc.) or functions which have the ability to modify the execution order.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#modifying-execution-flow",
+    "href": "lec/Lecture02.html#modifying-execution-flow",
+    "title": "Week 1, Meeting 2",
+    "section": "Modifying Execution Flow",
+    "text": "Modifying Execution Flow\n\nif Trueif Falseif-elifif-elifelse\n\n\n\n\nCode\nprint(\"Step 1: Welcome to club!\")  # Executed first\n\nMIN_AGE = 21\nage = 19\n\nif age &lt; MIN_AGE:  # Condition is checked\n    print(f\"Step 2: Sorry you are younger than {MIN_AGE}, you may not enter.\")  # Executed only if condition is True\n\nprint(\"Step 3: The club closes at midnight\")  # Always executed\n\n\nStep 1: Welcome to club!\nStep 2: Sorry you are younger than 21, you may not enter.\nStep 3: The club closes at midnight\n\n\n\n\n\n\nCode\nprint(\"Step 1: Welcome to club!\")  # Executed first\n\nMIN_AGE = 21\nage = 22\n\nif age &lt; MIN_AGE:  # Condition is checked\n    print(f\"Step 2: sorry you are younger than {MIN_AGE}, you cannot enter\")  # Executed only if condition is True\n\nprint(\"Step 3: The club closes at midnight\")  # Always executed\n\n\nStep 1: Welcome to club!\nStep 3: The club closes at midnight\n\n\n\nPython still executes from top to bottom.\nif modifies flow by conditionally skipping or executing a block.\nIndented code only runs if the condition is True.\n\n\n\n\n\nCode\nprint(\"Step 1: Welcome to club!\")  # Executed first\n\nMIN_AGE = 21\nage = 19\n\nif age &lt; MIN_AGE:  # Condition is checked\n    print(f\"Step 2: Sorry you are younger than {MIN_AGE}, you cannot enter\")  # Executed only if condition is True\nelif age &gt;= MIN_AGE:\n    print(f\"Step 2: Please come in!\")  # Executed only if this condition is True and the previous was False\n\nprint(\"Step 3: The club closes at midnight\")  # Always executed\n\n\nStep 1: Welcome to club!\nStep 2: Sorry you are younger than 21, you cannot enter\nStep 3: The club closes at midnight\n\n\n\nUse an elif when you have multiple possible conditions, but only one should execute.\nor when you want to avoid unnecessary condition checking after finding a True case.\nor When the conditions are mutually exclusive (only one can be True).\n\n\n\nSame thing, but multiple ages\n\n\nCode\nMIN_AGE = 21\nages = range(17,23)\nfor a in ages:\n    print(\"Step 1: Welcome to club! May we see some ID?\")  # Executed first\n    if a &lt; MIN_AGE:  # Condition is checked\n        print(f\"Step 2: Sorry you are {a} and are under {MIN_AGE}, you cannot enter \\n\")  # Executed only if condition is True\n    elif a &gt;= MIN_AGE:\n        print(f\"Step 2: You are {MIN_AGE} or over Please come in!\\n\")  # Executed only if this condition is True and the previous was False\n\nprint(\"The blocks terminate when the indentation returns to that of the initial if (or further left like this line)\")\n\n\nStep 1: Welcome to club! May we see some ID?\nStep 2: Sorry you are 17 and are under 21, you cannot enter \n\nStep 1: Welcome to club! May we see some ID?\nStep 2: Sorry you are 18 and are under 21, you cannot enter \n\nStep 1: Welcome to club! May we see some ID?\nStep 2: Sorry you are 19 and are under 21, you cannot enter \n\nStep 1: Welcome to club! May we see some ID?\nStep 2: Sorry you are 20 and are under 21, you cannot enter \n\nStep 1: Welcome to club! May we see some ID?\nStep 2: You are 21 or over Please come in!\n\nStep 1: Welcome to club! May we see some ID?\nStep 2: You are 21 or over Please come in!\n\nThe blocks terminate when the indentation returns to that of the initial if (or further left like this line)\n\n\n\nthe statements following the if and elif are placed on separate logical lines\n\nand indented rightward\n\n\n\nUse else as a default case when no conditions are met in the if or elif.\n\n\nCode\nscores = [91, 83, 45, 77, 68, None]\n\nfor score in scores:\n    if score is None:  # Missing\n        print(f\"Your score was {score} and your grade is 'I' (Incomplete)\\n\")\n    elif  score &gt;= 90:  # Condition is checked\n        print(f\"Your score was {score} and your grade is 'A' \\n\")  \n    elif score &gt;= 80:\n        print(f\"Your score was {score} and your grade is 'B' \\n\")  \n    elif score &gt;= 70:\n        print(f\"Your score was {score} and your grade is 'C' \\n\") \n    elif score &gt;= 60:\n        print(f\"Your score was {score} and your grade is 'D' \\n\") \n    else:\n        print(f\"Your score was {score} and your grade is 'F' \\n\") \n\n\nYour score was 91 and your grade is 'A' \n\nYour score was 83 and your grade is 'B' \n\nYour score was 45 and your grade is 'F' \n\nYour score was 77 and your grade is 'C' \n\nYour score was 68 and your grade is 'D' \n\nYour score was None and your grade is 'I' (Incomplete)\n\n\n\n\nWhen the if clause evaluates as true, the statements following the if clause execute, and the entire if statement ends.\nWhen the if clause evaluates as false, the expressions the elif clauses are evaluated in order starting from the first elif.\nShould the first elif evaluate as true, the statements following it are executed, and the entire if statement ends. If not, the next elif will evaluate.\nIf process reaches an else, the statements following the else are executed and then the entire block ends.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#when-to-employ-if-elif-else",
+    "href": "lec/Lecture02.html#when-to-employ-if-elif-else",
+    "title": "Week 1, Meeting 2",
+    "section": "When to employ if, elif, else",
+    "text": "When to employ if, elif, else\n\nif is used for the conditional execution of code and the if statement is one of the earliest programming concepts. It is used in decision-making.\nAvoid multiple if statements, this is inefficient because Python evaluates all of them, even when an earlier if is True.\nInstead use if with elif when multiple conditions exist, but only one of them should execute.\nUse an else for a default case when no previous conditions are satisfied.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#match-and-when-to-use-it",
+    "href": "lec/Lecture02.html#match-and-when-to-use-it",
+    "title": "Week 1, Meeting 2",
+    "section": "match and when to use it",
+    "text": "match and when to use it\n\nmatch is a newer control structure designed for pattern matching\nits effect in Python is like if-elif-else\nmatch is best for complex condition patterns because its more readable than having a complicated if-elif-else with multiple elif",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#optional-match-and-case-with-in",
+    "href": "lec/Lecture02.html#optional-match-and-case-with-in",
+    "title": "Week 1, Meeting 2",
+    "section": "(optional) match and case (with in)",
+    "text": "(optional) match and case (with in)\n\nmatch is relatively new to Python (late 2021)\nin Stats 21, if-elif-else will cover your needs\nbut match is not difficult to understand\n\n\n\nCode\nscores = [91, 83, 45, 77, 68, None]\n\nfor score in scores:\n    match score:\n        case None:\n            grade = \"I\"  # Incomplete\n        case _ if score in range(90, 101):  # 90-100\n            grade = \"A\"\n        case _ if score in range(80, 90):   # 80-89\n            grade = \"B\"\n        case _ if score in range(70, 80):   # 70-79\n            grade = \"C\"\n        case _ if score in range(60, 70):   # 60-69\n            grade = \"D\"\n        case _:\n            grade = \"F\"  # Anything below 60\n\n    print(f\"Your score was {score} and your grade is '{grade}'\\n\")\n\n\nYour score was 91 and your grade is 'A'\n\nYour score was 83 and your grade is 'B'\n\nYour score was 45 and your grade is 'F'\n\nYour score was 77 and your grade is 'C'\n\nYour score was 68 and your grade is 'D'\n\nYour score was None and your grade is 'I'",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#optional-while",
+    "href": "lec/Lecture02.html#optional-while",
+    "title": "Week 1, Meeting 2",
+    "section": "(optional) while",
+    "text": "(optional) while\n\nDocumentation\nThe while statement is used for repeated execution as long as an expression is true:\nNearly everything a while can do can be replaced by other statements such as for\nBut while can be used:\n\nA “while True:” creates a infinite loop because True is always true\nThe code within the loop will continue to execute repeatedly until it encounters a break statement or is externally interrupted.\nIt is used when the number of iterations isn’t a known value or when waiting for specific conditions to be met.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#optional-while-example",
+    "href": "lec/Lecture02.html#optional-while-example",
+    "title": "Week 1, Meeting 2",
+    "section": "(optional) while example",
+    "text": "(optional) while example\n\n\nCode\n\"\"\" \n    script is name_to_a1z26.py \n\n    Example of a while\n\n    After waiting for valid Alpha character input\n\n    Converts a name to A1Z26 cipher (A=1, B=2, ..., Z=26)\n\n\"\"\"\n\ndef name_to_a1z26(name):\n    name = name.upper()  # Convert to uppercase for consistency\n    return [ord(char) - 64 for char in name if char.isalpha()]  # Convert letters only\n\nattempts = 3\nwhile attempts &gt; 0:\n    name = input(\"Enter your name (or type 'quit' to exit): \")\n\n    if name.lower() == \"quit\":\n        print(\"Exiting the script\")\n        break\n\n    elif name.isalpha():  # Ensure the name is in A-Z or a-z after stripping spaces\n        cipher_values = name_to_a1z26(name)\n        print(f\"Your name in A1Z26 cipher: {cipher_values}\")\n        break  # Exit the loop if a valid name was given\n\n    attempts -= 1\n    print(f\"Invalid input. {attempts} attempts left.\")\n\nif attempts == 0:\n    print(\"Too many invalid attempts. Please come back when you are ready\")\n\nif __name__ == \"__main__\":\n    print(\"name_to_a1z26.py was executed directly\")\n    name_to_a1z26(name)",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#typical-python-script-structure",
+    "href": "lec/Lecture02.html#typical-python-script-structure",
+    "title": "Week 1, Meeting 2",
+    "section": "Typical Python Script Structure",
+    "text": "Typical Python Script Structure\n\n\n\n\n\n\n\nSection\nPurpose\n\n\n\n\nModule Docstring\nDescribes the purpose\n\n\nImports\nStandard then Third-party then Local\n\n\nGlobal Constants\nStore fixed values (e.g., API URLs file locations)\n\n\nFunctions\nDefine reusable actions\n\n\nClasses\nFor object-oriented programming\n\n\nMain Block (if name == ‘main’)\nEnsures script runs only when executed directly",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#break",
+    "href": "lec/Lecture02.html#break",
+    "title": "Week 1, Meeting 2",
+    "section": "Break",
+    "text": "Break\n\nThe break statement in Python is used to exit a loop early when a specific condition is met.\nThe break statement used with for and while loops to stop execution when further iteration is unnecessary.\nIn this example, only the last tab will run as intended, the first three highlight the use of break\n\n\nBreak Part 1Break Part 2Break Part 3Break Example Complete\n\n\n\n\nCode\nattempts = 3\nwhile attempts &gt; 0:\n    name = input(\"Enter your name (or type 'quit' to exit): \")\n\n    if name.lower() == \"quit\": # typing quit means exit immediately\n        print(\"Exiting the script\")\n        break\n\n\n\n\n\n\nCode\n    valid = True  # Assume the input is valid\n\n    for char in name:\n        if not (char.isalpha() or char in [\" \", \"-\", \"'\"]):  # Check each character\n            valid = False  # Found an invalid character\n        break  # Stop checking further\n\n\n\n\n\n\nCode\n    if valid:\n        cleaned_name = name.replace(\" \", \"\").replace(\"-\", \"\").replace(\"'\", \"\")  # Remove unwanted chars\n        print(f\"Your name as I understand it: {cleaned_name}\")\n        break  # Exit the loop if a valid name was given\n\n    attempts -= 1\n    print(f\"Invalid input. {attempts} attempts left.\")\n\n    \nif attempts == 0:\n    print(\"Too many invalid attempts. Please come back when you are ready to type\")\n\n\n\n\n\n\nCode\n\"\"\"\nA while, for and break example\n\nbreak_ex.py (it's just a modified name_to_a1z26.py)\n\nshould be run at the prompt like:\n\npython break_ex.py\n\"\"\"\n\nattempts = 3\nwhile attempts &gt; 0:\n    name = input(\"Enter your name (or type 'quit' to exit): \")\n\n    if name.lower() == \"quit\": # typing quit means exit immediately\n        print(\"Exiting the script\")\n        break\n\n    valid = True  # Assume the input is valid\n\n    for char in name:\n        if not (char.isalpha() or char in [\" \", \"-\", \"'\"]):  # Check each character\n            valid = False  # Found an invalid character\n        break  # Stop checking further\n    \n    if valid:\n        cleaned_name = name.replace(\" \", \"\").replace(\"-\", \"\").replace(\"'\", \"\")  # Remove unwanted chars\n        print(f\"Your name as I understand it: {cleaned_name}\")\n        break  # Exit the loop if a valid name was given\n\n    attempts -= 1\n    print(f\"Invalid input. {attempts} attempts left.\")\n\n    \nif attempts == 0:\n    print(\"Too many invalid attempts. Please come back when you are ready to type\")",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#continue",
+    "href": "lec/Lecture02.html#continue",
+    "title": "Week 1, Meeting 2",
+    "section": "Continue",
+    "text": "Continue\n\nThe continue statement in Python is used inside loops to skip the current iteration and move to the next one without executing the remaining code in the loop body\nSometimes restructuring the loop condition is a better choice than a continue (e.g., using if-else instead)\nConsider what is important to you and whether it is explicit or implicit\n\n\nEX 1EX 2Ex 3Ex 4\n\n\n\nThis example shows how continue operates\nSkips the rest of the current loop iteration and jumps to the next iteration\n\n\n\nCode\nscores = [85, 42, 75, 30, 90]\n\nfor score in scores:\n    if score &lt; 70:\n        continue  \n    print(f\"Score {score}: Pass\")\n\n\nScore 85: Pass\nScore 75: Pass\nScore 90: Pass\n\n\nIf someone were reading this quickly, they might miss the implicit skipping of the failing scores.\n\n\n\nA continue could be rewritten as an if-else\nHere, the decision making is explicit\n\n\n\nCode\nscores = [85, 42, 75, 30, 90]\n\nfor score in scores:\n    if score &gt;= 70:\n        print(f\"Score {score}: Pass\")\n    else:\n        print(f\"Score {score}: Fail\")\n\n\nScore 85: Pass\nScore 42: Fail\nScore 75: Pass\nScore 30: Fail\nScore 90: Pass\n\n\n\n\n\nIf you didn’t really care about the failing scores a continue would be more efficient.\n\nSuppose this was for the actuarial examinations, one might only want the names of people with passing scores.\n\n\n\nCode\nscores = [85, 42, 75, 30, 90]\n\nfor score in scores:\n    if score &lt; 70:\n        continue  # Skip failing scores\n    print(f\"Score {score}: Pass\")\n\n\nScore 85: Pass\nScore 75: Pass\nScore 90: Pass\n\n\n\n\n\nThis optional for week 1, there is yet another data structure called a dictionary.\n\nWe will look at the dictionary again later in the course.\nThis is a more realistic version of Ex 3\n\n\n\nCode\nscores = {\n    \"Zhiyuan\": 85,\n    \"Yasmin\": 42,\n    \"Xavier\": 75,\n    \"William\": 30,\n    \"Veda\": 90\n} # scores is a dictionary notice the {} and the :\n# these are \"key-value\" pairs\n\nfor name, score in scores.items(): # .items() is a dictionary method works both keys & values\n    if score &lt; 50:\n        continue  # Skip failing scores\n    print(f\"{name} passed with a score of {score}.\")\n\n\nZhiyuan passed with a score of 85.\nXavier passed with a score of 75.\nVeda passed with a score of 90.",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#pass",
+    "href": "lec/Lecture02.html#pass",
+    "title": "Week 1, Meeting 2",
+    "section": "Pass",
+    "text": "Pass\n\nThe pass statement does nothing.\nHere, pass does nothing when num == 2, so all numbers are printed.\nYou see it a lot in homework assignments.\nOr when you just need execution to continue as you work on another part of a larger program.\n\n\nfor num in range(5):\n    if num == 2:\n        pass  # Does nothing, execution continues as usual\n    print(num, end = \" \")\n\n0 1 2 3 4",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#difference-between-continue-and-pass",
+    "href": "lec/Lecture02.html#difference-between-continue-and-pass",
+    "title": "Week 1, Meeting 2",
+    "section": "Difference between Continue and Pass",
+    "text": "Difference between Continue and Pass\n\n\n\n\n\n\n\n\nFeature\nContinue\nPass\n\n\n\n\nPurpose\nSkips the remainder of the current loop iteration and continues to the next iteration\nIs a placeholder where a statement is required but pass does nothing\n\n\nEffect on Loop Execution\nMoves to the next iteration of the loop\nDoes nothing; execution moves to the next statement in the block\n\n\nWhen to use\nWhen skipping specific iterations in a loop\nWhen a block of code is required but no operation needs to be performed",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
+    ]
+  },
+  {
+    "objectID": "lec/Lecture02.html#if-we-have-time",
+    "href": "lec/Lecture02.html#if-we-have-time",
+    "title": "Week 1, Meeting 2",
+    "section": "If we have time",
+    "text": "If we have time\nTry it with your team - and if you didn’t get a photograph for uploading, now is the time:\n\n\ndef sphere_volume(r):\n    import math\n    pass\n\nWhat do we need to replace pass with to make this work?",
+    "crumbs": [
+      "Lectures",
+      "Lecture02"
     ]
   },
   {
@@ -825,21 +1349,98 @@
     ]
   },
   {
-    "objectID": "resources/pyodide_test.html",
-    "href": "resources/pyodide_test.html",
-    "title": "Pyodide and Quarto HTML Documents",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Statistics 21",
     "section": "",
-    "text": "This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "This site was produced with Quarto and Pyodide using VS Code and is currently hosted by GitHub. It was created for the students of Statistics 21 for use inside and outside of the classroom.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about Pyodide please visit https://pyodide.org/en/stable/\nAnd about its Quarto extension visit https://github.com/coatless-quarto/pyodide\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
     "crumbs": [
-      "Resources",
-      "Pyodide"
+      "Start Here",
+      "Overview"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "old_syllabus.html",
+    "href": "old_syllabus.html",
+    "title": "STATS 21 Spring 2025 Syllabus",
     "section": "",
-    "text": "This site was produced with Pyodide and Quarto in VS Code and is currently hosted by GitHub. It was created for the students of Statistics 21.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
+    "text": "This class covers using Python and other technologies for data analysis and data science. We will focus on programming with Python and a selection of its libraries: NumPy, Pandas, Matplotlib, and others for the purpose of data processing, data cleaning, data analysis, etc. Other technologies covered will include Quarto, VSCode, Jupyter, and Git. This course is intended for Data Theory majors as an introduction to the Python language and libraries most frequently used in data science. No prior experience with Python is assumed.\n\n\n\n\n\n\n\nCourse Information\nMore Information\n\n\n\n\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\n\n\nContact Info:  Please e-mail through BruinLearn\nOffice Hours: W 2:00pm-5:00pm (my office)  and you are always welcome to schedule appointment(s), evenings & weekends too\n\n\nMeeting Times and Locations: \nMW 2:00pm-3:15pm (Lect 1 - Math Sciences 4000A)\n\n\nTAs: Joseph Resch (1A 8am, 1B 9am)  and Lan Tao (1C 8am, 1D 9am)\nSection location Mathematical Sciences 5128 (1A, 1B)  Physics and Astronomy Building 1749 (1C, 1D)  Office Hours TBD"
+  },
+  {
+    "objectID": "old_syllabus.html#introduction",
+    "href": "old_syllabus.html#introduction",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "",
+    "text": "This class covers using Python and other technologies for data analysis and data science. We will focus on programming with Python and a selection of its libraries: NumPy, Pandas, Matplotlib, and others for the purpose of data processing, data cleaning, data analysis, etc. Other technologies covered will include Quarto, VSCode, Jupyter, and Git. This course is intended for Data Theory majors as an introduction to the Python language and libraries most frequently used in data science. No prior experience with Python is assumed.\n\n\n\n\n\n\n\nCourse Information\nMore Information\n\n\n\n\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\n\n\nContact Info:  Please e-mail through BruinLearn\nOffice Hours: W 2:00pm-5:00pm (my office)  and you are always welcome to schedule appointment(s), evenings & weekends too\n\n\nMeeting Times and Locations: \nMW 2:00pm-3:15pm (Lect 1 - Math Sciences 4000A)\n\n\nTAs: Joseph Resch (1A 8am, 1B 9am)  and Lan Tao (1C 8am, 1D 9am)\nSection location Mathematical Sciences 5128 (1A, 1B)  Physics and Astronomy Building 1749 (1C, 1D)  Office Hours TBD"
+  },
+  {
+    "objectID": "old_syllabus.html#proposed-learning-outcomes",
+    "href": "old_syllabus.html#proposed-learning-outcomes",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Proposed Learning Outcomes",
+    "text": "Proposed Learning Outcomes\nUpon completion of this course, students:\n\nwill be comfortable with some of the software tools associated with Python\n\nwill be able to read, write, and improve intermediate level code in Python\n\nwill be able to create, load, transform, and analyze data with Python\n\nwill be able to create and publish data visualizations in Python"
+  },
+  {
+    "objectID": "old_syllabus.html#grades",
+    "href": "old_syllabus.html#grades",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Grades",
+    "text": "Grades\nLetter grades are assigned on a straight scale as follows:\n\n50% and below: F\n\n51.0 - 76.9%: C, 77.0 - 79.9%: C+\n\n80.0 - 82.9%: B-, 83.0 - 86.9%: B, 87.0 - 89.9%: B+\n\n90.0 - 92.9%: A-, 93.0% and up A\n\nI do not assign C-, D+, D, or D-. If you are a Data Theory major please take the class for a letter grade. Taking the course pass/no-pass will not fulfill the requirements for completing the major.\n\nClass attendance and participation\nThe learning process of this class is based on in-person discussion and participation during lecture and attending and participating during discussion section with your TAs. The lecture is not broadcast (please check with your TA about section) instead a weekly recorded recap lecture will be uploaded to BruinLearn. If you are unable to attend lecture in person because you have a documented accommodation with UCLA, please let me know via e-mail sent from BruinLearn so we can work out a different arrangement.\n\n\nGrading\n\n20% Attending and participating in team activities during lecture\n\n10% Attending and participating during section (TA will determine the specifics)\n\n10% End of quarter project for TA/discussion (TA will determine the specifics)\n\n20% Python Homework (6 assignments - drop your lowest score)\n15% Python journal pages (upload 3x per week - drop 3 lowest)\n10% Python Teaching Video (due by the end of the quarter)\n15% Final exam (in-person only, bring a pencil, no electronic devices allowed and no internet access)\n\n\n\nCourse Grade Changes\nAfter course grades have been submitted to the registrar, grades are final. Grade changes will only be considered if there has been a clerical or procedural mistake. Students have one quarter to make requests for a grade change. Graded exams and other materials are kept for one quarter. After one quarter, course grade changes cannot be made."
+  },
+  {
+    "objectID": "old_syllabus.html#course-materials",
+    "href": "old_syllabus.html#course-materials",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Course Materials",
+    "text": "Course Materials\nAll course related materials are posted to BruinLearn, all assignments are uploaded to that site as well typically in the form of PDF files, photographs or recordings. Official course grades are found online on myUCLA only. Other materials:\n\nBill Lubanovic (2019 or 2025) Introducing Python\nWes McKinney (2022) Python for Data Analysis\n\nThe two texts are available free via access with UCLA’s library to O’Reilly.\n\nSuggested Tech for this course\n\nPython 3.13 minor version differences (e.g., 3.11, 3.12, 3.14) are fine.\n\nQuarto, or JupyterLab, or Google Colab.\n\npip (visit ChatGPT and ask it something like ‘How can I check if I have pip installed on my computer?’) or Anaconda\n\nVS Code you need some kind of source editor but Jupyter & Colab are perfectly acceptable\n\nA GitHub account (free) if you do not already have one and you should consider it (not required) also download and install git on your local computer\n\n\n\nPosting Policy\nAll course materials posted on the course website or distributed in class (including but not limited to lecture slides, homework assignments, lecture videos, quizzes, exams) are intended for personal use only by students enrolled in Stats 21 Lecture 1. It is a violation of course policy to post, share, or distribute any course material electronically or physically without permission from the instructor, even after the course is over."
+  },
+  {
+    "objectID": "old_syllabus.html#course-outline-this-is-subject-to-change",
+    "href": "old_syllabus.html#course-outline-this-is-subject-to-change",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Course Outline (this is subject to change)",
+    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic (T ; Th)\n\n\n\n\nWeek 1 4/1 & 4/3\nFirst Day business, Tech Checklist; base Python I\n\n\nWeek 2 4/8 & 4/10\nbase Python II; writing functions, working with data\n\n\nWeek 3 4/15 & 4/17\nObject-Oriented Programming Classes and objects, methods, inheritance\n\n\nWeek 4 4/22 & 4/24\nNumPy: Arrays, Broadcasting, Vectorization, Indexing, Math Functions\n\n\nWeek 5 4/29 & 5/1\nPandas: DataFrames, Filtering, GroupBy, Aggregation, Handling Missing Data\n\n\nWeek 6 5/6 & 5/8\nPandas: More Pandas\n\n\nWeek 7 5/13 & 5/15\nMatplotlib & Seaborn\n\n\nWeek 8 5/20 & 5/22\nSciPy & Scikit-learn\n\n\nWeek 9 5/27 & 5/29\nsome SQL\n\n\nWeek 10 6/3 & 6/5\nTBD; Review for Final Exam\n\n\nFinal 6/11\nWednesday June 11, 12:00pm - 1:30pm"
+  },
+  {
+    "objectID": "old_syllabus.html#academic-dishonesty",
+    "href": "old_syllabus.html#academic-dishonesty",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Academic Dishonesty",
+    "text": "Academic Dishonesty\nAs Bruins, we uphold the UCLA Student Code of Conduct. Academic dishonesty means activities like plagiarism, unauthorized material used on exams, unauthorized collaborations etc. According to Senate Regulation A-306, if an instructor encounters a problem, the instructor is required to report it to the Dean of Students.\n\nhttps://www.deanofstudents.ucla.edu/Student-Conduct#10690514-student-conduct-code\nhttps://ucla.app.box.com/s/8xq1jyrvqhs9343e4rzyvporx9lt8u1g\n\n\nAI policy\nYour instructor’s belief is AI should be used – wisely – as if it were an amazingly clever tutor or friend. But copying and pasting the code is not learning and chances are, you will not retain the skill (this is the greater concern). Writing well crafted AI prompts with the goal of developing correct scaffolding of programming skills will help you retain the knowledge long after this course is over."
+  },
+  {
+    "objectID": "old_syllabus.html#accessible-education",
+    "href": "old_syllabus.html#accessible-education",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Accessible Education",
+    "text": "Accessible Education\nStudents with accessibility issues are welcome and encouraged to seek accommodation. Students needing academic accommodations based on a documented disability should contact the Center for Accessible Education (CAE) at (310)825-1501 or in person at Murphy Hall A255. In order to ensure accommodations, students need to contact CAE within the first two weeks of the term."
+  },
+  {
+    "objectID": "old_syllabus.html#covid-19-health-and-safety",
+    "href": "old_syllabus.html#covid-19-health-and-safety",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "COVID-19 health and safety",
+    "text": "COVID-19 health and safety\nIn compliance with Los Angeles County policies effective January 6 2023, UCLA strongly recommends indoor masking, regardless of vaccination status. Testing is also strongly encouraged. See\n\nhttps://covid-19.ucla.edu/covid-protocols-at-a-glance/\nhttp://publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid=4220\n\nSome of us might feel more comfortable wearing masks and continuing to social distance, for example, during small-group work in class or section. All of our preferences are reasonable, and it is important that we treat each others’ preferences with respect and care so that we each feel comfortable and prepared to learn in class. You can find the most current policies on campus requirements on the UCLA COVID-19 resources site https://covid-19.ucla.edu/."
+  },
+  {
+    "objectID": "old_syllabus.html#psychological-health-well-being-and-resilience",
+    "href": "old_syllabus.html#psychological-health-well-being-and-resilience",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Psychological Health, Well-Being and Resilience",
+    "text": "Psychological Health, Well-Being and Resilience\nUCLA is renowned for academic excellence, and yet we know that many students feel overwhelmed at times by demands to succeed academically, socially and personally. Our campus community is committed to helping all students thrive, learn to cope with stress, and build resilience. Remember, self-care is a skill that is critical to your long-term success. Here are some of the many resources available at UCLA to support you:\n\nCounseling and Psychological Services (CAPS): Provides counseling and other psychological/mental health services to students. Walk-in hours are Monday-Thursday 8am-4:30pm and Friday 9am-4:30pm in John Wooden Center West. Crisis counseling is also available 24 hours/day at (310) 825-0768.\nAshe Student Health and Wellness Center: Provides high quality and accessible ambulatory healthcare and education by caring professionals to support the academic success and personal development of all UCLA students.\nHealthy Campus Initiative (HCI): Provides links to a wide variety of resources for enhancing physical and psychological well-being, positive social interactions, healthy sleep, healthy eating, healthy physical activity and more.\nCampus and Student Resilience: Provides programs to promote resilience and trains students to help support their peers.\nUCLA Recreation: Offers a broad array of services and programs including fitness, yoga, dance, martial arts, meditation, sports, and much more.\nEquity, Diversity and Inclusion: Committed to providing an equal learning, working and living environment at UCLA and supports a range of programs to promote these goals campus-wide."
+  },
+  {
+    "objectID": "old_syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "href": "old_syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Resources for Students Dealing with Financial Stress",
+    "text": "Resources for Students Dealing with Financial Stress\nLife is unpredictable and can create financial emergencies. If you find yourself in this situation, please seek assistance:\n\nBruin Shelter: Provides a safe, supportive environment for fellow college students experiencing homelessness by fostering a collaborative effort between universities, community-based organizations, and service providers.\nThe CPO Food Shelter: Provides free food for any UCLA student who may be experiencing hunger and/or struggling to attain food due to financial hardships."
+  },
+  {
+    "objectID": "old_syllabus.html#title-ix-resources",
+    "href": "old_syllabus.html#title-ix-resources",
+    "title": "STATS 21 Spring 2025 Syllabus",
+    "section": "Title IX Resources",
+    "text": "Title IX Resources\nUCLA prohibits gender discrimination, including sexual harassment, domestic and dating violence, sexual assault, and stalking. If you have experienced sexual harassment or sexual violence, there are a variety of resources to assist you.\n\nCONFIDENTIAL RESOURCES: You can receive confidential support and advocacy at the CARE Advocacy Office for Sexual and Gender-Based Violence, 1st Floor Wooden Center West, (310) 206-2465. Counseling and Psychological Services (CAPS) also provides confidential counseling to all students and can be reached 24/7 at (310) 825-0768.\nNON-CONFIDENTIAL RESOURCES: You can also report sexual violence or sexual harassment directly to the University’s Title IX Coordinator, 2241 Murphy Hall, titleix@conet.ucla.edu, (310) 206-3417. Reports to law enforcement can be made to UCPD at (310) 825-1491. These offices may be required to pursue an official investigation."
   }
 ]
