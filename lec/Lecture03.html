@@ -1192,7 +1192,7 @@ margin-right: 0; }
 <section id="string-methods-example" class="slide level2">
 <h2>String methods example</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-1-1">Setup</a></li><li><a href="#tabset-1-2">Join</a></li><li><a href="#tabset-1-3">Strip</a></li><li><a href="#tabset-1-4">Find &amp; in</a></li><li><a href="#tabset-1-5">replace</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-1-1">Setup</a></li><li><a href="#tabset-1-2">Join</a></li><li><a href="#tabset-1-3">Strip</a></li><li><a href="#tabset-1-4">Find</a></li><li><a href="#tabset-1-5">replace</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div id="text-as-string-vs-text-as-list" class="cell" data-execution_count="1">
@@ -1349,7 +1349,7 @@ is &#39;nation&#39; in text? True</code></pre>
 <span id="cb16-6"><a></a><span class="bu">print</span>(data[<span class="dv">0</span>:<span class="dv">30</span>])</span>
 <span id="cb16-7"><a></a></span>
 <span id="cb16-8"><a></a><span class="co"># modify list values with a list comprehension plus enumerate</span></span>
-<span id="cb16-9"><a></a><span class="co"># enumerate(data) returns both the index (i) and its value (val).</span></span>
+<span id="cb16-9"><a></a><span class="co"># enumerate(data) returns both the index (i) and its value (val)</span></span>
 <span id="cb16-10"><a></a>data2 <span class="op">=</span> [<span class="st">&quot;California&quot;</span> <span class="cf">if</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>, <span class="bu">len</span>(data), <span class="dv">5</span>) <span class="cf">else</span> val <span class="cf">for</span> i, val <span class="kw">in</span> <span class="bu">enumerate</span>(data)]</span>
 <span id="cb16-11"><a></a></span>
 <span id="cb16-12"><a></a><span class="bu">print</span>(data2[<span class="dv">0</span>:<span class="dv">30</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1522,31 +1522,31 @@ is &#39;nation&#39; in text? True</code></pre>
 <li>We learn to create by putting together our acquired skills to solve problems.</li>
 </ul>
 </section>
-<section id="skills-to-synthesis" class="slide level2 smaller">
-<h2>Skills to Synthesis</h2>
+<section id="skills-the-first-part-of-synthesis" class="slide level2 smaller">
+<h2>Skills the first part of Synthesis</h2>
 <ul>
-<li>We start with the mechanics (working parts) “how to create an object”, “these are data structures”, “this is how a for loop works”, etc.
+<li>We start with the basic skills (working parts) “how to create an object”, “these are data structures”, “this is how a for loop works”, etc.
 <ul>
 <li>Synthesis requires knowing that there are different parts and what the parts can do</li>
 <li>Knowing how to combine these parts to work together</li>
-<li>Learning when &amp; where to apply them (in different situations)</li>
+<li>Learning when &amp; where to apply them (in different situations, different advantages/disadavntages)</li>
 <li>Example - a <strong>while</strong> can be rewritten as an <strong>if</strong> which is preferred because generally <strong>if</strong> is faster. <strong>while</strong> repeatedly checks a condition for a given block of code; <strong>if</strong> checks once.</li>
 </ul></li>
 </ul>
 </section>
-<section id="moving-from-textbook-problems-to-new-problems" class="slide level2">
-<h2>Moving from textbook problems to New Problems</h2>
+<section id="from-textbook-to-new-different-problems" class="slide level2">
+<h2>From textbook to new &amp; different problems</h2>
 <ul>
 <li>We start to move away from solving textbook problems related to known examples
 <ul>
 <li>Synthesis requires us to break down unfamiliar problems into smaller parts</li>
 <li>Then apply the skills we have acquired in new and creative ways.</li>
-<li>With the goal of solving the unfamilar piece by piece</li>
+<li>With the goal of building a solution for the unfamilar piece by piece</li>
 </ul></li>
 </ul>
 </section>
 <section id="suggestion-look-for-patterns" class="slide level2">
-<h2>Suggestion: Look for patterns</h2>
+<h2>Suggestion: look for patterns</h2>
 <ul>
 <li>Different problems have similarities.
 <ul>
@@ -1557,8 +1557,8 @@ is &#39;nation&#39; in text? True</code></pre>
 </ul>
 <p>Synthesis involves seeing existing similarities and pairing more complex problems to pre-existing solutions.</p>
 </section>
-<section id="build-a-synthesis-framework" class="slide level2 smaller">
-<h2>Build a Synthesis framework</h2>
+<section id="have-a-synthesis-framework-in-mind" class="slide level2 smaller">
+<h2>Have a Synthesis framework in mind</h2>
 <ul>
 <li>Instead of resorting to brute force solutions to solve our problems, we aim to be more strategic in our approach to problem solving.
 <ul>
@@ -1596,8 +1596,9 @@ is &#39;nation&#39; in text? True</code></pre>
 <li>This approach can make problem solving and learning more manageable with a systematic approach.</li>
 <li>Possible steps might be
 <ul>
-<li>Work on each step then (maybe re)order them. Helps us to identify dependencies, inefficiencies or reveal opportunities for new solutions</li>
-<li>Take the time to assess each step to develop a deeper understanding of the entire process. Problem solving, debugging, revisions might happen here.</li>
+<li>Work out/on each step then (maybe re)order them.</li>
+<li>Helps us to identify dependencies, inefficiencies or reveal opportunities for new solutions</li>
+<li>Take the time to assess each step to develop a deeper understanding of the entire process. (Problem solving, debugging, revisions might happen here.)</li>
 <li>Combine the steps to form a solution</li>
 </ul></li>
 <li>Success might be measured in time savings, productivity, meeting/exceeding goals.</li>
@@ -1606,7 +1607,7 @@ is &#39;nation&#39; in text? True</code></pre>
 <section id="transforming-our-steps-into-modular-code" class="slide level2">
 <h2>Transforming our steps into modular code</h2>
 <ul>
-<li>Synthesis requires designing <em>reusable</em> functions.</li>
+<li>Synthesis in Python requires designing <em>reusable</em> functions.</li>
 <li>Then combining these separate functions into classes (more on classes next week).</li>
 <li>Doing this comfortably involves some skill in applying the “separation of concerns”
 <ul>
@@ -1628,9 +1629,9 @@ is &#39;nation&#39; in text? True</code></pre>
 <section id="how-separation-of-concerns-can-help" class="slide level2">
 <h2>How Separation of Concerns can help</h2>
 <ul>
-<li>Improves reproducibility given the clarity of the solution.</li>
+<li>Improves reproducibility (given the clarity of the solution).</li>
 <li>Helps collaboration because team members can work on the parts independently.</li>
-<li>Problems or improvements in one part do not affect other parts</li>
+<li>Problems or improvements in one part should not affect the other parts</li>
 <li>Scales up well because it will be easier to extend models, preprocessors, etc.</li>
 </ul>
 </section></section>
@@ -1820,7 +1821,7 @@ Hello, Lisa!</code></pre>
 <li>A basic function takes input and returns output.</li>
 <li>Most of our functions will be basic</li>
 </ul>
-<div id="0d9b36d2" class="cell" data-execution_count="14">
+<div id="dbb5ebba" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>nj <span class="op">=</span> [<span class="st">&#39;Hanni&#39;</span>, <span class="st">&#39;Hyein&#39;</span>, <span class="st">&#39;Haerin&#39;</span>, <span class="st">&#39;Danielle&#39;</span>, <span class="st">&#39;Minji&#39;</span>]</span>
@@ -1902,7 +1903,7 @@ Age must be a positive number.</code></pre>
 <ul>
 <li>The example from Week 1</li>
 </ul>
-<div id="bc2f94cd" class="cell" data-execution_count="16">
+<div id="a5de3e68" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="kw">def</span> bird_to_human_years(bird_age):</span>
@@ -1920,7 +1921,7 @@ Age must be a positive number.</code></pre>
 <li>Let’s put them together in one script, still basic</li>
 <li>This example is not handling errors well, but that is the iterative nature of programming, and an example for correction later.</li>
 </ul>
-<div id="11e6f2fc" class="cell" data-execution_count="17">
+<div id="98ee14a5" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="co">&quot;&quot;&quot;</span></span>
@@ -1979,13 +1980,13 @@ Age must be a positive number.</code></pre>
 <section id="and-still-more-practice-with-def" class="slide level2">
 <h2>And still more practice with def</h2>
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-6-1">while</a></li><li><a href="#tabset-6-2">sorted()</a></li><li><a href="#tabset-6-3">sorted() 2</a></li></ul>
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-6-1">while</a></li><li><a href="#tabset-6-2">sorted</a></li><li><a href="#tabset-6-3">sorted() 1</a></li><li><a href="#tabset-6-4">sorted() 2</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
 <ul>
 <li>From the Python documentation, example using while</li>
 </ul>
-<div id="8354122e" class="cell" data-execution_count="18">
+<div id="13ed911d" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="kw">def</span> fib(n):    <span class="co"># write Fibonacci series less than n</span></span>
@@ -2003,35 +2004,53 @@ Age must be a positive number.</code></pre>
 </div>
 <div id="tabset-6-2">
 <ul>
-<li>not asking you to program one but instead to see a higher order function in action</li>
-<li>sorted() is a built in function that takes another function as an argument</li>
-<li>sorted() will use that function to compute a value for each element before comparing them.</li>
+<li>sorted() is a built in function, at its simplest it just takes an iterable and does what you think it should do:</li>
 </ul>
-<div id="sorted-using-len" class="cell" data-execution_count="19">
+<div id="sorted-bare-bones" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a>spells <span class="op">=</span> [<span class="st">&quot;Expelliarmus&quot;</span>, <span class="st">&quot;Colloshoo&quot;</span>, <span class="st">&quot;Legilimens&quot;</span>,<span class="st">&quot;Impedimenta&quot;</span>, <span class="st">&quot;Confundo&quot;</span>, <span class="st">&quot;Finite Incantatem&quot;</span>,<span class="st">&quot;Incarcerous&quot;</span>]</span>
-<span id="cb35-2"><a></a></span>
-<span id="cb35-3"><a></a>sorted_spells <span class="op">=</span> <span class="bu">sorted</span>(spells, key<span class="op">=</span><span class="bu">len</span>)</span>
-<span id="cb35-4"><a></a><span class="bu">print</span>(sorted_spells)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb35-2"><a></a>nums <span class="op">=</span> [<span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">9</span>]</span>
+<span id="cb35-3"><a></a></span>
+<span id="cb35-4"><a></a><span class="bu">print</span>(<span class="bu">sorted</span>(spells))</span>
+<span id="cb35-5"><a></a><span class="bu">print</span>(<span class="bu">sorted</span>(nums))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[&#39;Colloshoo&#39;, &#39;Confundo&#39;, &#39;Expelliarmus&#39;, &#39;Finite Incantatem&#39;, &#39;Impedimenta&#39;, &#39;Incarcerous&#39;, &#39;Legilimens&#39;]
+[-9, 0, 3, 5, 6, 7, 8]</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-6-3">
+<ul>
+<li>But sorted() can take another function as an argument, this helps us transition into “higher order functions”</li>
+<li>sorted() will use that function to compute a value for each element before comparing them.</li>
+</ul>
+<div id="sorted-using-len" class="cell" data-execution_count="20">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a>spells <span class="op">=</span> [<span class="st">&quot;Expelliarmus&quot;</span>, <span class="st">&quot;Colloshoo&quot;</span>, <span class="st">&quot;Legilimens&quot;</span>,<span class="st">&quot;Impedimenta&quot;</span>, <span class="st">&quot;Confundo&quot;</span>, <span class="st">&quot;Finite Incantatem&quot;</span>,<span class="st">&quot;Incarcerous&quot;</span>]</span>
+<span id="cb37-2"><a></a></span>
+<span id="cb37-3"><a></a>sorted_spells <span class="op">=</span> <span class="bu">sorted</span>(spells, key<span class="op">=</span><span class="bu">len</span>)</span>
+<span id="cb37-4"><a></a><span class="bu">print</span>(sorted_spells)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[&#39;Confundo&#39;, &#39;Colloshoo&#39;, &#39;Legilimens&#39;, &#39;Impedimenta&#39;, &#39;Incarcerous&#39;, &#39;Expelliarmus&#39;, &#39;Finite Incantatem&#39;]</code></pre>
 </div>
 </div>
 </div>
-<div id="tabset-6-3">
+<div id="tabset-6-4">
 <ul>
-<li>lambdas are anonymous functions (key wants a function) more next lecture</li>
+<li>lambdas are anonymous functions (key= takes a function) they are small and inline</li>
 <li>syntax lambda argument(s): expression</li>
 </ul>
-<div id="sorted" class="cell" data-execution_count="20">
+<div id="sorted" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a>spells <span class="op">=</span> [<span class="st">&quot;Expelliarmus&quot;</span>, <span class="st">&quot;Colloshoo&quot;</span>, <span class="st">&quot;Legilimens&quot;</span>,<span class="st">&quot;Impedimenta&quot;</span>, <span class="st">&quot;Confundo&quot;</span>, <span class="st">&quot;Finite Incantatem&quot;</span>,<span class="st">&quot;Incarcerous&quot;</span>]</span>
-<span id="cb37-2"><a></a></span>
-<span id="cb37-3"><a></a>sorted_spells2 <span class="op">=</span> <span class="bu">sorted</span>(spells, key<span class="op">=</span><span class="kw">lambda</span> spells: spells[::<span class="op">-</span><span class="dv">1</span>]) <span class="co"># what does[::-1] do?</span></span>
-<span id="cb37-4"><a></a><span class="bu">print</span>(sorted_spells2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>spells <span class="op">=</span> [<span class="st">&quot;Expelliarmus&quot;</span>, <span class="st">&quot;Colloshoo&quot;</span>, <span class="st">&quot;Legilimens&quot;</span>,<span class="st">&quot;Impedimenta&quot;</span>, <span class="st">&quot;Confundo&quot;</span>, <span class="st">&quot;Finite Incantatem&quot;</span>,<span class="st">&quot;Incarcerous&quot;</span>]</span>
+<span id="cb39-2"><a></a></span>
+<span id="cb39-3"><a></a>sorted_spells2 <span class="op">=</span> <span class="bu">sorted</span>(spells, key<span class="op">=</span><span class="kw">lambda</span> spells: spells[::<span class="op">-</span><span class="dv">1</span>]) <span class="co"># what does[::-1] do?</span></span>
+<span id="cb39-4"><a></a><span class="bu">print</span>(sorted_spells2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[&#39;Impedimenta&#39;, &#39;Finite Incantatem&#39;, &#39;Confundo&#39;, &#39;Colloshoo&#39;, &#39;Legilimens&#39;, &#39;Expelliarmus&#39;, &#39;Incarcerous&#39;]</code></pre>
@@ -2041,12 +2060,16 @@ Age must be a positive number.</code></pre>
 </div>
 </div>
 </section>
-<section id="start-writing-functions" class="slide level2">
-<h2>Start Writing Functions</h2>
+<section id="takeaways" class="slide level2 smaller">
+<h2>Takeaways</h2>
 <ul>
+<li>Proposing a structure for getting started with writing functions in Python</li>
+<li>Know about the fundamental parts of Python</li>
+<li>Try a list comprehension</li>
 <li>Consider the basic function’s simple structure: “Input - Process - Output” and what needs to happen or what can happen at each step.</li>
 <li>When debugging, be able to trace the problem through the code (use whatever tools are available)</li>
 <li>Learn to identify problem constraints and “Edge Cases” (the extremes of your code where input or behavior occurs at a boundary of the expected range)</li>
+<li>Introduced the idea of using information from additional functions (e.g. lambda) which will bridge the gap from simple to complex.</li>
 </ul>
 </section></section>
 <section>
@@ -2073,21 +2096,22 @@ Age must be a positive number.</code></pre>
 <li>Stands for <strong>L</strong>ocal, <strong>E</strong>nclosing, <strong>G</strong>lobal and <strong>B</strong>uilt-In</li>
 <li>And refers to the order in which Python resolves variable names.</li>
 <li>Understanding this order will help with the debugging of errors when writing our functions.</li>
+<li>And decrease frustration/build confidence</li>
 </ul>
 </section>
 <section id="a-symbol-table" class="slide level2 smaller">
 <h2>A symbol table</h2>
 <p>The built-in function locals() can reveal the symbol table.</p>
-<div id="52696fab" class="cell" data-execution_count="21">
+<div id="e30d51cb" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a><span class="kw">def</span> my_function():</span>
-<span id="cb39-2"><a></a>    x <span class="op">=</span> <span class="dv">10</span>  </span>
-<span id="cb39-3"><a></a>    y <span class="op">=</span> <span class="dv">20</span></span>
-<span id="cb39-4"><a></a>    <span class="bu">print</span>(<span class="bu">locals</span>())  <span class="co"># Print the local symbol table</span></span>
-<span id="cb39-5"><a></a></span>
-<span id="cb39-6"><a></a>my_function()</span>
-<span id="cb39-7"><a></a><span class="bu">print</span>(x) <span class="co"># throws a NameError</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a><span class="kw">def</span> my_function():</span>
+<span id="cb41-2"><a></a>    x <span class="op">=</span> <span class="dv">10</span>  </span>
+<span id="cb41-3"><a></a>    y <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb41-4"><a></a>    <span class="bu">print</span>(<span class="bu">locals</span>())  <span class="co"># Print the local symbol table</span></span>
+<span id="cb41-5"><a></a></span>
+<span id="cb41-6"><a></a>my_function()</span>
+<span id="cb41-7"><a></a><span class="bu">print</span>(x) <span class="co"># throws a NameError</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>{&#39;x&#39;: 10, &#39;y&#39;: 20}</code></pre>
@@ -2096,7 +2120,7 @@ Age must be a positive number.</code></pre>
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[18]</span><span class="ansi-green-fg">, line 7</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[19]</span><span class="ansi-green-fg">, line 7</span>
 <span class="ansi-green-fg">      4</span>     <span style="color:rgb(0,135,0)">print</span>(<span style="color:rgb(0,135,0)">locals</span>())  <span style="font-style:italic;color:rgb(95,135,135)"># Print the local symbol table</span>
 <span class="ansi-green-fg">      6</span> my_function()
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">7</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">x</span>) <span style="font-style:italic;color:rgb(95,135,135)"># throws a NameError</span>
@@ -2130,57 +2154,104 @@ Age must be a positive number.</code></pre>
 </section>
 <section id="example-legb-at-work" class="slide level2 smaller">
 <h2>Example LEGB at work</h2>
-<div id="7ea8e20e" class="cell" data-execution_count="22">
+<div id="8dfe865f" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a>a <span class="op">=</span> <span class="st">&quot;global&quot;</span></span>
-<span id="cb41-2"><a></a></span>
-<span id="cb41-3"><a></a><span class="kw">def</span> outer():</span>
-<span id="cb41-4"><a></a>    b <span class="op">=</span> <span class="st">&quot;enclosing&quot;</span></span>
-<span id="cb41-5"><a></a>    </span>
-<span id="cb41-6"><a></a>    <span class="kw">def</span> inner():</span>
-<span id="cb41-7"><a></a>        c <span class="op">=</span> <span class="st">&quot;local&quot;</span></span>
-<span id="cb41-8"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;1: </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">&quot;</span>)  <span class="co"># Found in &#39;local&#39;</span></span>
-<span id="cb41-9"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;2: </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">&quot;</span>)  <span class="co"># Found in &#39;enclosing&#39; function</span></span>
-<span id="cb41-10"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;3: </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">&quot;</span>)  <span class="co"># Found in &#39;global&#39;</span></span>
-<span id="cb41-11"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;4: is locals() == globals()? </span><span class="sc">{</span><span class="bu">locals</span>() <span class="op">==</span> <span class="bu">globals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-12"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;5: This is in locals(): </span><span class="sc">{</span><span class="bu">locals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-13"><a></a></span>
-<span id="cb41-14"><a></a></span>
-<span id="cb41-15"><a></a>    inner()</span>
-<span id="cb41-16"><a></a>    <span class="co"># print(c) # will throw a name error</span></span>
-<span id="cb41-17"><a></a>    <span class="co"># outer() # will throw a recursion error</span></span>
-<span id="cb41-18"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;6: </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-19"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;7: </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-20"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;8: is locals() == globals()? </span><span class="sc">{</span><span class="bu">locals</span>() <span class="op">==</span> <span class="bu">globals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-21"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;9: This is locals(): </span><span class="sc">{</span><span class="bu">locals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-22"><a></a></span>
-<span id="cb41-23"><a></a>outer()</span>
-<span id="cb41-24"><a></a><span class="co"># print(c) # will throw a name error</span></span>
-<span id="cb41-25"><a></a><span class="co"># print(b) # will throw a name error</span></span>
-<span id="cb41-26"><a></a><span class="bu">print</span>(<span class="ss">f&quot;10: </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-27"><a></a><span class="bu">print</span>(<span class="ss">f&quot;11:is locals() == globals()? </span><span class="sc">{</span><span class="bu">locals</span>() <span class="op">==</span> <span class="bu">globals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-28"><a></a><span class="bu">print</span>(<span class="ss">f&quot;12: is &#39;a&#39; in globals()? </span><span class="sc">{</span><span class="st">&#39;a&#39;</span> <span class="kw">in</span> <span class="bu">globals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-29"><a></a><span class="bu">print</span>(<span class="ss">f&quot;13: is &#39;a&#39; in locals()? </span><span class="sc">{</span><span class="st">&#39;a&#39;</span> <span class="kw">in</span> <span class="bu">locals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-30"><a></a><span class="bu">print</span>(<span class="ss">f&quot;14: is &#39;__builtins__&#39; in &#39;locals()? </span><span class="sc">{</span><span class="st">&#39;__builtins__&#39;</span> <span class="kw">in</span> <span class="bu">locals</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb41-31"><a></a><span class="bu">print</span>(<span class="ss">f&quot;15: is &#39;print&#39; in dir(__builtins__)? </span><span class="sc">{</span><span class="st">&#39;print&#39;</span> <span class="kw">in</span> <span class="bu">dir</span>(__builtins__)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a>a <span class="op">=</span> <span class="st">&quot;global&quot;</span></span>
+<span id="cb43-2"><a></a></span>
+<span id="cb43-3"><a></a><span class="kw">def</span> outer():</span>
+<span id="cb43-4"><a></a>    b <span class="op">=</span> <span class="st">&quot;enclosing&quot;</span></span>
+<span id="cb43-5"><a></a>    </span>
+<span id="cb43-6"><a></a>    <span class="kw">def</span> inner():</span>
+<span id="cb43-7"><a></a>        c <span class="op">=</span> <span class="st">&quot;local&quot;</span></span>
+<span id="cb43-8"><a></a>        <span class="bu">print</span>(<span class="st">&quot;--- INNER FUNCTION SCOPE DIAGNOSTICS ---&quot;</span>)</span>
+<span id="cb43-9"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Name&#39;</span><span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Found?&#39;</span><span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Where?&#39;</span><span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-10"><a></a>        <span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">35</span>)</span>
+<span id="cb43-11"><a></a>        <span class="cf">for</span> name <span class="kw">in</span> [<span class="st">&#39;c&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;print&#39;</span>, <span class="st">&#39;length&#39;</span>, <span class="st">&#39;inner&#39;</span>, <span class="st">&#39;outer&#39;</span>]:</span>
+<span id="cb43-12"><a></a>            <span class="cf">if</span> name <span class="kw">in</span> <span class="bu">locals</span>():</span>
+<span id="cb43-13"><a></a>                where <span class="op">=</span> <span class="st">&quot;Local&quot;</span></span>
+<span id="cb43-14"><a></a>            <span class="cf">elif</span> <span class="st">&#39;b&#39;</span> <span class="kw">in</span> outer.__code__.co_varnames <span class="kw">and</span> name <span class="op">==</span> <span class="st">&#39;b&#39;</span>:</span>
+<span id="cb43-15"><a></a>                where <span class="op">=</span> <span class="st">&quot;Enclosing&quot;</span></span>
+<span id="cb43-16"><a></a>            <span class="cf">elif</span> name <span class="kw">in</span> <span class="bu">globals</span>():</span>
+<span id="cb43-17"><a></a>                where <span class="op">=</span> <span class="st">&quot;Global&quot;</span></span>
+<span id="cb43-18"><a></a>            <span class="cf">elif</span> name <span class="kw">in</span> <span class="bu">dir</span>(__builtins__):</span>
+<span id="cb43-19"><a></a>                where <span class="op">=</span> <span class="st">&quot;Built-in&quot;</span></span>
+<span id="cb43-20"><a></a>            <span class="cf">else</span>:</span>
+<span id="cb43-21"><a></a>                where <span class="op">=</span> <span class="st">&quot;Not Found&quot;</span></span>
+<span id="cb43-22"><a></a>            found <span class="op">=</span> where <span class="op">!=</span> <span class="st">&quot;Not Found&quot;</span></span>
+<span id="cb43-23"><a></a>            <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="bu">str</span>(found)<span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span>where<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-24"><a></a></span>
+<span id="cb43-25"><a></a>    inner()</span>
+<span id="cb43-26"><a></a>    <span class="co"># outer() # will throw a recursion error</span></span>
+<span id="cb43-27"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot; </span><span class="ch">\n</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-28"><a></a>    <span class="bu">print</span>(<span class="st">&quot;--- ENCLOSING FUNCTION SCOPE DIAGNOSTICS ---&quot;</span>)</span>
+<span id="cb43-29"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Name&#39;</span><span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Found?&#39;</span><span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Where?&#39;</span><span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-30"><a></a>    <span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">35</span>)</span>
+<span id="cb43-31"><a></a>    <span class="cf">for</span> name <span class="kw">in</span> [<span class="st">&#39;c&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;print&#39;</span>, <span class="st">&#39;length&#39;</span>,<span class="st">&#39;inner&#39;</span>, <span class="st">&#39;outer&#39;</span>]:</span>
+<span id="cb43-32"><a></a>        <span class="cf">if</span> name <span class="kw">in</span> <span class="bu">locals</span>():</span>
+<span id="cb43-33"><a></a>            where <span class="op">=</span> <span class="st">&quot;Local&quot;</span></span>
+<span id="cb43-34"><a></a>        <span class="cf">elif</span> name <span class="kw">in</span> <span class="bu">globals</span>():</span>
+<span id="cb43-35"><a></a>            where <span class="op">=</span> <span class="st">&quot;Global&quot;</span></span>
+<span id="cb43-36"><a></a>        <span class="cf">elif</span> name <span class="kw">in</span> <span class="bu">dir</span>(__builtins__):</span>
+<span id="cb43-37"><a></a>            where <span class="op">=</span> <span class="st">&quot;Built-in&quot;</span></span>
+<span id="cb43-38"><a></a>        <span class="cf">else</span>:</span>
+<span id="cb43-39"><a></a>            where <span class="op">=</span> <span class="st">&quot;Not Found&quot;</span></span>
+<span id="cb43-40"><a></a>        found <span class="op">=</span> where <span class="op">!=</span> <span class="st">&quot;Not Found&quot;</span></span>
+<span id="cb43-41"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="bu">str</span>(found)<span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span>where<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-42"><a></a></span>
+<span id="cb43-43"><a></a><span class="co"># inner() # placed here throws a NameError</span></span>
+<span id="cb43-44"><a></a>outer() <span class="co"># no recursion error here</span></span>
+<span id="cb43-45"><a></a><span class="bu">print</span>(<span class="ss">f&quot; </span><span class="ch">\n</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-46"><a></a><span class="bu">print</span>(<span class="st">&quot;--- OUTER FUNCTION SCOPE DIAGNOSTICS ---&quot;</span>)</span>
+<span id="cb43-47"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Name&#39;</span><span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Found?&#39;</span><span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Where?&#39;</span><span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-48"><a></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">35</span>)</span>
+<span id="cb43-49"><a></a><span class="cf">for</span> name <span class="kw">in</span> [<span class="st">&#39;c&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;print&#39;</span>, <span class="st">&#39;length&#39;</span>,<span class="st">&#39;inner&#39;</span>,<span class="st">&#39;outer&#39;</span>]:</span>
+<span id="cb43-50"><a></a>    <span class="cf">if</span> name <span class="kw">in</span> <span class="bu">locals</span>():</span>
+<span id="cb43-51"><a></a>        where <span class="op">=</span> <span class="st">&quot;Local&quot;</span></span>
+<span id="cb43-52"><a></a>    <span class="cf">elif</span> name <span class="kw">in</span> <span class="bu">globals</span>():</span>
+<span id="cb43-53"><a></a>        where <span class="op">=</span> <span class="st">&quot;Global&quot;</span></span>
+<span id="cb43-54"><a></a>    <span class="cf">elif</span> name <span class="kw">in</span> <span class="bu">dir</span>(__builtins__):</span>
+<span id="cb43-55"><a></a>        where <span class="op">=</span> <span class="st">&quot;Built-in&quot;</span></span>
+<span id="cb43-56"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb43-57"><a></a>        where <span class="op">=</span> <span class="st">&quot;Not Found&quot;</span></span>
+<span id="cb43-58"><a></a>    found <span class="op">=</span> where <span class="op">!=</span> <span class="st">&quot;Not Found&quot;</span></span>
+<span id="cb43-59"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="bu">str</span>(found)<span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span>where<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>1: local
-2: enclosing
-3: global
-4: is locals() == globals()? False
-5: This is in locals(): {&#39;c&#39;: &#39;local&#39;, &#39;b&#39;: &#39;enclosing&#39;}
-6: enclosing
-7: global
-8: is locals() == globals()? False
-9: This is locals(): {&#39;inner&#39;: &lt;function outer.&lt;locals&gt;.inner at 0x12edf7240&gt;, &#39;b&#39;: &#39;enclosing&#39;}
-10: global
-11:is locals() == globals()? True
-12: is &#39;a&#39; in globals()? True
-13: is &#39;a&#39; in locals()? True
-14: is &#39;__builtins__&#39; in &#39;locals()? True
-15: is &#39;print&#39; in dir(__builtins__)? True</code></pre>
+<pre><code>--- INNER FUNCTION SCOPE DIAGNOSTICS ---
+Name         Found?   Where?
+-----------------------------------
+c            True     Local
+b            True     Enclosing
+a            True     Global
+print        True     Built-in
+length       False    Not Found
+inner        False    Not Found
+outer        True     Global
+ 
+
+--- ENCLOSING FUNCTION SCOPE DIAGNOSTICS ---
+Name         Found?   Where?
+-----------------------------------
+c            False    Not Found
+b            True     Local
+a            True     Global
+print        True     Built-in
+length       False    Not Found
+inner        True     Local
+outer        True     Global
+ 
+
+--- OUTER FUNCTION SCOPE DIAGNOSTICS ---
+Name         Found?   Where?
+-----------------------------------
+c            False    Not Found
+b            False    Not Found
+a            True     Local
+print        True     Built-in
+length       False    Not Found
+inner        False    Not Found
+outer        True     Local</code></pre>
 </div>
 </div>
 </section>
@@ -2202,29 +2273,29 @@ Age must be a positive number.</code></pre>
 <ul>
 <li>trying to use x in the function and modifying it isn’t allowed</li>
 </ul>
-<div id="095118fb" class="cell" data-execution_count="23">
+<div id="74f60f71" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
-<span id="cb43-2"><a></a></span>
-<span id="cb43-3"><a></a><span class="kw">def</span> my_function():</span>
-<span id="cb43-4"><a></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>  <span class="co"># modification not allowed</span></span>
-<span id="cb43-5"><a></a>    <span class="bu">print</span>(x)</span>
-<span id="cb43-6"><a></a></span>
-<span id="cb43-7"><a></a>my_function() <span class="co"># error</span></span>
-<span id="cb43-8"><a></a><span class="co"># UnboundLocalError: cannot access local variable &#39;x&#39;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
+<span id="cb45-2"><a></a></span>
+<span id="cb45-3"><a></a><span class="kw">def</span> my_function():</span>
+<span id="cb45-4"><a></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>  <span class="co"># modification not allowed</span></span>
+<span id="cb45-5"><a></a>    <span class="bu">print</span>(x)</span>
+<span id="cb45-6"><a></a></span>
+<span id="cb45-7"><a></a>my_function() <span class="co"># error</span></span>
+<span id="cb45-8"><a></a><span class="co"># UnboundLocalError: cannot access local variable &#39;x&#39;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">UnboundLocalError</span>                         Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[20]</span><span class="ansi-green-fg">, line 7</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[21]</span><span class="ansi-green-fg">, line 7</span>
 <span class="ansi-green-fg">      4</span>     x = x + <span class="ansi-green-fg">1</span>  <span style="font-style:italic;color:rgb(95,135,135)"># modification not allowed</span>
 <span class="ansi-green-fg">      5</span>     <span style="color:rgb(0,135,0)">print</span>(x)
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">7</span> <span class="ansi-yellow-bg">my_function</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span> <span style="font-style:italic;color:rgb(95,135,135)"># error</span>
 <span class="ansi-green-fg">      8</span> <span style="font-style:italic;color:rgb(95,135,135)"># UnboundLocalError: cannot access local variable &#39;x&#39;</span>
 
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[20]</span><span class="ansi-green-fg">, line 4</span>, in <span class="ansi-cyan-fg">my_function</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[21]</span><span class="ansi-green-fg">, line 4</span>, in <span class="ansi-cyan-fg">my_function</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">      3</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg">my_function</span>():
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">4</span>     x = <span class="ansi-yellow-bg">x</span> + <span class="ansi-green-fg">1</span>  <span style="font-style:italic;color:rgb(95,135,135)"># modification not allowed</span>
 <span class="ansi-green-fg">      5</span>     <span style="color:rgb(0,135,0)">print</span>(x)
@@ -2238,16 +2309,16 @@ Age must be a positive number.</code></pre>
 <ul>
 <li>Passing x to the function works fine</li>
 </ul>
-<div id="9be5fdb8" class="cell" data-execution_count="24">
+<div id="929d7794" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
-<span id="cb44-2"><a></a></span>
-<span id="cb44-3"><a></a><span class="kw">def</span> my_function(var):</span>
-<span id="cb44-4"><a></a>    var <span class="op">=</span> var <span class="op">+</span> <span class="dv">1</span>  </span>
-<span id="cb44-5"><a></a>    <span class="bu">print</span>(var)</span>
-<span id="cb44-6"><a></a></span>
-<span id="cb44-7"><a></a>my_function(x) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
+<span id="cb46-2"><a></a></span>
+<span id="cb46-3"><a></a><span class="kw">def</span> my_function(var):</span>
+<span id="cb46-4"><a></a>    var <span class="op">=</span> var <span class="op">+</span> <span class="dv">1</span>  </span>
+<span id="cb46-5"><a></a>    <span class="bu">print</span>(var)</span>
+<span id="cb46-6"><a></a></span>
+<span id="cb46-7"><a></a>my_function(x) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>6</code></pre>
@@ -2258,15 +2329,15 @@ Age must be a positive number.</code></pre>
 <ul>
 <li>Passing x to the function works fine</li>
 </ul>
-<div id="6a3482bb" class="cell" data-execution_count="25">
+<div id="594552ac" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
-<span id="cb46-2"><a></a></span>
-<span id="cb46-3"><a></a><span class="kw">def</span> my_function():</span>
-<span id="cb46-4"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;x is ok to use and x = </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb46-5"><a></a></span>
-<span id="cb46-6"><a></a>my_function() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
+<span id="cb48-2"><a></a></span>
+<span id="cb48-3"><a></a><span class="kw">def</span> my_function():</span>
+<span id="cb48-4"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;x is ok to use and x = </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb48-5"><a></a></span>
+<span id="cb48-6"><a></a>my_function() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>x is ok to use and x = 5</code></pre>
@@ -2277,17 +2348,17 @@ Age must be a positive number.</code></pre>
 <ul>
 <li>not advised, but is do-able</li>
 </ul>
-<div id="dda399f2" class="cell" data-execution_count="26">
+<div id="e4a1496c" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
-<span id="cb48-2"><a></a></span>
-<span id="cb48-3"><a></a><span class="kw">def</span> my_function():</span>
-<span id="cb48-4"><a></a>    <span class="kw">global</span> x   <span class="co"># allows modification</span></span>
-<span id="cb48-5"><a></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>  </span>
-<span id="cb48-6"><a></a>    <span class="bu">print</span>(x)</span>
-<span id="cb48-7"><a></a></span>
-<span id="cb48-8"><a></a>my_function() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># global variable x</span></span>
+<span id="cb50-2"><a></a></span>
+<span id="cb50-3"><a></a><span class="kw">def</span> my_function():</span>
+<span id="cb50-4"><a></a>    <span class="kw">global</span> x   <span class="co"># allows modification</span></span>
+<span id="cb50-5"><a></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>  </span>
+<span id="cb50-6"><a></a>    <span class="bu">print</span>(x)</span>
+<span id="cb50-7"><a></a></span>
+<span id="cb50-8"><a></a>my_function() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>6</code></pre>
@@ -2353,54 +2424,54 @@ Age must be a positive number.</code></pre>
 </section>
 <section id="simple-example---volume-again" class="slide level2">
 <h2>Simple Example - Volume again</h2>
-<div id="simple-try-except" class="cell" data-execution_count="27">
+<div id="simple-try-except" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb50-2"><a></a><span class="co">computing sphere volume</span></span>
-<span id="cb50-3"><a></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb50-4"><a></a></span>
-<span id="cb50-5"><a></a><span class="im">import</span> math</span>
-<span id="cb50-6"><a></a></span>
-<span id="cb50-7"><a></a>PI <span class="op">=</span> math.pi</span>
-<span id="cb50-8"><a></a></span>
-<span id="cb50-9"><a></a>r_input <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;What is the radius of your sphere? &quot;</span>)</span>
-<span id="cb50-10"><a></a></span>
-<span id="cb50-11"><a></a><span class="cf">try</span>:</span>
-<span id="cb50-12"><a></a>    r <span class="op">=</span> <span class="bu">float</span>(r_input)</span>
-<span id="cb50-13"><a></a>    <span class="cf">if</span> r <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb50-14"><a></a>        volume <span class="op">=</span> <span class="bu">round</span>((<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>) <span class="op">*</span> PI <span class="op">*</span> (r<span class="op">**</span><span class="dv">3</span>), <span class="dv">2</span>)</span>
-<span id="cb50-15"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;The volume of your sphere is </span><span class="sc">{</span>volume<span class="sc">}</span><span class="ss"> cubic units.&quot;</span>)</span>
-<span id="cb50-16"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb50-17"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Error: The radius must be a positive numerical value.&quot;</span>)</span>
-<span id="cb50-18"><a></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
-<span id="cb50-19"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Error: Please enter a valid numerical value for the radius.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb52-2"><a></a><span class="co">computing sphere volume</span></span>
+<span id="cb52-3"><a></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb52-4"><a></a></span>
+<span id="cb52-5"><a></a><span class="im">import</span> math</span>
+<span id="cb52-6"><a></a></span>
+<span id="cb52-7"><a></a>PI <span class="op">=</span> math.pi</span>
+<span id="cb52-8"><a></a></span>
+<span id="cb52-9"><a></a>r_input <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;What is the radius of your sphere? &quot;</span>)</span>
+<span id="cb52-10"><a></a></span>
+<span id="cb52-11"><a></a><span class="cf">try</span>:</span>
+<span id="cb52-12"><a></a>    r <span class="op">=</span> <span class="bu">float</span>(r_input)</span>
+<span id="cb52-13"><a></a>    <span class="cf">if</span> r <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb52-14"><a></a>        volume <span class="op">=</span> <span class="bu">round</span>((<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>) <span class="op">*</span> PI <span class="op">*</span> (r<span class="op">**</span><span class="dv">3</span>), <span class="dv">2</span>)</span>
+<span id="cb52-15"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;The volume of your sphere is </span><span class="sc">{</span>volume<span class="sc">}</span><span class="ss"> cubic units.&quot;</span>)</span>
+<span id="cb52-16"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb52-17"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Error: The radius must be a positive numerical value.&quot;</span>)</span>
+<span id="cb52-18"><a></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb52-19"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Error: Please enter a valid numerical value for the radius.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>If a user is entering bad values like 0 or a string, a specific message is returned.</p>
 </section>
 <section id="more-complicated-example" class="slide level2">
 <h2>More Complicated Example</h2>
-<div id="9ac66a20" class="cell" data-execution_count="28">
+<div id="cc0c9815" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a><span class="im">import</span> requests</span>
-<span id="cb51-2"><a></a></span>
-<span id="cb51-3"><a></a><span class="kw">def</span> fetch_weather():</span>
-<span id="cb51-4"><a></a>     <span class="cf">try</span>:</span>
-<span id="cb51-5"><a></a>         response <span class="op">=</span> requests.get(<span class="st">&quot;https://api.weather.gov/points/34.06974489786188,-118.44321649871341&quot;</span>)</span>
-<span id="cb51-6"><a></a>         response.raise_for_status()  <span class="co"># raises an HTTPError if the response was an error</span></span>
-<span id="cb51-7"><a></a>         <span class="cf">return</span> response.json()</span>
-<span id="cb51-8"><a></a>     <span class="cf">except</span> requests.exceptions.HTTPError <span class="im">as</span> e:</span>
-<span id="cb51-9"><a></a>         <span class="bu">print</span>(<span class="st">&quot;Server returned an error:&quot;</span>, e)</span>
-<span id="cb51-10"><a></a>     <span class="cf">except</span> requests.exceptions.<span class="pp">ConnectionError</span>:</span>
-<span id="cb51-11"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Failed to connect to the weather server.&quot;</span>)</span>
-<span id="cb51-12"><a></a>     <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb51-13"><a></a>         <span class="bu">print</span>(<span class="st">&quot;Unexpected error:&quot;</span>, e)</span>
-<span id="cb51-14"><a></a></span>
-<span id="cb51-15"><a></a>fetch_weather()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a></a><span class="im">import</span> requests</span>
+<span id="cb53-2"><a></a></span>
+<span id="cb53-3"><a></a><span class="kw">def</span> fetch_weather():</span>
+<span id="cb53-4"><a></a>     <span class="cf">try</span>:</span>
+<span id="cb53-5"><a></a>         response <span class="op">=</span> requests.get(<span class="st">&quot;https://api.weather.gov/points/34.06974489786188,-118.44321649871341&quot;</span>)</span>
+<span id="cb53-6"><a></a>         response.raise_for_status()  <span class="co"># raises an HTTPError if the response was an error</span></span>
+<span id="cb53-7"><a></a>         <span class="cf">return</span> response.json()</span>
+<span id="cb53-8"><a></a>     <span class="cf">except</span> requests.exceptions.HTTPError <span class="im">as</span> e:</span>
+<span id="cb53-9"><a></a>         <span class="bu">print</span>(<span class="st">&quot;Server returned an error:&quot;</span>, e)</span>
+<span id="cb53-10"><a></a>     <span class="cf">except</span> requests.exceptions.<span class="pp">ConnectionError</span>:</span>
+<span id="cb53-11"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Failed to connect to the weather server.&quot;</span>)</span>
+<span id="cb53-12"><a></a>     <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb53-13"><a></a>         <span class="bu">print</span>(<span class="st">&quot;Unexpected error:&quot;</span>, e)</span>
+<span id="cb53-14"><a></a></span>
+<span id="cb53-15"><a></a>fetch_weather()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>{&#39;@context&#39;: [&#39;https://geojson.org/geojson-ld/geojson-context.jsonld&#39;,
   {&#39;@version&#39;: &#39;1.1&#39;,
    &#39;wx&#39;: &#39;https://api.weather.gov/ontology#&#39;,
@@ -2452,54 +2523,54 @@ Age must be a positive number.</code></pre>
 <ul>
 <li>As a Python programmer you may decide to throw (raise) an exception when a condition occurs. To do this, use the raise keyword.</li>
 </ul>
-<div id="bf928a6e" class="cell" data-execution_count="29">
+<div id="f811ce2d" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a></a><span class="kw">def</span> dog_to_human_years(dog_age):</span>
-<span id="cb53-2"><a></a>    <span class="co">&quot;&quot;&quot;15 human years equals the first year of a </span></span>
-<span id="cb53-3"><a></a><span class="co">    medium-sized dog’s life.</span></span>
-<span id="cb53-4"><a></a><span class="co">    Year two for a dog equals about nine years for a human.</span></span>
-<span id="cb53-5"><a></a><span class="co">    And after that, each human year would be </span></span>
-<span id="cb53-6"><a></a><span class="co">    approximately five years for a dog.&quot;&quot;&quot;</span></span>
-<span id="cb53-7"><a></a>    <span class="cf">if</span> dog_age <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
-<span id="cb53-8"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;Age must be a positive number.&quot;</span>)</span>
-<span id="cb53-9"><a></a>        <span class="co"># return &quot;Age must be a positive number.&quot; # Not this way</span></span>
-<span id="cb53-10"><a></a>    <span class="cf">elif</span> dog_age <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb53-11"><a></a>        <span class="cf">return</span> <span class="dv">15</span></span>
-<span id="cb53-12"><a></a>    <span class="cf">elif</span> dog_age <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb53-13"><a></a>        <span class="cf">return</span> <span class="dv">24</span></span>
-<span id="cb53-14"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb53-15"><a></a>        <span class="cf">return</span> <span class="dv">24</span> <span class="op">+</span> (dog_age <span class="op">-</span> <span class="dv">2</span>) <span class="op">*</span> <span class="dv">5</span></span>
-<span id="cb53-16"><a></a></span>
-<span id="cb53-17"><a></a><span class="kw">def</span> bird_to_human_years(bird_age):</span>
-<span id="cb53-18"><a></a>    <span class="cf">if</span> bird_age <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
-<span id="cb53-19"><a></a>       <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;Age must be a positive number.&quot;</span>)</span>
-<span id="cb53-20"><a></a>       <span class="co">#return &quot;Age must be a positive number.&quot; # Not this way</span></span>
-<span id="cb53-21"><a></a>    <span class="cf">return</span> <span class="ss">f&quot;Your bird is </span><span class="sc">{</span>bird_age <span class="op">*</span> <span class="dv">5</span><span class="sc">}</span><span class="ss"> in human years&quot;</span></span>
-<span id="cb53-22"><a></a></span>
-<span id="cb53-23"><a></a><span class="kw">def</span> pet_age_calculator():   </span>
-<span id="cb53-24"><a></a>    <span class="co">&quot;&quot;&quot;Calculates the human age of the pet based on the pet type and ask the user for input&quot;&quot;&quot;</span></span>
-<span id="cb53-25"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Welcome to the Pet Age Calculator!&quot;</span>)</span>
-<span id="cb53-26"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Supported pets are: Dog, Bird&quot;</span>)</span>
-<span id="cb53-27"><a></a></span>
-<span id="cb53-28"><a></a>    pet_type <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;What type of pet do you have? &quot;</span>).strip().lower()</span>
-<span id="cb53-29"><a></a></span>
-<span id="cb53-30"><a></a>    <span class="cf">if</span> pet_type <span class="kw">in</span> [<span class="st">&quot;dog&quot;</span>, <span class="st">&quot;bird&quot;</span>]:</span>
-<span id="cb53-31"><a></a>        <span class="cf">try</span>:</span>
-<span id="cb53-32"><a></a>            pet_age <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="ss">f&quot;Enter your </span><span class="sc">{</span>pet_type<span class="sc">}</span><span class="ss">&#39;s age in years: &quot;</span>))</span>
-<span id="cb53-33"><a></a>            <span class="cf">if</span> pet_type <span class="op">==</span> <span class="st">&quot;dog&quot;</span>:</span>
-<span id="cb53-34"><a></a>                human_age <span class="op">=</span> dog_to_human_years(pet_age)</span>
-<span id="cb53-35"><a></a>            <span class="cf">elif</span> pet_type <span class="op">==</span> <span class="st">&quot;bird&quot;</span>:</span>
-<span id="cb53-36"><a></a>                human_age <span class="op">=</span> bird_to_human_years(pet_age)</span>
-<span id="cb53-37"><a></a>            <span class="bu">print</span>(<span class="ss">f&quot;Your </span><span class="sc">{</span>pet_type<span class="sc">}</span><span class="ss"> is approximately </span><span class="sc">{</span>human_age<span class="sc">}</span><span class="ss"> human years old!&quot;</span>)</span>
-<span id="cb53-38"><a></a>        <span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
-<span id="cb53-39"><a></a>            <span class="bu">print</span>(<span class="ss">f&quot;Error: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb53-40"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb53-41"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Sorry, this calculator only supports dogs and birds.&quot;</span>)</span>
-<span id="cb53-42"><a></a></span>
-<span id="cb53-43"><a></a><span class="co"># run it</span></span>
-<span id="cb53-44"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
-<span id="cb53-45"><a></a>    pet_age_calculator()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a><span class="kw">def</span> dog_to_human_years(dog_age):</span>
+<span id="cb55-2"><a></a>    <span class="co">&quot;&quot;&quot;15 human years equals the first year of a </span></span>
+<span id="cb55-3"><a></a><span class="co">    medium-sized dog’s life.</span></span>
+<span id="cb55-4"><a></a><span class="co">    Year two for a dog equals about nine years for a human.</span></span>
+<span id="cb55-5"><a></a><span class="co">    And after that, each human year would be </span></span>
+<span id="cb55-6"><a></a><span class="co">    approximately five years for a dog.&quot;&quot;&quot;</span></span>
+<span id="cb55-7"><a></a>    <span class="cf">if</span> dog_age <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb55-8"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;Age must be a positive number.&quot;</span>)</span>
+<span id="cb55-9"><a></a>        <span class="co"># return &quot;Age must be a positive number.&quot; # Not this way</span></span>
+<span id="cb55-10"><a></a>    <span class="cf">elif</span> dog_age <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb55-11"><a></a>        <span class="cf">return</span> <span class="dv">15</span></span>
+<span id="cb55-12"><a></a>    <span class="cf">elif</span> dog_age <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb55-13"><a></a>        <span class="cf">return</span> <span class="dv">24</span></span>
+<span id="cb55-14"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb55-15"><a></a>        <span class="cf">return</span> <span class="dv">24</span> <span class="op">+</span> (dog_age <span class="op">-</span> <span class="dv">2</span>) <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb55-16"><a></a></span>
+<span id="cb55-17"><a></a><span class="kw">def</span> bird_to_human_years(bird_age):</span>
+<span id="cb55-18"><a></a>    <span class="cf">if</span> bird_age <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb55-19"><a></a>       <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">&quot;Age must be a positive number.&quot;</span>)</span>
+<span id="cb55-20"><a></a>       <span class="co">#return &quot;Age must be a positive number.&quot; # Not this way</span></span>
+<span id="cb55-21"><a></a>    <span class="cf">return</span> <span class="ss">f&quot;Your bird is </span><span class="sc">{</span>bird_age <span class="op">*</span> <span class="dv">5</span><span class="sc">}</span><span class="ss"> in human years&quot;</span></span>
+<span id="cb55-22"><a></a></span>
+<span id="cb55-23"><a></a><span class="kw">def</span> pet_age_calculator():   </span>
+<span id="cb55-24"><a></a>    <span class="co">&quot;&quot;&quot;Calculates the human age of the pet based on the pet type and ask the user for input&quot;&quot;&quot;</span></span>
+<span id="cb55-25"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Welcome to the Pet Age Calculator!&quot;</span>)</span>
+<span id="cb55-26"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Supported pets are: Dog, Bird&quot;</span>)</span>
+<span id="cb55-27"><a></a></span>
+<span id="cb55-28"><a></a>    pet_type <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;What type of pet do you have? &quot;</span>).strip().lower()</span>
+<span id="cb55-29"><a></a></span>
+<span id="cb55-30"><a></a>    <span class="cf">if</span> pet_type <span class="kw">in</span> [<span class="st">&quot;dog&quot;</span>, <span class="st">&quot;bird&quot;</span>]:</span>
+<span id="cb55-31"><a></a>        <span class="cf">try</span>:</span>
+<span id="cb55-32"><a></a>            pet_age <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="ss">f&quot;Enter your </span><span class="sc">{</span>pet_type<span class="sc">}</span><span class="ss">&#39;s age in years: &quot;</span>))</span>
+<span id="cb55-33"><a></a>            <span class="cf">if</span> pet_type <span class="op">==</span> <span class="st">&quot;dog&quot;</span>:</span>
+<span id="cb55-34"><a></a>                human_age <span class="op">=</span> dog_to_human_years(pet_age)</span>
+<span id="cb55-35"><a></a>            <span class="cf">elif</span> pet_type <span class="op">==</span> <span class="st">&quot;bird&quot;</span>:</span>
+<span id="cb55-36"><a></a>                human_age <span class="op">=</span> bird_to_human_years(pet_age)</span>
+<span id="cb55-37"><a></a>            <span class="bu">print</span>(<span class="ss">f&quot;Your </span><span class="sc">{</span>pet_type<span class="sc">}</span><span class="ss"> is approximately </span><span class="sc">{</span>human_age<span class="sc">}</span><span class="ss"> human years old!&quot;</span>)</span>
+<span id="cb55-38"><a></a>        <span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
+<span id="cb55-39"><a></a>            <span class="bu">print</span>(<span class="ss">f&quot;Error: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb55-40"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb55-41"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Sorry, this calculator only supports dogs and birds.&quot;</span>)</span>
+<span id="cb55-42"><a></a></span>
+<span id="cb55-43"><a></a><span class="co"># run it</span></span>
+<span id="cb55-44"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb55-45"><a></a>    pet_age_calculator()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -2569,12 +2640,12 @@ Age must be a positive number.</code></pre>
 <div class="tab-content">
 <div id="tabset-9-1">
 <p>Works like list slicing</p>
-<div id="tuple-slicing" class="cell" data-execution_count="30">
+<div id="tuple-slicing" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a></a>phy_sci <span class="op">=</span> (<span class="dv">2020</span>, <span class="dv">3270</span>, <span class="dv">2021</span>, <span class="dv">3306</span>, <span class="dv">2022</span>, <span class="dv">3165</span>, <span class="dv">2023</span>, <span class="dv">3136</span>, <span class="dv">2024</span>, <span class="dv">3304</span>)</span>
-<span id="cb54-2"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>phy_sci[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> Physical Science majors: </span><span class="sc">{</span>phy_sci[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">&quot;</span>) <span class="co"># Returns 2020 and 3270</span></span>
-<span id="cb54-3"><a></a><span class="bu">print</span>(phy_sci[<span class="dv">0</span>:<span class="dv">4</span>]) <span class="co"># Returns   2020, 3270, 2021, 3306      </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a></a>phy_sci <span class="op">=</span> (<span class="dv">2020</span>, <span class="dv">3270</span>, <span class="dv">2021</span>, <span class="dv">3306</span>, <span class="dv">2022</span>, <span class="dv">3165</span>, <span class="dv">2023</span>, <span class="dv">3136</span>, <span class="dv">2024</span>, <span class="dv">3304</span>)</span>
+<span id="cb56-2"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>phy_sci[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> Physical Science majors: </span><span class="sc">{</span>phy_sci[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">&quot;</span>) <span class="co"># Returns 2020 and 3270</span></span>
+<span id="cb56-3"><a></a><span class="bu">print</span>(phy_sci[<span class="dv">0</span>:<span class="dv">4</span>]) <span class="co"># Returns   2020, 3270, 2021, 3306      </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>2020 Physical Science majors: 3270
@@ -2583,11 +2654,11 @@ Age must be a positive number.</code></pre>
 </div>
 </div>
 <div id="tabset-9-2">
-<div id="max-and-min-values" class="cell" data-execution_count="31">
+<div id="max-and-min-values" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a></a>phy_sci <span class="op">=</span> (<span class="dv">2020</span>, <span class="dv">3270</span>, <span class="dv">2021</span>, <span class="dv">3306</span>, <span class="dv">2022</span>, <span class="dv">3165</span>, <span class="dv">2023</span>, <span class="dv">3136</span>, <span class="dv">2024</span>, <span class="dv">3304</span>)</span>
-<span id="cb56-2"><a></a><span class="bu">print</span>(<span class="bu">min</span>(phy_sci[<span class="dv">1</span>::<span class="dv">2</span>]), <span class="bu">max</span>(phy_sci[<span class="dv">1</span>::<span class="dv">2</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a></a>phy_sci <span class="op">=</span> (<span class="dv">2020</span>, <span class="dv">3270</span>, <span class="dv">2021</span>, <span class="dv">3306</span>, <span class="dv">2022</span>, <span class="dv">3165</span>, <span class="dv">2023</span>, <span class="dv">3136</span>, <span class="dv">2024</span>, <span class="dv">3304</span>)</span>
+<span id="cb58-2"><a></a><span class="bu">print</span>(<span class="bu">min</span>(phy_sci[<span class="dv">1</span>::<span class="dv">2</span>]), <span class="bu">max</span>(phy_sci[<span class="dv">1</span>::<span class="dv">2</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>3136 3306</code></pre>
@@ -2595,15 +2666,15 @@ Age must be a positive number.</code></pre>
 </div>
 </div>
 <div id="tabset-9-3">
-<div id="tuple-to-list-and-back-again" class="cell" data-execution_count="32">
+<div id="tuple-to-list-and-back-again" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a></a>phy_sci <span class="op">=</span> (<span class="dv">2020</span>, <span class="dv">3270</span>, <span class="dv">2021</span>, <span class="dv">3306</span>, <span class="dv">2022</span>, <span class="dv">3165</span>, <span class="dv">2023</span>, <span class="dv">3136</span>, <span class="dv">2024</span>, <span class="dv">3304</span>)</span>
-<span id="cb58-2"><a></a>phy_sci_list <span class="op">=</span> <span class="bu">list</span>(phy_sci)</span>
-<span id="cb58-3"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Is phy_sci_list a list? </span><span class="sc">{</span><span class="bu">isinstance</span>(phy_sci_list, <span class="bu">list</span>)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb58-4"><a></a></span>
-<span id="cb58-5"><a></a>phy_sci_tuple <span class="op">=</span> <span class="bu">tuple</span>(phy_sci_list)</span>
-<span id="cb58-6"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Is phy_sci_tuple a tuple? </span><span class="sc">{</span><span class="bu">isinstance</span>(phy_sci_tuple, <span class="bu">tuple</span>)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a></a>phy_sci <span class="op">=</span> (<span class="dv">2020</span>, <span class="dv">3270</span>, <span class="dv">2021</span>, <span class="dv">3306</span>, <span class="dv">2022</span>, <span class="dv">3165</span>, <span class="dv">2023</span>, <span class="dv">3136</span>, <span class="dv">2024</span>, <span class="dv">3304</span>)</span>
+<span id="cb60-2"><a></a>phy_sci_list <span class="op">=</span> <span class="bu">list</span>(phy_sci)</span>
+<span id="cb60-3"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Is phy_sci_list a list? </span><span class="sc">{</span><span class="bu">isinstance</span>(phy_sci_list, <span class="bu">list</span>)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb60-4"><a></a></span>
+<span id="cb60-5"><a></a>phy_sci_tuple <span class="op">=</span> <span class="bu">tuple</span>(phy_sci_list)</span>
+<span id="cb60-6"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Is phy_sci_tuple a tuple? </span><span class="sc">{</span><span class="bu">isinstance</span>(phy_sci_tuple, <span class="bu">tuple</span>)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Is phy_sci_list a list? True
@@ -2620,24 +2691,24 @@ Is phy_sci_tuple a tuple? True</code></pre>
 <ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-10-1">Constant</a></li><li><a href="#tabset-10-2">Keys</a></li><li><a href="#tabset-10-3">Swap</a></li><li><a href="#tabset-10-4">Return Multiple values</a></li></ul>
 <div class="tab-content">
 <div id="tabset-10-1">
-<div id="tuple-for-unchanging-values" class="cell" data-execution_count="33">
+<div id="tuple-for-unchanging-values" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a></a>UCLA_COLORS <span class="op">=</span> (<span class="st">&quot;#2774AE&quot;</span>, <span class="st">&quot;#FFD100&quot;</span>, <span class="st">&quot;#FFFFFF&quot;</span>)  <span class="co"># This will never change</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a></a>UCLA_COLORS <span class="op">=</span> (<span class="st">&quot;#2774AE&quot;</span>, <span class="st">&quot;#FFD100&quot;</span>, <span class="st">&quot;#FFFFFF&quot;</span>)  <span class="co"># This will never change</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 <div id="tabset-10-2">
 <p>They can serve as dictionary keys (more on dictionaries later):</p>
-<div id="tuple-as-dictionary-keys" class="cell" data-execution_count="34">
+<div id="tuple-as-dictionary-keys" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a>enrollment_data <span class="op">=</span> {</span>
-<span id="cb61-2"><a></a>    (<span class="st">&quot;Sep&quot;</span>, <span class="dv">2024</span>): <span class="dv">47335</span>,</span>
-<span id="cb61-3"><a></a>    (<span class="st">&quot;Sep&quot;</span>, <span class="dv">2023</span>): <span class="dv">46678</span>,</span>
-<span id="cb61-4"><a></a>    (<span class="st">&quot;Sep&quot;</span>, <span class="dv">2022</span>): <span class="dv">46430</span></span>
-<span id="cb61-5"><a></a>}</span>
-<span id="cb61-6"><a></a><span class="bu">print</span>(enrollment_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a>enrollment_data <span class="op">=</span> {</span>
+<span id="cb63-2"><a></a>    (<span class="st">&quot;Sep&quot;</span>, <span class="dv">2024</span>): <span class="dv">47335</span>,</span>
+<span id="cb63-3"><a></a>    (<span class="st">&quot;Sep&quot;</span>, <span class="dv">2023</span>): <span class="dv">46678</span>,</span>
+<span id="cb63-4"><a></a>    (<span class="st">&quot;Sep&quot;</span>, <span class="dv">2022</span>): <span class="dv">46430</span></span>
+<span id="cb63-5"><a></a>}</span>
+<span id="cb63-6"><a></a><span class="bu">print</span>(enrollment_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>{(&#39;Sep&#39;, 2024): 47335, (&#39;Sep&#39;, 2023): 46678, (&#39;Sep&#39;, 2022): 46430}</code></pre>
@@ -2646,14 +2717,14 @@ Is phy_sci_tuple a tuple? True</code></pre>
 </div>
 <div id="tabset-10-3">
 <p>You can easily swap two values using a tuple</p>
-<div id="tuple-swap" class="cell" data-execution_count="35">
+<div id="tuple-swap" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a>a, b <span class="op">=</span> <span class="dv">5</span>, <span class="dv">10</span></span>
-<span id="cb63-2"><a></a><span class="bu">print</span>(<span class="ss">f&quot;The original a, b is </span><span class="sc">{</span>a<span class="sc">,</span> b<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb63-3"><a></a></span>
-<span id="cb63-4"><a></a>a, b <span class="op">=</span> b, a</span>
-<span id="cb63-5"><a></a><span class="bu">print</span>(<span class="ss">f&quot;The tuple swap is </span><span class="sc">{</span>a<span class="sc">,</span> b<span class="sc">}</span><span class="ss">&quot;</span>)  <span class="co"># Output: 10, 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a>a, b <span class="op">=</span> <span class="dv">5</span>, <span class="dv">10</span></span>
+<span id="cb65-2"><a></a><span class="bu">print</span>(<span class="ss">f&quot;The original a, b is </span><span class="sc">{</span>a<span class="sc">,</span> b<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb65-3"><a></a></span>
+<span id="cb65-4"><a></a>a, b <span class="op">=</span> b, a</span>
+<span id="cb65-5"><a></a><span class="bu">print</span>(<span class="ss">f&quot;The tuple swap is </span><span class="sc">{</span>a<span class="sc">,</span> b<span class="sc">}</span><span class="ss">&quot;</span>)  <span class="co"># Output: 10, 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>The original a, b is (5, 10)
@@ -2663,16 +2734,16 @@ The tuple swap is (10, 5)</code></pre>
 </div>
 <div id="tabset-10-4">
 <p>This is handy, in your functions, you can return multiple values using a tuple:</p>
-<div id="tuple-multiple-return-values" class="cell" data-execution_count="36">
+<div id="tuple-multiple-return-values" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a><span class="kw">def</span> divide(a, b):</span>
-<span id="cb65-2"><a></a>    quotient <span class="op">=</span> a <span class="op">//</span> b</span>
-<span id="cb65-3"><a></a>    remainder <span class="op">=</span> a <span class="op">%</span> b</span>
-<span id="cb65-4"><a></a>    <span class="cf">return</span> quotient, remainder  <span class="co"># Returns a tuple</span></span>
-<span id="cb65-5"><a></a></span>
-<span id="cb65-6"><a></a>x, y <span class="op">=</span> divide(<span class="dv">10</span>, <span class="dv">3</span>)</span>
-<span id="cb65-7"><a></a><span class="bu">print</span>(<span class="ss">f&quot;quotient: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">, remainder: </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a></a><span class="kw">def</span> divide(a, b):</span>
+<span id="cb67-2"><a></a>    quotient <span class="op">=</span> a <span class="op">//</span> b</span>
+<span id="cb67-3"><a></a>    remainder <span class="op">=</span> a <span class="op">%</span> b</span>
+<span id="cb67-4"><a></a>    <span class="cf">return</span> quotient, remainder  <span class="co"># Returns a tuple</span></span>
+<span id="cb67-5"><a></a></span>
+<span id="cb67-6"><a></a>x, y <span class="op">=</span> divide(<span class="dv">10</span>, <span class="dv">3</span>)</span>
+<span id="cb67-7"><a></a><span class="bu">print</span>(<span class="ss">f&quot;quotient: </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">, remainder: </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>quotient: 3, remainder: 1</code></pre>
@@ -2701,38 +2772,38 @@ The tuple swap is (10, 5)</code></pre>
 <ul>
 <li>Membership testing is very fast</li>
 </ul>
-<div id="set-membership-testing" class="cell" data-execution_count="37">
+<div id="set-membership-testing" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a></a><span class="im">import</span> time</span>
-<span id="cb67-2"><a></a></span>
-<span id="cb67-3"><a></a><span class="co"># Large list vs tuple</span></span>
-<span id="cb67-4"><a></a>large_set <span class="op">=</span> <span class="bu">set</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
-<span id="cb67-5"><a></a>large_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
-<span id="cb67-6"><a></a>large_tuple <span class="op">=</span> <span class="bu">tuple</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
-<span id="cb67-7"><a></a></span>
-<span id="cb67-8"><a></a></span>
-<span id="cb67-9"><a></a><span class="co"># Measure list iteration time</span></span>
-<span id="cb67-10"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb67-11"><a></a><span class="dv">999999</span> <span class="kw">in</span> large_list</span>
-<span id="cb67-12"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb67-13"><a></a><span class="bu">print</span>(<span class="ss">f&quot;List iteration took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
-<span id="cb67-14"><a></a></span>
-<span id="cb67-15"><a></a><span class="co"># Measure tuple iteration time</span></span>
-<span id="cb67-16"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb67-17"><a></a><span class="dv">999999</span> <span class="kw">in</span> large_tuple</span>
-<span id="cb67-18"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb67-19"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Tuple iteration took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
-<span id="cb67-20"><a></a></span>
-<span id="cb67-21"><a></a><span class="co"># Measure set iteration time</span></span>
-<span id="cb67-22"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb67-23"><a></a><span class="dv">999999</span> <span class="kw">in</span> large_set</span>
-<span id="cb67-24"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb67-25"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Set iteration took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a></a><span class="im">import</span> time</span>
+<span id="cb69-2"><a></a></span>
+<span id="cb69-3"><a></a><span class="co"># Large list vs tuple</span></span>
+<span id="cb69-4"><a></a>large_set <span class="op">=</span> <span class="bu">set</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
+<span id="cb69-5"><a></a>large_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
+<span id="cb69-6"><a></a>large_tuple <span class="op">=</span> <span class="bu">tuple</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
+<span id="cb69-7"><a></a></span>
+<span id="cb69-8"><a></a></span>
+<span id="cb69-9"><a></a><span class="co"># Measure list iteration time</span></span>
+<span id="cb69-10"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb69-11"><a></a><span class="dv">999999</span> <span class="kw">in</span> large_list</span>
+<span id="cb69-12"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb69-13"><a></a><span class="bu">print</span>(<span class="ss">f&quot;List iteration took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
+<span id="cb69-14"><a></a></span>
+<span id="cb69-15"><a></a><span class="co"># Measure tuple iteration time</span></span>
+<span id="cb69-16"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb69-17"><a></a><span class="dv">999999</span> <span class="kw">in</span> large_tuple</span>
+<span id="cb69-18"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb69-19"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Tuple iteration took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
+<span id="cb69-20"><a></a></span>
+<span id="cb69-21"><a></a><span class="co"># Measure set iteration time</span></span>
+<span id="cb69-22"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb69-23"><a></a><span class="dv">999999</span> <span class="kw">in</span> large_set</span>
+<span id="cb69-24"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb69-25"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Set iteration took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>List iteration took: 0.007947 seconds
-Tuple iteration took: 0.005854 seconds
+<pre><code>List iteration took: 0.006580 seconds
+Tuple iteration took: 0.006361 seconds
 Set iteration took: 0.000015 seconds</code></pre>
 </div>
 </div>
@@ -2741,23 +2812,23 @@ Set iteration took: 0.000015 seconds</code></pre>
 <ul>
 <li>Finding the intersection of two sets is fast</li>
 </ul>
-<div id="intersections" class="cell" data-execution_count="38">
+<div id="intersections" class="cell" data-execution_count="39">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a></a><span class="im">import</span> time</span>
-<span id="cb69-2"><a></a></span>
-<span id="cb69-3"><a></a>large_set_A <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>), <span class="op">-</span><span class="dv">6</span>])</span>
-<span id="cb69-4"><a></a>large_set_B <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span><span class="op">+</span><span class="dv">1</span>,<span class="dv">10</span><span class="op">**</span><span class="dv">6</span><span class="op">+</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span><span class="op">+</span><span class="dv">1</span>), <span class="op">-</span><span class="dv">6</span>])</span>
-<span id="cb69-5"><a></a></span>
-<span id="cb69-6"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb69-7"><a></a>set_numbers <span class="op">=</span> large_set_A <span class="op">&amp;</span> large_set_B  </span>
-<span id="cb69-8"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb69-9"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Set intersection took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
-<span id="cb69-10"><a></a></span>
-<span id="cb69-11"><a></a><span class="bu">print</span>(set_numbers)  <span class="co"># Output: {-6}  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a></a><span class="im">import</span> time</span>
+<span id="cb71-2"><a></a></span>
+<span id="cb71-3"><a></a>large_set_A <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>), <span class="op">-</span><span class="dv">6</span>])</span>
+<span id="cb71-4"><a></a>large_set_B <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span><span class="op">+</span><span class="dv">1</span>,<span class="dv">10</span><span class="op">**</span><span class="dv">6</span><span class="op">+</span><span class="dv">10</span><span class="op">**</span><span class="dv">6</span><span class="op">+</span><span class="dv">1</span>), <span class="op">-</span><span class="dv">6</span>])</span>
+<span id="cb71-5"><a></a></span>
+<span id="cb71-6"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb71-7"><a></a>set_numbers <span class="op">=</span> large_set_A <span class="op">&amp;</span> large_set_B  </span>
+<span id="cb71-8"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb71-9"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Set intersection took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
+<span id="cb71-10"><a></a></span>
+<span id="cb71-11"><a></a><span class="bu">print</span>(set_numbers)  <span class="co"># Output: {-6}  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Set intersection took: 0.000017 seconds
+<pre><code>Set intersection took: 0.000016 seconds
 {-6}</code></pre>
 </div>
 </div>
@@ -2767,40 +2838,40 @@ Set iteration took: 0.000015 seconds</code></pre>
 <li>Finding the difference of two sets</li>
 <li>Something that list and tuples cannot do (programmers convert lists and tuples to sets if possible)</li>
 </ul>
-<div id="difference" class="cell" data-execution_count="39">
+<div id="difference" class="cell" data-execution_count="40">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a></a><span class="im">import</span> time</span>
-<span id="cb71-2"><a></a></span>
-<span id="cb71-3"><a></a>large_set_A <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">8</span>), <span class="op">-</span><span class="dv">6</span>])</span>
-<span id="cb71-4"><a></a>large_set_B <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">8</span>), <span class="op">-</span><span class="dv">7</span>])</span>
-<span id="cb71-5"><a></a></span>
-<span id="cb71-6"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb71-7"><a></a>in_A_only <span class="op">=</span> large_set_A <span class="op">-</span> large_set_B  </span>
-<span id="cb71-8"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb71-9"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Set difference took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
-<span id="cb71-10"><a></a></span>
-<span id="cb71-11"><a></a><span class="bu">print</span>(in_A_only)  <span class="co"># Output: {-6}    </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a></a><span class="im">import</span> time</span>
+<span id="cb73-2"><a></a></span>
+<span id="cb73-3"><a></a>large_set_A <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">8</span>), <span class="op">-</span><span class="dv">6</span>])</span>
+<span id="cb73-4"><a></a>large_set_B <span class="op">=</span> <span class="bu">set</span>([<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">8</span>), <span class="op">-</span><span class="dv">7</span>])</span>
+<span id="cb73-5"><a></a></span>
+<span id="cb73-6"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb73-7"><a></a>in_A_only <span class="op">=</span> large_set_A <span class="op">-</span> large_set_B  </span>
+<span id="cb73-8"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb73-9"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Set difference took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
+<span id="cb73-10"><a></a></span>
+<span id="cb73-11"><a></a><span class="bu">print</span>(in_A_only)  <span class="co"># Output: {-6}    </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Set difference took: 0.000016 seconds
+<pre><code>Set difference took: 0.000015 seconds
 {-6}</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-11-4">
-<div id="uniqueness" class="cell" data-execution_count="40">
+<div id="uniqueness" class="cell" data-execution_count="41">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a></a>ingredients <span class="op">=</span> <span class="bu">set</span>()</span>
-<span id="cb73-2"><a></a>ingredients.add(<span class="st">&quot;banana&quot;</span>)</span>
-<span id="cb73-3"><a></a>ingredients.add(<span class="st">&quot;banana&quot;</span>)</span>
-<span id="cb73-4"><a></a>ingredients.add(<span class="st">&quot;meatball&quot;</span>) </span>
-<span id="cb73-5"><a></a></span>
-<span id="cb73-6"><a></a><span class="bu">print</span>(ingredients)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a></a>ingredients <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb75-2"><a></a>ingredients.add(<span class="st">&quot;banana&quot;</span>)</span>
+<span id="cb75-3"><a></a>ingredients.add(<span class="st">&quot;banana&quot;</span>)</span>
+<span id="cb75-4"><a></a>ingredients.add(<span class="st">&quot;meatball&quot;</span>) </span>
+<span id="cb75-5"><a></a></span>
+<span id="cb75-6"><a></a><span class="bu">print</span>(ingredients)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>{&#39;meatball&#39;, &#39;banana&#39;}</code></pre>
+<pre><code>{&#39;banana&#39;, &#39;meatball&#39;}</code></pre>
 </div>
 </div>
 </div>
@@ -2820,35 +2891,35 @@ Set iteration took: 0.000015 seconds</code></pre>
 </section>
 <section id="example-with-unique-ids" class="slide level2">
 <h2>Example with unique IDs</h2>
-<div id="simple-dictionary-creation" class="cell" data-execution_count="41">
+<div id="simple-dictionary-creation" class="cell" data-execution_count="42">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a></a>cities <span class="op">=</span> [</span>
-<span id="cb75-2"><a></a>    {</span>
-<span id="cb75-3"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Los Angeles&quot;</span>,</span>
-<span id="cb75-4"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1781</span>,</span>
-<span id="cb75-5"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
-<span id="cb75-6"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;DTLA&quot;</span>, <span class="st">&quot;Hollywood&quot;</span>, <span class="st">&quot;Westwood&quot;</span>]</span>
-<span id="cb75-7"><a></a>        },</span>
-<span id="cb75-8"><a></a>    {</span>
-<span id="cb75-9"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Diego&quot;</span>,</span>
-<span id="cb75-10"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1769</span>,</span>
-<span id="cb75-11"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
-<span id="cb75-12"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Balboa Park&quot;</span>, <span class="st">&quot;Hillcrest&quot;</span>, <span class="st">&quot;Old Town&quot;</span>]</span>
-<span id="cb75-13"><a></a>        },</span>
-<span id="cb75-14"><a></a>    {</span>
-<span id="cb75-15"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Jose&quot;</span>,</span>
-<span id="cb75-16"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1777</span>,</span>
-<span id="cb75-17"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
-<span id="cb75-18"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Almaden&quot;</span>, <span class="st">&quot;Northside&quot;</span>, <span class="st">&quot;South San Jose&quot;</span>]</span>
-<span id="cb75-19"><a></a>        }</span>
-<span id="cb75-20"><a></a>]</span>
-<span id="cb75-21"><a></a></span>
-<span id="cb75-22"><a></a><span class="bu">print</span>(cities[<span class="dv">1</span>][<span class="st">&#39;name&#39;</span>])   <span class="co"># Output: San Diego</span></span>
-<span id="cb75-23"><a></a><span class="bu">print</span>(cities[<span class="dv">1</span>][<span class="st">&#39;neighborhoods&#39;</span>])    <span class="co"># Output: [&quot;Balboa Park&quot;, &quot;Hillcrest&quot;, &quot;Old Town&quot;]</span></span>
-<span id="cb75-24"><a></a></span>
-<span id="cb75-25"><a></a><span class="cf">for</span> city <span class="kw">in</span> cities:</span>
-<span id="cb75-26"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>city[<span class="st">&#39;name&#39;</span>]<span class="sc">}</span><span class="ss"> and some of its neighborhoods are </span><span class="sc">{</span>city[<span class="st">&#39;neighborhoods&#39;</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a></a>cities <span class="op">=</span> [</span>
+<span id="cb77-2"><a></a>    {</span>
+<span id="cb77-3"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Los Angeles&quot;</span>,</span>
+<span id="cb77-4"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1781</span>,</span>
+<span id="cb77-5"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
+<span id="cb77-6"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;DTLA&quot;</span>, <span class="st">&quot;Hollywood&quot;</span>, <span class="st">&quot;Westwood&quot;</span>]</span>
+<span id="cb77-7"><a></a>        },</span>
+<span id="cb77-8"><a></a>    {</span>
+<span id="cb77-9"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Diego&quot;</span>,</span>
+<span id="cb77-10"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1769</span>,</span>
+<span id="cb77-11"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
+<span id="cb77-12"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Balboa Park&quot;</span>, <span class="st">&quot;Hillcrest&quot;</span>, <span class="st">&quot;Old Town&quot;</span>]</span>
+<span id="cb77-13"><a></a>        },</span>
+<span id="cb77-14"><a></a>    {</span>
+<span id="cb77-15"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Jose&quot;</span>,</span>
+<span id="cb77-16"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1777</span>,</span>
+<span id="cb77-17"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
+<span id="cb77-18"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Almaden&quot;</span>, <span class="st">&quot;Northside&quot;</span>, <span class="st">&quot;South San Jose&quot;</span>]</span>
+<span id="cb77-19"><a></a>        }</span>
+<span id="cb77-20"><a></a>]</span>
+<span id="cb77-21"><a></a></span>
+<span id="cb77-22"><a></a><span class="bu">print</span>(cities[<span class="dv">1</span>][<span class="st">&#39;name&#39;</span>])   <span class="co"># Output: San Diego</span></span>
+<span id="cb77-23"><a></a><span class="bu">print</span>(cities[<span class="dv">1</span>][<span class="st">&#39;neighborhoods&#39;</span>])    <span class="co"># Output: [&quot;Balboa Park&quot;, &quot;Hillcrest&quot;, &quot;Old Town&quot;]</span></span>
+<span id="cb77-24"><a></a></span>
+<span id="cb77-25"><a></a><span class="cf">for</span> city <span class="kw">in</span> cities:</span>
+<span id="cb77-26"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>city[<span class="st">&#39;name&#39;</span>]<span class="sc">}</span><span class="ss"> and some of its neighborhoods are </span><span class="sc">{</span>city[<span class="st">&#39;neighborhoods&#39;</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>San Diego
@@ -2861,34 +2932,34 @@ San Jose and some of its neighborhoods are [&#39;Almaden&#39;, &#39;Northside&#3
 </section>
 <section id="example-with-unique-ids-1" class="slide level2">
 <h2>Example with unique IDs</h2>
-<div id="dictionary-creation" class="cell" data-execution_count="42">
+<div id="dictionary-creation" class="cell" data-execution_count="43">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a></a>cities <span class="op">=</span> {</span>
-<span id="cb77-2"><a></a>    <span class="st">&quot;city001&quot;</span>: {</span>
-<span id="cb77-3"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Los Angeles&quot;</span>,</span>
-<span id="cb77-4"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1781</span>,</span>
-<span id="cb77-5"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
-<span id="cb77-6"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;DTLA&quot;</span>, <span class="st">&quot;Hollywood&quot;</span>, <span class="st">&quot;Westwood&quot;</span>]</span>
-<span id="cb77-7"><a></a>        },</span>
-<span id="cb77-8"><a></a>    <span class="st">&quot;city002&quot;</span>: {</span>
-<span id="cb77-9"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Diego&quot;</span>,</span>
-<span id="cb77-10"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1769</span>,</span>
-<span id="cb77-11"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
-<span id="cb77-12"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Balboa Park&quot;</span>, <span class="st">&quot;Hillcrest&quot;</span>, <span class="st">&quot;Old Town&quot;</span>]</span>
-<span id="cb77-13"><a></a>        },</span>
-<span id="cb77-14"><a></a>    <span class="st">&quot;city003&quot;</span>: {</span>
-<span id="cb77-15"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Jose&quot;</span>,</span>
-<span id="cb77-16"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1777</span>,</span>
-<span id="cb77-17"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
-<span id="cb77-18"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Almaden&quot;</span>, <span class="st">&quot;Northside&quot;</span>, <span class="st">&quot;South San Jose&quot;</span>]</span>
-<span id="cb77-19"><a></a>        }</span>
-<span id="cb77-20"><a></a>}</span>
-<span id="cb77-21"><a></a><span class="bu">print</span>(cities[<span class="st">&quot;city003&quot;</span>][<span class="st">&quot;name&quot;</span>])   <span class="co"># Output: San Jose</span></span>
-<span id="cb77-22"><a></a><span class="bu">print</span>(cities[<span class="st">&quot;city001&quot;</span>][<span class="st">&quot;neighborhoods&quot;</span>])    <span class="co"># Output: [&#39;DTLA&#39;, &#39;Hollywood&#39;, &#39;Westwood&#39;]</span></span>
-<span id="cb77-23"><a></a></span>
-<span id="cb77-24"><a></a><span class="cf">for</span> city_id, info <span class="kw">in</span> cities.items():</span>
-<span id="cb77-25"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>city_id<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>info[<span class="st">&#39;name&#39;</span>]<span class="sc">}</span><span class="ss"> and some of its neighborhoods are </span><span class="sc">{</span>info[<span class="st">&#39;neighborhoods&#39;</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a></a>cities <span class="op">=</span> {</span>
+<span id="cb79-2"><a></a>    <span class="st">&quot;city001&quot;</span>: {</span>
+<span id="cb79-3"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Los Angeles&quot;</span>,</span>
+<span id="cb79-4"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1781</span>,</span>
+<span id="cb79-5"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
+<span id="cb79-6"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;DTLA&quot;</span>, <span class="st">&quot;Hollywood&quot;</span>, <span class="st">&quot;Westwood&quot;</span>]</span>
+<span id="cb79-7"><a></a>        },</span>
+<span id="cb79-8"><a></a>    <span class="st">&quot;city002&quot;</span>: {</span>
+<span id="cb79-9"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Diego&quot;</span>,</span>
+<span id="cb79-10"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1769</span>,</span>
+<span id="cb79-11"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
+<span id="cb79-12"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Balboa Park&quot;</span>, <span class="st">&quot;Hillcrest&quot;</span>, <span class="st">&quot;Old Town&quot;</span>]</span>
+<span id="cb79-13"><a></a>        },</span>
+<span id="cb79-14"><a></a>    <span class="st">&quot;city003&quot;</span>: {</span>
+<span id="cb79-15"><a></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;San Jose&quot;</span>,</span>
+<span id="cb79-16"><a></a>        <span class="st">&quot;founded&quot;</span>: <span class="dv">1777</span>,</span>
+<span id="cb79-17"><a></a>        <span class="st">&quot;country&quot;</span>: <span class="st">&quot;United States&quot;</span>,</span>
+<span id="cb79-18"><a></a>        <span class="st">&quot;neighborhoods&quot;</span>: [<span class="st">&quot;Almaden&quot;</span>, <span class="st">&quot;Northside&quot;</span>, <span class="st">&quot;South San Jose&quot;</span>]</span>
+<span id="cb79-19"><a></a>        }</span>
+<span id="cb79-20"><a></a>}</span>
+<span id="cb79-21"><a></a><span class="bu">print</span>(cities[<span class="st">&quot;city003&quot;</span>][<span class="st">&quot;name&quot;</span>])   <span class="co"># Output: San Jose</span></span>
+<span id="cb79-22"><a></a><span class="bu">print</span>(cities[<span class="st">&quot;city001&quot;</span>][<span class="st">&quot;neighborhoods&quot;</span>])    <span class="co"># Output: [&#39;DTLA&#39;, &#39;Hollywood&#39;, &#39;Westwood&#39;]</span></span>
+<span id="cb79-23"><a></a></span>
+<span id="cb79-24"><a></a><span class="cf">for</span> city_id, info <span class="kw">in</span> cities.items():</span>
+<span id="cb79-25"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>city_id<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>info[<span class="st">&#39;name&#39;</span>]<span class="sc">}</span><span class="ss"> and some of its neighborhoods are </span><span class="sc">{</span>info[<span class="st">&#39;neighborhoods&#39;</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>San Jose
@@ -2908,29 +2979,29 @@ city003: San Jose and some of its neighborhoods are [&#39;Almaden&#39;, &#39;Nor
 <ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-12-1">Lookup</a></li><li><a href="#tabset-12-2">items</a></li><li><a href="#tabset-12-3">keys</a></li><li><a href="#tabset-12-4">values</a></li><li><a href="#tabset-12-5">get</a></li></ul>
 <div class="tab-content">
 <div id="tabset-12-1">
-<div id="dictionary-lookups" class="cell" data-execution_count="43">
+<div id="dictionary-lookups" class="cell" data-execution_count="44">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a></a><span class="im">import</span> re <span class="co"># regular expressions (later)</span></span>
-<span id="cb79-2"><a></a></span>
-<span id="cb79-3"><a></a>file_path <span class="op">=</span> <span class="st">&quot;gettysburg.txt&quot;</span> </span>
-<span id="cb79-4"><a></a></span>
-<span id="cb79-5"><a></a><span class="co"># Open and read the file creating a string</span></span>
-<span id="cb79-6"><a></a><span class="cf">with</span> <span class="bu">open</span>(file_path, <span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb79-7"><a></a>    text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb79-8"><a></a>    clean_text <span class="op">=</span> re.sub(<span class="vs">r&#39;[^\w\s]&#39;</span>, <span class="st">&#39;&#39;</span>, text).lower()</span>
-<span id="cb79-9"><a></a></span>
-<span id="cb79-10"><a></a></span>
-<span id="cb79-11"><a></a>word_counts <span class="op">=</span> {} <span class="co"># create a dictionary</span></span>
-<span id="cb79-12"><a></a><span class="cf">for</span> word <span class="kw">in</span> clean_text.split():</span>
-<span id="cb79-13"><a></a>    word_counts[word] <span class="op">=</span> word_counts.get(word, <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb79-14"><a></a></span>
-<span id="cb79-15"><a></a><span class="bu">print</span>(word_counts) </span>
-<span id="cb79-16"><a></a><span class="co"># Output: {&#39;Four&#39;: 1, &#39;score&#39;: 1, &#39;and&#39;: 6, &#39;seven&#39;: 1, ...}</span></span>
-<span id="cb79-17"><a></a></span>
-<span id="cb79-18"><a></a>most_common_word <span class="op">=</span> <span class="bu">max</span>(word_counts, key<span class="op">=</span>word_counts.get)</span>
-<span id="cb79-19"><a></a></span>
-<span id="cb79-20"><a></a><span class="bu">print</span>(<span class="ss">f&quot;The most common word was &#39;</span><span class="sc">{</span><span class="bu">max</span>(word_counts, key<span class="op">=</span>word_counts.get)<span class="sc">}</span><span class="ss">&#39; with a count of </span><span class="sc">{</span>word_counts[most_common_word]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a></a><span class="im">import</span> re <span class="co"># regular expressions (later)</span></span>
+<span id="cb81-2"><a></a></span>
+<span id="cb81-3"><a></a>file_path <span class="op">=</span> <span class="st">&quot;gettysburg.txt&quot;</span> </span>
+<span id="cb81-4"><a></a></span>
+<span id="cb81-5"><a></a><span class="co"># Open and read the file creating a string</span></span>
+<span id="cb81-6"><a></a><span class="cf">with</span> <span class="bu">open</span>(file_path, <span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb81-7"><a></a>    text <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb81-8"><a></a>    clean_text <span class="op">=</span> re.sub(<span class="vs">r&#39;[^\w\s]&#39;</span>, <span class="st">&#39;&#39;</span>, text).lower()</span>
+<span id="cb81-9"><a></a></span>
+<span id="cb81-10"><a></a></span>
+<span id="cb81-11"><a></a>word_counts <span class="op">=</span> {} <span class="co"># create a dictionary</span></span>
+<span id="cb81-12"><a></a><span class="cf">for</span> word <span class="kw">in</span> clean_text.split():</span>
+<span id="cb81-13"><a></a>    word_counts[word] <span class="op">=</span> word_counts.get(word, <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb81-14"><a></a></span>
+<span id="cb81-15"><a></a><span class="bu">print</span>(word_counts) </span>
+<span id="cb81-16"><a></a><span class="co"># Output: {&#39;Four&#39;: 1, &#39;score&#39;: 1, &#39;and&#39;: 6, &#39;seven&#39;: 1, ...}</span></span>
+<span id="cb81-17"><a></a></span>
+<span id="cb81-18"><a></a>most_common_word <span class="op">=</span> <span class="bu">max</span>(word_counts, key<span class="op">=</span>word_counts.get)</span>
+<span id="cb81-19"><a></a></span>
+<span id="cb81-20"><a></a><span class="bu">print</span>(<span class="ss">f&quot;The most common word was &#39;</span><span class="sc">{</span><span class="bu">max</span>(word_counts, key<span class="op">=</span>word_counts.get)<span class="sc">}</span><span class="ss">&#39; with a count of </span><span class="sc">{</span>word_counts[most_common_word]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>{&#39;four&#39;: 1, &#39;score&#39;: 1, &#39;and&#39;: 6, &#39;seven&#39;: 1, &#39;years&#39;: 1, &#39;ago&#39;: 1, &#39;our&#39;: 2, &#39;fathers&#39;: 1, &#39;brought&#39;: 1, &#39;forth&#39;: 1, &#39;on&#39;: 2, &#39;this&#39;: 4, &#39;continent&#39;: 1, &#39;a&#39;: 7, &#39;new&#39;: 2, &#39;nation&#39;: 5, &#39;conceived&#39;: 2, &#39;in&#39;: 4, &#39;liberty&#39;: 1, &#39;dedicated&#39;: 4, &#39;to&#39;: 8, &#39;the&#39;: 11, &#39;proposition&#39;: 1, &#39;that&#39;: 13, &#39;all&#39;: 1, &#39;men&#39;: 2, &#39;are&#39;: 3, &#39;created&#39;: 1, &#39;equal&#39;: 1, &#39;now&#39;: 1, &#39;we&#39;: 10, &#39;engaged&#39;: 1, &#39;great&#39;: 3, &#39;civil&#39;: 1, &#39;war&#39;: 2, &#39;testing&#39;: 1, &#39;whether&#39;: 1, &#39;or&#39;: 2, &#39;any&#39;: 1, &#39;so&#39;: 3, &#39;can&#39;: 5, &#39;long&#39;: 2, &#39;endure&#39;: 1, &#39;met&#39;: 1, &#39;battlefield&#39;: 1, &#39;of&#39;: 5, &#39;have&#39;: 5, &#39;come&#39;: 1, &#39;dedicate&#39;: 2, &#39;portion&#39;: 1, &#39;field&#39;: 1, &#39;as&#39;: 1, &#39;final&#39;: 1, &#39;resting&#39;: 1, &#39;place&#39;: 1, &#39;for&#39;: 5, &#39;those&#39;: 1, &#39;who&#39;: 3, &#39;here&#39;: 8, &#39;gave&#39;: 2, &#39;their&#39;: 1, &#39;lives&#39;: 1, &#39;might&#39;: 1, &#39;live&#39;: 1, &#39;it&#39;: 5, &#39;is&#39;: 3, &#39;altogether&#39;: 1, &#39;fitting&#39;: 1, &#39;proper&#39;: 1, &#39;should&#39;: 1, &#39;do&#39;: 1, &#39;but&#39;: 2, &#39;larger&#39;: 1, &#39;sense&#39;: 1, &#39;not&#39;: 5, &#39;consecrate&#39;: 1, &#39;hallow&#39;: 1, &#39;ground&#39;: 1, &#39;brave&#39;: 1, &#39;living&#39;: 2, &#39;dead&#39;: 3, &#39;struggled&#39;: 1, &#39;consecrated&#39;: 1, &#39;far&#39;: 2, &#39;above&#39;: 1, &#39;poor&#39;: 1, &#39;power&#39;: 1, &#39;add&#39;: 1, &#39;detract&#39;: 1, &#39;world&#39;: 1, &#39;will&#39;: 1, &#39;little&#39;: 1, &#39;note&#39;: 1, &#39;nor&#39;: 1, &#39;remember&#39;: 1, &#39;what&#39;: 2, &#39;say&#39;: 1, &#39;never&#39;: 1, &#39;forget&#39;: 1, &#39;they&#39;: 3, &#39;did&#39;: 1, &#39;us&#39;: 3, &#39;rather&#39;: 2, &#39;be&#39;: 2, &#39;unfinished&#39;: 1, &#39;work&#39;: 1, &#39;which&#39;: 2, &#39;fought&#39;: 1, &#39;thus&#39;: 1, &#39;nobly&#39;: 1, &#39;advanced&#39;: 1, &#39;task&#39;: 1, &#39;remaining&#39;: 1, &#39;before&#39;: 1, &#39;from&#39;: 2, &#39;these&#39;: 2, &#39;honored&#39;: 1, &#39;take&#39;: 1, &#39;increased&#39;: 1, &#39;devotion&#39;: 2, &#39;cause&#39;: 1, &#39;last&#39;: 1, &#39;full&#39;: 1, &#39;measure&#39;: 1, &#39;highly&#39;: 1, &#39;resolve&#39;: 1, &#39;shall&#39;: 3, &#39;died&#39;: 1, &#39;vain&#39;: 1, &#39;under&#39;: 1, &#39;god&#39;: 1, &#39;birth&#39;: 1, &#39;freedom&#39;: 1, &#39;government&#39;: 1, &#39;people&#39;: 3, &#39;by&#39;: 1, &#39;perish&#39;: 1, &#39;earth&#39;: 1}
@@ -2939,48 +3010,48 @@ The most common word was &#39;that&#39; with a count of 13</code></pre>
 </div>
 </div>
 <div id="tabset-12-2">
-<div id="da95b2ec" class="cell" data-execution_count="44">
+<div id="32e8a941" class="cell" data-execution_count="45">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a></a>my_items <span class="op">=</span> <span class="bu">list</span>(word_counts.items())</span>
-<span id="cb81-2"><a></a>my_items[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a></a>my_items <span class="op">=</span> <span class="bu">list</span>(word_counts.items())</span>
+<span id="cb83-2"><a></a>my_items[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div class="cell-output cell-output-display" data-execution_count="40">
 <pre><code>[(&#39;four&#39;, 1), (&#39;score&#39;, 1), (&#39;and&#39;, 6), (&#39;seven&#39;, 1), (&#39;years&#39;, 1)]</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-12-3">
-<div id="982b5805" class="cell" data-execution_count="45">
+<div id="4046d5ec" class="cell" data-execution_count="46">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a></a>my_keys <span class="op">=</span> <span class="bu">list</span>(word_counts.keys())</span>
-<span id="cb83-2"><a></a>my_keys[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a></a>my_keys <span class="op">=</span> <span class="bu">list</span>(word_counts.keys())</span>
+<span id="cb85-2"><a></a>my_keys[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="40">
+<div class="cell-output cell-output-display" data-execution_count="41">
 <pre><code>[&#39;four&#39;, &#39;score&#39;, &#39;and&#39;, &#39;seven&#39;, &#39;years&#39;]</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-12-4">
-<div id="4d5679b0" class="cell" data-execution_count="46">
+<div id="01f056a8" class="cell" data-execution_count="47">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a></a>my_values <span class="op">=</span> <span class="bu">list</span>(word_counts.values())</span>
-<span id="cb85-2"><a></a>my_values[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a></a>my_values <span class="op">=</span> <span class="bu">list</span>(word_counts.values())</span>
+<span id="cb87-2"><a></a>my_values[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="41">
+<div class="cell-output cell-output-display" data-execution_count="42">
 <pre><code>[1, 1, 6, 1, 1]</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-12-5">
-<div id="944b0b1b" class="cell" data-execution_count="47">
+<div id="e5a763b0" class="cell" data-execution_count="48">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a></a>word_counts.get(<span class="st">&#39;nation&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a></a>word_counts.get(<span class="st">&#39;nation&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="42">
+<div class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>5</code></pre>
 </div>
 </div>
