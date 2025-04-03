@@ -1126,7 +1126,7 @@ margin-right: 0; }
 <li>The Python “way”</li>
 <li>Objects</li>
 <li>Names, Naming</li>
-<li>Built-In Functions</li>
+<li><a href="https://docs.python.org/3/library/functions.html">Built-In Functions</a></li>
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
@@ -1295,12 +1295,14 @@ Unicode of 大: 22823</code></pre>
 <span id="cb5-4"><a></a><span class="bu">print</span>(<span class="ss">f&quot;This is b1: </span><span class="sc">{</span>b1<span class="sc">}</span><span class="ss">&quot;</span>)</span>
 <span id="cb5-5"><a></a><span class="bu">print</span>(<span class="ss">f&quot;This is b2: </span><span class="sc">{</span>b2<span class="sc">}</span><span class="ss">&quot;</span>)</span>
 <span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a><span class="bu">print</span>(<span class="va">True</span> <span class="op">*</span> <span class="dv">3</span> <span class="op">+</span> (<span class="va">True</span><span class="op">/</span><span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-7"><a></a><span class="bu">print</span>(<span class="va">True</span> <span class="op">*</span> <span class="dv">3</span> <span class="op">+</span> (<span class="va">True</span><span class="op">/</span><span class="dv">4</span>))</span>
+<span id="cb5-8"><a></a><span class="bu">print</span>((<span class="va">True</span><span class="op">*</span><span class="dv">55</span> <span class="op">+</span> <span class="va">False</span><span class="op">*</span><span class="dv">45</span>)<span class="op">/</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>This is b1: True
 This is b2: False
-3.25</code></pre>
+3.25
+0.55</code></pre>
 </div>
 </div>
 </div>
@@ -1309,6 +1311,7 @@ This is b2: False
 <li><a href="https://docs.python.org/3/library/stdtypes.html#typebool">https://docs.python.org/3/library/stdtypes.html#typebool</a></li>
 <li><a href="https://docs.python.org/3/library/functions.html#bool">https://docs.python.org/3/library/functions.html#bool</a></li>
 <li><a href="https://docs.python.org/3/library/stdtypes.html">https://docs.python.org/3/library/stdtypes.html</a></li>
+<li><a href="https://docs.python.org/3/library/functions.html#isinstance">https://docs.python.org/3/library/functions.html#isinstance</a></li>
 </ul>
 </div>
 </div>
@@ -1493,6 +1496,19 @@ The new value of y is: 33
 </code></pre>
 </div>
 </div>
+<aside class="notes">
+<p>x = 23 y = 13 z = 30</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="floats" class="slide level2 smaller">
 <h2>Floats</h2>
@@ -1561,6 +1577,19 @@ y/x = (5+0j)
 <li><code>not in</code> (membership operator)</li>
 </ul>
 </div></div>
+<aside class="notes">
+<p>x is y ‘a’ in y</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -1856,7 +1885,7 @@ range(1, 100, 2)
 <h2>What’s in a name?</h2>
 <ul>
 <li>Please gather together in small groups, please make sure at least one member has a laptop</li>
-<li>for credit: minimum group size 3, maximum group size 6 &amp; at least one classmate who wasn’t on your previous team</li>
+<li>for credit: minimum group size 3, no max BUT at least one classmate who wasn’t on your previous team</li>
 <li>please introduce yourselves and try to learn a new name today</li>
 <li>please take a group photo, annotate with with names or add names as a comment during upload</li>
 <li>upload a photo individually for attendance credit</li>
@@ -1865,17 +1894,16 @@ range(1, 100, 2)
 <section id="what-to-do-in-your-group-10-15-minutes" class="slide level2 smaller">
 <h2>What to do in your group (10-15 minutes)</h2>
 <ul>
-<li>You could do it all as one or do things separately and then share what you tried</li>
-<li>Using either the REPL, a Python Script, a Jupyter Notebook or a Quarto Document</li>
-<li>Try to create at least one of the following:
+<li>You could find out if everyone has Python, can use the Python interpreter (REPL) and a notebook (e.g. Jupyter)</li>
+<li>You could try to answer my questions below and do it all as one or do things separately and then share what you tried. Using any of your tools (e.g. REPL, a Python Script, a Jupyter Notebook or a Quarto Document) Try to create at least one of the following:
 <ul>
 <li>docstring or comment or f-string</li>
 <li>try an operation (comparison, simple, or augmented operators)</li>
 <li>create a sequence(s), slice, concatenate, iterate?</li>
 <li>create a longer string, or a list, tuple, range</li>
 <li>try slicing or indexing etc.</li>
-<li>try my question on the next slide</li>
 </ul></li>
+<li>OR try my question on the next slide</li>
 </ul>
 </section>
 <section id="please-explain" class="slide level2 smaller">
@@ -2128,17 +2156,17 @@ display:block!important;
 <span id="cb37-12"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is UCB and id = 4805171584 
+<pre><code>The value of a is UCB and id = 4838433264 
 
-The value of b is UCB and id = 4805171584 
+The value of b is UCB and id = 4838433264 
 
-The value of a is now UCBC and id = 4745718464 
+The value of a is now UCBC and id = 4838432784 
 
-The value of b is now UCB and id = 4805171584 
+The value of b is now UCB and id = 4838433264 
 
-The value of a is now UCBC and id = 4805172160 
+The value of a is now UCBC and id = 4838434176 
 
-The value of b is now UCB and id = 4805171584 
+The value of b is now UCB and id = 4838433264 
 </code></pre>
 </div>
 </div>
@@ -2162,17 +2190,17 @@ The value of b is now UCB and id = 4805171584
 <span id="cb39-12"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is [&#39;UCB&#39;] and id = 4787287232 
+<pre><code>The value of a is [&#39;UCB&#39;] and id = 4807787776 
 
-The value of b is [&#39;UCB&#39;] and id = 4787287232 
+The value of b is [&#39;UCB&#39;] and id = 4807787776 
 
-The value of a is now [&#39;UCBC&#39;] and id = 4787287232 
+The value of a is now [&#39;UCBC&#39;] and id = 4807787776 
 
-The value of b is now [&#39;UCBC&#39;] and id = 4787287232 
+The value of b is now [&#39;UCBC&#39;] and id = 4807787776 
 
-The value of a is now [&#39;UCBC&#39;] and id = 4800523968 
+The value of a is now [&#39;UCBC&#39;] and id = 4453055872 
 
-The value of b is now [&#39;UCBC&#39;] and id = 4787287232 
+The value of b is now [&#39;UCBC&#39;] and id = 4807787776 
 </code></pre>
 </div>
 </div>
@@ -2239,9 +2267,9 @@ The value of b is now [&#39;UCBC&#39;] and id = 4787287232
 <span id="cb41-6"><a></a>a[<span class="dv">0</span>] <span class="op">=</span> (<span class="st">&#39;UCBC&#39;</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4383609856 
+<pre><code>The value of a is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4424799296 
 
-The value of b is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4383609856 
+The value of b is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4424799296 
 </code></pre>
 </div>
 <div class="cell-output cell-output-error">
@@ -2273,13 +2301,13 @@ The value of b is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4383609856
 <span id="cb43-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4810839104 
+<pre><code>The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4844180992 
 
-The value of b is now (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4383609856 
+The value of b is now (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4424799296 
 
-The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;, &#39;UCI&#39;) and id = 4810820800 
+The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;, &#39;UCI&#39;) and id = 4844091328 
 
-The value of b is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4810839104 
+The value of b is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4844180992 
 </code></pre>
 </div>
 </div>
@@ -2302,28 +2330,25 @@ The value of b is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4810839104
 <span id="cb45-4"><a></a>large_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
 <span id="cb45-5"><a></a>large_tuple <span class="op">=</span> <span class="bu">tuple</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
 <span id="cb45-6"><a></a></span>
-<span id="cb45-7"><a></a><span class="kw">def</span> pass_through(seq):</span>
-<span id="cb45-8"><a></a>    <span class="co">&quot;&quot;&quot;Function that copies a sequence&quot;&quot;&quot;</span></span>
-<span id="cb45-9"><a></a>    seq2 <span class="op">=</span> seq</span>
-<span id="cb45-10"><a></a>    <span class="cf">return</span> seq2</span>
-<span id="cb45-11"><a></a></span>
-<span id="cb45-12"><a></a><span class="co"># Measure list function call time</span></span>
-<span id="cb45-13"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb45-14"><a></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>):  <span class="co"># Call function many times</span></span>
-<span id="cb45-15"><a></a>    pass_through(large_list)</span>
-<span id="cb45-16"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb45-17"><a></a><span class="bu">print</span>(<span class="ss">f&quot;List function call took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
-<span id="cb45-18"><a></a></span>
-<span id="cb45-19"><a></a><span class="co"># Measure tuple function call time</span></span>
-<span id="cb45-20"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb45-21"><a></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>):  <span class="co"># Call function many times</span></span>
-<span id="cb45-22"><a></a>    pass_through(large_tuple)</span>
-<span id="cb45-23"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb45-24"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Tuple function call took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb45-7"><a></a><span class="co"># write a little function that sums the sequence</span></span>
+<span id="cb45-8"><a></a><span class="kw">def</span> sum_elements(seq):</span>
+<span id="cb45-9"><a></a>    <span class="cf">return</span> <span class="bu">sum</span>(seq)</span>
+<span id="cb45-10"><a></a></span>
+<span id="cb45-11"><a></a><span class="co"># Measure list processing time</span></span>
+<span id="cb45-12"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb45-13"><a></a>sum_elements(large_list)</span>
+<span id="cb45-14"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb45-15"><a></a><span class="bu">print</span>(<span class="ss">f&quot;List sum took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
+<span id="cb45-16"><a></a></span>
+<span id="cb45-17"><a></a><span class="co"># Measure tuple processing time</span></span>
+<span id="cb45-18"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb45-19"><a></a>sum_elements(large_tuple)</span>
+<span id="cb45-20"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb45-21"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Tuple sum took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>List function call took: 0.054200 seconds
-Tuple function call took: 0.051582 seconds</code></pre>
+<pre><code>List sum took: 0.006593 seconds
+Tuple sum took: 0.005112 seconds</code></pre>
 </div>
 </div>
 </section>
