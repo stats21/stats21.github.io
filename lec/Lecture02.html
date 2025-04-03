@@ -1198,10 +1198,10 @@ margin-right: 0; }
 </tbody>
 </table>
 </section>
-<section id="bool" class="slide level2 smaller">
+<section id="bool" class="slide level2 smaller scrollable">
 <h2>Bool</h2>
 <ul>
-<li>The boolean data type values are True and False.</li>
+<li>The boolean data type values are <strong>True</strong> and <strong>False</strong> (note the capitals)</li>
 <li>In Stats 21 we may use the values directly as data.</li>
 <li>We might also use them as an evaluation result</li>
 </ul>
@@ -1282,7 +1282,7 @@ Unicode of 大: 22823</code></pre>
 </div>
 <div id="tabset-1-3">
 <ul>
-<li>An instance is a concrete realization of an object based on a “blueprint” known as a <strong>class</strong> (more on this in two weeks or so)</li>
+<li>An instance is a concrete realization of an object based on a “blueprint” known as a <strong>class</strong> (more on this in week 3 or so)</li>
 <li>Recall, Python is at heart an <strong>object oriented language</strong> but it supports multiple programming models</li>
 <li><strong>False</strong> then is type bool and is an instance of the bool class which is also a built-in (sub)class of <strong>int</strong>.</li>
 </ul>
@@ -1313,6 +1313,23 @@ This is b2: False
 </div>
 </div>
 </div>
+<aside class="notes">
+<p>Four tabs</p>
+<ol type="1">
+<li>This slide is about BOOL but wanders into Strings and operators</li>
+<li>Strings can be evaluated BUT according to specific rules.</li>
+</ol>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="integers" class="slide level2">
 <h2>Integers</h2>
@@ -1389,6 +1406,19 @@ a = 100000
 </tr>
 </tbody>
 </table>
+<aside class="notes">
+<p>There are many operators These are common and organized by precedence</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="examples" class="slide level2">
 <h2>Examples</h2>
@@ -1558,6 +1588,14 @@ y/x = (5+0j)
 <li>same as <code>x = x + 2</code></li>
 </ul>
 </div></div>
+</section>
+<section id="notes-on-operators" class="slide level2">
+<h2>Notes on Operators</h2>
+<ul>
+<li>Operator Precedence: <a href="https://docs.python.org/3/reference/expressions.html#operator-precedence">https://docs.python.org/3/reference/expressions.html#operator-precedence</a></li>
+<li>You can examine the details at <a href="https://docs.python.org/3/reference/lexical_analysis.html#operators">https://docs.python.org/3/reference/lexical_analysis.html#operators</a></li>
+<li>You can find the code for many operators here <a href="https://github.com/python/cpython/blob/3.13/Lib/operator.py">https://github.com/python/cpython/blob/3.13/Lib/operator.py</a></li>
+</ul>
 </section>
 <section id="sequences" class="slide level2 smaller">
 <h2>Sequences</h2>
@@ -1808,11 +1846,74 @@ range(1, 100, 2)
 <li>List comprehension is a feature of Python syntax that provides a concise way to generate lists.</li>
 <li>But let’s slow it down a little</li>
 </ul>
+</section></section>
+<section>
+<section id="activity-1" class="title-slide slide level1 center">
+<h1>Activity 1</h1>
+
+</section>
+<section id="whats-in-a-name" class="slide level2">
+<h2>What’s in a name?</h2>
+<ul>
+<li>Please gather together in small groups, please make sure at least one member has a laptop</li>
+<li>for credit: minimum group size 3, maximum group size 6 &amp; at least one classmate who wasn’t on your previous team</li>
+<li>please introduce yourselves and try to learn a new name today</li>
+<li>please take a group photo, annotate with with names or add names as a comment during upload</li>
+<li>upload a photo individually for attendance credit</li>
+</ul>
+</section>
+<section id="what-to-do-in-your-group-10-15-minutes" class="slide level2 smaller">
+<h2>What to do in your group (10-15 minutes)</h2>
+<ul>
+<li>You could do it all as one or do things separately and then share what you tried</li>
+<li>Using either the REPL, a Python Script, a Jupyter Notebook or a Quarto Document</li>
+<li>Try to create at least one of the following:
+<ul>
+<li>docstring or comment or f-string</li>
+<li>try an operation (comparison, simple, or augmented operators)</li>
+<li>create a sequence(s), slice, concatenate, iterate?</li>
+<li>create a longer string, or a list, tuple, range</li>
+<li>try slicing or indexing etc.</li>
+<li>try my question on the next slide</li>
+</ul></li>
+</ul>
+</section>
+<section id="please-explain" class="slide level2 smaller">
+<h2>Please explain</h2>
+<p>Your friend is trying to teach himself Python by watching videos on YouTube. He has a question for you:</p>
+<p>He wants the last letter of every spell extracted, when he runs his code, it runs without error, but only an “s” is printed.</p>
+<div id="activity-1-code" class="cell" data-execution_count="16">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a>spells <span class="op">=</span> [</span>
+<span id="cb31-2"><a></a>    <span class="st">&quot;Expelliarmus&quot;</span>,</span>
+<span id="cb31-3"><a></a>    <span class="st">&quot;Colloshoo&quot;</span>,</span>
+<span id="cb31-4"><a></a>    <span class="st">&quot;Legilimens&quot;</span>,</span>
+<span id="cb31-5"><a></a>    <span class="st">&quot;Impedimenta&quot;</span>,</span>
+<span id="cb31-6"><a></a>    <span class="st">&quot;Confundo&quot;</span>, </span>
+<span id="cb31-7"><a></a>    <span class="st">&quot;Finite Incantatem&quot;</span>,</span>
+<span id="cb31-8"><a></a>    <span class="st">&quot;Incarcerous&quot;</span></span>
+<span id="cb31-9"><a></a>]</span>
+<span id="cb31-10"><a></a></span>
+<span id="cb31-11"><a></a><span class="cf">for</span> spell <span class="kw">in</span> spells:</span>
+<span id="cb31-12"><a></a>    first <span class="op">=</span> spell[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb31-13"><a></a>    </span>
+<span id="cb31-14"><a></a><span class="bu">print</span>(first, end <span class="op">=</span> <span class="st">&quot; &quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>s </code></pre>
+</div>
+</div>
+<ul>
+<li>You can copy and modify the code to solve his problem</li>
+<li>But please be prepared explain to him why he is only getting an “s”</li>
+<li>Please tell him what he needs to change to get all of the last letters.</li>
+</ul>
 </section>
 <section id="built-in-data-structures" class="slide level2 smaller">
 <h2>Built-in Data Structures</h2>
 <ul>
-<li>These are ways in “core” Python to store and organize data</li>
+<li>These are some ways in “core” Python to store and organize data</li>
 <li>NumPy has arrays and Pandas has DataFrames but those are not “core” Python (third party libraries)</li>
 <li>We have different data structures to suit different needs</li>
 </ul>
@@ -1865,23 +1966,70 @@ range(1, 100, 2)
 </tbody>
 </table>
 </section>
-<section id="but-is-it-iterable" class="slide level2">
-<h2>But is it iterable?</h2>
-<div id="is-it-iterable" class="cell" data-execution_count="16">
+<section id="but-is-it-a-sequence" class="slide level2">
+<h2>But is it a sequence?</h2>
+<div id="is-it-a-sequence" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="im">from</span> collections.abc <span class="im">import</span> Iterable</span>
-<span id="cb31-2"><a></a></span>
-<span id="cb31-3"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>([], Iterable))  <span class="co"># True (list)</span></span>
-<span id="cb31-4"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>((), Iterable))  <span class="co"># True (tuple)</span></span>
-<span id="cb31-5"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="st">&quot;&quot;</span>, Iterable))  <span class="co"># True (string)</span></span>
-<span id="cb31-6"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="bu">range</span>(<span class="dv">5</span>), Iterable))  <span class="co"># True</span></span>
-<span id="cb31-7"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="bu">set</span>(), Iterable))  <span class="co"># True</span></span>
-<span id="cb31-8"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>({}, Iterable))  <span class="co"># True (dictionary keys)</span></span>
-<span id="cb31-9"><a></a></span>
-<span id="cb31-10"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="dv">10</span>, Iterable))  <span class="co"># False (integer)</span></span>
-<span id="cb31-11"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="fl">3.14</span>, Iterable))  <span class="co"># False (float)</span></span>
-<span id="cb31-12"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">None</span>, Iterable))  <span class="co"># False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="im">from</span> collections.abc <span class="im">import</span> Sequence</span>
+<span id="cb33-2"><a></a></span>
+<span id="cb33-3"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>([],  Sequence))  <span class="co"># True (list)</span></span>
+<span id="cb33-4"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>((),  Sequence))  <span class="co"># True (tuple)</span></span>
+<span id="cb33-5"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="st">&quot;&quot;</span>,  Sequence))  <span class="co"># True (string)</span></span>
+<span id="cb33-6"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="bu">range</span>(<span class="dv">5</span>),  Sequence))  <span class="co"># True</span></span>
+<span id="cb33-7"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="bu">set</span>(),  Sequence))  <span class="co"># False</span></span>
+<span id="cb33-8"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>({},  Sequence))  <span class="co"># False (dictionary keys)</span></span>
+<span id="cb33-9"><a></a></span>
+<span id="cb33-10"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="dv">10</span>, Sequence))  <span class="co"># False (integer)</span></span>
+<span id="cb33-11"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="fl">3.14</span>,  Sequence))  <span class="co"># False (float)</span></span>
+<span id="cb33-12"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">True</span>, Sequence)) <span class="co"># False (bool)</span></span>
+<span id="cb33-13"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">None</span>,  Sequence))  <span class="co"># False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>True
+True
+True
+True
+False
+False
+False
+False
+False
+False</code></pre>
+</div>
+</div>
+<aside class="notes">
+<p>collections.abc is part of the Python standard library don’t think you would need it other than to be shown there is a way to determine if something is a sequence instance is concrete realization of an object based on a class</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
+</section>
+<section id="but-is-it-iterable" class="slide level2">
+<h2>But is it iterable?</h2>
+<div id="is-it-iterable" class="cell" data-execution_count="18">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a><span class="im">from</span> collections.abc <span class="im">import</span> Iterable</span>
+<span id="cb35-2"><a></a></span>
+<span id="cb35-3"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>([], Iterable))  <span class="co"># True (list)</span></span>
+<span id="cb35-4"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>((), Iterable))  <span class="co"># True (tuple)</span></span>
+<span id="cb35-5"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="st">&quot;&quot;</span>, Iterable))  <span class="co"># True (string)</span></span>
+<span id="cb35-6"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="bu">range</span>(<span class="dv">5</span>), Iterable))  <span class="co"># True</span></span>
+<span id="cb35-7"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="bu">set</span>(), Iterable))  <span class="co"># True</span></span>
+<span id="cb35-8"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>({}, Iterable))  <span class="co"># True (dictionary keys)</span></span>
+<span id="cb35-9"><a></a></span>
+<span id="cb35-10"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="dv">10</span>, Iterable))  <span class="co"># False (integer)</span></span>
+<span id="cb35-11"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="fl">3.14</span>, Iterable))  <span class="co"># False (float)</span></span>
+<span id="cb35-12"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">True</span>, Sequence)) <span class="co"># False (bool)</span></span>
+<span id="cb35-13"><a></a><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">None</span>, Iterable))  <span class="co"># False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>True
@@ -1892,9 +2040,23 @@ True
 True
 False
 False
+False
 False</code></pre>
 </div>
 </div>
+<aside class="notes">
+<p>collections.abc is part of the Python standard library don’t think you would need it other than to be shown there is a way to determine if something is a iterable</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="data-structures-lists-tuples" class="slide level2 smaller">
 <h2>Data Structures: Lists &amp; Tuples</h2>
@@ -1949,68 +2111,68 @@ False</code></pre>
 <div class="tab-content">
 <div id="tabset-2-1">
 <p>Strings are immutable, to change a string is a reassignment in memory.</p>
-<div id="immutable-string-example" class="cell" data-execution_count="17">
+<div id="immutable-string-example" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a>a <span class="op">=</span> <span class="st">&#39;UCB&#39;</span>  <span class="co"># UC Berkeley</span></span>
-<span id="cb33-2"><a></a>b <span class="op">=</span> <span class="st">&#39;UCB&#39;</span>  <span class="co"># UC Berkeley</span></span>
-<span id="cb33-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb33-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb33-5"><a></a></span>
-<span id="cb33-6"><a></a>a <span class="op">=</span> a <span class="op">+</span> <span class="st">&#39;C&#39;</span> <span class="co"># concatenation</span></span>
-<span id="cb33-7"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb33-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb33-9"><a></a></span>
-<span id="cb33-10"><a></a>a <span class="op">=</span> <span class="st">&#39;UCBC&#39;</span> </span>
-<span id="cb33-11"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb33-12"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a>a <span class="op">=</span> <span class="st">&#39;UCB&#39;</span>  <span class="co"># UC Berkeley</span></span>
+<span id="cb37-2"><a></a>b <span class="op">=</span> <span class="st">&#39;UCB&#39;</span>  <span class="co"># UC Berkeley</span></span>
+<span id="cb37-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb37-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb37-5"><a></a></span>
+<span id="cb37-6"><a></a>a <span class="op">=</span> a <span class="op">+</span> <span class="st">&#39;C&#39;</span> <span class="co"># concatenation</span></span>
+<span id="cb37-7"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb37-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb37-9"><a></a></span>
+<span id="cb37-10"><a></a>a <span class="op">=</span> <span class="st">&#39;UCBC&#39;</span> </span>
+<span id="cb37-11"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb37-12"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is UCB and id = 4775189152 
+<pre><code>The value of a is UCB and id = 4805171584 
 
-The value of b is UCB and id = 4775189152 
+The value of b is UCB and id = 4805171584 
 
-The value of a is now UCBC and id = 4775188672 
+The value of a is now UCBC and id = 4745718464 
 
-The value of b is now UCB and id = 4775189152 
+The value of b is now UCB and id = 4805171584 
 
-The value of a is now UCBC and id = 4775189968 
+The value of a is now UCBC and id = 4805172160 
 
-The value of b is now UCB and id = 4775189152 
+The value of b is now UCB and id = 4805171584 
 </code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-2-2">
 <p>Lists are mutable data structures, notice the differences</p>
-<div id="mutable-list-example" class="cell" data-execution_count="18">
+<div id="mutable-list-example" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a>a <span class="op">=</span> [<span class="st">&#39;UCB&#39;</span>]</span>
-<span id="cb35-2"><a></a>b <span class="op">=</span> a</span>
-<span id="cb35-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb35-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb35-5"><a></a></span>
-<span id="cb35-6"><a></a>a[<span class="dv">0</span>]<span class="op">=</span> <span class="st">&#39;UCBC&#39;</span></span>
-<span id="cb35-7"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb35-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb35-9"><a></a></span>
-<span id="cb35-10"><a></a>a <span class="op">=</span> [<span class="st">&#39;UCBC&#39;</span>]</span>
-<span id="cb35-11"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb35-12"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>a <span class="op">=</span> [<span class="st">&#39;UCB&#39;</span>]</span>
+<span id="cb39-2"><a></a>b <span class="op">=</span> a</span>
+<span id="cb39-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb39-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb39-5"><a></a></span>
+<span id="cb39-6"><a></a>a[<span class="dv">0</span>]<span class="op">=</span> <span class="st">&#39;UCBC&#39;</span></span>
+<span id="cb39-7"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb39-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb39-9"><a></a></span>
+<span id="cb39-10"><a></a>a <span class="op">=</span> [<span class="st">&#39;UCBC&#39;</span>]</span>
+<span id="cb39-11"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb39-12"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is [&#39;UCB&#39;] and id = 4744499008 
+<pre><code>The value of a is [&#39;UCB&#39;] and id = 4787287232 
 
-The value of b is [&#39;UCB&#39;] and id = 4744499008 
+The value of b is [&#39;UCB&#39;] and id = 4787287232 
 
-The value of a is now [&#39;UCBC&#39;] and id = 4744499008 
+The value of a is now [&#39;UCBC&#39;] and id = 4787287232 
 
-The value of b is now [&#39;UCBC&#39;] and id = 4744499008 
+The value of b is now [&#39;UCBC&#39;] and id = 4787287232 
 
-The value of a is now [&#39;UCBC&#39;] and id = 4720658496 
+The value of a is now [&#39;UCBC&#39;] and id = 4800523968 
 
-The value of b is now [&#39;UCBC&#39;] and id = 4744499008 
+The value of b is now [&#39;UCBC&#39;] and id = 4787287232 
 </code></pre>
 </div>
 </div>
@@ -2066,27 +2228,27 @@ The value of b is now [&#39;UCBC&#39;] and id = 4744499008
 </div>
 <div id="tabset-2-4">
 <p>Tuples are immutable data structures.</p>
-<div id="immutable-tuple-example" class="cell" data-execution_count="19">
+<div id="immutable-tuple-example" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a>a <span class="op">=</span> (<span class="st">&#39;UCB&#39;</span>,<span class="st">&#39;UCLA&#39;</span>)</span>
-<span id="cb37-2"><a></a>b <span class="op">=</span> a</span>
-<span id="cb37-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb37-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb37-5"><a></a></span>
-<span id="cb37-6"><a></a>a[<span class="dv">0</span>] <span class="op">=</span> (<span class="st">&#39;UCBC&#39;</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a>a <span class="op">=</span> (<span class="st">&#39;UCB&#39;</span>,<span class="st">&#39;UCLA&#39;</span>)</span>
+<span id="cb41-2"><a></a>b <span class="op">=</span> a</span>
+<span id="cb41-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb41-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb41-5"><a></a></span>
+<span id="cb41-6"><a></a>a[<span class="dv">0</span>] <span class="op">=</span> (<span class="st">&#39;UCBC&#39;</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4361405632 
+<pre><code>The value of a is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4383609856 
 
-The value of b is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4361405632 
+The value of b is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4383609856 
 </code></pre>
 </div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[19]</span><span class="ansi-green-fg">, line 6</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[21]</span><span class="ansi-green-fg">, line 6</span>
 <span class="ansi-green-fg">      3</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">The value of a is </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>a<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> and id = </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span><span style="color:rgb(0,135,0)">id</span>(a)<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> </span><span style="font-weight:bold;color:rgb(175,95,0)">\n</span><span class="ansi-yellow-fg">&#39;</span>)
 <span class="ansi-green-fg">      4</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">The value of b is </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>b<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> and id = </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span><span style="color:rgb(0,135,0)">id</span>(b)<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> </span><span style="font-weight:bold;color:rgb(175,95,0)">\n</span><span class="ansi-yellow-fg">&#39;</span>)
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">6</span> <span class="ansi-yellow-bg">a</span><span class="ansi-yellow-bg">[</span><span class="ansi-green-fg ansi-yellow-bg">0</span><span class="ansi-yellow-bg">]</span> = (<span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">UCBC</span><span class="ansi-yellow-fg">&#39;</span>,)
@@ -2098,26 +2260,26 @@ The value of b is (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4361405632
 </div>
 <div id="tabset-2-5">
 <p>Tuples are immutable.</p>
-<div id="immutable-tuple-example-continued" class="cell" data-execution_count="20">
+<div id="immutable-tuple-example-continued" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>a <span class="op">=</span> (<span class="st">&#39;UCBC&#39;</span>,<span class="st">&#39;UCLA&#39;</span>) </span>
-<span id="cb39-2"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb39-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb39-4"><a></a></span>
-<span id="cb39-5"><a></a>b <span class="op">=</span> a</span>
-<span id="cb39-6"><a></a>a <span class="op">=</span> a <span class="op">+</span> (<span class="st">&quot;UCI&quot;</span>,)</span>
-<span id="cb39-7"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
-<span id="cb39-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a>a <span class="op">=</span> (<span class="st">&#39;UCBC&#39;</span>,<span class="st">&#39;UCLA&#39;</span>) </span>
+<span id="cb43-2"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb43-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb43-4"><a></a></span>
+<span id="cb43-5"><a></a>b <span class="op">=</span> a</span>
+<span id="cb43-6"><a></a>a <span class="op">=</span> a <span class="op">+</span> (<span class="st">&quot;UCI&quot;</span>,)</span>
+<span id="cb43-7"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of a is now </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(a)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb43-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The value of b is now </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> and id = </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4780864064 
+<pre><code>The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4810839104 
 
-The value of b is now (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4361405632 
+The value of b is now (&#39;UCB&#39;, &#39;UCLA&#39;) and id = 4383609856 
 
-The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;, &#39;UCI&#39;) and id = 4780760128 
+The value of a is now (&#39;UCBC&#39;, &#39;UCLA&#39;, &#39;UCI&#39;) and id = 4810820800 
 
-The value of b is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4780864064 
+The value of b is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4810839104 
 </code></pre>
 </div>
 </div>
@@ -2131,37 +2293,37 @@ The value of b is now (&#39;UCBC&#39;, &#39;UCLA&#39;) and id = 4780864064
 <li>They are faster during iteration</li>
 <li>They require fewer resources than lists</li>
 </ul>
-<div id="timing-tuples-vs-lists" class="cell" data-execution_count="21">
+<div id="timing-tuples-vs-lists" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a><span class="im">import</span> time</span>
-<span id="cb41-2"><a></a></span>
-<span id="cb41-3"><a></a><span class="co"># Create large list and tuple</span></span>
-<span id="cb41-4"><a></a>large_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
-<span id="cb41-5"><a></a>large_tuple <span class="op">=</span> <span class="bu">tuple</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
-<span id="cb41-6"><a></a></span>
-<span id="cb41-7"><a></a><span class="kw">def</span> pass_through(seq):</span>
-<span id="cb41-8"><a></a>    <span class="co">&quot;&quot;&quot;Function that copies a sequence&quot;&quot;&quot;</span></span>
-<span id="cb41-9"><a></a>    seq2 <span class="op">=</span> seq</span>
-<span id="cb41-10"><a></a>    <span class="cf">return</span> seq2</span>
-<span id="cb41-11"><a></a></span>
-<span id="cb41-12"><a></a><span class="co"># Measure list function call time</span></span>
-<span id="cb41-13"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb41-14"><a></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>):  <span class="co"># Call function many times</span></span>
-<span id="cb41-15"><a></a>    pass_through(large_list)</span>
-<span id="cb41-16"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb41-17"><a></a><span class="bu">print</span>(<span class="ss">f&quot;List function call took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
-<span id="cb41-18"><a></a></span>
-<span id="cb41-19"><a></a><span class="co"># Measure tuple function call time</span></span>
-<span id="cb41-20"><a></a>start <span class="op">=</span> time.time()</span>
-<span id="cb41-21"><a></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>):  <span class="co"># Call function many times</span></span>
-<span id="cb41-22"><a></a>    pass_through(large_tuple)</span>
-<span id="cb41-23"><a></a>end <span class="op">=</span> time.time()</span>
-<span id="cb41-24"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Tuple function call took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="im">import</span> time</span>
+<span id="cb45-2"><a></a></span>
+<span id="cb45-3"><a></a><span class="co"># Create large list and tuple</span></span>
+<span id="cb45-4"><a></a>large_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
+<span id="cb45-5"><a></a>large_tuple <span class="op">=</span> <span class="bu">tuple</span>(<span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))</span>
+<span id="cb45-6"><a></a></span>
+<span id="cb45-7"><a></a><span class="kw">def</span> pass_through(seq):</span>
+<span id="cb45-8"><a></a>    <span class="co">&quot;&quot;&quot;Function that copies a sequence&quot;&quot;&quot;</span></span>
+<span id="cb45-9"><a></a>    seq2 <span class="op">=</span> seq</span>
+<span id="cb45-10"><a></a>    <span class="cf">return</span> seq2</span>
+<span id="cb45-11"><a></a></span>
+<span id="cb45-12"><a></a><span class="co"># Measure list function call time</span></span>
+<span id="cb45-13"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb45-14"><a></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>):  <span class="co"># Call function many times</span></span>
+<span id="cb45-15"><a></a>    pass_through(large_list)</span>
+<span id="cb45-16"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb45-17"><a></a><span class="bu">print</span>(<span class="ss">f&quot;List function call took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span>
+<span id="cb45-18"><a></a></span>
+<span id="cb45-19"><a></a><span class="co"># Measure tuple function call time</span></span>
+<span id="cb45-20"><a></a>start <span class="op">=</span> time.time()</span>
+<span id="cb45-21"><a></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span><span class="op">**</span><span class="dv">6</span>):  <span class="co"># Call function many times</span></span>
+<span id="cb45-22"><a></a>    pass_through(large_tuple)</span>
+<span id="cb45-23"><a></a>end <span class="op">=</span> time.time()</span>
+<span id="cb45-24"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Tuple function call took: </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.6f}</span><span class="ss"> seconds&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>List function call took: 0.058314 seconds
-Tuple function call took: 0.060044 seconds</code></pre>
+<pre><code>List function call took: 0.054200 seconds
+Tuple function call took: 0.051582 seconds</code></pre>
 </div>
 </div>
 </section>
@@ -2180,28 +2342,30 @@ Tuple function call took: 0.060044 seconds</code></pre>
 </section>
 <section id="optional-reading-a-simple-text-file" class="slide level2">
 <h2>Optional: Reading a simple text file</h2>
-<div id="text-as-string-vs-text-as-list" class="cell" data-execution_count="22">
+<div id="text-as-string-vs-text-as-list" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a><span class="co"># Specify the location of the data</span></span>
-<span id="cb43-2"><a></a></span>
-<span id="cb43-3"><a></a>file_path <span class="op">=</span> <span class="st">&quot;gettysburg.txt&quot;</span>  <span class="co"># This is in the same directory as my script - update it with your actual file path</span></span>
-<span id="cb43-4"><a></a></span>
-<span id="cb43-5"><a></a><span class="co"># Open and read the file, first split words using .split()</span></span>
-<span id="cb43-6"><a></a><span class="cf">with</span> <span class="bu">open</span>(file_path, <span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb43-7"><a></a>    text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb43-8"><a></a></span>
-<span id="cb43-9"><a></a>    words <span class="op">=</span> text.split()</span>
-<span id="cb43-10"><a></a></span>
-<span id="cb43-11"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Word Count: </span><span class="sc">{</span><span class="bu">len</span>(words)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb43-12"><a></a></span>
-<span id="cb43-13"><a></a><span class="bu">print</span>(<span class="ss">f&quot;First 6 words: </span><span class="sc">{</span>words[:<span class="dv">6</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb43-14"><a></a></span>
-<span id="cb43-15"><a></a><span class="cf">for</span> word <span class="kw">in</span> words[<span class="dv">0</span>:<span class="dv">6</span>]:</span>
-<span id="cb43-16"><a></a>    <span class="bu">print</span>(word)</span>
-<span id="cb43-17"><a></a></span>
-<span id="cb43-18"><a></a><span class="cf">for</span> _ <span class="kw">in</span> text[<span class="dv">0</span>:<span class="dv">6</span>]:</span>
-<span id="cb43-19"><a></a>    <span class="bu">print</span>(_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a><span class="co"># Specify the location of the data</span></span>
+<span id="cb47-2"><a></a></span>
+<span id="cb47-3"><a></a>file_path <span class="op">=</span> <span class="st">&quot;gettysburg.txt&quot;</span>  <span class="co"># This is in the same directory as my script - update it with your actual file path</span></span>
+<span id="cb47-4"><a></a></span>
+<span id="cb47-5"><a></a><span class="co"># Open and read the file, first split words using .split()</span></span>
+<span id="cb47-6"><a></a><span class="cf">with</span> <span class="bu">open</span>(file_path, <span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb47-7"><a></a>    text <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb47-8"><a></a></span>
+<span id="cb47-9"><a></a>    words <span class="op">=</span> text.split()</span>
+<span id="cb47-10"><a></a></span>
+<span id="cb47-11"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Word Count: </span><span class="sc">{</span><span class="bu">len</span>(words)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb47-12"><a></a></span>
+<span id="cb47-13"><a></a><span class="bu">print</span>(<span class="ss">f&quot;First 6 words: </span><span class="sc">{</span>words[:<span class="dv">6</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb47-14"><a></a></span>
+<span id="cb47-15"><a></a><span class="cf">for</span> word <span class="kw">in</span> words[<span class="dv">0</span>:<span class="dv">6</span>]:</span>
+<span id="cb47-16"><a></a>    <span class="bu">print</span>(word)</span>
+<span id="cb47-17"><a></a></span>
+<span id="cb47-18"><a></a><span class="cf">for</span> _ <span class="kw">in</span> text[<span class="dv">0</span>:<span class="dv">6</span>]:</span>
+<span id="cb47-19"><a></a>    <span class="bu">print</span>(_, end <span class="op">=</span> <span class="st">&#39;&#39;</span>)</span>
+<span id="cb47-20"><a></a></span>
+<span id="cb47-21"><a></a><span class="bu">print</span>([_ <span class="cf">for</span> _ <span class="kw">in</span> words[<span class="dv">0</span>:<span class="dv">6</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Word Count: 278
@@ -2212,78 +2376,23 @@ and
 seven
 years
 ago
-F
-o
-u
-r
- 
-s</code></pre>
+Four s[&#39;Four&#39;, &#39;score&#39;, &#39;and&#39;, &#39;seven&#39;, &#39;years&#39;, &#39;ago&#39;]</code></pre>
 </div>
 </div>
 <p>See <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</a> for more information and more string methods.</p>
-</section></section>
-<section>
-<section id="activity-1" class="title-slide slide level1 center">
-<h1>Activity 1</h1>
-
-</section>
-<section id="whats-in-a-name" class="slide level2">
-<h2>What’s in a name?</h2>
-<ul>
-<li>Please gather together in small groups, please make sure at least one member has a laptop</li>
-<li>for credit: minimum group size 3, maximum group size 6 &amp; at least one classmate who wasn’t on your previous team</li>
-<li>please introduce yourselves and try to learn a new name today</li>
-<li>please take a group photo, annotate with with names or add names as a comment during upload</li>
-<li>upload a photo individually for attendance credit</li>
-</ul>
-</section>
-<section id="what-to-do-in-your-group-10-15-minutes" class="slide level2 smaller">
-<h2>What to do in your group (10-15 minutes)</h2>
-<ul>
-<li>You could do it all as one or do things separately and then share what you tried</li>
-<li>Using either the REPL, a Python Script, a Jupyter Notebook or a Quarto Document</li>
-<li>Try to create at least one of the following:
-<ul>
-<li>docstring or comment of f-string</li>
-<li>try an operation (comparison, simple, or augmented operators)</li>
-<li>create a sequence(s), slice, concatenate, iterate?</li>
-<li>create a longer string, or a list, tuple, range</li>
-<li>try slicing or indexing etc.</li>
-<li>try my question on the next slide</li>
-</ul></li>
-</ul>
-</section>
-<section id="please-explain" class="slide level2 smaller">
-<h2>Please explain</h2>
-<p>Your friend is trying to teach himself Python by watching videos on YouTube. He has a question for you:</p>
-<p>He wants the last letter of every spell extracted, when he runs his code, it runs without error, but only an “s” is printed.</p>
-<div id="activity-1-code" class="cell" data-execution_count="23">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a>spells <span class="op">=</span> [</span>
-<span id="cb45-2"><a></a>    <span class="st">&quot;Expelliarmus&quot;</span>,</span>
-<span id="cb45-3"><a></a>    <span class="st">&quot;Colloshoo&quot;</span>,</span>
-<span id="cb45-4"><a></a>    <span class="st">&quot;Legilimens&quot;</span>,</span>
-<span id="cb45-5"><a></a>    <span class="st">&quot;Impedimenta&quot;</span>,</span>
-<span id="cb45-6"><a></a>    <span class="st">&quot;Confundo&quot;</span>, </span>
-<span id="cb45-7"><a></a>    <span class="st">&quot;Finite Incantatem&quot;</span>,</span>
-<span id="cb45-8"><a></a>    <span class="st">&quot;Incarcerous&quot;</span></span>
-<span id="cb45-9"><a></a>]</span>
-<span id="cb45-10"><a></a></span>
-<span id="cb45-11"><a></a><span class="cf">for</span> spell <span class="kw">in</span> spells:</span>
-<span id="cb45-12"><a></a>    first <span class="op">=</span> spell[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb45-13"><a></a>    </span>
-<span id="cb45-14"><a></a><span class="bu">print</span>(first, end <span class="op">=</span> <span class="st">&quot; &quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>s </code></pre>
-</div>
-</div>
-<ul>
-<li>You can copy and modify the code to solve his problem</li>
-<li>But please be prepared explain to him why he is only getting an “s”</li>
-<li>Please tell him what he needs to change to get all of the last letters.</li>
-</ul>
+<aside class="notes">
+<p>The _ is a wildcard or a throwaway variable here. We don’t want to create another object so we can use _</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section></section>
 <section>
 <section id="part-2-moving-beyond-the-basics" class="title-slide slide level1 center">
@@ -2399,20 +2508,20 @@ s</code></pre>
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-3-1">if True</a></li><li><a href="#tabset-3-2">if False</a></li><li><a href="#tabset-3-3">if-elif</a></li><li><a href="#tabset-3-4">if-elif</a></li><li><a href="#tabset-3-5">else</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div id="if-when-true" class="cell" data-execution_count="24">
+<div id="if-when-true" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club!&quot;</span>)  <span class="co"># Executed first</span></span>
-<span id="cb47-2"><a></a></span>
-<span id="cb47-3"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb47-4"><a></a>age <span class="op">=</span> <span class="dv">19</span></span>
-<span id="cb47-5"><a></a></span>
-<span id="cb47-6"><a></a><span class="cf">if</span> age <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
-<span id="cb47-7"><a></a>    <span class="co"># print() executed only when the if condition is True</span></span>
-<span id="cb47-8"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Sorry you are younger than </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you may not enter.&quot;</span>)  </span>
-<span id="cb47-9"><a></a></span>
-<span id="cb47-10"><a></a><span class="co"># Always executed</span></span>
-<span id="cb47-11"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 3: The club closes at midnight&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club!&quot;</span>)  <span class="co"># Executed first</span></span>
+<span id="cb49-2"><a></a></span>
+<span id="cb49-3"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb49-4"><a></a>age <span class="op">=</span> <span class="dv">19</span></span>
+<span id="cb49-5"><a></a></span>
+<span id="cb49-6"><a></a><span class="cf">if</span> age <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
+<span id="cb49-7"><a></a>    <span class="co"># print() executed only when the if condition is True</span></span>
+<span id="cb49-8"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Sorry you are younger than </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you may not enter.&quot;</span>)  </span>
+<span id="cb49-9"><a></a></span>
+<span id="cb49-10"><a></a><span class="co"># Always executed</span></span>
+<span id="cb49-11"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 3: The club closes at midnight&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Step 1: Welcome to club!
@@ -2422,20 +2531,20 @@ Step 3: The club closes at midnight</code></pre>
 </div>
 </div>
 <div id="tabset-3-2">
-<div id="if-when-false" class="cell" data-execution_count="25">
+<div id="if-when-false" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club!&quot;</span>)  <span class="co"># Executed first</span></span>
-<span id="cb49-2"><a></a></span>
-<span id="cb49-3"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb49-4"><a></a>age <span class="op">=</span> <span class="dv">22</span></span>
-<span id="cb49-5"><a></a></span>
-<span id="cb49-6"><a></a><span class="cf">if</span> age <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
-<span id="cb49-7"><a></a>    <span class="co"># Executed only if condition is True</span></span>
-<span id="cb49-8"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: sorry you are younger than </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you cannot enter&quot;</span>) </span>
-<span id="cb49-9"><a></a></span>
-<span id="cb49-10"><a></a><span class="co"># This print() is always executed</span></span>
-<span id="cb49-11"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 3: The club closes at midnight&quot;</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club!&quot;</span>)  <span class="co"># Executed first</span></span>
+<span id="cb51-2"><a></a></span>
+<span id="cb51-3"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb51-4"><a></a>age <span class="op">=</span> <span class="dv">22</span></span>
+<span id="cb51-5"><a></a></span>
+<span id="cb51-6"><a></a><span class="cf">if</span> age <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
+<span id="cb51-7"><a></a>    <span class="co"># Executed only if condition is True</span></span>
+<span id="cb51-8"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: sorry you are younger than </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you cannot enter&quot;</span>) </span>
+<span id="cb51-9"><a></a></span>
+<span id="cb51-10"><a></a><span class="co"># This print() is always executed</span></span>
+<span id="cb51-11"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 3: The club closes at midnight&quot;</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Step 1: Welcome to club!
@@ -2449,20 +2558,20 @@ Step 3: The club closes at midnight</code></pre>
 </ul>
 </div>
 <div id="tabset-3-3">
-<div id="if-and-elif" class="cell" data-execution_count="26">
+<div id="if-and-elif" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club!&quot;</span>)  <span class="co"># Executed first</span></span>
-<span id="cb51-2"><a></a></span>
-<span id="cb51-3"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb51-4"><a></a>age <span class="op">=</span> <span class="dv">19</span></span>
-<span id="cb51-5"><a></a></span>
-<span id="cb51-6"><a></a><span class="cf">if</span> age <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
-<span id="cb51-7"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Sorry you are younger than </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you cannot enter&quot;</span>)  <span class="co"># Executed only if condition is True</span></span>
-<span id="cb51-8"><a></a><span class="cf">elif</span> age <span class="op">&gt;=</span> MIN_AGE:</span>
-<span id="cb51-9"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Please come in!&quot;</span>)  <span class="co"># Executed only if this condition is True and the previous was False</span></span>
-<span id="cb51-10"><a></a></span>
-<span id="cb51-11"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 3: The club closes at midnight&quot;</span>)  <span class="co"># Always executed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club!&quot;</span>)  <span class="co"># Executed first</span></span>
+<span id="cb53-2"><a></a></span>
+<span id="cb53-3"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb53-4"><a></a>age <span class="op">=</span> <span class="dv">19</span></span>
+<span id="cb53-5"><a></a></span>
+<span id="cb53-6"><a></a><span class="cf">if</span> age <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
+<span id="cb53-7"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Sorry you are younger than </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you cannot enter&quot;</span>)  <span class="co"># Executed only if condition is True</span></span>
+<span id="cb53-8"><a></a><span class="cf">elif</span> age <span class="op">&gt;=</span> MIN_AGE:</span>
+<span id="cb53-9"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Please come in!&quot;</span>)  <span class="co"># Executed only if this condition is True and the previous was False</span></span>
+<span id="cb53-10"><a></a></span>
+<span id="cb53-11"><a></a><span class="bu">print</span>(<span class="st">&quot;Step 3: The club closes at midnight&quot;</span>)  <span class="co"># Always executed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Step 1: Welcome to club!
@@ -2478,19 +2587,19 @@ Step 3: The club closes at midnight</code></pre>
 </div>
 <div id="tabset-3-4">
 <p>Same thing, but multiple ages</p>
-<div id="if-and-elif-with-range" class="cell" data-execution_count="27">
+<div id="if-and-elif-with-range" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb53-2"><a></a>ages <span class="op">=</span> <span class="bu">range</span>(<span class="dv">17</span>,<span class="dv">23</span>)</span>
-<span id="cb53-3"><a></a><span class="cf">for</span> a <span class="kw">in</span> ages:</span>
-<span id="cb53-4"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club! May we see some ID?&quot;</span>)  <span class="co"># Executed first</span></span>
-<span id="cb53-5"><a></a>    <span class="cf">if</span> a <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
-<span id="cb53-6"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Sorry you are </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and are under </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you cannot enter </span><span class="ch">\n</span><span class="ss">&quot;</span>)  <span class="co"># Executed only if condition is True</span></span>
-<span id="cb53-7"><a></a>    <span class="cf">elif</span> a <span class="op">&gt;=</span> MIN_AGE:</span>
-<span id="cb53-8"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Step 2: You are </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss"> or over Please come in!</span><span class="ch">\n</span><span class="ss">&quot;</span>)  <span class="co"># Executed only if this condition is True and the previous was False</span></span>
-<span id="cb53-9"><a></a></span>
-<span id="cb53-10"><a></a><span class="bu">print</span>(<span class="st">&quot;The blocks terminate when the indentation returns to that of the initial if (or further left like this line)&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a>MIN_AGE <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb55-2"><a></a>ages <span class="op">=</span> <span class="bu">range</span>(<span class="dv">17</span>,<span class="dv">23</span>)</span>
+<span id="cb55-3"><a></a><span class="cf">for</span> a <span class="kw">in</span> ages:</span>
+<span id="cb55-4"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Step 1: Welcome to club! May we see some ID?&quot;</span>)  <span class="co"># Executed first</span></span>
+<span id="cb55-5"><a></a>    <span class="cf">if</span> a <span class="op">&lt;</span> MIN_AGE:  <span class="co"># Condition is checked</span></span>
+<span id="cb55-6"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Step 2: Sorry you are </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> and are under </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss">, you cannot enter </span><span class="ch">\n</span><span class="ss">&quot;</span>)  <span class="co"># Executed only if condition is True</span></span>
+<span id="cb55-7"><a></a>    <span class="cf">elif</span> a <span class="op">&gt;=</span> MIN_AGE:</span>
+<span id="cb55-8"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Step 2: You are </span><span class="sc">{</span>MIN_AGE<span class="sc">}</span><span class="ss"> or over Please come in!</span><span class="ch">\n</span><span class="ss">&quot;</span>)  <span class="co"># Executed only if this condition is True and the previous was False</span></span>
+<span id="cb55-9"><a></a></span>
+<span id="cb55-10"><a></a><span class="bu">print</span>(<span class="st">&quot;The blocks terminate when the indentation returns to that of the initial if (or further left like this line)&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Step 1: Welcome to club! May we see some ID?
@@ -2522,24 +2631,24 @@ The blocks terminate when the indentation returns to that of the initial if (or 
 </div>
 <div id="tabset-3-5">
 <p>Use else as a default case when no conditions are met in the if or elif.</p>
-<div id="if-elif-and-else" class="cell" data-execution_count="28">
+<div id="if-elif-and-else" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a>scores <span class="op">=</span> [<span class="dv">91</span>, <span class="dv">83</span>, <span class="dv">45</span>, <span class="dv">77</span>, <span class="dv">68</span>, <span class="va">None</span>]</span>
-<span id="cb55-2"><a></a></span>
-<span id="cb55-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
-<span id="cb55-4"><a></a>    <span class="cf">if</span> score <span class="kw">is</span> <span class="va">None</span>:  <span class="co"># Missing</span></span>
-<span id="cb55-5"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;I&#39; (Incomplete)</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span>
-<span id="cb55-6"><a></a>    <span class="cf">elif</span>  score <span class="op">&gt;=</span> <span class="dv">90</span>:  <span class="co"># Condition is checked</span></span>
-<span id="cb55-7"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;A&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>)  </span>
-<span id="cb55-8"><a></a>    <span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">80</span>:</span>
-<span id="cb55-9"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;B&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>)  </span>
-<span id="cb55-10"><a></a>    <span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">70</span>:</span>
-<span id="cb55-11"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;C&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>) </span>
-<span id="cb55-12"><a></a>    <span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">60</span>:</span>
-<span id="cb55-13"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;D&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>) </span>
-<span id="cb55-14"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb55-15"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;F&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>scores <span class="op">=</span> [<span class="dv">91</span>, <span class="dv">83</span>, <span class="dv">45</span>, <span class="dv">77</span>, <span class="dv">68</span>, <span class="va">None</span>]</span>
+<span id="cb57-2"><a></a></span>
+<span id="cb57-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
+<span id="cb57-4"><a></a>    <span class="cf">if</span> score <span class="kw">is</span> <span class="va">None</span>:  <span class="co"># Missing</span></span>
+<span id="cb57-5"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;I&#39; (Incomplete)</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span>
+<span id="cb57-6"><a></a>    <span class="cf">elif</span>  score <span class="op">&gt;=</span> <span class="dv">90</span>:  <span class="co"># Condition is checked</span></span>
+<span id="cb57-7"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;A&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>)  </span>
+<span id="cb57-8"><a></a>    <span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">80</span>:</span>
+<span id="cb57-9"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;B&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>)  </span>
+<span id="cb57-10"><a></a>    <span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">70</span>:</span>
+<span id="cb57-11"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;C&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>) </span>
+<span id="cb57-12"><a></a>    <span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">60</span>:</span>
+<span id="cb57-13"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;D&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>) </span>
+<span id="cb57-14"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb57-15"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;F&#39; </span><span class="ch">\n</span><span class="ss">&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Your score was 91 and your grade is &#39;A&#39; 
@@ -2590,28 +2699,28 @@ Your score was None and your grade is &#39;I&#39; (Incomplete)
 <li>in Stats 21, <strong>if-elif-else</strong> will cover your needs</li>
 <li>but match is not difficult to understand</li>
 </ul>
-<div id="match-case-_-and-in" class="cell" data-execution_count="29">
+<div id="match-case-_-and-in" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>scores <span class="op">=</span> [<span class="dv">91</span>, <span class="dv">83</span>, <span class="dv">45</span>, <span class="dv">77</span>, <span class="dv">68</span>, <span class="va">None</span>]</span>
-<span id="cb57-2"><a></a></span>
-<span id="cb57-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
-<span id="cb57-4"><a></a>    <span class="cf">match</span> score:</span>
-<span id="cb57-5"><a></a>        <span class="cf">case</span> <span class="va">None</span>:</span>
-<span id="cb57-6"><a></a>            grade <span class="op">=</span> <span class="st">&quot;I&quot;</span>  <span class="co"># Incomplete</span></span>
-<span id="cb57-7"><a></a>        <span class="co"># the _ is a wildcard variable that is not kept</span></span>
-<span id="cb57-8"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">90</span>, <span class="dv">101</span>):  <span class="co"># 90-100</span></span>
-<span id="cb57-9"><a></a>            grade <span class="op">=</span> <span class="st">&quot;A&quot;</span></span>
-<span id="cb57-10"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">80</span>, <span class="dv">90</span>):   <span class="co"># 80-89</span></span>
-<span id="cb57-11"><a></a>            grade <span class="op">=</span> <span class="st">&quot;B&quot;</span></span>
-<span id="cb57-12"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">70</span>, <span class="dv">80</span>):   <span class="co"># 70-79</span></span>
-<span id="cb57-13"><a></a>            grade <span class="op">=</span> <span class="st">&quot;C&quot;</span></span>
-<span id="cb57-14"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">60</span>, <span class="dv">70</span>):   <span class="co"># 60-69</span></span>
-<span id="cb57-15"><a></a>            grade <span class="op">=</span> <span class="st">&quot;D&quot;</span></span>
-<span id="cb57-16"><a></a>        <span class="cf">case</span> _:</span>
-<span id="cb57-17"><a></a>            grade <span class="op">=</span> <span class="st">&quot;F&quot;</span>  <span class="co"># Anything below 60</span></span>
-<span id="cb57-18"><a></a></span>
-<span id="cb57-19"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;</span><span class="sc">{</span>grade<span class="sc">}</span><span class="ss">&#39;</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a>scores <span class="op">=</span> [<span class="dv">91</span>, <span class="dv">83</span>, <span class="dv">45</span>, <span class="dv">77</span>, <span class="dv">68</span>, <span class="va">None</span>]</span>
+<span id="cb59-2"><a></a></span>
+<span id="cb59-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
+<span id="cb59-4"><a></a>    <span class="cf">match</span> score:</span>
+<span id="cb59-5"><a></a>        <span class="cf">case</span> <span class="va">None</span>:</span>
+<span id="cb59-6"><a></a>            grade <span class="op">=</span> <span class="st">&quot;I&quot;</span>  <span class="co"># Incomplete</span></span>
+<span id="cb59-7"><a></a>        <span class="co"># the _ is a wildcard variable that is not kept</span></span>
+<span id="cb59-8"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">90</span>, <span class="dv">101</span>):  <span class="co"># 90-100</span></span>
+<span id="cb59-9"><a></a>            grade <span class="op">=</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb59-10"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">80</span>, <span class="dv">90</span>):   <span class="co"># 80-89</span></span>
+<span id="cb59-11"><a></a>            grade <span class="op">=</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb59-12"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">70</span>, <span class="dv">80</span>):   <span class="co"># 70-79</span></span>
+<span id="cb59-13"><a></a>            grade <span class="op">=</span> <span class="st">&quot;C&quot;</span></span>
+<span id="cb59-14"><a></a>        <span class="cf">case</span> _ <span class="cf">if</span> score <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">60</span>, <span class="dv">70</span>):   <span class="co"># 60-69</span></span>
+<span id="cb59-15"><a></a>            grade <span class="op">=</span> <span class="st">&quot;D&quot;</span></span>
+<span id="cb59-16"><a></a>        <span class="cf">case</span> _:</span>
+<span id="cb59-17"><a></a>            grade <span class="op">=</span> <span class="st">&quot;F&quot;</span>  <span class="co"># Anything below 60</span></span>
+<span id="cb59-18"><a></a></span>
+<span id="cb59-19"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Your score was </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss"> and your grade is &#39;</span><span class="sc">{</span>grade<span class="sc">}</span><span class="ss">&#39;</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Your score was 91 and your grade is &#39;A&#39;
@@ -2645,46 +2754,46 @@ Your score was None and your grade is &#39;I&#39;
 </section>
 <section id="optional-while-example" class="slide level2 smaller">
 <h2>(optional) while example</h2>
-<div id="optional-while-example" class="cell" data-execution_count="30">
+<div id="optional-while-example" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a><span class="co">&quot;&quot;&quot; </span></span>
-<span id="cb59-2"><a></a><span class="co">    script is name_to_a1z26.py </span></span>
-<span id="cb59-3"><a></a></span>
-<span id="cb59-4"><a></a><span class="co">    Example of a while</span></span>
-<span id="cb59-5"><a></a></span>
-<span id="cb59-6"><a></a><span class="co">    After waiting for valid Alpha character input</span></span>
-<span id="cb59-7"><a></a></span>
-<span id="cb59-8"><a></a><span class="co">    Converts a name to A1Z26 cipher (A=1, B=2, ..., Z=26)</span></span>
-<span id="cb59-9"><a></a></span>
-<span id="cb59-10"><a></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb59-11"><a></a></span>
-<span id="cb59-12"><a></a><span class="kw">def</span> name_to_a1z26(name):</span>
-<span id="cb59-13"><a></a>    name <span class="op">=</span> name.upper()  <span class="co"># Convert to uppercase for consistency</span></span>
-<span id="cb59-14"><a></a>    <span class="cf">return</span> [<span class="bu">ord</span>(char) <span class="op">-</span> <span class="dv">64</span> <span class="cf">for</span> char <span class="kw">in</span> name <span class="cf">if</span> char.isalpha()]  <span class="co"># Convert letters only</span></span>
-<span id="cb59-15"><a></a></span>
-<span id="cb59-16"><a></a>attempts <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb59-17"><a></a><span class="cf">while</span> attempts <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb59-18"><a></a>    name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name (or type &#39;quit&#39; to exit): &quot;</span>)</span>
-<span id="cb59-19"><a></a></span>
-<span id="cb59-20"><a></a>    <span class="cf">if</span> name.lower() <span class="op">==</span> <span class="st">&quot;quit&quot;</span>:</span>
-<span id="cb59-21"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Exiting the script&quot;</span>)</span>
-<span id="cb59-22"><a></a>        <span class="cf">break</span></span>
-<span id="cb59-23"><a></a></span>
-<span id="cb59-24"><a></a>    <span class="cf">elif</span> name.isalpha():  <span class="co"># Ensure the name is in A-Z or a-z after stripping spaces</span></span>
-<span id="cb59-25"><a></a>        cipher_values <span class="op">=</span> name_to_a1z26(name)</span>
-<span id="cb59-26"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your name in A1Z26 cipher: </span><span class="sc">{</span>cipher_values<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb59-27"><a></a>        <span class="cf">break</span>  <span class="co"># Exit the loop if a valid name was given</span></span>
-<span id="cb59-28"><a></a></span>
-<span id="cb59-29"><a></a>    attempts <span class="op">-=</span> <span class="dv">1</span></span>
-<span id="cb59-30"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Invalid input. </span><span class="sc">{</span>attempts<span class="sc">}</span><span class="ss"> attempts left.&quot;</span>)</span>
-<span id="cb59-31"><a></a></span>
-<span id="cb59-32"><a></a><span class="cf">if</span> attempts <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb59-33"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Too many invalid attempts. Please come back when you are ready&quot;</span>)</span>
-<span id="cb59-34"><a></a></span>
-<span id="cb59-35"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
-<span id="cb59-36"><a></a>    <span class="bu">print</span>(<span class="st">&quot;name_to_a1z26.py was executed directly&quot;</span>)</span>
-<span id="cb59-37"><a></a>    name_to_a1z26(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a><span class="co">&quot;&quot;&quot; </span></span>
+<span id="cb61-2"><a></a><span class="co">    script is name_to_a1z26.py </span></span>
+<span id="cb61-3"><a></a></span>
+<span id="cb61-4"><a></a><span class="co">    Example of a while</span></span>
+<span id="cb61-5"><a></a></span>
+<span id="cb61-6"><a></a><span class="co">    After waiting for valid Alpha character input</span></span>
+<span id="cb61-7"><a></a></span>
+<span id="cb61-8"><a></a><span class="co">    Converts a name to A1Z26 cipher (A=1, B=2, ..., Z=26)</span></span>
+<span id="cb61-9"><a></a></span>
+<span id="cb61-10"><a></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb61-11"><a></a></span>
+<span id="cb61-12"><a></a><span class="kw">def</span> name_to_a1z26(name):</span>
+<span id="cb61-13"><a></a>    name <span class="op">=</span> name.upper()  <span class="co"># Convert to uppercase for consistency</span></span>
+<span id="cb61-14"><a></a>    <span class="cf">return</span> [<span class="bu">ord</span>(char) <span class="op">-</span> <span class="dv">64</span> <span class="cf">for</span> char <span class="kw">in</span> name <span class="cf">if</span> char.isalpha()]  <span class="co"># Convert letters only</span></span>
+<span id="cb61-15"><a></a></span>
+<span id="cb61-16"><a></a>attempts <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb61-17"><a></a><span class="cf">while</span> attempts <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb61-18"><a></a>    name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name (or type &#39;quit&#39; to exit): &quot;</span>)</span>
+<span id="cb61-19"><a></a></span>
+<span id="cb61-20"><a></a>    <span class="cf">if</span> name.lower() <span class="op">==</span> <span class="st">&quot;quit&quot;</span>:</span>
+<span id="cb61-21"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Exiting the script&quot;</span>)</span>
+<span id="cb61-22"><a></a>        <span class="cf">break</span></span>
+<span id="cb61-23"><a></a></span>
+<span id="cb61-24"><a></a>    <span class="cf">elif</span> name.isalpha():  <span class="co"># Ensure the name is in A-Z or a-z after stripping spaces</span></span>
+<span id="cb61-25"><a></a>        cipher_values <span class="op">=</span> name_to_a1z26(name)</span>
+<span id="cb61-26"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your name in A1Z26 cipher: </span><span class="sc">{</span>cipher_values<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb61-27"><a></a>        <span class="cf">break</span>  <span class="co"># Exit the loop if a valid name was given</span></span>
+<span id="cb61-28"><a></a></span>
+<span id="cb61-29"><a></a>    attempts <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb61-30"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Invalid input. </span><span class="sc">{</span>attempts<span class="sc">}</span><span class="ss"> attempts left.&quot;</span>)</span>
+<span id="cb61-31"><a></a></span>
+<span id="cb61-32"><a></a><span class="cf">if</span> attempts <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb61-33"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Too many invalid attempts. Please come back when you are ready&quot;</span>)</span>
+<span id="cb61-34"><a></a></span>
+<span id="cb61-35"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb61-36"><a></a>    <span class="bu">print</span>(<span class="st">&quot;name_to_a1z26.py was executed directly&quot;</span>)</span>
+<span id="cb61-37"><a></a>    name_to_a1z26(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -2699,90 +2808,90 @@ Your score was None and your grade is &#39;I&#39;
 <ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-4-1">Break Part 1</a></li><li><a href="#tabset-4-2">Break Part 2</a></li><li><a href="#tabset-4-3">Break Part 3</a></li><li><a href="#tabset-4-4">Break Example Complete</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
-<div id="break-example" class="cell" data-execution_count="31">
+<div id="break-example" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a></a>attempts <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb60-2"><a></a><span class="cf">while</span> attempts <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb60-3"><a></a>    name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name (or type &#39;quit&#39; to exit): &quot;</span>)</span>
-<span id="cb60-4"><a></a></span>
-<span id="cb60-5"><a></a>    <span class="cf">if</span> name.lower() <span class="op">==</span> <span class="st">&quot;quit&quot;</span>: <span class="co"># typing quit means exit immediately</span></span>
-<span id="cb60-6"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Exiting the script&quot;</span>)</span>
-<span id="cb60-7"><a></a>        <span class="cf">break</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a></a>attempts <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb62-2"><a></a><span class="cf">while</span> attempts <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb62-3"><a></a>    name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name (or type &#39;quit&#39; to exit): &quot;</span>)</span>
+<span id="cb62-4"><a></a></span>
+<span id="cb62-5"><a></a>    <span class="cf">if</span> name.lower() <span class="op">==</span> <span class="st">&quot;quit&quot;</span>: <span class="co"># typing quit means exit immediately</span></span>
+<span id="cb62-6"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Exiting the script&quot;</span>)</span>
+<span id="cb62-7"><a></a>        <span class="cf">break</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 <div id="tabset-4-2">
-<div id="break-example-2" class="cell" data-execution_count="32">
+<div id="break-example-2" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a>    valid <span class="op">=</span> <span class="va">True</span>  <span class="co"># Assume the input is valid</span></span>
-<span id="cb61-2"><a></a></span>
-<span id="cb61-3"><a></a>    <span class="cf">for</span> char <span class="kw">in</span> name:</span>
-<span id="cb61-4"><a></a>        <span class="cf">if</span> <span class="kw">not</span> (char.isalpha() <span class="kw">or</span> char <span class="kw">in</span> [<span class="st">&quot; &quot;</span>, <span class="st">&quot;-&quot;</span>, <span class="st">&quot;&#39;&quot;</span>]):  <span class="co"># Check each character</span></span>
-<span id="cb61-5"><a></a>            valid <span class="op">=</span> <span class="va">False</span>  <span class="co"># Found an invalid character</span></span>
-<span id="cb61-6"><a></a>        <span class="cf">break</span>  <span class="co"># Stop checking further</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a>    valid <span class="op">=</span> <span class="va">True</span>  <span class="co"># Assume the input is valid</span></span>
+<span id="cb63-2"><a></a></span>
+<span id="cb63-3"><a></a>    <span class="cf">for</span> char <span class="kw">in</span> name:</span>
+<span id="cb63-4"><a></a>        <span class="cf">if</span> <span class="kw">not</span> (char.isalpha() <span class="kw">or</span> char <span class="kw">in</span> [<span class="st">&quot; &quot;</span>, <span class="st">&quot;-&quot;</span>, <span class="st">&quot;&#39;&quot;</span>]):  <span class="co"># Check each character</span></span>
+<span id="cb63-5"><a></a>            valid <span class="op">=</span> <span class="va">False</span>  <span class="co"># Found an invalid character</span></span>
+<span id="cb63-6"><a></a>        <span class="cf">break</span>  <span class="co"># Stop checking further</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 <div id="tabset-4-3">
-<div id="break-example-3" class="cell" data-execution_count="33">
+<div id="break-example-3" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a></a>    <span class="cf">if</span> valid:</span>
-<span id="cb62-2"><a></a>        cleaned_name <span class="op">=</span> name.replace(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;-&quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;&#39;&quot;</span>, <span class="st">&quot;&quot;</span>)  <span class="co"># Remove unwanted chars</span></span>
-<span id="cb62-3"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your name as I understand it: </span><span class="sc">{</span>cleaned_name<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb62-4"><a></a>        <span class="cf">break</span>  <span class="co"># Exit the loop if a valid name was given</span></span>
-<span id="cb62-5"><a></a></span>
-<span id="cb62-6"><a></a>    attempts <span class="op">-=</span> <span class="dv">1</span></span>
-<span id="cb62-7"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Invalid input. </span><span class="sc">{</span>attempts<span class="sc">}</span><span class="ss"> attempts left.&quot;</span>)</span>
-<span id="cb62-8"><a></a></span>
-<span id="cb62-9"><a></a>    </span>
-<span id="cb62-10"><a></a><span class="cf">if</span> attempts <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb62-11"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Too many invalid attempts. Please come back when you are ready to type&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a></a>    <span class="cf">if</span> valid:</span>
+<span id="cb64-2"><a></a>        cleaned_name <span class="op">=</span> name.replace(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;-&quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;&#39;&quot;</span>, <span class="st">&quot;&quot;</span>)  <span class="co"># Remove unwanted chars</span></span>
+<span id="cb64-3"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your name as I understand it: </span><span class="sc">{</span>cleaned_name<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb64-4"><a></a>        <span class="cf">break</span>  <span class="co"># Exit the loop if a valid name was given</span></span>
+<span id="cb64-5"><a></a></span>
+<span id="cb64-6"><a></a>    attempts <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb64-7"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Invalid input. </span><span class="sc">{</span>attempts<span class="sc">}</span><span class="ss"> attempts left.&quot;</span>)</span>
+<span id="cb64-8"><a></a></span>
+<span id="cb64-9"><a></a>    </span>
+<span id="cb64-10"><a></a><span class="cf">if</span> attempts <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb64-11"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Too many invalid attempts. Please come back when you are ready to type&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
 <div id="tabset-4-4">
-<div id="break-example-complete" class="cell" data-execution_count="34">
+<div id="break-example-complete" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb63-2"><a></a><span class="co">A while, for and break example</span></span>
-<span id="cb63-3"><a></a></span>
-<span id="cb63-4"><a></a><span class="co">break_ex.py (it&#39;s just a modified name_to_a1z26.py)</span></span>
-<span id="cb63-5"><a></a></span>
-<span id="cb63-6"><a></a><span class="co">should be run at the prompt like:</span></span>
-<span id="cb63-7"><a></a></span>
-<span id="cb63-8"><a></a><span class="co">python break_ex.py</span></span>
-<span id="cb63-9"><a></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb63-10"><a></a></span>
-<span id="cb63-11"><a></a>attempts <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb63-12"><a></a><span class="cf">while</span> attempts <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb63-13"><a></a>    name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name (or type &#39;quit&#39; to exit): &quot;</span>)</span>
-<span id="cb63-14"><a></a></span>
-<span id="cb63-15"><a></a>    <span class="cf">if</span> name.lower() <span class="op">==</span> <span class="st">&quot;quit&quot;</span>: <span class="co"># typing quit means exit immediately</span></span>
-<span id="cb63-16"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Exiting the script&quot;</span>)</span>
-<span id="cb63-17"><a></a>        <span class="cf">break</span></span>
-<span id="cb63-18"><a></a></span>
-<span id="cb63-19"><a></a>    valid <span class="op">=</span> <span class="va">True</span>  <span class="co"># Assume the input is valid</span></span>
-<span id="cb63-20"><a></a></span>
-<span id="cb63-21"><a></a>    <span class="cf">for</span> char <span class="kw">in</span> name:</span>
-<span id="cb63-22"><a></a>        <span class="cf">if</span> <span class="kw">not</span> (char.isalpha() <span class="kw">or</span> char <span class="kw">in</span> [<span class="st">&quot; &quot;</span>, <span class="st">&quot;-&quot;</span>, <span class="st">&quot;&#39;&quot;</span>]):  <span class="co"># Check each character</span></span>
-<span id="cb63-23"><a></a>            valid <span class="op">=</span> <span class="va">False</span>  <span class="co"># Found an invalid character</span></span>
-<span id="cb63-24"><a></a>        <span class="cf">break</span>  <span class="co"># Stop checking further</span></span>
-<span id="cb63-25"><a></a>    </span>
-<span id="cb63-26"><a></a>    <span class="cf">if</span> valid:</span>
-<span id="cb63-27"><a></a>        cleaned_name <span class="op">=</span> name.replace(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;-&quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;&#39;&quot;</span>, <span class="st">&quot;&quot;</span>)  <span class="co"># Remove unwanted chars</span></span>
-<span id="cb63-28"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your name as I understand it: </span><span class="sc">{</span>cleaned_name<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb63-29"><a></a>        <span class="cf">break</span>  <span class="co"># Exit the loop if a valid name was given</span></span>
-<span id="cb63-30"><a></a></span>
-<span id="cb63-31"><a></a>    attempts <span class="op">-=</span> <span class="dv">1</span></span>
-<span id="cb63-32"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Invalid input. </span><span class="sc">{</span>attempts<span class="sc">}</span><span class="ss"> attempts left.&quot;</span>)</span>
-<span id="cb63-33"><a></a></span>
-<span id="cb63-34"><a></a>    </span>
-<span id="cb63-35"><a></a><span class="cf">if</span> attempts <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb63-36"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Too many invalid attempts. Please come back when you are ready to type&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb65-2"><a></a><span class="co">A while, for and break example</span></span>
+<span id="cb65-3"><a></a></span>
+<span id="cb65-4"><a></a><span class="co">break_ex.py (it&#39;s just a modified name_to_a1z26.py)</span></span>
+<span id="cb65-5"><a></a></span>
+<span id="cb65-6"><a></a><span class="co">should be run at the prompt like:</span></span>
+<span id="cb65-7"><a></a></span>
+<span id="cb65-8"><a></a><span class="co">python break_ex.py</span></span>
+<span id="cb65-9"><a></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb65-10"><a></a></span>
+<span id="cb65-11"><a></a>attempts <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb65-12"><a></a><span class="cf">while</span> attempts <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb65-13"><a></a>    name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name (or type &#39;quit&#39; to exit): &quot;</span>)</span>
+<span id="cb65-14"><a></a></span>
+<span id="cb65-15"><a></a>    <span class="cf">if</span> name.lower() <span class="op">==</span> <span class="st">&quot;quit&quot;</span>: <span class="co"># typing quit means exit immediately</span></span>
+<span id="cb65-16"><a></a>        <span class="bu">print</span>(<span class="st">&quot;Exiting the script&quot;</span>)</span>
+<span id="cb65-17"><a></a>        <span class="cf">break</span></span>
+<span id="cb65-18"><a></a></span>
+<span id="cb65-19"><a></a>    valid <span class="op">=</span> <span class="va">True</span>  <span class="co"># Assume the input is valid</span></span>
+<span id="cb65-20"><a></a></span>
+<span id="cb65-21"><a></a>    <span class="cf">for</span> char <span class="kw">in</span> name:</span>
+<span id="cb65-22"><a></a>        <span class="cf">if</span> <span class="kw">not</span> (char.isalpha() <span class="kw">or</span> char <span class="kw">in</span> [<span class="st">&quot; &quot;</span>, <span class="st">&quot;-&quot;</span>, <span class="st">&quot;&#39;&quot;</span>]):  <span class="co"># Check each character</span></span>
+<span id="cb65-23"><a></a>            valid <span class="op">=</span> <span class="va">False</span>  <span class="co"># Found an invalid character</span></span>
+<span id="cb65-24"><a></a>        <span class="cf">break</span>  <span class="co"># Stop checking further</span></span>
+<span id="cb65-25"><a></a>    </span>
+<span id="cb65-26"><a></a>    <span class="cf">if</span> valid:</span>
+<span id="cb65-27"><a></a>        cleaned_name <span class="op">=</span> name.replace(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;-&quot;</span>, <span class="st">&quot;&quot;</span>).replace(<span class="st">&quot;&#39;&quot;</span>, <span class="st">&quot;&quot;</span>)  <span class="co"># Remove unwanted chars</span></span>
+<span id="cb65-28"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Your name as I understand it: </span><span class="sc">{</span>cleaned_name<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb65-29"><a></a>        <span class="cf">break</span>  <span class="co"># Exit the loop if a valid name was given</span></span>
+<span id="cb65-30"><a></a></span>
+<span id="cb65-31"><a></a>    attempts <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb65-32"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Invalid input. </span><span class="sc">{</span>attempts<span class="sc">}</span><span class="ss"> attempts left.&quot;</span>)</span>
+<span id="cb65-33"><a></a></span>
+<span id="cb65-34"><a></a>    </span>
+<span id="cb65-35"><a></a><span class="cf">if</span> attempts <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb65-36"><a></a>    <span class="bu">print</span>(<span class="st">&quot;Too many invalid attempts. Please come back when you are ready to type&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
@@ -2804,15 +2913,15 @@ Your score was None and your grade is &#39;I&#39;
 <li>This example shows how continue operates</li>
 <li>Skips the rest of the current loop iteration and jumps to the next iteration</li>
 </ul>
-<div id="continue-example-1" class="cell" data-execution_count="35">
+<div id="continue-example-1" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a></a>scores <span class="op">=</span> [<span class="dv">85</span>, <span class="dv">42</span>, <span class="dv">75</span>, <span class="dv">30</span>, <span class="dv">90</span>]</span>
-<span id="cb64-2"><a></a></span>
-<span id="cb64-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
-<span id="cb64-4"><a></a>    <span class="cf">if</span> score <span class="op">&lt;</span> <span class="dv">70</span>:</span>
-<span id="cb64-5"><a></a>        <span class="cf">continue</span>  </span>
-<span id="cb64-6"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Pass&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a></a>scores <span class="op">=</span> [<span class="dv">85</span>, <span class="dv">42</span>, <span class="dv">75</span>, <span class="dv">30</span>, <span class="dv">90</span>]</span>
+<span id="cb66-2"><a></a></span>
+<span id="cb66-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
+<span id="cb66-4"><a></a>    <span class="cf">if</span> score <span class="op">&lt;</span> <span class="dv">70</span>:</span>
+<span id="cb66-5"><a></a>        <span class="cf">continue</span>  </span>
+<span id="cb66-6"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Pass&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Score 85: Pass
@@ -2827,16 +2936,16 @@ Score 90: Pass</code></pre>
 <li>A continue could be rewritten as an if-else</li>
 <li>Here, the decision making is explicit</li>
 </ul>
-<div id="continue-example-2" class="cell" data-execution_count="36">
+<div id="continue-example-2" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a></a>scores <span class="op">=</span> [<span class="dv">85</span>, <span class="dv">42</span>, <span class="dv">75</span>, <span class="dv">30</span>, <span class="dv">90</span>]</span>
-<span id="cb66-2"><a></a></span>
-<span id="cb66-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
-<span id="cb66-4"><a></a>    <span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">70</span>:</span>
-<span id="cb66-5"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Pass&quot;</span>)</span>
-<span id="cb66-6"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb66-7"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Fail&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a></a>scores <span class="op">=</span> [<span class="dv">85</span>, <span class="dv">42</span>, <span class="dv">75</span>, <span class="dv">30</span>, <span class="dv">90</span>]</span>
+<span id="cb68-2"><a></a></span>
+<span id="cb68-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
+<span id="cb68-4"><a></a>    <span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">70</span>:</span>
+<span id="cb68-5"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Pass&quot;</span>)</span>
+<span id="cb68-6"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb68-7"><a></a>        <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Fail&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Score 85: Pass
@@ -2853,15 +2962,15 @@ Score 90: Pass</code></pre>
 </li>
 <li>Suppose this was for the actuarial examinations, one might only want the names of people with passing scores.</li>
 </ul>
-<div id="continue-example-3" class="cell" data-execution_count="37">
+<div id="continue-example-3" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a></a>scores <span class="op">=</span> [<span class="dv">85</span>, <span class="dv">42</span>, <span class="dv">75</span>, <span class="dv">30</span>, <span class="dv">90</span>]</span>
-<span id="cb68-2"><a></a></span>
-<span id="cb68-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
-<span id="cb68-4"><a></a>    <span class="cf">if</span> score <span class="op">&lt;</span> <span class="dv">70</span>:</span>
-<span id="cb68-5"><a></a>        <span class="cf">continue</span>  <span class="co"># Skip failing scores</span></span>
-<span id="cb68-6"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Pass&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a></a>scores <span class="op">=</span> [<span class="dv">85</span>, <span class="dv">42</span>, <span class="dv">75</span>, <span class="dv">30</span>, <span class="dv">90</span>]</span>
+<span id="cb70-2"><a></a></span>
+<span id="cb70-3"><a></a><span class="cf">for</span> score <span class="kw">in</span> scores:</span>
+<span id="cb70-4"><a></a>    <span class="cf">if</span> score <span class="op">&lt;</span> <span class="dv">70</span>:</span>
+<span id="cb70-5"><a></a>        <span class="cf">continue</span>  <span class="co"># Skip failing scores</span></span>
+<span id="cb70-6"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;Score </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">: Pass&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Score 85: Pass
@@ -2877,22 +2986,22 @@ Score 90: Pass</code></pre>
 <li>We will look at the dictionary again later in the course.</li>
 <li>This is a more realistic version of Ex 3</li>
 </ul>
-<div id="continue-example-4" class="cell" data-execution_count="38">
+<div id="continue-example-4" class="cell" data-execution_count="39">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a></a>scores <span class="op">=</span> {</span>
-<span id="cb70-2"><a></a>    <span class="st">&quot;Zhiyuan&quot;</span>: <span class="dv">85</span>,</span>
-<span id="cb70-3"><a></a>    <span class="st">&quot;Yasmin&quot;</span>: <span class="dv">42</span>,</span>
-<span id="cb70-4"><a></a>    <span class="st">&quot;Xavier&quot;</span>: <span class="dv">75</span>,</span>
-<span id="cb70-5"><a></a>    <span class="st">&quot;William&quot;</span>: <span class="dv">30</span>,</span>
-<span id="cb70-6"><a></a>    <span class="st">&quot;Veda&quot;</span>: <span class="dv">90</span></span>
-<span id="cb70-7"><a></a>} <span class="co"># scores is a dictionary notice the {} and the :</span></span>
-<span id="cb70-8"><a></a><span class="co"># these are &quot;key-value&quot; pairs</span></span>
-<span id="cb70-9"><a></a></span>
-<span id="cb70-10"><a></a><span class="cf">for</span> name, score <span class="kw">in</span> scores.items(): <span class="co"># .items() is a dictionary method works both keys &amp; values</span></span>
-<span id="cb70-11"><a></a>    <span class="cf">if</span> score <span class="op">&lt;</span> <span class="dv">50</span>:</span>
-<span id="cb70-12"><a></a>        <span class="cf">continue</span>  <span class="co"># Skip failing scores</span></span>
-<span id="cb70-13"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> passed with a score of </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a></a>scores <span class="op">=</span> {</span>
+<span id="cb72-2"><a></a>    <span class="st">&quot;Zhiyuan&quot;</span>: <span class="dv">85</span>,</span>
+<span id="cb72-3"><a></a>    <span class="st">&quot;Yasmin&quot;</span>: <span class="dv">42</span>,</span>
+<span id="cb72-4"><a></a>    <span class="st">&quot;Xavier&quot;</span>: <span class="dv">75</span>,</span>
+<span id="cb72-5"><a></a>    <span class="st">&quot;William&quot;</span>: <span class="dv">30</span>,</span>
+<span id="cb72-6"><a></a>    <span class="st">&quot;Veda&quot;</span>: <span class="dv">90</span></span>
+<span id="cb72-7"><a></a>} <span class="co"># scores is a dictionary notice the {} and the :</span></span>
+<span id="cb72-8"><a></a><span class="co"># these are &quot;key-value&quot; pairs</span></span>
+<span id="cb72-9"><a></a></span>
+<span id="cb72-10"><a></a><span class="cf">for</span> name, score <span class="kw">in</span> scores.items(): <span class="co"># .items() is a dictionary method works both keys &amp; values</span></span>
+<span id="cb72-11"><a></a>    <span class="cf">if</span> score <span class="op">&lt;</span> <span class="dv">50</span>:</span>
+<span id="cb72-12"><a></a>        <span class="cf">continue</span>  <span class="co"># Skip failing scores</span></span>
+<span id="cb72-13"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> passed with a score of </span><span class="sc">{</span>score<span class="sc">}</span><span class="ss">.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Zhiyuan passed with a score of 85.
@@ -2912,11 +3021,11 @@ Veda passed with a score of 90.</code></pre>
 <li>You see it a lot in homework assignments.</li>
 <li>Or when you just need execution to continue as you work on another part of a larger program.</li>
 </ul>
-<div id="pass-example" class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a></a><span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb72-2"><a></a>    <span class="cf">if</span> num <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb72-3"><a></a>        <span class="cf">pass</span>  <span class="co"># Does nothing, execution continues as usual</span></span>
-<span id="cb72-4"><a></a>    <span class="bu">print</span>(num, end <span class="op">=</span> <span class="st">&quot; &quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="pass-example" class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a></a><span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb74-2"><a></a>    <span class="cf">if</span> num <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb74-3"><a></a>        <span class="cf">pass</span>  <span class="co"># Does nothing, execution continues as usual</span></span>
+<span id="cb74-4"><a></a>    <span class="bu">print</span>(num, end <span class="op">=</span> <span class="st">&quot; &quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0 1 2 3 4 </code></pre>
 </div>
@@ -3023,10 +3132,10 @@ V = \frac{4}{3}\pi r^{3}
 </li>
 <li>Your result should display the calculated volume</li>
 </ul>
-<div id="activity-2" class="cell" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a></a><span class="im">import</span> math</span>
-<span id="cb74-2"><a></a></span>
-<span id="cb74-3"><a></a><span class="co"># some code to calcuate volume</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="activity-2" class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a></a><span class="im">import</span> math</span>
+<span id="cb76-2"><a></a></span>
+<span id="cb76-3"><a></a><span class="co"># some code to calcuate volume</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section id="have-a-terrific-weekend" class="title-slide slide level1 center">
