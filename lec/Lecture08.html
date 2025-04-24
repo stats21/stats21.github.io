@@ -1123,7 +1123,7 @@ margin-right: 0; }
 </section>
 <section id="read-a-little-data" class="slide level2">
 <h2>Read a little data</h2>
-<div id="99e90fea" class="cell" data-execution_count="1">
+<div id="20bfa074" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a></a></span>
@@ -1174,7 +1174,7 @@ margin-right: 0; }
 <section id="take-a-look-at-the-data" class="slide level2">
 <h2>Take a look at the data</h2>
 <p>Here are the first 5 rows (samples), each of which consists of 20 feature values,</p>
-<div id="f61799a7" class="cell" data-execution_count="2">
+<div id="7fccee87" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="bu">print</span>(ames[<span class="dv">0</span>:<span class="dv">5</span>, :])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1199,7 +1199,7 @@ margin-right: 0; }
 <li><p>We can use axis=0 to help us generate statistics (recall ames is 1121,20)</p></li>
 <li><p>Not a ton of descriptive statistics (a limitation) - but all of the basics - <a href="https://numpy.org/doc/stable/reference/routines.statistics.html">https://numpy.org/doc/stable/reference/routines.statistics.html</a></p></li>
 </ul>
-<div id="4e1b14ed" class="cell" data-execution_count="3">
+<div id="81ec67d5" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The mean of each column is </span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>ames<span class="sc">.</span>mean(axis<span class="op">=</span><span class="dv">0</span>)<span class="sc">}</span><span class="ss">&#39;</span>)</span>
@@ -1228,7 +1228,7 @@ The standard deviation of each column is
 <ul>
 <li>In addition to generating slices, you can also filter.</li>
 </ul>
-<div id="e20f8e8a" class="cell" data-execution_count="4">
+<div id="f134d4d4" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="bu">print</span>(<span class="ss">f&#39;multidimensional slice example: ames[2, :] result:</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>ames[<span class="dv">2</span>, :]<span class="sc">}</span><span class="ss">&#39;</span>)</span>
@@ -1286,7 +1286,7 @@ filter example: ames[ames &gt; 250000] result:
 <section id="regression-example" class="slide level2">
 <h2>Regression Example</h2>
 <p>The target value is typically the last column “SalePrice” and the predictors are the other variables such as “OverallQual” and “Gr Liv Area”</p>
-<div id="8eb647c8" class="cell" data-execution_count="5">
+<div id="7f4c3556" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="co"># X = keep all rows, all columns except the last one note the :</span></span>
@@ -1342,7 +1342,7 @@ The shape of ames_target is: (1121,)</code></pre>
 <li>NumPy default is no intercept (R’s default lm has intercept)</li>
 <li>the typical regression interpretations no longer apply with no intercept (this is here to show you the defaults)</li>
 </ul>
-<div id="1205ea53" class="cell" data-execution_count="6">
+<div id="e4052750" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>X <span class="op">=</span> ames_data</span>
@@ -1366,6 +1366,35 @@ Least squares no intercept:
 </div>
 </div>
 </section>
+<section id="least-squares-solution" class="slide level2 smaller">
+<h2>Least squares solution</h2>
+<ul>
+<li>actually returns a tuple, the coefficients <span class="math inline">\(\widehat\beta\)</span> are [0]</li>
+<li>The sum of squared residuals (SSR) is [1]</li>
+<li>rank of matrix X is [2] ours is 19 which means no collinearity in our regressors</li>
+<li>Singular values [3] values near zero would indicate singularity or ill-conditioning relating to stability of our estimates</li>
+</ul>
+<div id="83e19ef9" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>est_object <span class="op">=</span> np.linalg.lstsq(X, y)</span>
+<span id="cb14-2"><a></a><span class="bu">print</span>(<span class="bu">type</span>(est_object))</span>
+<span id="cb14-3"><a></a>est_object</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class &#39;tuple&#39;&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>(array([  -45.328,     0.634, 24536.128,   119.514,   116.068,    31.159,    19.362,     9.697,     8.764,     6.703,
+           21.37 ,  5289.538,  1466.212,  5608.279,  -291.224, 18698.836,    22.096,    36.841,    24.913]),
+ array([1.689e+12]),
+ np.int32(19),
+ array([449227.094,  81427.957,  19990.822,  19321.37 ,  11906.281,   6225.646,   5623.717,   4843.079,   3854.53 ,
+          1952.509,    796.106,    671.436,    525.437,    359.168,     30.636,     28.761,     17.551,     12.866,
+            10.622]))</code></pre>
+</div>
+</div>
+</section>
 <section id="aside-how-to-achieve-stability" class="slide level2">
 <h2>(aside) How to achieve stability</h2>
 <p><code>np.linalg.lstsq</code> solves the system using QR decomposition or <strong>Singular Value Decomposition (SVD)</strong>:</p>
@@ -1380,16 +1409,16 @@ X = U \Sigma V^T
 </section>
 <section id="how-to-add-an-intercept" class="slide level2">
 <h2>How to add an intercept</h2>
-<div id="8c5e4123" class="cell" data-execution_count="7">
+<div id="7b148717" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>intercept <span class="op">=</span> np.ones((<span class="bu">len</span>(y), <span class="dv">1</span>))  <span class="co"># column of 1s</span></span>
-<span id="cb14-2"><a></a><span class="bu">print</span>(<span class="st">&quot;The intercept: </span><span class="ch">\n</span><span class="st">&quot;</span>, intercept[<span class="dv">0</span>:<span class="dv">5</span>])</span>
-<span id="cb14-3"><a></a></span>
-<span id="cb14-4"><a></a><span class="co"># Add as the first column</span></span>
-<span id="cb14-5"><a></a>X_with_intercept <span class="op">=</span> np.hstack((intercept, X))</span>
-<span id="cb14-6"><a></a><span class="bu">print</span>()</span>
-<span id="cb14-7"><a></a><span class="bu">print</span>(<span class="st">&quot;X_with_intercept:</span><span class="ch">\n</span><span class="st">&quot;</span>  , X_with_intercept[<span class="dv">0</span>:<span class="dv">5</span>, <span class="dv">0</span>:<span class="dv">4</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>intercept <span class="op">=</span> np.ones((<span class="bu">len</span>(y), <span class="dv">1</span>))  <span class="co"># column of 1s</span></span>
+<span id="cb17-2"><a></a><span class="bu">print</span>(<span class="st">&quot;The intercept: </span><span class="ch">\n</span><span class="st">&quot;</span>, intercept[<span class="dv">0</span>:<span class="dv">5</span>])</span>
+<span id="cb17-3"><a></a></span>
+<span id="cb17-4"><a></a><span class="co"># Add as the first column</span></span>
+<span id="cb17-5"><a></a>X_with_intercept <span class="op">=</span> np.hstack((intercept, X))</span>
+<span id="cb17-6"><a></a><span class="bu">print</span>()</span>
+<span id="cb17-7"><a></a><span class="bu">print</span>(<span class="st">&quot;X_with_intercept:</span><span class="ch">\n</span><span class="st">&quot;</span>  , X_with_intercept[<span class="dv">0</span>:<span class="dv">5</span>, <span class="dv">0</span>:<span class="dv">4</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>The intercept: 
@@ -1414,27 +1443,27 @@ X_with_intercept:
 <li><p>In R, you might combine vectors, matrices, data frames with rbind() (for rows) or cbind() (for columns).</p></li>
 <li><p>In NumPy, use <code>np.hstack</code> for stacking arrays horizontally (column-wise) and <code>np.vstack</code> for stacking arrays vertically</p></li>
 </ul>
-<div id="68621371" class="cell" data-execution_count="8">
+<div id="5de82b09" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb16-2"><a></a></span>
-<span id="cb16-3"><a></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
-<span id="cb16-4"><a></a>b <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
-<span id="cb16-5"><a></a>ones <span class="op">=</span> np.ones(<span class="dv">2</span>)</span>
-<span id="cb16-6"><a></a></span>
-<span id="cb16-7"><a></a><span class="co"># Reshape to 2D first</span></span>
-<span id="cb16-8"><a></a>a2 <span class="op">=</span> a.reshape(<span class="dv">1</span>, <span class="dv">3</span>)  </span>
-<span id="cb16-9"><a></a>b2 <span class="op">=</span> b.reshape(<span class="dv">1</span>, <span class="dv">3</span>)  </span>
-<span id="cb16-10"><a></a>ones2 <span class="op">=</span> ones.reshape(<span class="dv">2</span>,<span class="dv">1</span>)</span>
-<span id="cb16-11"><a></a></span>
-<span id="cb16-12"><a></a>v <span class="op">=</span> np.vstack((a2, b2))</span>
-<span id="cb16-13"><a></a>h <span class="op">=</span> np.hstack((ones2, v))</span>
-<span id="cb16-14"><a></a></span>
-<span id="cb16-15"><a></a><span class="bu">print</span>(<span class="ss">f&#39;shape: </span><span class="sc">{</span>v<span class="sc">.</span>shape<span class="sc">}</span><span class="ss"> and result:&#39;</span>)</span>
-<span id="cb16-16"><a></a><span class="bu">print</span>(v)</span>
-<span id="cb16-17"><a></a><span class="bu">print</span>(<span class="ss">f&#39;shape: </span><span class="sc">{</span>h<span class="sc">.</span>shape<span class="sc">}</span><span class="ss"> and result:&#39;</span>)</span>
-<span id="cb16-18"><a></a><span class="bu">print</span>(h)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-2"><a></a></span>
+<span id="cb19-3"><a></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb19-4"><a></a>b <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb19-5"><a></a>ones <span class="op">=</span> np.ones(<span class="dv">2</span>)</span>
+<span id="cb19-6"><a></a></span>
+<span id="cb19-7"><a></a><span class="co"># Reshape to 2D first</span></span>
+<span id="cb19-8"><a></a>a2 <span class="op">=</span> a.reshape(<span class="dv">1</span>, <span class="dv">3</span>)  </span>
+<span id="cb19-9"><a></a>b2 <span class="op">=</span> b.reshape(<span class="dv">1</span>, <span class="dv">3</span>)  </span>
+<span id="cb19-10"><a></a>ones2 <span class="op">=</span> ones.reshape(<span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb19-11"><a></a></span>
+<span id="cb19-12"><a></a>v <span class="op">=</span> np.vstack((a2, b2))</span>
+<span id="cb19-13"><a></a>h <span class="op">=</span> np.hstack((ones2, v))</span>
+<span id="cb19-14"><a></a></span>
+<span id="cb19-15"><a></a><span class="bu">print</span>(<span class="ss">f&#39;shape: </span><span class="sc">{</span>v<span class="sc">.</span>shape<span class="sc">}</span><span class="ss"> and result:&#39;</span>)</span>
+<span id="cb19-16"><a></a><span class="bu">print</span>(v)</span>
+<span id="cb19-17"><a></a><span class="bu">print</span>(<span class="ss">f&#39;shape: </span><span class="sc">{</span>h<span class="sc">.</span>shape<span class="sc">}</span><span class="ss"> and result:&#39;</span>)</span>
+<span id="cb19-18"><a></a><span class="bu">print</span>(h)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>shape: (2, 3) and result:
@@ -1451,12 +1480,12 @@ shape: (2, 4) and result:
 <ul>
 <li>NumPy result is barebones</li>
 </ul>
-<div id="4dab3400" class="cell" data-execution_count="9">
+<div id="306dbc76" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="co"># Least squares solution (stable) </span></span>
-<span id="cb18-2"><a></a>beta_lstsq_with_intercept <span class="op">=</span> np.linalg.lstsq(X_with_intercept, y)[<span class="dv">0</span>]</span>
-<span id="cb18-3"><a></a><span class="bu">print</span>(<span class="st">&quot;Least squares estimates:</span><span class="ch">\n</span><span class="st">&quot;</span>, beta_lstsq_with_intercept)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="co"># Least squares solution (stable) </span></span>
+<span id="cb21-2"><a></a>beta_lstsq_with_intercept <span class="op">=</span> np.linalg.lstsq(X_with_intercept, y)[<span class="dv">0</span>]</span>
+<span id="cb21-3"><a></a><span class="bu">print</span>(<span class="st">&quot;Least squares estimates:</span><span class="ch">\n</span><span class="st">&quot;</span>, beta_lstsq_with_intercept)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Least squares estimates:
@@ -1471,16 +1500,16 @@ shape: (2, 4) and result:
 <ul>
 <li>But Python results are extremely customizable</li>
 </ul>
-<div id="97f685f9" class="cell" data-execution_count="10">
+<div id="8ee82c35" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>var_names <span class="op">=</span> [<span class="st">&#39;intercept&#39;</span>, <span class="st">&#39;LotFrontage&#39;</span>, <span class="st">&#39;LotArea&#39;</span>, <span class="st">&#39;OverallQual&#39;</span>, <span class="st">&#39;YearBuilt&#39;</span>, <span class="st">&#39;YearRemodAdd&#39;</span>, <span class="st">&#39;MasVnrArea&#39;</span>, <span class="st">&#39;BsmtFinSF1&#39;</span>, <span class="st">&#39;TotalBsmtSF&#39;</span>, <span class="st">&#39;1stFlrSF&#39;</span>, <span class="st">&#39;2ndFlrSF&#39;</span>, <span class="st">&#39;GrLivArea&#39;</span>, <span class="st">&#39;FullBath&#39;</span>, <span class="st">&#39;TotRmsAbvGrd&#39;</span>, <span class="st">&#39;Fireplaces&#39;</span>, <span class="st">&#39;GarageYrBlt&#39;</span>, <span class="st">&#39;GarageCars&#39;</span>, <span class="st">&#39;GarageArea&#39;</span>, <span class="st">&#39;WoodDeckSF &#39;</span>, <span class="st">&#39;OpenPorchSF&#39;</span>, <span class="st">&#39;SalePrice&#39;</span>]</span>
-<span id="cb20-2"><a></a></span>
-<span id="cb20-3"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Variable&#39;</span><span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Estimate&#39;</span><span class="sc">:&gt;12}</span><span class="ss">&quot;</span>)</span>
-<span id="cb20-4"><a></a><span class="bu">print</span>(<span class="st">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">28</span>)</span>
-<span id="cb20-5"><a></a></span>
-<span id="cb20-6"><a></a><span class="cf">for</span> name, value <span class="kw">in</span> <span class="bu">zip</span>(var_names, beta_lstsq_with_intercept):</span>
-<span id="cb20-7"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span>value<span class="sc">:12.3f}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>var_names <span class="op">=</span> [<span class="st">&#39;intercept&#39;</span>, <span class="st">&#39;LotFrontage&#39;</span>, <span class="st">&#39;LotArea&#39;</span>, <span class="st">&#39;OverallQual&#39;</span>, <span class="st">&#39;YearBuilt&#39;</span>, <span class="st">&#39;YearRemodAdd&#39;</span>, <span class="st">&#39;MasVnrArea&#39;</span>, <span class="st">&#39;BsmtFinSF1&#39;</span>, <span class="st">&#39;TotalBsmtSF&#39;</span>, <span class="st">&#39;1stFlrSF&#39;</span>, <span class="st">&#39;2ndFlrSF&#39;</span>, <span class="st">&#39;GrLivArea&#39;</span>, <span class="st">&#39;FullBath&#39;</span>, <span class="st">&#39;TotRmsAbvGrd&#39;</span>, <span class="st">&#39;Fireplaces&#39;</span>, <span class="st">&#39;GarageYrBlt&#39;</span>, <span class="st">&#39;GarageCars&#39;</span>, <span class="st">&#39;GarageArea&#39;</span>, <span class="st">&#39;WoodDeckSF &#39;</span>, <span class="st">&#39;OpenPorchSF&#39;</span>, <span class="st">&#39;SalePrice&#39;</span>]</span>
+<span id="cb23-2"><a></a></span>
+<span id="cb23-3"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Variable&#39;</span><span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Estimate&#39;</span><span class="sc">:&gt;12}</span><span class="ss">&quot;</span>)</span>
+<span id="cb23-4"><a></a><span class="bu">print</span>(<span class="st">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">28</span>)</span>
+<span id="cb23-5"><a></a></span>
+<span id="cb23-6"><a></a><span class="cf">for</span> name, value <span class="kw">in</span> <span class="bu">zip</span>(var_names, beta_lstsq_with_intercept):</span>
+<span id="cb23-7"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span>value<span class="sc">:12.3f}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Variable            Estimate
@@ -1553,15 +1582,15 @@ OpenPorchSF           10.517</code></pre>
 <p><span class="math display">\[
 \text{Residuals} = y - \widehat{y} = y - X \beta
 \]</span></p>
-<div id="e9ee197f" class="cell" data-execution_count="11">
+<div id="1f5964cc" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="co"># Compute the predicted values y_hat</span></span>
-<span id="cb22-2"><a></a>y_hat <span class="op">=</span> np.dot(X_with_intercept, beta_lstsq_with_intercept)</span>
-<span id="cb22-3"><a></a></span>
-<span id="cb22-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;y_hat is </span><span class="sc">{</span><span class="bu">type</span>(y_hat)<span class="sc">}</span><span class="ss"> with shape: </span><span class="sc">{</span>y_hat<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
-<span id="cb22-5"><a></a><span class="bu">print</span>(<span class="ss">f&#39;a look at the first 5 y_hats:&#39;</span>)</span>
-<span id="cb22-6"><a></a><span class="bu">print</span>(y_hat[<span class="dv">0</span>:<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="co"># Compute the predicted values y_hat</span></span>
+<span id="cb25-2"><a></a>y_hat <span class="op">=</span> np.dot(X_with_intercept, beta_lstsq_with_intercept)</span>
+<span id="cb25-3"><a></a></span>
+<span id="cb25-4"><a></a><span class="bu">print</span>(<span class="ss">f&#39;y_hat is </span><span class="sc">{</span><span class="bu">type</span>(y_hat)<span class="sc">}</span><span class="ss"> with shape: </span><span class="sc">{</span>y_hat<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb25-5"><a></a><span class="bu">print</span>(<span class="ss">f&#39;a look at the first 5 y_hats:&#39;</span>)</span>
+<span id="cb25-6"><a></a><span class="bu">print</span>(y_hat[<span class="dv">0</span>:<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>y_hat is &lt;class &#39;numpy.ndarray&#39;&gt; with shape: (1121,)
@@ -1572,16 +1601,16 @@ a look at the first 5 y_hats:
 </section>
 <section id="compute-the-residuals" class="slide level2">
 <h2>Compute the residuals</h2>
-<div id="134e786b" class="cell" data-execution_count="12">
+<div id="80d55537" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="co"># Compute the residuals</span></span>
-<span id="cb24-2"><a></a></span>
-<span id="cb24-3"><a></a>residuals <span class="op">=</span> y <span class="op">-</span> y_hat</span>
-<span id="cb24-4"><a></a></span>
-<span id="cb24-5"><a></a><span class="bu">print</span>(<span class="ss">f&#39;residuals is </span><span class="sc">{</span><span class="bu">type</span>(residuals)<span class="sc">}</span><span class="ss"> with shape: </span><span class="sc">{</span>residuals<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
-<span id="cb24-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;a look at the first 5&#39;</span>)</span>
-<span id="cb24-7"><a></a><span class="bu">print</span>(residuals[<span class="dv">0</span>:<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="co"># Compute the residuals</span></span>
+<span id="cb27-2"><a></a></span>
+<span id="cb27-3"><a></a>residuals <span class="op">=</span> y <span class="op">-</span> y_hat</span>
+<span id="cb27-4"><a></a></span>
+<span id="cb27-5"><a></a><span class="bu">print</span>(<span class="ss">f&#39;residuals is </span><span class="sc">{</span><span class="bu">type</span>(residuals)<span class="sc">}</span><span class="ss"> with shape: </span><span class="sc">{</span>residuals<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb27-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;a look at the first 5&#39;</span>)</span>
+<span id="cb27-7"><a></a><span class="bu">print</span>(residuals[<span class="dv">0</span>:<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>residuals is &lt;class &#39;numpy.ndarray&#39;&gt; with shape: (1121,)
@@ -1595,15 +1624,15 @@ a look at the first 5
 <ul>
 <li>MSE - the mean squared error</li>
 </ul>
-<div id="9537d2dd" class="cell" data-execution_count="13">
+<div id="e2a19ad4" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="co"># Compute the variance of the error (mean squared error)</span></span>
-<span id="cb26-2"><a></a>n <span class="op">=</span> y.shape[<span class="dv">0</span>]</span>
-<span id="cb26-3"><a></a>p <span class="op">=</span> X_with_intercept.shape[<span class="dv">1</span>]  <span class="co"># number of parameters (include intercept)</span></span>
-<span id="cb26-4"><a></a>MSE <span class="op">=</span> ((residuals<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()) <span class="op">/</span> (n <span class="op">-</span> p)  <span class="co"># Mean squared error (variance of error)</span></span>
-<span id="cb26-5"><a></a></span>
-<span id="cb26-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;n is </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">, p is </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">, MSE is </span><span class="sc">{</span><span class="bu">round</span>(MSE,<span class="dv">3</span>)<span class="sc">}</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="co"># Compute the variance of the error (mean squared error)</span></span>
+<span id="cb29-2"><a></a>n <span class="op">=</span> y.shape[<span class="dv">0</span>]</span>
+<span id="cb29-3"><a></a>p <span class="op">=</span> X_with_intercept.shape[<span class="dv">1</span>]  <span class="co"># number of parameters (include intercept)</span></span>
+<span id="cb29-4"><a></a>MSE <span class="op">=</span> ((residuals<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()) <span class="op">/</span> (n <span class="op">-</span> p)  <span class="co"># Mean squared error (variance of error)</span></span>
+<span id="cb29-5"><a></a></span>
+<span id="cb29-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;n is </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">, p is </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">, MSE is </span><span class="sc">{</span><span class="bu">round</span>(MSE,<span class="dv">3</span>)<span class="sc">}</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>n is 1121, p is 20, MSE is 1480623267.516</code></pre>
@@ -1612,15 +1641,15 @@ a look at the first 5
 </section>
 <section id="and-the-ses-for-your-coefficients" class="slide level2">
 <h2>and the SEs for your coefficients</h2>
-<div id="ed339b60" class="cell" data-execution_count="14">
+<div id="2a9781b2" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a><span class="co"># Compute the standard error for each coefficient including intercept</span></span>
-<span id="cb28-2"><a></a>XtX_inv <span class="op">=</span> np.linalg.inv(np.dot(X_with_intercept.T, X_with_intercept))  </span>
-<span id="cb28-3"><a></a></span>
-<span id="cb28-4"><a></a><span class="co"># (X^T X)^-1</span></span>
-<span id="cb28-5"><a></a>standard_errors <span class="op">=</span> np.sqrt(np.diagonal(XtX_inv) <span class="op">*</span> MSE)</span>
-<span id="cb28-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The SEs are</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>standard_errors<span class="sc">}</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="co"># Compute the standard error for each coefficient including intercept</span></span>
+<span id="cb31-2"><a></a>XtX_inv <span class="op">=</span> np.linalg.inv(np.dot(X_with_intercept.T, X_with_intercept))  </span>
+<span id="cb31-3"><a></a></span>
+<span id="cb31-4"><a></a><span class="co"># (X^T X)^-1</span></span>
+<span id="cb31-5"><a></a>standard_errors <span class="op">=</span> np.sqrt(np.diagonal(XtX_inv) <span class="op">*</span> MSE)</span>
+<span id="cb31-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The SEs are</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>standard_errors<span class="sc">}</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>The SEs are
@@ -1635,18 +1664,18 @@ a look at the first 5
 <li>Once we have the SEs, we can do many things</li>
 <li>Here, confidence intervals instead of p-values</li>
 </ul>
-<div id="a401c822" class="cell" data-execution_count="15">
+<div id="95dfcdd7" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="co"># Compute confidence intervals (95% CI) for each coefficient</span></span>
-<span id="cb30-2"><a></a>z_score <span class="op">=</span> <span class="fl">1.96</span>  <span class="co"># For 95% confidence</span></span>
-<span id="cb30-3"><a></a>lower_bound <span class="op">=</span> beta_lstsq_with_intercept <span class="op">-</span> z_score <span class="op">*</span> standard_errors</span>
-<span id="cb30-4"><a></a>upper_bound <span class="op">=</span> beta_lstsq_with_intercept <span class="op">+</span> z_score <span class="op">*</span> standard_errors</span>
-<span id="cb30-5"><a></a></span>
-<span id="cb30-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;lower_bound is </span><span class="sc">{</span>lower_bound<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
-<span id="cb30-7"><a></a><span class="bu">print</span>(lower_bound)</span>
-<span id="cb30-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;upper_bound is </span><span class="sc">{</span>upper_bound<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
-<span id="cb30-9"><a></a><span class="bu">print</span>(upper_bound)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="co"># Compute confidence intervals (95% CI) for each coefficient</span></span>
+<span id="cb33-2"><a></a>z_score <span class="op">=</span> <span class="fl">1.96</span>  <span class="co"># For 95% confidence</span></span>
+<span id="cb33-3"><a></a>lower_bound <span class="op">=</span> beta_lstsq_with_intercept <span class="op">-</span> z_score <span class="op">*</span> standard_errors</span>
+<span id="cb33-4"><a></a>upper_bound <span class="op">=</span> beta_lstsq_with_intercept <span class="op">+</span> z_score <span class="op">*</span> standard_errors</span>
+<span id="cb33-5"><a></a></span>
+<span id="cb33-6"><a></a><span class="bu">print</span>(<span class="ss">f&#39;lower_bound is </span><span class="sc">{</span>lower_bound<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb33-7"><a></a><span class="bu">print</span>(lower_bound)</span>
+<span id="cb33-8"><a></a><span class="bu">print</span>(<span class="ss">f&#39;upper_bound is </span><span class="sc">{</span>upper_bound<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb33-9"><a></a><span class="bu">print</span>(upper_bound)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>lower_bound is (20,)
@@ -1662,17 +1691,17 @@ upper_bound is (20,)
 </section>
 <section id="but-format-it" class="slide level2">
 <h2>But format it</h2>
-<div id="e106e0dd" class="cell" data-execution_count="16">
+<div id="3c759f9e" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="co"># Format the results </span></span>
-<span id="cb32-2"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Variable&#39;</span><span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Estimate&#39;</span><span class="sc">:&gt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Standard Error&#39;</span><span class="sc">:&gt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Lower CI&#39;</span><span class="sc">:&gt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Upper CI&#39;</span><span class="sc">:&gt;12}</span><span class="ss">&quot;</span>)</span>
-<span id="cb32-3"><a></a><span class="bu">print</span>(<span class="st">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">70</span>)</span>
-<span id="cb32-4"><a></a></span>
-<span id="cb32-5"><a></a><span class="cf">for</span> name, beta, se, lb, ub <span class="kw">in</span> <span class="bu">zip</span>(var_names, beta_lstsq_with_intercept, standard_errors, lower_bound, upper_bound):</span>
-<span id="cb32-6"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span>beta<span class="sc">:12.3f}</span><span class="ss"> </span><span class="sc">{</span>se<span class="sc">:15.3f}</span><span class="ss"> </span><span class="sc">{</span>lb<span class="sc">:12.3f}</span><span class="ss"> </span><span class="sc">{</span>ub<span class="sc">:12.3f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb32-7"><a></a> </span>
-<span id="cb32-8"><a></a><span class="bu">print</span>(<span class="st">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">70</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a><span class="co"># Format the results </span></span>
+<span id="cb35-2"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Variable&#39;</span><span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Estimate&#39;</span><span class="sc">:&gt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Standard Error&#39;</span><span class="sc">:&gt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Lower CI&#39;</span><span class="sc">:&gt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">&#39;Upper CI&#39;</span><span class="sc">:&gt;12}</span><span class="ss">&quot;</span>)</span>
+<span id="cb35-3"><a></a><span class="bu">print</span>(<span class="st">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">70</span>)</span>
+<span id="cb35-4"><a></a></span>
+<span id="cb35-5"><a></a><span class="cf">for</span> name, beta, se, lb, ub <span class="kw">in</span> <span class="bu">zip</span>(var_names, beta_lstsq_with_intercept, standard_errors, lower_bound, upper_bound):</span>
+<span id="cb35-6"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>name<span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span>beta<span class="sc">:12.3f}</span><span class="ss"> </span><span class="sc">{</span>se<span class="sc">:15.3f}</span><span class="ss"> </span><span class="sc">{</span>lb<span class="sc">:12.3f}</span><span class="ss"> </span><span class="sc">{</span>ub<span class="sc">:12.3f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb35-7"><a></a> </span>
+<span id="cb35-8"><a></a><span class="bu">print</span>(<span class="st">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">70</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Variable            Estimate  Standard Error     Lower CI     Upper CI
@@ -1710,14 +1739,14 @@ R^2 = 1 - \frac{\text{SSR}}{\text{SST}}
 <p>Where:<br>
 <strong>SSR</strong> = Sum of Squared Residuals = <span class="math inline">\(\sum (y_i - \widehat{y}_i)^2\)</span><br>
 <strong>SST</strong> = Total Sum of Squares = <span class="math inline">\(\sum (y_i - \bar{y})^2\)</span></p>
-<div id="85bd27b7" class="cell" data-execution_count="17">
+<div id="163b0126" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a>y_mean <span class="op">=</span> y.mean()</span>
-<span id="cb34-2"><a></a>SST <span class="op">=</span> ((y <span class="op">-</span> y_mean)<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()</span>
-<span id="cb34-3"><a></a>SSR <span class="op">=</span> ((y <span class="op">-</span> y_hat)<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()</span>
-<span id="cb34-4"><a></a>r_squared <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> (SSR <span class="op">/</span> SST)</span>
-<span id="cb34-5"><a></a><span class="bu">print</span>(<span class="ss">f&#39;R-squared: </span><span class="sc">{</span>r_squared<span class="sc">:.4f}</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a>y_mean <span class="op">=</span> y.mean()</span>
+<span id="cb37-2"><a></a>SST <span class="op">=</span> ((y <span class="op">-</span> y_mean)<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()</span>
+<span id="cb37-3"><a></a>SSR <span class="op">=</span> ((y <span class="op">-</span> y_hat)<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()</span>
+<span id="cb37-4"><a></a>r_squared <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> (SSR <span class="op">/</span> SST)</span>
+<span id="cb37-5"><a></a><span class="bu">print</span>(<span class="ss">f&#39;R-squared: </span><span class="sc">{</span>r_squared<span class="sc">:.4f}</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R-squared: 0.7887</code></pre>
@@ -1737,11 +1766,11 @@ p = number of predictors (including intercept)</p>
 </section>
 <section id="f-statistic-coded" class="slide level2">
 <h2>F-statistic coded</h2>
-<div id="d64c2c02" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a>MSR <span class="op">=</span> (SST <span class="op">-</span> SSR) <span class="op">/</span> (p <span class="op">-</span> <span class="dv">1</span>)  <span class="co"># Regression mean square</span></span>
-<span id="cb36-2"><a></a>MSE <span class="op">=</span> SSR <span class="op">/</span> (n <span class="op">-</span> p)          <span class="co"># Residual mean square</span></span>
-<span id="cb36-3"><a></a>f_statistic <span class="op">=</span> MSR <span class="op">/</span> MSE</span>
-<span id="cb36-4"><a></a><span class="bu">print</span>(<span class="ss">f&quot;F-statistic: </span><span class="sc">{</span>f_statistic<span class="sc">:.3f}</span><span class="ss"> on </span><span class="sc">{</span>p<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss"> and </span><span class="sc">{</span>n<span class="op">-</span>p<span class="sc">}</span><span class="ss"> DF&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="54d3b7b8" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>MSR <span class="op">=</span> (SST <span class="op">-</span> SSR) <span class="op">/</span> (p <span class="op">-</span> <span class="dv">1</span>)  <span class="co"># Regression mean square</span></span>
+<span id="cb39-2"><a></a>MSE <span class="op">=</span> SSR <span class="op">/</span> (n <span class="op">-</span> p)          <span class="co"># Residual mean square</span></span>
+<span id="cb39-3"><a></a>f_statistic <span class="op">=</span> MSR <span class="op">/</span> MSE</span>
+<span id="cb39-4"><a></a><span class="bu">print</span>(<span class="ss">f&quot;F-statistic: </span><span class="sc">{</span>f_statistic<span class="sc">:.3f}</span><span class="ss"> on </span><span class="sc">{</span>p<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss"> and </span><span class="sc">{</span>n<span class="op">-</span>p<span class="sc">}</span><span class="ss"> DF&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>F-statistic: 216.316 on 19 and 1101 DF</code></pre>
 </div>
@@ -1752,23 +1781,23 @@ p = number of predictors (including intercept)</p>
 <ul>
 <li>it has to be simulated in NumPy (not ideal)</li>
 </ul>
-<div id="622d3b7d" class="cell" data-execution_count="19">
+<div id="d385f925" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a><span class="co"># Degrees of freedom</span></span>
-<span id="cb38-2"><a></a></span>
-<span id="cb38-3"><a></a>d1 <span class="op">=</span> p <span class="op">-</span> <span class="dv">1</span>           <span class="co"># Numerator df</span></span>
-<span id="cb38-4"><a></a>d2 <span class="op">=</span> n <span class="op">-</span> p           <span class="co"># Denominator df</span></span>
-<span id="cb38-5"><a></a>observed_F <span class="op">=</span> f_statistic  <span class="co"># Computed earlier</span></span>
-<span id="cb38-6"><a></a></span>
-<span id="cb38-7"><a></a><span class="co"># F-distribution using NumPy</span></span>
-<span id="cb38-8"><a></a><span class="co"># https://numpy.org/doc/stable/reference/random/generated/numpy.random.f.html</span></span>
-<span id="cb38-9"><a></a>f_samples <span class="op">=</span> np.random.f(d1, d2, size <span class="op">=</span> <span class="dv">1000000</span>)</span>
-<span id="cb38-10"><a></a></span>
-<span id="cb38-11"><a></a><span class="co"># p-value: Proportion of simulated values &gt; observed F</span></span>
-<span id="cb38-12"><a></a>p_value_numpy_F <span class="op">=</span> np.mean(f_samples <span class="op">&gt;</span> observed_F)</span>
-<span id="cb38-13"><a></a></span>
-<span id="cb38-14"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Approximate p-value (NumPy): </span><span class="sc">{</span>p_value_numpy_F<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a><span class="co"># Degrees of freedom</span></span>
+<span id="cb41-2"><a></a></span>
+<span id="cb41-3"><a></a>d1 <span class="op">=</span> p <span class="op">-</span> <span class="dv">1</span>           <span class="co"># Numerator df</span></span>
+<span id="cb41-4"><a></a>d2 <span class="op">=</span> n <span class="op">-</span> p           <span class="co"># Denominator df</span></span>
+<span id="cb41-5"><a></a>observed_F <span class="op">=</span> f_statistic  <span class="co"># Computed earlier</span></span>
+<span id="cb41-6"><a></a></span>
+<span id="cb41-7"><a></a><span class="co"># F-distribution using NumPy</span></span>
+<span id="cb41-8"><a></a><span class="co"># https://numpy.org/doc/stable/reference/random/generated/numpy.random.f.html</span></span>
+<span id="cb41-9"><a></a>f_samples <span class="op">=</span> np.random.f(d1, d2, size <span class="op">=</span> <span class="dv">1000000</span>)</span>
+<span id="cb41-10"><a></a></span>
+<span id="cb41-11"><a></a><span class="co"># p-value: Proportion of simulated values &gt; observed F</span></span>
+<span id="cb41-12"><a></a>p_value_numpy_F <span class="op">=</span> np.mean(f_samples <span class="op">&gt;</span> observed_F)</span>
+<span id="cb41-13"><a></a></span>
+<span id="cb41-14"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Approximate p-value (NumPy): </span><span class="sc">{</span>p_value_numpy_F<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Approximate p-value (NumPy): 0.0</code></pre>
@@ -1787,17 +1816,17 @@ p = number of predictors (including intercept)</p>
 </section>
 <section id="scipy-example" class="slide level2">
 <h2>scipy example</h2>
-<div id="8e4fd006" class="cell" data-execution_count="20">
+<div id="2a5b0307" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a><span class="im">from</span> scipy.stats <span class="im">import</span> f <span class="im">as</span> scipy_f</span>
-<span id="cb40-2"><a></a>   </span>
-<span id="cb40-3"><a></a>p_value_scipy <span class="op">=</span> scipy_f.sf(observed_F, dfn<span class="op">=</span>d1, dfd<span class="op">=</span>d2)</span>
-<span id="cb40-4"><a></a>    </span>
-<span id="cb40-5"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;F-statistic:&#39;</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>observed_F<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb40-6"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;df1 (numerator):&#39;</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>d1<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb40-7"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;df2 (denominator):&#39;</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>d2<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb40-8"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;model p-value (SciPy exact):&#39;</span><span class="sc">:&lt;20}</span><span class="ss"> </span><span class="sc">{</span>p_value_scipy<span class="sc">:.5f}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a><span class="im">from</span> scipy.stats <span class="im">import</span> f <span class="im">as</span> scipy_f</span>
+<span id="cb43-2"><a></a>   </span>
+<span id="cb43-3"><a></a>p_value_scipy <span class="op">=</span> scipy_f.sf(observed_F, dfn<span class="op">=</span>d1, dfd<span class="op">=</span>d2)</span>
+<span id="cb43-4"><a></a>    </span>
+<span id="cb43-5"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;F-statistic:&#39;</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>observed_F<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-6"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;df1 (numerator):&#39;</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>d1<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-7"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;df2 (denominator):&#39;</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>d2<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb43-8"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;model p-value (SciPy exact):&#39;</span><span class="sc">:&lt;20}</span><span class="ss"> </span><span class="sc">{</span>p_value_scipy<span class="sc">:.5f}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>F-statistic:                   216.3156
@@ -1828,15 +1857,15 @@ model p-value (SciPy exact): 0.00000</code></pre>
 <li><strong>pandas</strong> is typically the better choice because it can handle the “messiness”</li>
 <li>first, get the data read and set some options</li>
 </ul>
-<div id="2de33210" class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb42-2"><a></a><span class="im">from</span> pprint <span class="im">import</span> pprint</span>
-<span id="cb42-3"><a></a></span>
-<span id="cb42-4"><a></a>pd.set_option(<span class="st">&#39;display.max_columns&#39;</span>, <span class="va">None</span>)    <span class="co"># show all columns</span></span>
-<span id="cb42-5"><a></a>pd.set_option(<span class="st">&#39;display.max_rows&#39;</span>, <span class="va">None</span>)       <span class="co"># show all row</span></span>
-<span id="cb42-6"><a></a>pd.set_option(<span class="st">&#39;display.width&#39;</span>, <span class="va">None</span>)           <span class="co"># widen the line-wrap limit</span></span>
-<span id="cb42-7"><a></a></span>
-<span id="cb42-8"><a></a>ames_pd <span class="op">=</span> pd.read_csv(<span class="st">&quot;ames.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="73c39bb8" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb45-2"><a></a><span class="im">from</span> pprint <span class="im">import</span> pprint</span>
+<span id="cb45-3"><a></a></span>
+<span id="cb45-4"><a></a>pd.set_option(<span class="st">&#39;display.max_columns&#39;</span>, <span class="va">None</span>)    <span class="co"># show all columns</span></span>
+<span id="cb45-5"><a></a>pd.set_option(<span class="st">&#39;display.max_rows&#39;</span>, <span class="va">None</span>)       <span class="co"># show all row</span></span>
+<span id="cb45-6"><a></a>pd.set_option(<span class="st">&#39;display.width&#39;</span>, <span class="va">None</span>)           <span class="co"># widen the line-wrap limit</span></span>
+<span id="cb45-7"><a></a></span>
+<span id="cb45-8"><a></a>ames_pd <span class="op">=</span> pd.read_csv(<span class="st">&quot;ames.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="get-info-on-the-pandas-object" class="slide level2">
@@ -1844,10 +1873,10 @@ model p-value (SciPy exact): 0.00000</code></pre>
 <ul>
 <li>We can pick this apart as there is a lot of info here</li>
 </ul>
-<div id="04993253" class="cell" data-execution_count="22">
+<div id="fdf492e1" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a>ames_pd.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a></a>ames_pd.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -1946,13 +1975,13 @@ memory usage: 924.0+ KB</code></pre>
 <ul>
 <li>a dataframe carries some of the <code>ndarray</code> attributes</li>
 </ul>
-<div id="73d8c178" class="cell" data-execution_count="23">
+<div id="fadf6610" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="bu">print</span>(<span class="st">&quot;type(ames_pd):&quot;</span>, <span class="bu">type</span>(ames_pd))</span>
-<span id="cb45-2"><a></a><span class="bu">print</span>(<span class="st">&quot;ames_pd.shape:&quot;</span>, ames_pd.shape)    <span class="co"># tuple of (rows, cols)</span></span>
-<span id="cb45-3"><a></a><span class="bu">print</span>(<span class="st">&quot;ames_pd.ndim:&quot;</span>, ames_pd.ndim)    <span class="co"># number of dimensions (always 2 for DataFrame)</span></span>
-<span id="cb45-4"><a></a><span class="bu">print</span>(<span class="st">&quot;ames_pd.size:&quot;</span>, ames_pd.size)     <span class="co"># total number of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a></a><span class="bu">print</span>(<span class="st">&quot;type(ames_pd):&quot;</span>, <span class="bu">type</span>(ames_pd))</span>
+<span id="cb48-2"><a></a><span class="bu">print</span>(<span class="st">&quot;ames_pd.shape:&quot;</span>, ames_pd.shape)    <span class="co"># tuple of (rows, cols)</span></span>
+<span id="cb48-3"><a></a><span class="bu">print</span>(<span class="st">&quot;ames_pd.ndim:&quot;</span>, ames_pd.ndim)    <span class="co"># number of dimensions (always 2 for DataFrame)</span></span>
+<span id="cb48-4"><a></a><span class="bu">print</span>(<span class="st">&quot;ames_pd.size:&quot;</span>, ames_pd.size)     <span class="co"># total number of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>type(ames_pd): &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -1968,13 +1997,13 @@ ames_pd.size: 118260</code></pre>
 <li>lessons learned from examining objects</li>
 <li><code>.dtypes</code> gives us the data type object is non-numeric</li>
 </ul>
-<div id="fd89670d" class="cell" data-execution_count="24">
+<div id="4d4c7778" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a><span class="co"># show the column names and type</span></span>
-<span id="cb47-2"><a></a></span>
-<span id="cb47-3"><a></a><span class="bu">print</span>(<span class="st">&quot;Data Types of each&quot;</span>)</span>
-<span id="cb47-4"><a></a>pprint(ames_pd.dtypes, width<span class="op">=</span><span class="dv">80</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a></a><span class="co"># show the column names and type</span></span>
+<span id="cb50-2"><a></a></span>
+<span id="cb50-3"><a></a><span class="bu">print</span>(<span class="st">&quot;Data Types of each&quot;</span>)</span>
+<span id="cb50-4"><a></a>pprint(ames_pd.dtypes, width<span class="op">=</span><span class="dv">80</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Data Types of each
@@ -2070,12 +2099,13 @@ dtype: object</code></pre>
 <li>to_dict() is a pandas dataframe method</li>
 <li>examine a single row</li>
 </ul>
-<div id="b9a82ccc" class="cell" data-execution_count="25">
+<div id="bd83775a" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a></a><span class="co"># as a dict of column with each value</span></span>
-<span id="cb49-2"><a></a>row_dict <span class="op">=</span> ames_pd.iloc[<span class="dv">0</span>].to_dict()</span>
-<span id="cb49-3"><a></a>pprint(row_dict, width<span class="op">=</span><span class="dv">80</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a></a><span class="co"># as a dict of column with each value</span></span>
+<span id="cb52-2"><a></a><span class="co"># notice we are &quot;chaining&quot; .iloc[0].to_dict() more next week</span></span>
+<span id="cb52-3"><a></a>row_dict <span class="op">=</span> ames_pd.iloc[<span class="dv">0</span>].to_dict()</span>
+<span id="cb52-4"><a></a>pprint(row_dict, width<span class="op">=</span><span class="dv">80</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>{&#39;1stFlrSF&#39;: 856,
@@ -2167,11 +2197,11 @@ dtype: object</code></pre>
 <ul>
 <li>a percentage may be an easier read than raw values</li>
 </ul>
-<div id="e4569201" class="cell" data-execution_count="26">
+<div id="05e692c3" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a>column_pct <span class="op">=</span> (ames_pd.notna().mean() <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>).to_dict()</span>
-<span id="cb51-2"><a></a>pprint(column_pct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a></a>column_pct <span class="op">=</span> (ames_pd.notna().mean() <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>).to_dict()</span>
+<span id="cb54-2"><a></a>pprint(column_pct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>{&#39;1stFlrSF&#39;: 100.0,
@@ -2260,10 +2290,10 @@ dtype: object</code></pre>
 </section>
 <section id="produce-a-summary-of-the-numeric-data" class="slide level2 smaller">
 <h2>Produce a summary of the numeric data</h2>
-<div id="910fe46c" class="cell" data-execution_count="27">
+<div id="3f98b0b5" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a></a><span class="bu">print</span>(ames_pd.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a></a><span class="bu">print</span>(ames_pd.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                Id   MSSubClass  LotFrontage        LotArea  OverallQual  \
@@ -2350,10 +2380,10 @@ max      12.000000  2010.000000  755000.000000  </code></pre>
 </section>
 <section id="or-given-what-you-know-about-numpy" class="slide level2 smaller">
 <h2>Or given what you know about NumPy</h2>
-<div id="8e6a7404" class="cell" data-execution_count="28">
+<div id="e1760c91" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a><span class="bu">print</span>(ames_pd.describe().T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a></a><span class="bu">print</span>(ames_pd.describe().T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                count           mean           std      min        25%  \
@@ -2440,15 +2470,15 @@ SalePrice      163000.0  214000.00  755000.0  </code></pre>
 </section>
 <section id="or-just-a-single-statistic" class="slide level2">
 <h2>Or just a single statistic</h2>
-<div id="36b8376a" class="cell" data-execution_count="29">
+<div id="1a6decbe" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>column_means <span class="op">=</span> ames_pd.mean(</span>
-<span id="cb57-2"><a></a>    axis<span class="op">=</span><span class="dv">0</span>,           <span class="co"># along columns recall NumPy</span></span>
-<span id="cb57-3"><a></a>    numeric_only<span class="op">=</span><span class="va">True</span>, <span class="co"># makes sense</span></span>
-<span id="cb57-4"><a></a>    skipna<span class="op">=</span><span class="va">True</span>       <span class="co"># this is default</span></span>
-<span id="cb57-5"><a></a>)</span>
-<span id="cb57-6"><a></a><span class="bu">print</span>(column_means.to_string())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a></a>column_means <span class="op">=</span> ames_pd.mean(</span>
+<span id="cb60-2"><a></a>    axis<span class="op">=</span><span class="dv">0</span>,           <span class="co"># along columns recall NumPy</span></span>
+<span id="cb60-3"><a></a>    numeric_only<span class="op">=</span><span class="va">True</span>, <span class="co"># makes sense</span></span>
+<span id="cb60-4"><a></a>    skipna<span class="op">=</span><span class="va">True</span>       <span class="co"># this is default</span></span>
+<span id="cb60-5"><a></a>)</span>
+<span id="cb60-6"><a></a><span class="bu">print</span>(column_means.to_string())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Id                  730.500000
@@ -2494,23 +2524,23 @@ SalePrice        180921.195890</code></pre>
 </section>
 <section id="or-customize-your-statistics" class="slide level2">
 <h2>Or customize your statistics</h2>
-<div id="10770c7f" class="cell" data-execution_count="30">
+<div id="fc49b7f2" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a>column_quantiles <span class="op">=</span> ames_pd.quantile(</span>
-<span id="cb59-2"><a></a>    q <span class="op">=</span> [<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span>, <span class="dv">1</span>],</span>
-<span id="cb59-3"><a></a>    numeric_only<span class="op">=</span><span class="va">True</span> <span class="co"># need it here</span></span>
-<span id="cb59-4"><a></a>).T</span>
-<span id="cb59-5"><a></a></span>
-<span id="cb59-6"><a></a>counts <span class="op">=</span> ames_pd.count(numeric_only<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb59-7"><a></a></span>
-<span id="cb59-8"><a></a>column_quantiles.insert(<span class="dv">5</span>, <span class="st">&#39;Valid N&#39;</span>, counts)</span>
-<span id="cb59-9"><a></a></span>
-<span id="cb59-10"><a></a></span>
-<span id="cb59-11"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Quantiles&#39;</span><span class="sc">:^65}</span><span class="ss">&quot;</span>)</span>
-<span id="cb59-12"><a></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">65</span>)</span>
-<span id="cb59-13"><a></a><span class="bu">print</span>(column_quantiles)</span>
-<span id="cb59-14"><a></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">65</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a></a>column_quantiles <span class="op">=</span> ames_pd.quantile(</span>
+<span id="cb62-2"><a></a>    q <span class="op">=</span> [<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span>, <span class="dv">1</span>],</span>
+<span id="cb62-3"><a></a>    numeric_only<span class="op">=</span><span class="va">True</span> <span class="co"># need it here</span></span>
+<span id="cb62-4"><a></a>).T</span>
+<span id="cb62-5"><a></a></span>
+<span id="cb62-6"><a></a>counts <span class="op">=</span> ames_pd.count(numeric_only<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb62-7"><a></a></span>
+<span id="cb62-8"><a></a>column_quantiles.insert(<span class="dv">5</span>, <span class="st">&#39;Valid N&#39;</span>, counts)</span>
+<span id="cb62-9"><a></a></span>
+<span id="cb62-10"><a></a></span>
+<span id="cb62-11"><a></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="st">&#39;Quantiles&#39;</span><span class="sc">:^65}</span><span class="ss">&quot;</span>)</span>
+<span id="cb62-12"><a></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">65</span>)</span>
+<span id="cb62-13"><a></a><span class="bu">print</span>(column_quantiles)</span>
+<span id="cb62-14"><a></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">65</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                            Quantiles                            
@@ -2560,10 +2590,10 @@ SalePrice      34900.0  129975.00  163000.0  214000.00  755000.0     1460
 </section>
 <section id="examine-non-numeric" class="slide level2">
 <h2>Examine non-numeric</h2>
-<div id="213d76de" class="cell" data-execution_count="31">
+<div id="df03e6d5" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a><span class="bu">print</span>(ames_pd.describe(include<span class="op">=</span>[<span class="st">&#39;object&#39;</span>]).T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a></a><span class="bu">print</span>(ames_pd.describe(include<span class="op">=</span>[<span class="st">&#39;object&#39;</span>]).T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>              count unique      top  freq
@@ -2615,10 +2645,10 @@ SaleCondition  1460      6   Normal  1198</code></pre>
 </section>
 <section id="specific-non-numeric" class="slide level2">
 <h2>Specific non-numeric</h2>
-<div id="eecb3898" class="cell" data-execution_count="32">
+<div id="2d9d37dd" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a><span class="bu">print</span>(ames_pd[<span class="st">&#39;SaleCondition&#39;</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>).to_string())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a></a><span class="bu">print</span>(ames_pd[<span class="st">&#39;SaleCondition&#39;</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>).to_string())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>SaleCondition
@@ -2636,14 +2666,14 @@ AdjLand       4</code></pre>
 <ul>
 <li>back to lists and for loops</li>
 </ul>
-<div id="7f9b4817" class="cell" data-execution_count="33">
+<div id="8369db2d" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a>cat_cols <span class="op">=</span> [<span class="st">&#39;MSZoning&#39;</span>, <span class="st">&#39;LotShape&#39;</span>, <span class="st">&#39;LandContour&#39;</span>, <span class="st">&#39;Condition1&#39;</span>,<span class="st">&#39;Condition2&#39;</span>]</span>
-<span id="cb65-2"><a></a><span class="cf">for</span> col <span class="kw">in</span> cat_cols:</span>
-<span id="cb65-3"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;--- </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss"> ---&quot;</span>)</span>
-<span id="cb65-4"><a></a>    <span class="bu">print</span>(ames_pd[col].value_counts(dropna<span class="op">=</span><span class="va">False</span>).to_string())</span>
-<span id="cb65-5"><a></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a></a>cat_cols <span class="op">=</span> [<span class="st">&#39;MSZoning&#39;</span>, <span class="st">&#39;LotShape&#39;</span>, <span class="st">&#39;LandContour&#39;</span>, <span class="st">&#39;Condition1&#39;</span>,<span class="st">&#39;Condition2&#39;</span>]</span>
+<span id="cb68-2"><a></a><span class="cf">for</span> col <span class="kw">in</span> cat_cols:</span>
+<span id="cb68-3"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;--- </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss"> ---&quot;</span>)</span>
+<span id="cb68-4"><a></a>    <span class="bu">print</span>(ames_pd[col].value_counts(dropna<span class="op">=</span><span class="va">False</span>).to_string())</span>
+<span id="cb68-5"><a></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>--- MSZoning ---
@@ -2696,17 +2726,17 @@ RRAe         1
 </section>
 <section id="cross-classify-categories" class="slide level2">
 <h2>Cross-classify categories</h2>
-<div id="9f9e3420" class="cell" data-execution_count="34">
+<div id="ef1daec6" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a></a>ct <span class="op">=</span> pd.crosstab(</span>
-<span id="cb67-2"><a></a>    index<span class="op">=</span>ames_pd[<span class="st">&#39;Neighborhood&#39;</span>],      </span>
-<span id="cb67-3"><a></a>    columns<span class="op">=</span>ames_pd[<span class="st">&#39;ExterQual&#39;</span>],       </span>
-<span id="cb67-4"><a></a>    margins<span class="op">=</span><span class="va">True</span>,                        </span>
-<span id="cb67-5"><a></a>    dropna<span class="op">=</span><span class="va">False</span>                          </span>
-<span id="cb67-6"><a></a>)</span>
-<span id="cb67-7"><a></a></span>
-<span id="cb67-8"><a></a><span class="bu">print</span>(ct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a></a>ct <span class="op">=</span> pd.crosstab(</span>
+<span id="cb70-2"><a></a>    index<span class="op">=</span>ames_pd[<span class="st">&#39;Neighborhood&#39;</span>],      </span>
+<span id="cb70-3"><a></a>    columns<span class="op">=</span>ames_pd[<span class="st">&#39;ExterQual&#39;</span>],       </span>
+<span id="cb70-4"><a></a>    margins<span class="op">=</span><span class="va">True</span>,                        </span>
+<span id="cb70-5"><a></a>    dropna<span class="op">=</span><span class="va">False</span>                          </span>
+<span id="cb70-6"><a></a>)</span>
+<span id="cb70-7"><a></a></span>
+<span id="cb70-8"><a></a><span class="bu">print</span>(ct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>ExterQual     Ex  Fa   Gd   TA   All
@@ -2742,16 +2772,16 @@ All           52  14  488  906  1460</code></pre>
 </section>
 <section id="add-a-third-numeric-value" class="slide level2">
 <h2>Add a third (numeric) value</h2>
-<div id="8564d013" class="cell" data-execution_count="35">
+<div id="a8555162" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a></a>pivot_sp <span class="op">=</span> ames_pd.pivot_table(</span>
-<span id="cb69-2"><a></a>    index<span class="op">=</span><span class="st">&#39;HouseStyle&#39;</span>,</span>
-<span id="cb69-3"><a></a>    columns<span class="op">=</span><span class="st">&#39;ExterQual&#39;</span>,</span>
-<span id="cb69-4"><a></a>    values<span class="op">=</span><span class="st">&#39;SalePrice&#39;</span>,</span>
-<span id="cb69-5"><a></a>    aggfunc<span class="op">=</span><span class="st">&#39;mean&#39;</span></span>
-<span id="cb69-6"><a></a>)</span>
-<span id="cb69-7"><a></a><span class="bu">print</span>(pivot_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a></a>pivot_sp <span class="op">=</span> ames_pd.pivot_table(</span>
+<span id="cb72-2"><a></a>    index<span class="op">=</span><span class="st">&#39;HouseStyle&#39;</span>,</span>
+<span id="cb72-3"><a></a>    columns<span class="op">=</span><span class="st">&#39;ExterQual&#39;</span>,</span>
+<span id="cb72-4"><a></a>    values<span class="op">=</span><span class="st">&#39;SalePrice&#39;</span>,</span>
+<span id="cb72-5"><a></a>    aggfunc<span class="op">=</span><span class="st">&#39;mean&#39;</span></span>
+<span id="cb72-6"><a></a>)</span>
+<span id="cb72-7"><a></a><span class="bu">print</span>(pivot_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>ExterQual              Ex             Fa             Gd             TA
