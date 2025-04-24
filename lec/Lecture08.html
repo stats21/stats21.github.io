@@ -1123,7 +1123,7 @@ margin-right: 0; }
 </section>
 <section id="read-a-little-data" class="slide level2">
 <h2>Read a little data</h2>
-<div id="845e050c" class="cell" data-execution_count="1">
+<div id="e510108d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a></a></span>
@@ -1174,7 +1174,7 @@ margin-right: 0; }
 <section id="take-a-look-at-the-data" class="slide level2">
 <h2>Take a look at the data</h2>
 <p>Here are the first 5 rows (samples), each of which consists of 20 feature values,</p>
-<div id="f6e681b9" class="cell" data-execution_count="2">
+<div id="c8647055" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="bu">print</span>(ames[<span class="dv">0</span>:<span class="dv">5</span>, :])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1199,7 +1199,7 @@ margin-right: 0; }
 <li><p>We can use axis=0 to help us generate statistics (recall ames is 1121,20)</p></li>
 <li><p>Not a ton of descriptive statistics (a limitation) - but all of the basics - <a href="https://numpy.org/doc/stable/reference/routines.statistics.html">https://numpy.org/doc/stable/reference/routines.statistics.html</a></p></li>
 </ul>
-<div id="97d23f61" class="cell" data-execution_count="3">
+<div id="d55d8b8d" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(<span class="ss">f&#39;The mean of each column is </span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>ames<span class="sc">.</span>mean(axis<span class="op">=</span><span class="dv">0</span>)<span class="sc">}</span><span class="ss">&#39;</span>)</span>
@@ -1228,7 +1228,7 @@ The standard deviation of each column is
 <ul>
 <li>In addition to generating slices, you can also filter.</li>
 </ul>
-<div id="e00ccb8b" class="cell" data-execution_count="4">
+<div id="ba68db21" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="bu">print</span>(<span class="ss">f&#39;multidimensional slice example: ames[2, :] result:</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>ames[<span class="dv">2</span>, :]<span class="sc">}</span><span class="ss">&#39;</span>)</span>
@@ -1263,11 +1263,30 @@ filter example: ames[ames &gt; 250000] result:
 </div>
 </div>
 <p>Reference: <a href="https://numpy.org/doc/stable/user/absolute_beginners.html#indexing-and-slicing">https://numpy.org/doc/stable/user/absolute_beginners.html#indexing-and-slicing</a></p>
+</section></section>
+<section>
+<section id="activity" class="title-slide slide level1 center">
+<h1>Activity</h1>
+
+</section>
+<section id="what-to-do-in-your-group-5-10-minutes" class="slide level2 smaller">
+<h2>What to do in your group (5-10 minutes)</h2>
+<p>Grab a team photo, and then</p>
+<ul>
+<li>Please check your team
+<ul>
+<li>does everyone have pandas and matplotlib working?</li>
+<li>extra - you might install scipy</li>
+<li>pretty much anything Python related that your team can agree upon</li>
+<li>the most important lesson to come away with from attending is how to interact with your classmates</li>
+<li>Maybe say hello to someone new today</li>
+</ul></li>
+</ul>
 </section>
 <section id="regression-example" class="slide level2">
 <h2>Regression Example</h2>
 <p>The target value is typically the last column “SalePrice” and the predictors are the other variables such as “OverallQual” and “Gr Liv Area”</p>
-<div id="ea8bc448" class="cell" data-execution_count="5">
+<div id="70e65a20" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="co"># X = keep all rows, all columns except the last one note the :</span></span>
@@ -1323,7 +1342,7 @@ The shape of ames_target is: (1121,)</code></pre>
 <li>NumPy default is no intercept (R’s default lm has intercept)</li>
 <li>the typical regression interpretations no longer apply with no intercept (this is here to show you the defaults)</li>
 </ul>
-<div id="85d4038c" class="cell" data-execution_count="6">
+<div id="53a230ba" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>X <span class="op">=</span> ames_data</span>
@@ -1361,7 +1380,7 @@ X = U \Sigma V^T
 </section>
 <section id="how-to-add-an-intercept" class="slide level2">
 <h2>How to add an intercept</h2>
-<div id="b1524fab" class="cell" data-execution_count="7">
+<div id="a70e398a" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>intercept <span class="op">=</span> np.ones((<span class="bu">len</span>(y), <span class="dv">1</span>))  <span class="co"># column of 1s</span></span>
@@ -1395,7 +1414,7 @@ X_with_intercept:
 <li><p>In R, you might combine vectors, matrices, data frames with rbind() (for rows) or cbind() (for columns).</p></li>
 <li><p>In NumPy, use <code>np.hstack</code> for stacking arrays horizontally (column-wise) and <code>np.vstack</code> for stacking arrays vertically</p></li>
 </ul>
-<div id="17a7186a" class="cell" data-execution_count="8">
+<div id="ecc89b15" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1432,7 +1451,7 @@ shape: (2, 4) and result:
 <ul>
 <li>NumPy result is barebones</li>
 </ul>
-<div id="f3fe197b" class="cell" data-execution_count="9">
+<div id="57258ab4" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="co"># Least squares solution (stable) </span></span>
@@ -1452,7 +1471,7 @@ shape: (2, 4) and result:
 <ul>
 <li>But Python results are extremely customizable</li>
 </ul>
-<div id="e5394f5c" class="cell" data-execution_count="10">
+<div id="745d2791" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>var_names <span class="op">=</span> [<span class="st">&#39;intercept&#39;</span>, <span class="st">&#39;LotFrontage&#39;</span>, <span class="st">&#39;LotArea&#39;</span>, <span class="st">&#39;OverallQual&#39;</span>, <span class="st">&#39;YearBuilt&#39;</span>, <span class="st">&#39;YearRemodAdd&#39;</span>, <span class="st">&#39;MasVnrArea&#39;</span>, <span class="st">&#39;BsmtFinSF1&#39;</span>, <span class="st">&#39;TotalBsmtSF&#39;</span>, <span class="st">&#39;1stFlrSF&#39;</span>, <span class="st">&#39;2ndFlrSF&#39;</span>, <span class="st">&#39;GrLivArea&#39;</span>, <span class="st">&#39;FullBath&#39;</span>, <span class="st">&#39;TotRmsAbvGrd&#39;</span>, <span class="st">&#39;Fireplaces&#39;</span>, <span class="st">&#39;GarageYrBlt&#39;</span>, <span class="st">&#39;GarageCars&#39;</span>, <span class="st">&#39;GarageArea&#39;</span>, <span class="st">&#39;WoodDeckSF &#39;</span>, <span class="st">&#39;OpenPorchSF&#39;</span>, <span class="st">&#39;SalePrice&#39;</span>]</span>
@@ -1534,7 +1553,7 @@ OpenPorchSF           10.517</code></pre>
 <p><span class="math display">\[
 \text{Residuals} = y - \widehat{y} = y - X \beta
 \]</span></p>
-<div id="c75d8402" class="cell" data-execution_count="11">
+<div id="0d2bd2ec" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="co"># Compute the predicted values y_hat</span></span>
@@ -1553,7 +1572,7 @@ a look at the first 5 y_hats:
 </section>
 <section id="compute-the-residuals" class="slide level2">
 <h2>Compute the residuals</h2>
-<div id="8546223a" class="cell" data-execution_count="12">
+<div id="c3c07d19" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="co"># Compute the residuals</span></span>
@@ -1576,7 +1595,7 @@ a look at the first 5
 <ul>
 <li>MSE - the mean squared error</li>
 </ul>
-<div id="b7b5be88" class="cell" data-execution_count="13">
+<div id="d012e619" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="co"># Compute the variance of the error (mean squared error)</span></span>
@@ -1593,7 +1612,7 @@ a look at the first 5
 </section>
 <section id="and-the-ses-for-your-coefficients" class="slide level2">
 <h2>and the SEs for your coefficients</h2>
-<div id="977500bf" class="cell" data-execution_count="14">
+<div id="8b8b7141" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a><span class="co"># Compute the standard error for each coefficient including intercept</span></span>
@@ -1616,7 +1635,7 @@ a look at the first 5
 <li>Once we have the SEs, we can do many things</li>
 <li>Here, confidence intervals instead of p-values</li>
 </ul>
-<div id="0154212d" class="cell" data-execution_count="15">
+<div id="7c2dbaf1" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="co"># Compute confidence intervals (95% CI) for each coefficient</span></span>
@@ -1643,7 +1662,7 @@ upper_bound is (20,)
 </section>
 <section id="but-format-it" class="slide level2">
 <h2>But format it</h2>
-<div id="f3ce2c2b" class="cell" data-execution_count="16">
+<div id="e59b4cd6" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="co"># Format the results </span></span>
@@ -1691,7 +1710,7 @@ R^2 = 1 - \frac{\text{SSR}}{\text{SST}}
 <p>Where:<br>
 <strong>SSR</strong> = Sum of Squared Residuals = <span class="math inline">\(\sum (y_i - \widehat{y}_i)^2\)</span><br>
 <strong>SST</strong> = Total Sum of Squares = <span class="math inline">\(\sum (y_i - \bar{y})^2\)</span></p>
-<div id="11047e32" class="cell" data-execution_count="17">
+<div id="f926fc0d" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a>y_mean <span class="op">=</span> y.mean()</span>
@@ -1718,7 +1737,7 @@ p = number of predictors (including intercept)</p>
 </section>
 <section id="f-statistic-coded" class="slide level2">
 <h2>F-statistic coded</h2>
-<div id="0926b999" class="cell" data-execution_count="18">
+<div id="58c2cea8" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a>MSR <span class="op">=</span> (SST <span class="op">-</span> SSR) <span class="op">/</span> (p <span class="op">-</span> <span class="dv">1</span>)  <span class="co"># Regression mean square</span></span>
 <span id="cb36-2"><a></a>MSE <span class="op">=</span> SSR <span class="op">/</span> (n <span class="op">-</span> p)          <span class="co"># Residual mean square</span></span>
 <span id="cb36-3"><a></a>f_statistic <span class="op">=</span> MSR <span class="op">/</span> MSE</span>
@@ -1733,7 +1752,7 @@ p = number of predictors (including intercept)</p>
 <ul>
 <li>it has to be simulated in NumPy (not ideal)</li>
 </ul>
-<div id="cbe8621a" class="cell" data-execution_count="19">
+<div id="f25df1c1" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a><span class="co"># Degrees of freedom</span></span>
@@ -1768,7 +1787,7 @@ p = number of predictors (including intercept)</p>
 </section>
 <section id="scipy-example" class="slide level2">
 <h2>scipy example</h2>
-<div id="0291cfc5" class="cell" data-execution_count="20">
+<div id="1e92d117" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a><span class="im">from</span> scipy.stats <span class="im">import</span> f <span class="im">as</span> scipy_f</span>
@@ -1809,20 +1828,20 @@ model p-value (SciPy exact): 0.00000</code></pre>
 <li><strong>pandas</strong> is typically the better choice because it can handle the “messiness”</li>
 <li>first, get the data read and set some options</li>
 </ul>
-<div id="6a857a90" class="cell" data-execution_count="21">
+<div id="09a2d52c" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb42-2"><a></a><span class="im">from</span> pprint <span class="im">import</span> pprint</span>
 <span id="cb42-3"><a></a></span>
 <span id="cb42-4"><a></a>pd.set_option(<span class="st">&#39;display.max_columns&#39;</span>, <span class="va">None</span>)    <span class="co"># show all columns</span></span>
 <span id="cb42-5"><a></a>pd.set_option(<span class="st">&#39;display.max_rows&#39;</span>, <span class="va">None</span>)       <span class="co"># show all row</span></span>
-<span id="cb42-6"><a></a>pd.set_option(<span class="st">&#39;display.width&#39;</span>, <span class="dv">200</span>)           <span class="co"># widen the line-wrap limit</span></span>
+<span id="cb42-6"><a></a>pd.set_option(<span class="st">&#39;display.width&#39;</span>, <span class="va">None</span>)           <span class="co"># widen the line-wrap limit</span></span>
 <span id="cb42-7"><a></a></span>
 <span id="cb42-8"><a></a>ames_pd <span class="op">=</span> pd.read_csv(<span class="st">&quot;ames.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="review-the-pandas-object" class="slide level2">
 <h2>Review the pandas object</h2>
-<div id="b04485ae" class="cell" data-execution_count="22">
+<div id="094e0750" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a>all_my_objects <span class="op">=</span> <span class="bu">dir</span>(ames_pd)</span>
@@ -1939,7 +1958,7 @@ model p-value (SciPy exact): 0.00000</code></pre>
 <ul>
 <li>it carries some of the <code>ndarray</code> attributes</li>
 </ul>
-<div id="331c3eca" class="cell" data-execution_count="23">
+<div id="2f7ccf4e" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="bu">print</span>(<span class="st">&quot;type(ames_pd):&quot;</span>, <span class="bu">type</span>(ames_pd))</span>
@@ -1961,7 +1980,7 @@ ames_pd.size: 118260</code></pre>
 <li>lessons learned from examining objects</li>
 <li><code>.dtypes</code> gives us the data type object is non-numeric</li>
 </ul>
-<div id="29ca10c2" class="cell" data-execution_count="24">
+<div id="a215987c" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a><span class="co"># show the column names and type</span></span>
@@ -2063,7 +2082,7 @@ dtype: object</code></pre>
 <li>to_dict() is a pandas dataframe method</li>
 <li>examine a single row</li>
 </ul>
-<div id="e7cfec9e" class="cell" data-execution_count="25">
+<div id="1af8efc6" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a></a><span class="co"># as a dict of column with each value</span></span>
@@ -2155,9 +2174,9 @@ dtype: object</code></pre>
 </div>
 </div>
 </section>
-<section id="obtain-an-estimate-of-non-missingness" class="slide level2">
+<section id="obtain-an-estimate-of-non-missingness" class="slide level2 smaller">
 <h2>Obtain an estimate of non-missingness</h2>
-<div id="658c5aff" class="cell" data-execution_count="26">
+<div id="b7510683" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a>column_pct <span class="op">=</span> (ames_pd.notna().mean() <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>).to_dict()</span>
@@ -2248,99 +2267,189 @@ dtype: object</code></pre>
 </div>
 </div>
 </section>
-<section id="produce-a-summary-of-the-numeric-data" class="slide level2">
+<section id="produce-a-summary-of-the-numeric-data" class="slide level2 smaller">
 <h2>Produce a summary of the numeric data</h2>
-<div id="083d0893" class="cell" data-execution_count="27">
+<div id="4cde1795" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a></a><span class="bu">print</span>(ames_pd.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>                Id   MSSubClass  LotFrontage        LotArea  OverallQual  OverallCond    YearBuilt  YearRemodAdd   MasVnrArea   BsmtFinSF1   BsmtFinSF2    BsmtUnfSF  TotalBsmtSF     1stFlrSF  \
-count  1460.000000  1460.000000  1201.000000    1460.000000  1460.000000  1460.000000  1460.000000   1460.000000  1452.000000  1460.000000  1460.000000  1460.000000  1460.000000  1460.000000   
-mean    730.500000    56.897260    70.049958   10516.828082     6.099315     5.575342  1971.267808   1984.865753   103.685262   443.639726    46.549315   567.240411  1057.429452  1162.626712   
-std     421.610009    42.300571    24.284752    9981.264932     1.382997     1.112799    30.202904     20.645407   181.066207   456.098091   161.319273   441.866955   438.705324   386.587738   
-min       1.000000    20.000000    21.000000    1300.000000     1.000000     1.000000  1872.000000   1950.000000     0.000000     0.000000     0.000000     0.000000     0.000000   334.000000   
-25%     365.750000    20.000000    59.000000    7553.500000     5.000000     5.000000  1954.000000   1967.000000     0.000000     0.000000     0.000000   223.000000   795.750000   882.000000   
-50%     730.500000    50.000000    69.000000    9478.500000     6.000000     5.000000  1973.000000   1994.000000     0.000000   383.500000     0.000000   477.500000   991.500000  1087.000000   
-75%    1095.250000    70.000000    80.000000   11601.500000     7.000000     6.000000  2000.000000   2004.000000   166.000000   712.250000     0.000000   808.000000  1298.250000  1391.250000   
-max    1460.000000   190.000000   313.000000  215245.000000    10.000000     9.000000  2010.000000   2010.000000  1600.000000  5644.000000  1474.000000  2336.000000  6110.000000  4692.000000   
+<pre><code>                Id   MSSubClass  LotFrontage        LotArea  OverallQual  \
+count  1460.000000  1460.000000  1201.000000    1460.000000  1460.000000   
+mean    730.500000    56.897260    70.049958   10516.828082     6.099315   
+std     421.610009    42.300571    24.284752    9981.264932     1.382997   
+min       1.000000    20.000000    21.000000    1300.000000     1.000000   
+25%     365.750000    20.000000    59.000000    7553.500000     5.000000   
+50%     730.500000    50.000000    69.000000    9478.500000     6.000000   
+75%    1095.250000    70.000000    80.000000   11601.500000     7.000000   
+max    1460.000000   190.000000   313.000000  215245.000000    10.000000   
 
-          2ndFlrSF  LowQualFinSF    GrLivArea  BsmtFullBath  BsmtHalfBath     FullBath     HalfBath  BedroomAbvGr  KitchenAbvGr  TotRmsAbvGrd   Fireplaces  GarageYrBlt   GarageCars   GarageArea  \
-count  1460.000000   1460.000000  1460.000000   1460.000000   1460.000000  1460.000000  1460.000000   1460.000000   1460.000000   1460.000000  1460.000000  1379.000000  1460.000000  1460.000000   
-mean    346.992466      5.844521  1515.463699      0.425342      0.057534     1.565068     0.382877      2.866438      1.046575      6.517808     0.613014  1978.506164     1.767123   472.980137   
-std     436.528436     48.623081   525.480383      0.518911      0.238753     0.550916     0.502885      0.815778      0.220338      1.625393     0.644666    24.689725     0.747315   213.804841   
-min       0.000000      0.000000   334.000000      0.000000      0.000000     0.000000     0.000000      0.000000      0.000000      2.000000     0.000000  1900.000000     0.000000     0.000000   
-25%       0.000000      0.000000  1129.500000      0.000000      0.000000     1.000000     0.000000      2.000000      1.000000      5.000000     0.000000  1961.000000     1.000000   334.500000   
-50%       0.000000      0.000000  1464.000000      0.000000      0.000000     2.000000     0.000000      3.000000      1.000000      6.000000     1.000000  1980.000000     2.000000   480.000000   
-75%     728.000000      0.000000  1776.750000      1.000000      0.000000     2.000000     1.000000      3.000000      1.000000      7.000000     1.000000  2002.000000     2.000000   576.000000   
-max    2065.000000    572.000000  5642.000000      3.000000      2.000000     3.000000     2.000000      8.000000      3.000000     14.000000     3.000000  2010.000000     4.000000  1418.000000   
+       OverallCond    YearBuilt  YearRemodAdd   MasVnrArea   BsmtFinSF1  \
+count  1460.000000  1460.000000   1460.000000  1452.000000  1460.000000   
+mean      5.575342  1971.267808   1984.865753   103.685262   443.639726   
+std       1.112799    30.202904     20.645407   181.066207   456.098091   
+min       1.000000  1872.000000   1950.000000     0.000000     0.000000   
+25%       5.000000  1954.000000   1967.000000     0.000000     0.000000   
+50%       5.000000  1973.000000   1994.000000     0.000000   383.500000   
+75%       6.000000  2000.000000   2004.000000   166.000000   712.250000   
+max       9.000000  2010.000000   2010.000000  1600.000000  5644.000000   
 
-        WoodDeckSF  OpenPorchSF  EnclosedPorch    3SsnPorch  ScreenPorch     PoolArea       MiscVal       MoSold       YrSold      SalePrice  
-count  1460.000000  1460.000000    1460.000000  1460.000000  1460.000000  1460.000000   1460.000000  1460.000000  1460.000000    1460.000000  
-mean     94.244521    46.660274      21.954110     3.409589    15.060959     2.758904     43.489041     6.321918  2007.815753  180921.195890  
-std     125.338794    66.256028      61.119149    29.317331    55.757415    40.177307    496.123024     2.703626     1.328095   79442.502883  
-min       0.000000     0.000000       0.000000     0.000000     0.000000     0.000000      0.000000     1.000000  2006.000000   34900.000000  
-25%       0.000000     0.000000       0.000000     0.000000     0.000000     0.000000      0.000000     5.000000  2007.000000  129975.000000  
-50%       0.000000    25.000000       0.000000     0.000000     0.000000     0.000000      0.000000     6.000000  2008.000000  163000.000000  
-75%     168.000000    68.000000       0.000000     0.000000     0.000000     0.000000      0.000000     8.000000  2009.000000  214000.000000  
-max     857.000000   547.000000     552.000000   508.000000   480.000000   738.000000  15500.000000    12.000000  2010.000000  755000.000000  </code></pre>
+        BsmtFinSF2    BsmtUnfSF  TotalBsmtSF     1stFlrSF     2ndFlrSF  \
+count  1460.000000  1460.000000  1460.000000  1460.000000  1460.000000   
+mean     46.549315   567.240411  1057.429452  1162.626712   346.992466   
+std     161.319273   441.866955   438.705324   386.587738   436.528436   
+min       0.000000     0.000000     0.000000   334.000000     0.000000   
+25%       0.000000   223.000000   795.750000   882.000000     0.000000   
+50%       0.000000   477.500000   991.500000  1087.000000     0.000000   
+75%       0.000000   808.000000  1298.250000  1391.250000   728.000000   
+max    1474.000000  2336.000000  6110.000000  4692.000000  2065.000000   
+
+       LowQualFinSF    GrLivArea  BsmtFullBath  BsmtHalfBath     FullBath  \
+count   1460.000000  1460.000000   1460.000000   1460.000000  1460.000000   
+mean       5.844521  1515.463699      0.425342      0.057534     1.565068   
+std       48.623081   525.480383      0.518911      0.238753     0.550916   
+min        0.000000   334.000000      0.000000      0.000000     0.000000   
+25%        0.000000  1129.500000      0.000000      0.000000     1.000000   
+50%        0.000000  1464.000000      0.000000      0.000000     2.000000   
+75%        0.000000  1776.750000      1.000000      0.000000     2.000000   
+max      572.000000  5642.000000      3.000000      2.000000     3.000000   
+
+          HalfBath  BedroomAbvGr  KitchenAbvGr  TotRmsAbvGrd   Fireplaces  \
+count  1460.000000   1460.000000   1460.000000   1460.000000  1460.000000   
+mean      0.382877      2.866438      1.046575      6.517808     0.613014   
+std       0.502885      0.815778      0.220338      1.625393     0.644666   
+min       0.000000      0.000000      0.000000      2.000000     0.000000   
+25%       0.000000      2.000000      1.000000      5.000000     0.000000   
+50%       0.000000      3.000000      1.000000      6.000000     1.000000   
+75%       1.000000      3.000000      1.000000      7.000000     1.000000   
+max       2.000000      8.000000      3.000000     14.000000     3.000000   
+
+       GarageYrBlt   GarageCars   GarageArea   WoodDeckSF  OpenPorchSF  \
+count  1379.000000  1460.000000  1460.000000  1460.000000  1460.000000   
+mean   1978.506164     1.767123   472.980137    94.244521    46.660274   
+std      24.689725     0.747315   213.804841   125.338794    66.256028   
+min    1900.000000     0.000000     0.000000     0.000000     0.000000   
+25%    1961.000000     1.000000   334.500000     0.000000     0.000000   
+50%    1980.000000     2.000000   480.000000     0.000000    25.000000   
+75%    2002.000000     2.000000   576.000000   168.000000    68.000000   
+max    2010.000000     4.000000  1418.000000   857.000000   547.000000   
+
+       EnclosedPorch    3SsnPorch  ScreenPorch     PoolArea       MiscVal  \
+count    1460.000000  1460.000000  1460.000000  1460.000000   1460.000000   
+mean       21.954110     3.409589    15.060959     2.758904     43.489041   
+std        61.119149    29.317331    55.757415    40.177307    496.123024   
+min         0.000000     0.000000     0.000000     0.000000      0.000000   
+25%         0.000000     0.000000     0.000000     0.000000      0.000000   
+50%         0.000000     0.000000     0.000000     0.000000      0.000000   
+75%         0.000000     0.000000     0.000000     0.000000      0.000000   
+max       552.000000   508.000000   480.000000   738.000000  15500.000000   
+
+            MoSold       YrSold      SalePrice  
+count  1460.000000  1460.000000    1460.000000  
+mean      6.321918  2007.815753  180921.195890  
+std       2.703626     1.328095   79442.502883  
+min       1.000000  2006.000000   34900.000000  
+25%       5.000000  2007.000000  129975.000000  
+50%       6.000000  2008.000000  163000.000000  
+75%       8.000000  2009.000000  214000.000000  
+max      12.000000  2010.000000  755000.000000  </code></pre>
 </div>
 </div>
 </section>
-<section id="or-given-what-you-know-about-numpy" class="slide level2">
+<section id="or-given-what-you-know-about-numpy" class="slide level2 smaller">
 <h2>Or given what you know about NumPy</h2>
-<div id="cc060389" class="cell" data-execution_count="28">
+<div id="f85bbab5" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a><span class="bu">print</span>(ames_pd.describe().T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>                count           mean           std      min        25%       50%        75%       max
-Id             1460.0     730.500000    421.610009      1.0     365.75     730.5    1095.25    1460.0
-MSSubClass     1460.0      56.897260     42.300571     20.0      20.00      50.0      70.00     190.0
-LotFrontage    1201.0      70.049958     24.284752     21.0      59.00      69.0      80.00     313.0
-LotArea        1460.0   10516.828082   9981.264932   1300.0    7553.50    9478.5   11601.50  215245.0
-OverallQual    1460.0       6.099315      1.382997      1.0       5.00       6.0       7.00      10.0
-OverallCond    1460.0       5.575342      1.112799      1.0       5.00       5.0       6.00       9.0
-YearBuilt      1460.0    1971.267808     30.202904   1872.0    1954.00    1973.0    2000.00    2010.0
-YearRemodAdd   1460.0    1984.865753     20.645407   1950.0    1967.00    1994.0    2004.00    2010.0
-MasVnrArea     1452.0     103.685262    181.066207      0.0       0.00       0.0     166.00    1600.0
-BsmtFinSF1     1460.0     443.639726    456.098091      0.0       0.00     383.5     712.25    5644.0
-BsmtFinSF2     1460.0      46.549315    161.319273      0.0       0.00       0.0       0.00    1474.0
-BsmtUnfSF      1460.0     567.240411    441.866955      0.0     223.00     477.5     808.00    2336.0
-TotalBsmtSF    1460.0    1057.429452    438.705324      0.0     795.75     991.5    1298.25    6110.0
-1stFlrSF       1460.0    1162.626712    386.587738    334.0     882.00    1087.0    1391.25    4692.0
-2ndFlrSF       1460.0     346.992466    436.528436      0.0       0.00       0.0     728.00    2065.0
-LowQualFinSF   1460.0       5.844521     48.623081      0.0       0.00       0.0       0.00     572.0
-GrLivArea      1460.0    1515.463699    525.480383    334.0    1129.50    1464.0    1776.75    5642.0
-BsmtFullBath   1460.0       0.425342      0.518911      0.0       0.00       0.0       1.00       3.0
-BsmtHalfBath   1460.0       0.057534      0.238753      0.0       0.00       0.0       0.00       2.0
-FullBath       1460.0       1.565068      0.550916      0.0       1.00       2.0       2.00       3.0
-HalfBath       1460.0       0.382877      0.502885      0.0       0.00       0.0       1.00       2.0
-BedroomAbvGr   1460.0       2.866438      0.815778      0.0       2.00       3.0       3.00       8.0
-KitchenAbvGr   1460.0       1.046575      0.220338      0.0       1.00       1.0       1.00       3.0
-TotRmsAbvGrd   1460.0       6.517808      1.625393      2.0       5.00       6.0       7.00      14.0
-Fireplaces     1460.0       0.613014      0.644666      0.0       0.00       1.0       1.00       3.0
-GarageYrBlt    1379.0    1978.506164     24.689725   1900.0    1961.00    1980.0    2002.00    2010.0
-GarageCars     1460.0       1.767123      0.747315      0.0       1.00       2.0       2.00       4.0
-GarageArea     1460.0     472.980137    213.804841      0.0     334.50     480.0     576.00    1418.0
-WoodDeckSF     1460.0      94.244521    125.338794      0.0       0.00       0.0     168.00     857.0
-OpenPorchSF    1460.0      46.660274     66.256028      0.0       0.00      25.0      68.00     547.0
-EnclosedPorch  1460.0      21.954110     61.119149      0.0       0.00       0.0       0.00     552.0
-3SsnPorch      1460.0       3.409589     29.317331      0.0       0.00       0.0       0.00     508.0
-ScreenPorch    1460.0      15.060959     55.757415      0.0       0.00       0.0       0.00     480.0
-PoolArea       1460.0       2.758904     40.177307      0.0       0.00       0.0       0.00     738.0
-MiscVal        1460.0      43.489041    496.123024      0.0       0.00       0.0       0.00   15500.0
-MoSold         1460.0       6.321918      2.703626      1.0       5.00       6.0       8.00      12.0
-YrSold         1460.0    2007.815753      1.328095   2006.0    2007.00    2008.0    2009.00    2010.0
-SalePrice      1460.0  180921.195890  79442.502883  34900.0  129975.00  163000.0  214000.00  755000.0</code></pre>
+<pre><code>                count           mean           std      min        25%  \
+Id             1460.0     730.500000    421.610009      1.0     365.75   
+MSSubClass     1460.0      56.897260     42.300571     20.0      20.00   
+LotFrontage    1201.0      70.049958     24.284752     21.0      59.00   
+LotArea        1460.0   10516.828082   9981.264932   1300.0    7553.50   
+OverallQual    1460.0       6.099315      1.382997      1.0       5.00   
+OverallCond    1460.0       5.575342      1.112799      1.0       5.00   
+YearBuilt      1460.0    1971.267808     30.202904   1872.0    1954.00   
+YearRemodAdd   1460.0    1984.865753     20.645407   1950.0    1967.00   
+MasVnrArea     1452.0     103.685262    181.066207      0.0       0.00   
+BsmtFinSF1     1460.0     443.639726    456.098091      0.0       0.00   
+BsmtFinSF2     1460.0      46.549315    161.319273      0.0       0.00   
+BsmtUnfSF      1460.0     567.240411    441.866955      0.0     223.00   
+TotalBsmtSF    1460.0    1057.429452    438.705324      0.0     795.75   
+1stFlrSF       1460.0    1162.626712    386.587738    334.0     882.00   
+2ndFlrSF       1460.0     346.992466    436.528436      0.0       0.00   
+LowQualFinSF   1460.0       5.844521     48.623081      0.0       0.00   
+GrLivArea      1460.0    1515.463699    525.480383    334.0    1129.50   
+BsmtFullBath   1460.0       0.425342      0.518911      0.0       0.00   
+BsmtHalfBath   1460.0       0.057534      0.238753      0.0       0.00   
+FullBath       1460.0       1.565068      0.550916      0.0       1.00   
+HalfBath       1460.0       0.382877      0.502885      0.0       0.00   
+BedroomAbvGr   1460.0       2.866438      0.815778      0.0       2.00   
+KitchenAbvGr   1460.0       1.046575      0.220338      0.0       1.00   
+TotRmsAbvGrd   1460.0       6.517808      1.625393      2.0       5.00   
+Fireplaces     1460.0       0.613014      0.644666      0.0       0.00   
+GarageYrBlt    1379.0    1978.506164     24.689725   1900.0    1961.00   
+GarageCars     1460.0       1.767123      0.747315      0.0       1.00   
+GarageArea     1460.0     472.980137    213.804841      0.0     334.50   
+WoodDeckSF     1460.0      94.244521    125.338794      0.0       0.00   
+OpenPorchSF    1460.0      46.660274     66.256028      0.0       0.00   
+EnclosedPorch  1460.0      21.954110     61.119149      0.0       0.00   
+3SsnPorch      1460.0       3.409589     29.317331      0.0       0.00   
+ScreenPorch    1460.0      15.060959     55.757415      0.0       0.00   
+PoolArea       1460.0       2.758904     40.177307      0.0       0.00   
+MiscVal        1460.0      43.489041    496.123024      0.0       0.00   
+MoSold         1460.0       6.321918      2.703626      1.0       5.00   
+YrSold         1460.0    2007.815753      1.328095   2006.0    2007.00   
+SalePrice      1460.0  180921.195890  79442.502883  34900.0  129975.00   
+
+                    50%        75%       max  
+Id                730.5    1095.25    1460.0  
+MSSubClass         50.0      70.00     190.0  
+LotFrontage        69.0      80.00     313.0  
+LotArea          9478.5   11601.50  215245.0  
+OverallQual         6.0       7.00      10.0  
+OverallCond         5.0       6.00       9.0  
+YearBuilt        1973.0    2000.00    2010.0  
+YearRemodAdd     1994.0    2004.00    2010.0  
+MasVnrArea          0.0     166.00    1600.0  
+BsmtFinSF1        383.5     712.25    5644.0  
+BsmtFinSF2          0.0       0.00    1474.0  
+BsmtUnfSF         477.5     808.00    2336.0  
+TotalBsmtSF       991.5    1298.25    6110.0  
+1stFlrSF         1087.0    1391.25    4692.0  
+2ndFlrSF            0.0     728.00    2065.0  
+LowQualFinSF        0.0       0.00     572.0  
+GrLivArea        1464.0    1776.75    5642.0  
+BsmtFullBath        0.0       1.00       3.0  
+BsmtHalfBath        0.0       0.00       2.0  
+FullBath            2.0       2.00       3.0  
+HalfBath            0.0       1.00       2.0  
+BedroomAbvGr        3.0       3.00       8.0  
+KitchenAbvGr        1.0       1.00       3.0  
+TotRmsAbvGrd        6.0       7.00      14.0  
+Fireplaces          1.0       1.00       3.0  
+GarageYrBlt      1980.0    2002.00    2010.0  
+GarageCars          2.0       2.00       4.0  
+GarageArea        480.0     576.00    1418.0  
+WoodDeckSF          0.0     168.00     857.0  
+OpenPorchSF        25.0      68.00     547.0  
+EnclosedPorch       0.0       0.00     552.0  
+3SsnPorch           0.0       0.00     508.0  
+ScreenPorch         0.0       0.00     480.0  
+PoolArea            0.0       0.00     738.0  
+MiscVal             0.0       0.00   15500.0  
+MoSold              6.0       8.00      12.0  
+YrSold           2008.0    2009.00    2010.0  
+SalePrice      163000.0  214000.00  755000.0  </code></pre>
 </div>
 </div>
 </section>
 <section id="or-just-a-single-statistic" class="slide level2">
 <h2>Or just a single statistic</h2>
-<div id="7bd491c2" class="cell" data-execution_count="29">
+<div id="c47026e8" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>column_means <span class="op">=</span> ames_pd.mean(</span>
@@ -2348,7 +2457,7 @@ SalePrice      1460.0  180921.195890  79442.502883  34900.0  129975.00  163000.0
 <span id="cb57-3"><a></a>    numeric_only<span class="op">=</span><span class="va">True</span>, <span class="co"># makes sense</span></span>
 <span id="cb57-4"><a></a>    skipna<span class="op">=</span><span class="va">True</span>       <span class="co"># this is default</span></span>
 <span id="cb57-5"><a></a>)</span>
-<span id="cb57-6"><a></a><span class="bu">print</span>(column_means)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb57-6"><a></a><span class="bu">print</span>(column_means.to_string())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Id                  730.500000
@@ -2388,14 +2497,13 @@ PoolArea              2.758904
 MiscVal              43.489041
 MoSold                6.321918
 YrSold             2007.815753
-SalePrice        180921.195890
-dtype: float64</code></pre>
+SalePrice        180921.195890</code></pre>
 </div>
 </div>
 </section>
 <section id="or-customize-your-statistics" class="slide level2">
 <h2>Or customize your statistics</h2>
-<div id="7ccca764" class="cell" data-execution_count="30">
+<div id="4bc2d6ab" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a>column_quantiles <span class="op">=</span> ames_pd.quantile(</span>
@@ -2461,7 +2569,7 @@ SalePrice      34900.0  129975.00  163000.0  214000.00  755000.0     1460
 </section>
 <section id="examine-non-numeric" class="slide level2">
 <h2>Examine non-numeric</h2>
-<div id="2ae2c7c9" class="cell" data-execution_count="31">
+<div id="05f0ac9d" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a><span class="bu">print</span>(ames_pd.describe(include<span class="op">=</span>[<span class="st">&#39;object&#39;</span>]).T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2516,10 +2624,10 @@ SaleCondition  1460      6   Normal  1198</code></pre>
 </section>
 <section id="specific-non-numeric" class="slide level2">
 <h2>Specific non-numeric</h2>
-<div id="6ec31914" class="cell" data-execution_count="32">
+<div id="20f59791" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a><span class="bu">print</span>(ames_pd[<span class="st">&#39;SaleCondition&#39;</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a><span class="bu">print</span>(ames_pd[<span class="st">&#39;SaleCondition&#39;</span>].value_counts(dropna<span class="op">=</span><span class="va">False</span>).to_string())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>SaleCondition
@@ -2528,8 +2636,7 @@ Partial     125
 Abnorml     101
 Family       20
 Alloca       12
-AdjLand       4
-Name: count, dtype: int64</code></pre>
+AdjLand       4</code></pre>
 </div>
 </div>
 </section>
@@ -2538,13 +2645,13 @@ Name: count, dtype: int64</code></pre>
 <ul>
 <li>back to lists and for loops</li>
 </ul>
-<div id="da2b3dd5" class="cell" data-execution_count="33">
+<div id="f6fedc6b" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a>cat_cols <span class="op">=</span> [<span class="st">&#39;MSZoning&#39;</span>, <span class="st">&#39;LotShape&#39;</span>, <span class="st">&#39;LandContour&#39;</span>, <span class="st">&#39;Condition1&#39;</span>,<span class="st">&#39;Condition2&#39;</span>]</span>
 <span id="cb65-2"><a></a><span class="cf">for</span> col <span class="kw">in</span> cat_cols:</span>
 <span id="cb65-3"><a></a>    <span class="bu">print</span>(<span class="ss">f&quot;--- </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss"> ---&quot;</span>)</span>
-<span id="cb65-4"><a></a>    <span class="bu">print</span>(ames_pd[col].value_counts(dropna<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb65-4"><a></a>    <span class="bu">print</span>(ames_pd[col].value_counts(dropna<span class="op">=</span><span class="va">False</span>).to_string())</span>
 <span id="cb65-5"><a></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -2555,7 +2662,6 @@ RM          218
 FV           65
 RH           16
 C (all)      10
-Name: count, dtype: int64
 
 --- LotShape ---
 LotShape
@@ -2563,7 +2669,6 @@ Reg    925
 IR1    484
 IR2     41
 IR3     10
-Name: count, dtype: int64
 
 --- LandContour ---
 LandContour
@@ -2571,7 +2676,6 @@ Lvl    1311
 Bnk      63
 HLS      50
 Low      36
-Name: count, dtype: int64
 
 --- Condition1 ---
 Condition1
@@ -2584,7 +2688,6 @@ RRAe        11
 PosA         8
 RRNn         5
 RRNe         2
-Name: count, dtype: int64
 
 --- Condition2 ---
 Condition2
@@ -2596,14 +2699,13 @@ PosN         2
 PosA         1
 RRAn         1
 RRAe         1
-Name: count, dtype: int64
 </code></pre>
 </div>
 </div>
 </section>
 <section id="cross-classify-categories" class="slide level2">
 <h2>Cross-classify categories</h2>
-<div id="f78b397f" class="cell" data-execution_count="34">
+<div id="612c2343" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a></a>ct <span class="op">=</span> pd.crosstab(</span>
@@ -2649,7 +2751,7 @@ All           52  14  488  906  1460</code></pre>
 </section>
 <section id="add-a-third-numeric-value" class="slide level2">
 <h2>Add a third (numeric) value</h2>
-<div id="916e776f" class="cell" data-execution_count="35">
+<div id="1e269cf6" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a></a>pivot_sp <span class="op">=</span> ames_pd.pivot_table(</span>
