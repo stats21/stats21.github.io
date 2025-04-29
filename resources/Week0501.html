@@ -1,0 +1,3289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Pandas for Lecture 9 part 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="Week0501_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Week0501_files/libs/quarto-html/quarto.js"></script>
+<script src="Week0501_files/libs/quarto-html/popper.min.js"></script>
+<script src="Week0501_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Week0501_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Week0501_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Week0501_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Week0501_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Week0501_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Week0501_files/libs/bootstrap/bootstrap-c0367b04c37547644fece4185067e4a7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pandas for Lecture 9 part 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="6aa50a92" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Please download the following files from the Week 5 module of BruinLearn into the same folder as your current working Jupyter notebook</p>
+<p>ames_numeric.txt<br>
+marijuana_biz.geojson<br>
+college.csv</p>
+<p>if you are comfortable working with your folders and files, you can create a new folder for this week and move the files there</p>
+<div id="e0b2aee2" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># useful options</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.float_format'</span>, <span class="st">'</span><span class="sc">{:.4f}</span><span class="st">'</span>.<span class="bu">format</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#pd.set_option('display.max_rows', None) # defaults to 10</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#pd.set_option('display.max_columns', None) # defaults to 20</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#pd.set_option('display.width', 1000) # defaults to 80</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="inputting-data-basics" class="level2">
+<h2 class="anchored" data-anchor-id="inputting-data-basics">Inputting Data Basics</h2>
+<ul>
+<li><p>https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html</p></li>
+<li><p>read_csv( ) is a basic function in the pandas library for reading text data with separators. (https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-read-csv.html)</p></li>
+<li><p>read_excel() does the same for Excel files.</p></li>
+<li><p>pandas has read_json() but knowing how to read json files using the json library is more useful.</p></li>
+</ul>
+</section>
+<section id="reading-in-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="reading-in-the-data">Reading in the data</h2>
+<ul>
+<li>separated data</li>
+<li>data with no headers</li>
+<li>non-separated data</li>
+<li>Excel files</li>
+<li>json files</li>
+</ul>
+</section>
+<section id="try-the-csv-file-first" class="level2">
+<h2 class="anchored" data-anchor-id="try-the-csv-file-first">Try the csv file first</h2>
+<ul>
+<li>This is the easiest</li>
+<li>You have been told it is a csv file</li>
+<li>And it is nicely formatted has a header row</li>
+<li>and we can read it directly off the web (no security here)</li>
+</ul>
+<div id="00dc728e" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>AAPL <span class="op">=</span> pd.read_csv(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/AAPL.csv'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>AAPL.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">High</th>
+<th data-quarto-table-cell-role="th">Low</th>
+<th data-quarto-table-cell-role="th">Close</th>
+<th data-quarto-table-cell-role="th">Adj Close</th>
+<th data-quarto-table-cell-role="th">Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2019-01-02</td>
+<td>38.7225</td>
+<td>39.7125</td>
+<td>38.5575</td>
+<td>39.4800</td>
+<td>37.8450</td>
+<td>148158800</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2019-01-03</td>
+<td>35.9950</td>
+<td>36.4300</td>
+<td>35.5000</td>
+<td>35.5475</td>
+<td>34.0754</td>
+<td>365248800</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2019-01-04</td>
+<td>36.1325</td>
+<td>37.1375</td>
+<td>35.9500</td>
+<td>37.0650</td>
+<td>35.5301</td>
+<td>234428400</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2019-01-07</td>
+<td>37.1750</td>
+<td>37.2075</td>
+<td>36.4750</td>
+<td>36.9825</td>
+<td>35.4510</td>
+<td>219111200</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2019-01-08</td>
+<td>37.3900</td>
+<td>37.9550</td>
+<td>37.1300</td>
+<td>37.6875</td>
+<td>36.1268</td>
+<td>164101200</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="always-check-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="always-check-the-data">Always check the data</h2>
+<ul>
+<li>Use the head() method to check the first few rows</li>
+<li>or use the tail() method to check the last few rows</li>
+<li>Use the info() method to check the data types</li>
+<li>Use the describe() method to generate the summary statistics</li>
+<li>Use whatever you need to check the data</li>
+</ul>
+<div id="a0eb535e" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>AAPL.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1257 entries, 0 to 1256
+Data columns (total 7 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   Date       1257 non-null   object 
+ 1   Open       1257 non-null   float64
+ 2   High       1257 non-null   float64
+ 3   Low        1257 non-null   float64
+ 4   Close      1257 non-null   float64
+ 5   Adj Close  1257 non-null   float64
+ 6   Volume     1257 non-null   int64  
+dtypes: float64(5), int64(1), object(1)
+memory usage: 68.9+ KB</code></pre>
+</div>
+</div>
+<div id="23955754" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>AAPL.describe().T <span class="co"># notice date is not included in the summary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">count</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+<th data-quarto-table-cell-role="th">min</th>
+<th data-quarto-table-cell-role="th">25%</th>
+<th data-quarto-table-cell-role="th">50%</th>
+<th data-quarto-table-cell-role="th">75%</th>
+<th data-quarto-table-cell-role="th">max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Open</td>
+<td>1257.0000</td>
+<td>122.8492</td>
+<td>46.4880</td>
+<td>35.9950</td>
+<td>76.8100</td>
+<td>134.7900</td>
+<td>159.6700</td>
+<td>198.0200</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">High</td>
+<td>1257.0000</td>
+<td>124.2644</td>
+<td>46.9134</td>
+<td>36.4300</td>
+<td>77.9425</td>
+<td>135.9900</td>
+<td>162.0600</td>
+<td>199.6200</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Low</td>
+<td>1257.0000</td>
+<td>121.5448</td>
+<td>46.0671</td>
+<td>35.5000</td>
+<td>76.0725</td>
+<td>133.3200</td>
+<td>157.6800</td>
+<td>197.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Close</td>
+<td>1257.0000</td>
+<td>122.9758</td>
+<td>46.5045</td>
+<td>35.5475</td>
+<td>77.3775</td>
+<td>134.5100</td>
+<td>159.5900</td>
+<td>198.1100</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Adj Close</td>
+<td>1257.0000</td>
+<td>121.3574</td>
+<td>46.7345</td>
+<td>34.0754</td>
+<td>75.2876</td>
+<td>132.4783</td>
+<td>157.7868</td>
+<td>197.8575</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Volume</td>
+<td>1257.0000</td>
+<td>101637340.8115</td>
+<td>52605486.5600</td>
+<td>24048300.0000</td>
+<td>68034100.0000</td>
+<td>88636800.0000</td>
+<td>118994400.0000</td>
+<td>426510000.0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="what-if-you-were-not-sure" class="level2">
+<h2 class="anchored" data-anchor-id="what-if-you-were-not-sure">What if you were not sure?</h2>
+<ul>
+<li>Try reading in only a few rows (using nrows=) of the data to see what it looks like</li>
+<li>read_csv() is quite flexible, has many options, can read almost any text file</li>
+<li>sep=r’+’ means that the separator is any whitespace the r indicates raw string — do not interpret the backslash</li>
+<li>This next example shows the flexibility of pandas</li>
+</ul>
+<div id="bc851a65" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/NBA_TEAMS.tsv'</span>, </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                     nrows<span class="op">=</span><span class="dv">5</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                     sep<span class="op">=</span><span class="vs">r'\s+'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.head())</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Error:"</span>, e)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              TEAM   W      PTS     FGA     FG%     3PA     3P%     FTA  \
+Atlanta      Hawks  43 113.9000 88.3000 47.0000 34.4000 37.4000 22.3000   
+Boston     Celtics  51 111.8000 87.4000 46.6000 37.1000 35.6000 20.9000   
+Brooklyn      Nets  44 112.9000 88.4000 47.5000 31.7000 36.1000 21.7000   
+Charlotte  Hornets  43 115.3000 91.4000 46.8000 38.2000 36.5000 21.4000   
+Chicago      Bulls  46 111.6000 86.9000 48.0000 28.8000 36.9000 21.5000   
+
+              FT%    DREB     REB     AST     TOV    STL    BLK  
+Atlanta   81.2000 33.9000 44.0000 24.6000 11.9000 7.2000 4.2000  
+Boston    81.6000 35.5000 46.1000 24.8000 13.6000 7.2000 5.8000  
+Brooklyn  80.5000 34.1000 44.4000 25.3000 14.1000 7.1000 5.5000  
+Charlotte 74.0000 33.7000 44.6000 28.1000 13.3000 8.6000 4.9000  
+Chicago   81.3000 33.7000 42.3000 23.9000 12.8000 7.1000 4.1000  </code></pre>
+</div>
+</div>
+<div id="3cd23c1b" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.info() <span class="co"># notice the city is not considered part of the team variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Index: 5 entries, Atlanta to Chicago
+Data columns (total 15 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   TEAM    5 non-null      object 
+ 1   W       5 non-null      int64  
+ 2   PTS     5 non-null      float64
+ 3   FGA     5 non-null      float64
+ 4   FG%     5 non-null      float64
+ 5   3PA     5 non-null      float64
+ 6   3P%     5 non-null      float64
+ 7   FTA     5 non-null      float64
+ 8   FT%     5 non-null      float64
+ 9   DREB    5 non-null      float64
+ 10  REB     5 non-null      float64
+ 11  AST     5 non-null      float64
+ 12  TOV     5 non-null      float64
+ 13  STL     5 non-null      float64
+ 14  BLK     5 non-null      float64
+dtypes: float64(13), int64(1), object(1)
+memory usage: 640.0+ bytes</code></pre>
+</div>
+</div>
+</section>
+<section id="observations" class="level2">
+<h2 class="anchored" data-anchor-id="observations">Observations</h2>
+<ul>
+<li>Pandas is really good, with little information, it has guessed the structure of the data fairly well</li>
+<li>but really, the data should have been read as tab delimited</li>
+<li>a subtle problem, Pandas has split the city from the team name</li>
+<li>In the next example, ’ is recognized as the tab character and the data is read more correctly</li>
+</ul>
+<div id="1477e354" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>nba_teams <span class="op">=</span> pd.read_csv(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/NBA_TEAMS.tsv'</span>, </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                        sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>nba_teams.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">TEAM</th>
+<th data-quarto-table-cell-role="th">W</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FGA</th>
+<th data-quarto-table-cell-role="th">FG%</th>
+<th data-quarto-table-cell-role="th">3PA</th>
+<th data-quarto-table-cell-role="th">3P%</th>
+<th data-quarto-table-cell-role="th">FTA</th>
+<th data-quarto-table-cell-role="th">FT%</th>
+<th data-quarto-table-cell-role="th">DREB</th>
+<th data-quarto-table-cell-role="th">REB</th>
+<th data-quarto-table-cell-role="th">AST</th>
+<th data-quarto-table-cell-role="th">TOV</th>
+<th data-quarto-table-cell-role="th">STL</th>
+<th data-quarto-table-cell-role="th">BLK</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Atlanta Hawks</td>
+<td>43</td>
+<td>113.9000</td>
+<td>88.3000</td>
+<td>47.0000</td>
+<td>34.4000</td>
+<td>37.4000</td>
+<td>22.3000</td>
+<td>81.2000</td>
+<td>33.9000</td>
+<td>44.0000</td>
+<td>24.6000</td>
+<td>11.9000</td>
+<td>7.2000</td>
+<td>4.2000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Boston Celtics</td>
+<td>51</td>
+<td>111.8000</td>
+<td>87.4000</td>
+<td>46.6000</td>
+<td>37.1000</td>
+<td>35.6000</td>
+<td>20.9000</td>
+<td>81.6000</td>
+<td>35.5000</td>
+<td>46.1000</td>
+<td>24.8000</td>
+<td>13.6000</td>
+<td>7.2000</td>
+<td>5.8000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Brooklyn Nets</td>
+<td>44</td>
+<td>112.9000</td>
+<td>88.4000</td>
+<td>47.5000</td>
+<td>31.7000</td>
+<td>36.1000</td>
+<td>21.7000</td>
+<td>80.5000</td>
+<td>34.1000</td>
+<td>44.4000</td>
+<td>25.3000</td>
+<td>14.1000</td>
+<td>7.1000</td>
+<td>5.5000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Charlotte Hornets</td>
+<td>43</td>
+<td>115.3000</td>
+<td>91.4000</td>
+<td>46.8000</td>
+<td>38.2000</td>
+<td>36.5000</td>
+<td>21.4000</td>
+<td>74.0000</td>
+<td>33.7000</td>
+<td>44.6000</td>
+<td>28.1000</td>
+<td>13.3000</td>
+<td>8.6000</td>
+<td>4.9000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Chicago Bulls</td>
+<td>46</td>
+<td>111.6000</td>
+<td>86.9000</td>
+<td>48.0000</td>
+<td>28.8000</td>
+<td>36.9000</td>
+<td>21.5000</td>
+<td>81.3000</td>
+<td>33.7000</td>
+<td>42.3000</td>
+<td>23.9000</td>
+<td>12.8000</td>
+<td>7.1000</td>
+<td>4.1000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="de64c4db" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>nba_teams.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 30 entries, 0 to 29
+Data columns (total 15 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   TEAM    30 non-null     object 
+ 1   W       30 non-null     int64  
+ 2   PTS     30 non-null     float64
+ 3   FGA     30 non-null     float64
+ 4   FG%     30 non-null     float64
+ 5   3PA     30 non-null     float64
+ 6   3P%     30 non-null     float64
+ 7   FTA     30 non-null     float64
+ 8   FT%     30 non-null     float64
+ 9   DREB    30 non-null     float64
+ 10  REB     30 non-null     float64
+ 11  AST     30 non-null     float64
+ 12  TOV     30 non-null     float64
+ 13  STL     30 non-null     float64
+ 14  BLK     30 non-null     float64
+dtypes: float64(13), int64(1), object(1)
+memory usage: 3.6+ KB</code></pre>
+</div>
+</div>
+</section>
+<section id="please-try-this-one" class="level2">
+<h2 class="anchored" data-anchor-id="please-try-this-one">Please try this one</h2>
+<ul>
+<li>Just for practice</li>
+</ul>
+<p>http://www.stat.ucla.edu/~vlew/datasets/Rossi.txt</p>
+<div id="37b545da" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">### you can guess the delimiter</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="another-uncertain-example" class="level2">
+<h2 class="anchored" data-anchor-id="another-uncertain-example">Another uncertain example</h2>
+<ul>
+<li>suppose you didn’t know what a .json file was, you could try to take a look at the very top of the file</li>
+<li>again, we are just trying to get a feel for the data, look at the first few lines with space as a separator</li>
+<li>we could assume it has no header so if it does, we can see it</li>
+<li>the try/except statement is a good way to check for errors but not required here</li>
+</ul>
+<div id="a6d58c33" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/DataSift-49de7967b29ac130ab49248db140d634-1389311635.json'</span>, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                     nrows<span class="op">=</span><span class="dv">2</span>, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                     sep<span class="op">=</span><span class="vs">r'\s+'</span>, </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                     header<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.head())</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Error:"</span>, e)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                0     1    2     3     \
+0  {"count":18,"hash":"2f07e6e5e408d2a2988e","has...     9  Jan  2014   
+
+       4                                                  5     \
+0  23:53:55  +0000","interactions":[{"interaction":{"author...   
+
+                                                6     7         8    9     \
+0  Freegle","username":"OxfordFreegle"},"content"...  Blue  Brooches    -   
+
+   ... 1106 1107 1108     1109  \
+0  ...  you  how  its  played.   
+
+                                                1110  \
+0  ,followers_count":63,"friends_count":337,"id":...   
+
+                                                1111  1112  1113 1114  \
+0  Marie","profile_image_url":"http://a0.twimg.co...  Time   (US    &amp;   
+
+                                1115  
+0  Canada)","utc_offset":-18000}}}]}  
+
+[1 rows x 1116 columns]</code></pre>
+</div>
+</div>
+<section id="pandas-read_json" class="level3">
+<h3 class="anchored" data-anchor-id="pandas-read_json">Pandas read_json()</h3>
+<ul>
+<li>read_json() is not as flexible as read_csv()</li>
+<li>it is also not as flexible as the json library</li>
+<li>This one is initially easy to read, but at some point, it requires a lot of flattening…</li>
+<li>we will revisit json files in pandas later</li>
+</ul>
+<div id="c819a431" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/DataSift-49de7967b29ac130ab49248db140d634-1389311635.json'</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">count</th>
+<th data-quarto-table-cell-role="th">hash</th>
+<th data-quarto-table-cell-role="th">hash_type</th>
+<th data-quarto-table-cell-role="th">id</th>
+<th data-quarto-table-cell-role="th">delivered_at</th>
+<th data-quarto-table-cell-role="th">interactions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>18</td>
+<td>2f07e6e5e408d2a2988e</td>
+<td>historic</td>
+<td>49de7967b29ac130ab49248db140d634</td>
+<td>2014-01-09 23:53:55+00:00</td>
+<td>{'interaction': {'author': {'avatar': 'http://...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>18</td>
+<td>2f07e6e5e408d2a2988e</td>
+<td>historic</td>
+<td>49de7967b29ac130ab49248db140d634</td>
+<td>2014-01-09 23:53:55+00:00</td>
+<td>{'interaction': {'author': {'avatar': 'http://...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>18</td>
+<td>2f07e6e5e408d2a2988e</td>
+<td>historic</td>
+<td>49de7967b29ac130ab49248db140d634</td>
+<td>2014-01-09 23:53:55+00:00</td>
+<td>{'demographic': {'gender': 'male'}, 'interacti...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>18</td>
+<td>2f07e6e5e408d2a2988e</td>
+<td>historic</td>
+<td>49de7967b29ac130ab49248db140d634</td>
+<td>2014-01-09 23:53:55+00:00</td>
+<td>{'demographic': {'gender': 'mostly_female'}, '...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>18</td>
+<td>2f07e6e5e408d2a2988e</td>
+<td>historic</td>
+<td>49de7967b29ac130ab49248db140d634</td>
+<td>2014-01-09 23:53:55+00:00</td>
+<td>{'demographic': {'gender': 'female'}, 'interac...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="please-download-ames_numeric.txt" class="level3">
+<h3 class="anchored" data-anchor-id="please-download-ames_numeric.txt">Please download ames_numeric.txt</h3>
+<ul>
+<li>We used this file in the last lecture</li>
+<li>It is a space delimited file with no header</li>
+<li>It is important to know that the first row is not a header</li>
+</ul>
+<div id="88214c1a" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ames <span class="op">=</span> pd.read_csv(<span class="st">'ames_numeric.txt'</span>, </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                   sep <span class="op">=</span> <span class="vs">r'\s+'</span>, </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                   header <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>ames.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+<th data-quarto-table-cell-role="th">10</th>
+<th data-quarto-table-cell-role="th">11</th>
+<th data-quarto-table-cell-role="th">12</th>
+<th data-quarto-table-cell-role="th">13</th>
+<th data-quarto-table-cell-role="th">14</th>
+<th data-quarto-table-cell-role="th">15</th>
+<th data-quarto-table-cell-role="th">16</th>
+<th data-quarto-table-cell-role="th">17</th>
+<th data-quarto-table-cell-role="th">18</th>
+<th data-quarto-table-cell-role="th">19</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>65</td>
+<td>8450</td>
+<td>7</td>
+<td>2003</td>
+<td>2003</td>
+<td>196</td>
+<td>706</td>
+<td>856</td>
+<td>856</td>
+<td>854</td>
+<td>1710</td>
+<td>2</td>
+<td>8</td>
+<td>0</td>
+<td>2003</td>
+<td>2</td>
+<td>548</td>
+<td>0</td>
+<td>61</td>
+<td>208500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>80</td>
+<td>9600</td>
+<td>6</td>
+<td>1976</td>
+<td>1976</td>
+<td>0</td>
+<td>978</td>
+<td>1262</td>
+<td>1262</td>
+<td>0</td>
+<td>1262</td>
+<td>2</td>
+<td>6</td>
+<td>1</td>
+<td>1976</td>
+<td>2</td>
+<td>460</td>
+<td>298</td>
+<td>0</td>
+<td>181500</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>68</td>
+<td>11250</td>
+<td>7</td>
+<td>2001</td>
+<td>2002</td>
+<td>162</td>
+<td>486</td>
+<td>920</td>
+<td>920</td>
+<td>866</td>
+<td>1786</td>
+<td>2</td>
+<td>6</td>
+<td>1</td>
+<td>2001</td>
+<td>2</td>
+<td>608</td>
+<td>0</td>
+<td>42</td>
+<td>223500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>60</td>
+<td>9550</td>
+<td>7</td>
+<td>1915</td>
+<td>1970</td>
+<td>0</td>
+<td>216</td>
+<td>756</td>
+<td>961</td>
+<td>756</td>
+<td>1717</td>
+<td>1</td>
+<td>7</td>
+<td>1</td>
+<td>1998</td>
+<td>3</td>
+<td>642</td>
+<td>0</td>
+<td>35</td>
+<td>140000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>84</td>
+<td>14260</td>
+<td>8</td>
+<td>2000</td>
+<td>2000</td>
+<td>350</td>
+<td>655</td>
+<td>1145</td>
+<td>1145</td>
+<td>1053</td>
+<td>2198</td>
+<td>2</td>
+<td>9</td>
+<td>1</td>
+<td>2000</td>
+<td>3</td>
+<td>836</td>
+<td>192</td>
+<td>84</td>
+<td>250000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="a-file-with-no-delimiters" class="level3">
+<h3 class="anchored" data-anchor-id="a-file-with-no-delimiters">A file with no delimiters</h3>
+<ul>
+<li>These are not very common but they do exist</li>
+<li>Again, in practice, you might try to read in a few rows of the file to see what it looks like</li>
+</ul>
+<div id="7f6383d7" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/dataread3.txt'</span>, </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                     nrows<span class="op">=</span><span class="dv">2</span>, sep<span class="op">=</span><span class="vs">r'\s+'</span>, </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                     header<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.head())</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Error:"</span>, e)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       0     1    2                           3           4  \
+0  1Gone  with  the                        Wind         MGM   
+1  2Star  Wars  Fox  $1,225,462,80005/25/197747  26.0736766   
+
+                            5       6      7      8  
+0  $1,390,067,00012/15/193958 23.9667  DRAMA 8.0000  
+1                      ACTION  6.0000    NaN    NaN  </code></pre>
+</div>
+</div>
+<div id="258a51b5" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>col_locs <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">2</span>), (<span class="dv">2</span>, <span class="dv">29</span>), (<span class="dv">29</span>, <span class="dv">38</span>), (<span class="dv">38</span>, <span class="dv">52</span>), (<span class="dv">52</span>, <span class="dv">62</span>),  (<span class="dv">62</span>, <span class="dv">65</span>), (<span class="dv">65</span>,<span class="dv">76</span>), (<span class="dv">76</span>,<span class="dv">86</span>), (<span class="dv">86</span>,<span class="dv">88</span>)]</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>movies <span class="op">=</span> pd.read_fwf(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/dataread3.txt'</span>, colspecs<span class="op">=</span>col_locs, header<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">#movies.columns = ['RANK', 'TITLE', 'STUDIO', 'GROSS', 'OPEN', 'COS', 'RATIO', 'GENRE', 'OSCARS']</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     0                            1          2               3           4  \
+0    1           Gone with the Wind        MGM  $1,390,067,000  12/15/1939   
+1    2                    Star Wars        Fox  $1,225,462,800  05/25/1977   
+2    3           The Sound of Music        Fox    $979,817,800  03/29/1965   
+3    4  E.T.: The Extra-Terrestrial  Universal    $975,957,800  06/11/1982   
+4    5         The Ten Commandments  Paramount    $901,280,000  10/05/1956   
+5    6                      Titanic  Paramount    $883,019,700  12/19/1997   
+6    7                         Jaws  Universal    $881,182,300  06/20/1975   
+7    8               Doctor Zhivago        MGM    $854,051,900  12/22/1965   
+8    9                 The Exorcist     Warner    $760,712,400  12/26/1973   
+9   10                   Snow White     Disney    $749,920,000  02/04/1937   
+10  11               101 Dalmatians     Disney    $687,430,700  01/25/1961   
+11  12      The Empire Strikes Back        Fox    $675,482,800  05/21/1980   
+12  13                      Ben-Hur        MGM    $674,240,000  11/18/1959   
+13  14           Return of the Jedi        Fox    $647,128,700  05/25/1983   
+14  15                    The Sting  Universal    $613,302,900  12/25/1973   
+15  16      Raiders of the Lost Ark  Paramount    $606,416,000  06/12/1981   
+16  17                Jurassic Park  Universal    $593,096,200  06/11/1993   
+17  18                 The Graduate       AVCO    $588,731,200  12/21/1967   
+18  19           The Phantom Menace        Fox    $583,601,600  05/19/1999   
+19  20                     Fantasia     Disney    $571,339,100  11/13/1940   
+20  21                The Godfather  Paramount    $542,987,300  03/24/1972   
+21  22                 Forrest Gump  Paramount    $540,393,800  07/06/1994   
+22  23                 Mary Poppins     Disney    $537,890,900  08/29/1964   
+23  24                The Lion King     Disney    $531,354,700  06/24/1994   
+24  25                       Grease  Paramount    $529,221,700  06/16/1978   
+
+      5       6          7       8  
+0    58 23.9667      DRAMA  8.0000  
+1    47 26.0737     ACTION  6.0000  
+2    54 18.1448    MUSICAL  5.0000  
+3    24 40.6649      DRAMA  4.0000  
+4   103  8.7503      DRAMA  1.0000  
+5   270  3.2704      DRAMA 11.0000  
+6    50 17.6236     ACTION  3.0000  
+7    73 11.6993      DRAMA  5.0000  
+8    53 14.3531      DRAMA  2.0000  
+9    22 34.0873  ANIMATION  0.0000  
+10   28 24.5511  ANIMATION  0.0000  
+11   57 11.8506     ACTION  1.0000  
+12  113  5.9667      DRAMA 11.0000  
+13   73  8.8648     ACTION  0.0000  
+14   27 22.7149     COMEDY  7.0000  
+15   50 12.1283     ACTION  4.0000  
+16  141  4.2064     ACTION  3.0000  
+17   18 32.7073      DRAMA  1.0000  
+18  145  4.0248     ACTION     NaN  
+19   34 16.8041  ANIMATION     NaN  
+20   32 16.9684      DRAMA  3.0000  
+21   80  6.7549     COMEDY  6.0000  
+22   41 13.1193    MUSICAL  5.0000  
+23  113  4.7023  ANIMATION  2.0000  
+24   20 26.4611    MUSICAL  0.0000  </code></pre>
+</div>
+</div>
+<div id="c8cb44c2" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">## no need to fix the NaN values, automatically drops from computation</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>movies.describe().T </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">count</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+<th data-quarto-table-cell-role="th">min</th>
+<th data-quarto-table-cell-role="th">25%</th>
+<th data-quarto-table-cell-role="th">50%</th>
+<th data-quarto-table-cell-role="th">75%</th>
+<th data-quarto-table-cell-role="th">max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>25.0000</td>
+<td>13.0000</td>
+<td>7.3598</td>
+<td>1.0000</td>
+<td>7.0000</td>
+<td>13.0000</td>
+<td>19.0000</td>
+<td>25.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>25.0000</td>
+<td>69.0400</td>
+<td>55.7348</td>
+<td>18.0000</td>
+<td>32.0000</td>
+<td>53.0000</td>
+<td>80.0000</td>
+<td>270.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>25.0000</td>
+<td>16.4184</td>
+<td>10.2778</td>
+<td>3.2704</td>
+<td>8.7503</td>
+<td>14.3531</td>
+<td>23.9667</td>
+<td>40.6649</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>23.0000</td>
+<td>3.8261</td>
+<td>3.2704</td>
+<td>0.0000</td>
+<td>1.0000</td>
+<td>3.0000</td>
+<td>5.5000</td>
+<td>11.0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="excel-files" class="level3">
+<h3 class="anchored" data-anchor-id="excel-files">Excel files</h3>
+<ul>
+<li>Excel probably has over 500 million users</li>
+<li>Again, pandas is very good at reading in Excel files</li>
+<li>If you have a file with multiple sheets, you can specify the sheet name</li>
+<li>Example:<br>
+</li>
+</ul>
+<pre><code>mj = pd.read_excel('MJ1982_2024.xlsx', sheet_name='Sheet1')</code></pre>
+<div id="ff5b0778" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sbux <span class="op">=</span> pd.read_excel(<span class="st">'http://www.stat.ucla.edu/~vlew/datasets/SBUX.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="always-check-the-results" class="level2">
+<h2 class="anchored" data-anchor-id="always-check-the-results">Always check the results</h2>
+<div id="b3702c99" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>sbux.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Store ID</th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">Brand</th>
+<th data-quarto-table-cell-role="th">Store Number</th>
+<th data-quarto-table-cell-role="th">Phone Number</th>
+<th data-quarto-table-cell-role="th">Ownership Type</th>
+<th data-quarto-table-cell-role="th">Street Combined</th>
+<th data-quarto-table-cell-role="th">Street 1</th>
+<th data-quarto-table-cell-role="th">Street 2</th>
+<th data-quarto-table-cell-role="th">Street 3</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Country Subdivision</th>
+<th data-quarto-table-cell-role="th">Country</th>
+<th data-quarto-table-cell-role="th">Postal Code</th>
+<th data-quarto-table-cell-role="th">Coordinates</th>
+<th data-quarto-table-cell-role="th">Latitude</th>
+<th data-quarto-table-cell-role="th">Longitude</th>
+<th data-quarto-table-cell-role="th">Timezone</th>
+<th data-quarto-table-cell-role="th">Current Timezone Offset</th>
+<th data-quarto-table-cell-role="th">Olson Timezone</th>
+<th data-quarto-table-cell-role="th">First Seen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1</td>
+<td>Plaza Hollywood</td>
+<td>Starbucks</td>
+<td>34638-85784</td>
+<td>29554570</td>
+<td>LS</td>
+<td>Level 2, Plaza Hollywood, Diamond Hill,, Kowloon</td>
+<td>Level 2, Plaza Hollywood, Diamond Hill,</td>
+<td>Kowloon</td>
+<td>NaN</td>
+<td>...</td>
+<td>91</td>
+<td>CN</td>
+<td>NaN</td>
+<td>(22.3407001495361, 114.201690673828)</td>
+<td>22.3407</td>
+<td>114.2017</td>
+<td>China Standard Time</td>
+<td>480</td>
+<td>GMT+08:00 Asia/Beijing</td>
+<td>12/08/2013 10:41:59 PM</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>6</td>
+<td>Exchange Square</td>
+<td>Starbucks</td>
+<td>34601-20281</td>
+<td>21473739</td>
+<td>LS</td>
+<td>Shops 308-310, 3/F.,, Exchange Square Podium, ...</td>
+<td>Shops 308-310, 3/F.,</td>
+<td>Exchange Square Podium, Central, HK.</td>
+<td>NaN</td>
+<td>...</td>
+<td>91</td>
+<td>CN</td>
+<td>NaN</td>
+<td>(22.2839393615723, 114.158187866211)</td>
+<td>22.2839</td>
+<td>114.1582</td>
+<td>China Standard Time</td>
+<td>480</td>
+<td>GMT+08:00 Asia/Beijing</td>
+<td>12/08/2013 10:41:59 PM</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>8</td>
+<td>Telford Plaza</td>
+<td>Starbucks</td>
+<td>34610-28207</td>
+<td>27541323</td>
+<td>LS</td>
+<td>Shop Unit G1A, Atrium A, Telford Plaza I, , Ko...</td>
+<td>Shop Unit G1A, Atrium A, Telford Plaza I</td>
+<td>, Kowloon Bay, Kowloon</td>
+<td>NaN</td>
+<td>...</td>
+<td>91</td>
+<td>CN</td>
+<td>NaN</td>
+<td>(22.3228702545166, 114.213439941406)</td>
+<td>22.3229</td>
+<td>114.2134</td>
+<td>China Standard Time</td>
+<td>480</td>
+<td>GMT+08:00 Asia/Beijing</td>
+<td>12/08/2013 10:41:59 PM</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>13</td>
+<td>Hong Kong Station</td>
+<td>Starbucks</td>
+<td>34622-64463</td>
+<td>25375216</td>
+<td>LS</td>
+<td>Concession HOK 3a &amp; b, LAR Hong Kong Station</td>
+<td>Concession HOK 3a &amp; b</td>
+<td>LAR Hong Kong Station</td>
+<td>NaN</td>
+<td>...</td>
+<td>91</td>
+<td>CN</td>
+<td>NaN</td>
+<td>(22.2844505310059, 114.158462524414)</td>
+<td>22.2845</td>
+<td>114.1585</td>
+<td>China Standard Time</td>
+<td>480</td>
+<td>GMT+08:00 Asia/Beijing</td>
+<td>12/08/2013 10:41:59 PM</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>17</td>
+<td>Pacific Place, Central</td>
+<td>Starbucks</td>
+<td>34609-22927</td>
+<td>29184762</td>
+<td>LS</td>
+<td>Shop 131, Level 1, Pacific Place, 88 Queensway...</td>
+<td>Shop 131, Level 1, Pacific Place</td>
+<td>88 Queensway, HK</td>
+<td>NaN</td>
+<td>...</td>
+<td>91</td>
+<td>CN</td>
+<td>NaN</td>
+<td>(22.2777309417725, 114.164916992188)</td>
+<td>22.2777</td>
+<td>114.1649</td>
+<td>China Standard Time</td>
+<td>480</td>
+<td>GMT+08:00 Asia/Beijing</td>
+<td>12/08/2013 10:41:59 PM</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 21 columns</p>
+</div>
+</div>
+</div>
+<div id="28352ff7" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sbux.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 23546 entries, 0 to 23545
+Data columns (total 21 columns):
+ #   Column                   Non-Null Count  Dtype  
+---  ------                   --------------  -----  
+ 0   Store ID                 23546 non-null  int64  
+ 1   Name                     23546 non-null  object 
+ 2   Brand                    23546 non-null  object 
+ 3   Store Number             23546 non-null  object 
+ 4   Phone Number             17471 non-null  object 
+ 5   Ownership Type           23546 non-null  object 
+ 6   Street Combined          23544 non-null  object 
+ 7   Street 1                 23542 non-null  object 
+ 8   Street 2                 7560 non-null   object 
+ 9   Street 3                 5287 non-null   object 
+ 10  City                     23528 non-null  object 
+ 11  Country Subdivision      23546 non-null  object 
+ 12  Country                  23546 non-null  object 
+ 13  Postal Code              21952 non-null  object 
+ 14  Coordinates              23543 non-null  object 
+ 15  Latitude                 23543 non-null  float64
+ 16  Longitude                23543 non-null  float64
+ 17  Timezone                 23546 non-null  object 
+ 18  Current Timezone Offset  23546 non-null  int64  
+ 19  Olson Timezone           23546 non-null  object 
+ 20  First Seen               23546 non-null  object 
+dtypes: float64(2), int64(2), object(17)
+memory usage: 3.8+ MB</code></pre>
+</div>
+</div>
+<div id="cea9c471" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sbux.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Store ID</th>
+<th data-quarto-table-cell-role="th">Latitude</th>
+<th data-quarto-table-cell-role="th">Longitude</th>
+<th data-quarto-table-cell-role="th">Current Timezone Offset</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>23546.0000</td>
+<td>23543.0000</td>
+<td>23543.0000</td>
+<td>23546.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>285495.4633</td>
+<td>35.0636</td>
+<td>-32.0760</td>
+<td>-117.0543</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>437882.0420</td>
+<td>13.2653</td>
+<td>95.4262</td>
+<td>380.8553</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>1.0000</td>
+<td>-46.4120</td>
+<td>-159.4588</td>
+<td>-600.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>8418.2500</td>
+<td>31.6914</td>
+<td>-105.0251</td>
+<td>-420.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>16071.5000</td>
+<td>37.2358</td>
+<td>-79.9511</td>
+<td>-300.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>1005586.7500</td>
+<td>41.7715</td>
+<td>55.1796</td>
+<td>240.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>1014503.0000</td>
+<td>64.8545</td>
+<td>176.9175</td>
+<td>780.0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="revisit-a-json-file" class="level2">
+<h2 class="anchored" data-anchor-id="revisit-a-json-file">Revisit a json file</h2>
+<div id="1fdf0e83" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>marijuana_biz <span class="op">=</span> pd.read_json(<span class="st">'marijuana_biz.geojson'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="65fc0dbd" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>marijuana_biz.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">type</th>
+<th data-quarto-table-cell-role="th">features</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>FeatureCollection</td>
+<td>{'type': 'Feature', 'properties': {'zip_code':...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>FeatureCollection</td>
+<td>{'type': 'Feature', 'properties': {'zip_code':...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>FeatureCollection</td>
+<td>{'type': 'Feature', 'properties': {'zip_code':...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>FeatureCollection</td>
+<td>{'type': 'Feature', 'properties': {'zip_code':...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>FeatureCollection</td>
+<td>{'type': 'Feature', 'properties': {'zip_code':...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-happening" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-happening">What is happening?</h2>
+<ul>
+<li>The first row of the data is used as the header by default</li>
+<li>If you do not specify an index column, pandas will create a default index column, integers starting at 0</li>
+<li>During import pandas infers the most appropriate data type for each column.</li>
+<li>Pandas dtypes are: object (for text or mixed numeric/non), int64 and float64, bool, datetime64, etc.</li>
+<li>https://pandas.pydata.org/pandas-docs/stable/user_guide/basics.html#dtypes</li>
+<li>If pandas can’t figure it out, the data is asssigned to string (object).</li>
+</ul>
+</section>
+<section id="correctly-reading-json-data" class="level2">
+<h2 class="anchored" data-anchor-id="correctly-reading-json-data">Correctly reading json data</h2>
+<ul>
+<li>chances are, json data will have a nested structure (othewise why bother with json?)</li>
+<li>The json library is better at handling nested data than pandas</li>
+<li>The json library can be used to read the data into a dictionary, and then you can convert the dictionary to a pandas dataframe</li>
+</ul>
+<div id="c760072b" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'marijuana_biz.geojson'</span>) <span class="im">as</span> f:</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> json.load(f) </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>data.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<pre><code>dict_keys(['type', 'features'])</code></pre>
+</div>
+</div>
+<ul>
+<li>In a nested json type of data file, only one portion will have the data you want</li>
+<li>The rest of the data is often metadata</li>
+</ul>
+<div id="1c95c2a0" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(data[<span class="st">'type'</span>]), <span class="bu">len</span>(data[<span class="st">'type'</span>]))</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(data[<span class="st">'features'</span>]), <span class="bu">len</span>(data[<span class="st">'features'</span>])) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'str'&gt; 17
+&lt;class 'list'&gt; 915</code></pre>
+</div>
+</div>
+<ul>
+<li>The list is the data you want</li>
+<li>It’s usally a list of dictionaries in a json file</li>
+</ul>
+<div id="bf6b4527" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'features'</span>][<span class="dv">0</span>] <span class="co"># look at the first feature</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<pre><code>{'type': 'Feature',
+ 'properties': {'zip_code': '90001-1007',
+  'city': 'LOS ANGELES',
+  'business_name': '1000 PALMS ASSOCIATES GROUP INC',
+  'naics': '888888',
+  'mailing_address': None,
+  'mailing_city': None,
+  'dba_name': 'COOKIES',
+  'mailing_zip_code': None,
+  'location_description': '935 59TH 90001-1007',
+  'street_address': '935 E 59TH STREET',
+  'primary_naics_description': 'Medical Marijuana Collective',
+  'location_start_date': '2018-01-01T00:00:00.000',
+  'location_account': '0003067666-0001-0',
+  'council_district': '9',
+  'location_end_date': None},
+ 'geometry': {'type': 'Point', 'coordinates': [-118.258, 33.9877]}}</code></pre>
+</div>
+</div>
+</section>
+<section id="multiple-dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-dictionaries">Multiple dictionaries</h2>
+<ul>
+<li>In features we have a list of dictionaries</li>
+<li>The first key is ‘type’ and the value is ‘FeatureCollection’ (not useful)</li>
+<li>The second key is ‘properties’ and it is a dictionary</li>
+<li>The third key is ‘geometry’ and it is a dictionary</li>
+</ul>
+<div id="28bb554d" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[<span class="st">'features'</span>][<span class="dv">0</span>][<span class="st">'properties'</span>].keys()) </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[<span class="st">'features'</span>][<span class="dv">0</span>][<span class="st">'geometry'</span>].keys())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>dict_keys(['zip_code', 'city', 'business_name', 'naics', 'mailing_address', 'mailing_city', 'dba_name', 'mailing_zip_code', 'location_description', 'street_address', 'primary_naics_description', 'location_start_date', 'location_account', 'council_district', 'location_end_date'])
+dict_keys(['type', 'coordinates'])</code></pre>
+</div>
+</div>
+</section>
+<section id="this-needs-to-be-flattened" class="level2">
+<h2 class="anchored" data-anchor-id="this-needs-to-be-flattened">This needs to be flattened</h2>
+<ul>
+<li>You can write a function to read in json data and convert it to something more tabular</li>
+<li>But pandas has a built-in function that does this for you.</li>
+</ul>
+<p>https://pandas.pydata.org/docs/reference/api/pandas.json_normalize.html</p>
+<ul>
+<li>We can use a list comprehension to help us flatten the data</li>
+</ul>
+<div id="5f026885" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># recall read it from right to left if it's still confusing</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>marijuana_biz <span class="op">=</span> pd.json_normalize([feature[<span class="st">'properties'</span>] <span class="cf">for</span> feature <span class="kw">in</span> data[<span class="st">'features'</span>]])</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>marijuana_biz.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">zip_code</th>
+<th data-quarto-table-cell-role="th">city</th>
+<th data-quarto-table-cell-role="th">business_name</th>
+<th data-quarto-table-cell-role="th">naics</th>
+<th data-quarto-table-cell-role="th">mailing_address</th>
+<th data-quarto-table-cell-role="th">mailing_city</th>
+<th data-quarto-table-cell-role="th">dba_name</th>
+<th data-quarto-table-cell-role="th">mailing_zip_code</th>
+<th data-quarto-table-cell-role="th">location_description</th>
+<th data-quarto-table-cell-role="th">street_address</th>
+<th data-quarto-table-cell-role="th">primary_naics_description</th>
+<th data-quarto-table-cell-role="th">location_start_date</th>
+<th data-quarto-table-cell-role="th">location_account</th>
+<th data-quarto-table-cell-role="th">council_district</th>
+<th data-quarto-table-cell-role="th">location_end_date</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>90001-1007</td>
+<td>LOS ANGELES</td>
+<td>1000 PALMS ASSOCIATES GROUP INC</td>
+<td>888888</td>
+<td>None</td>
+<td>None</td>
+<td>COOKIES</td>
+<td>None</td>
+<td>935 59TH 90001-1007</td>
+<td>935 E 59TH STREET</td>
+<td>Medical Marijuana Collective</td>
+<td>2018-01-01T00:00:00.000</td>
+<td>0003067666-0001-0</td>
+<td>9</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>90001-1504</td>
+<td>LOS ANGELES</td>
+<td>100 GRAM DASH LLC</td>
+<td>888888</td>
+<td>None</td>
+<td>None</td>
+<td>100 GRAM DASH</td>
+<td>None</td>
+<td>722 62nd 90001-1504</td>
+<td>722 E 62ND STREET</td>
+<td>Medical Marijuana Collective</td>
+<td>2024-08-12T00:00:00.000</td>
+<td>0003318524-0002-8</td>
+<td>9</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>90015-2305</td>
+<td>LOS ANGELES</td>
+<td>1041 WALL STREET INC</td>
+<td>888888</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>1037 WALL 90015-2305</td>
+<td>1037 WALL STREET</td>
+<td>Medical Marijuana Collective</td>
+<td>2018-01-01T00:00:00.000</td>
+<td>0003069660-0001-7</td>
+<td>14</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>90021-2801</td>
+<td>LOS ANGELES</td>
+<td>10TH STREET FACILITIES LLC</td>
+<td>888888</td>
+<td>3956 INGLEWOOD BLVD</td>
+<td>LOS ANGELES</td>
+<td>None</td>
+<td>90066-4529</td>
+<td>2180 10TH 90021-2801</td>
+<td>2180 E 10TH STREET</td>
+<td>Medical Marijuana Collective</td>
+<td>2018-01-01T00:00:00.000</td>
+<td>0003075570-0001-0</td>
+<td>14</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>90003-4416</td>
+<td>LOS ANGELES</td>
+<td>11500 VERMONT HOLDINGS LLC</td>
+<td>888888</td>
+<td>401 PINE AVENUE</td>
+<td>LONG BEACH</td>
+<td>CATALYST CANNABIS- SOUTH FIGUEROA</td>
+<td>90802-2349</td>
+<td>10020 FIGUEROA 90003-4416</td>
+<td>10020 S FIGUEROA STREET</td>
+<td>Medical Marijuana Collective</td>
+<td>2023-06-22T00:00:00.000</td>
+<td>0003216492-0001-8</td>
+<td>8</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="we-will-revisit-this-later" class="level2">
+<h2 class="anchored" data-anchor-id="we-will-revisit-this-later">We will revisit this later</h2>
+<ul>
+<li>We can grab the geography data from the json file and convert it to a pandas dataframe too</li>
+<li>Next step (next time) would be to merge the two dataframes</li>
+</ul>
+<div id="adaa1ceb" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>marijuana_biz_geometry <span class="op">=</span> pd.json_normalize([feature[<span class="st">'geometry'</span>] <span class="cf">for</span> feature <span class="kw">in</span> data[<span class="st">'features'</span>]])</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>marijuana_biz_geometry.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">type</th>
+<th data-quarto-table-cell-role="th">coordinates</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Point</td>
+<td>[-118.258, 33.9877]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Point</td>
+<td>[-118.2625, 33.9832]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Point</td>
+<td>[-118.234, 34.025]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Point</td>
+<td>[-118.2822, 33.9449]</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="a-check-your-understanding-activity" class="level2">
+<h2 class="anchored" data-anchor-id="a-check-your-understanding-activity">A ‘check your understanding’ activity</h2>
+<ul>
+<li>Please download ‘college.csv’ from the Week 5 module of BruinLearn</li>
+<li>Use the pandas library to read in the data</li>
+<li>if you do it correctly, you should see a dataframe with 1356 rows and 25 columns</li>
+</ul>
+<div id="9b670f22" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">#college = </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="dataframes-are-objects" class="level2">
+<h2 class="anchored" data-anchor-id="dataframes-are-objects">DataFrames are objects</h2>
+<ul>
+<li>DataFrames are objects, and have methods and attributes</li>
+<li>https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas-dataframe</li>
+</ul>
+<div id="0d493b01" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> textwrap</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>attrs <span class="op">=</span> <span class="bu">dir</span>(AAPL)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>all_attrs <span class="op">=</span> <span class="st">", "</span>.join(attrs)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>wrapped <span class="op">=</span> textwrap.fill(all_attrs, width<span class="op">=</span><span class="dv">160</span>)</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(wrapped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Close, Date, High, Low, Open, T, Volume, _AXIS_LEN, _AXIS_ORDERS, _AXIS_TO_AXIS_NUMBER, _HANDLED_TYPES, __abs__, __add__, __and__, __annotations__, __array__,
+__array_priority__, __array_ufunc__, __arrow_c_stream__, __bool__, __class__, __contains__, __copy__, __dataframe__, __dataframe_consortium_standard__,
+__deepcopy__, __delattr__, __delitem__, __dict__, __dir__, __divmod__, __doc__, __eq__, __finalize__, __firstlineno__, __floordiv__, __format__, __ge__,
+__getattr__, __getattribute__, __getitem__, __getstate__, __gt__, __hash__, __iadd__, __iand__, __ifloordiv__, __imod__, __imul__, __init__, __init_subclass__,
+__invert__, __ior__, __ipow__, __isub__, __iter__, __itruediv__, __ixor__, __le__, __len__, __lt__, __matmul__, __mod__, __module__, __mul__, __ne__, __neg__,
+__new__, __nonzero__, __or__, __pandas_priority__, __pos__, __pow__, __radd__, __rand__, __rdivmod__, __reduce__, __reduce_ex__, __repr__, __rfloordiv__,
+__rmatmul__, __rmod__, __rmul__, __ror__, __round__, __rpow__, __rsub__, __rtruediv__, __rxor__, __setattr__, __setitem__, __setstate__, __sizeof__,
+__static_attributes__, __str__, __sub__, __subclasshook__, __truediv__, __weakref__, __xor__, _accessors, _accum_func, _agg_examples_doc, _agg_see_also_doc,
+_align_for_op, _align_frame, _align_series, _append, _arith_method, _arith_method_with_reindex, _as_manager, _attrs, _box_col_values, _can_fast_transpose,
+_check_inplace_and_allows_duplicate_labels, _check_is_chained_assignment_possible, _check_label_or_level_ambiguity, _check_setitem_copy, _clear_item_cache,
+_clip_with_one_bound, _clip_with_scalar, _cmp_method, _combine_frame, _consolidate, _consolidate_inplace, _construct_axes_dict, _construct_result, _constructor,
+_constructor_from_mgr, _constructor_sliced, _constructor_sliced_from_mgr, _create_data_for_split_and_tight_to_dict, _data, _deprecate_downcast, _dir_additions,
+_dir_deletions, _dispatch_frame_op, _drop_axis, _drop_labels_or_levels, _ensure_valid_index, _find_valid_index, _flags, _flex_arith_method, _flex_cmp_method,
+_from_arrays, _from_mgr, _get_agg_axis, _get_axis, _get_axis_name, _get_axis_number, _get_axis_resolvers, _get_block_manager_axis, _get_bool_data,
+_get_cleaned_column_resolvers, _get_column_array, _get_index_resolvers, _get_item_cache, _get_label_or_level_values, _get_numeric_data, _get_value,
+_get_values_for_csv, _getitem_bool_array, _getitem_multilevel, _getitem_nocopy, _getitem_slice, _gotitem, _hidden_attrs, _indexed_same, _info_axis,
+_info_axis_name, _info_axis_number, _info_repr, _init_mgr, _inplace_method, _internal_names, _internal_names_set, _is_copy, _is_homogeneous_type,
+_is_label_or_level_reference, _is_label_reference, _is_level_reference, _is_mixed_type, _is_view, _is_view_after_cow_rules, _iset_item, _iset_item_mgr,
+_iset_not_inplace, _item_cache, _iter_column_arrays, _ixs, _logical_func, _logical_method, _maybe_align_series_as_frame, _maybe_cache_changed,
+_maybe_update_cacher, _metadata, _mgr, _min_count_stat_function, _needs_reindex_multi, _pad_or_backfill, _protect_consolidate, _reduce, _reduce_axis1,
+_reindex_axes, _reindex_multi, _reindex_with_indexers, _rename, _replace_columnwise, _repr_data_resource_, _repr_fits_horizontal_, _repr_fits_vertical_,
+_repr_html_, _repr_latex_, _reset_cache, _reset_cacher, _sanitize_column, _series, _set_axis, _set_axis_name, _set_axis_nocheck, _set_is_copy, _set_item,
+_set_item_frame_value, _set_item_mgr, _set_value, _setitem_array, _setitem_frame, _setitem_slice, _shift_with_freq, _should_reindex_frame_op, _slice,
+_stat_function, _stat_function_ddof, _take_with_is_copy, _to_dict_of_blocks, _to_latex_via_styler, _typ, _update_inplace, _validate_dtype, _values, _where, abs,
+add, add_prefix, add_suffix, agg, aggregate, align, all, any, apply, applymap, asfreq, asof, assign, astype, at, at_time, attrs, axes, backfill, between_time,
+bfill, bool, boxplot, clip, columns, combine, combine_first, compare, convert_dtypes, copy, corr, corrwith, count, cov, cummax, cummin, cumprod, cumsum,
+describe, diff, div, divide, dot, drop, drop_duplicates, droplevel, dropna, dtypes, duplicated, empty, eq, equals, eval, ewm, expanding, explode, ffill, fillna,
+filter, first, first_valid_index, flags, floordiv, from_dict, from_records, ge, get, groupby, gt, head, hist, iat, idxmax, idxmin, iloc, index, infer_objects,
+info, insert, interpolate, isetitem, isin, isna, isnull, items, iterrows, itertuples, join, keys, kurt, kurtosis, last, last_valid_index, le, loc, lt, map,
+mask, max, mean, median, melt, memory_usage, merge, min, mod, mode, mul, multiply, ndim, ne, nlargest, notna, notnull, nsmallest, nunique, pad, pct_change,
+pipe, pivot, pivot_table, plot, pop, pow, prod, product, quantile, query, radd, rank, rdiv, reindex, reindex_like, rename, rename_axis, reorder_levels, replace,
+resample, reset_index, rfloordiv, rmod, rmul, rolling, round, rpow, rsub, rtruediv, sample, select_dtypes, sem, set_axis, set_flags, set_index, shape, shift,
+size, skew, sort_index, sort_values, squeeze, stack, std, style, sub, subtract, sum, swapaxes, swaplevel, tail, take, to_clipboard, to_csv, to_dict, to_excel,
+to_feather, to_gbq, to_hdf, to_html, to_json, to_latex, to_markdown, to_numpy, to_orc, to_parquet, to_period, to_pickle, to_records, to_sql, to_stata,
+to_string, to_timestamp, to_xarray, to_xml, transform, transpose, truediv, truncate, tz_convert, tz_localize, unstack, update, value_counts, values, var, where,
+xs</code></pre>
+</div>
+</div>
+</section>
+<section id="dataframe---basic-details" class="level2">
+<h2 class="anchored" data-anchor-id="dataframe---basic-details">DataFrame - basic details</h2>
+<ul>
+<li>Today’s objects are Pandas DataFrames for multicolumn data.</li>
+<li>Roughly equivalent to the Data Frame in R</li>
+<li>In each of our examples, the data is organized in rows and columns with zero indexed row labels</li>
+<li>We could have set any column as the index but we did not set one so Pandas generated an index for us.</li>
+<li>An index can be any column which can act as a primary identifier or reference for each row (we will see this later)</li>
+<li>The index itself is not a column in the data, but a reference to the row.</li>
+</ul>
+</section>
+<section id="what-is-dot-notation-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-dot-notation-in-python">What is dot notation in Python?</h2>
+<p>Dot notation (<code>.</code>) is how Python accesses attributes and methods of an object.</p>
+<p>When you write something like:</p>
+<p>object.attribute object.method()</p>
+<p>it means</p>
+<ul>
+<li>give the attribute called <code>attribute</code> from <code>object</code>.</li>
+<li>Call the method called <code>method()</code> on <code>object</code>.”</li>
+</ul>
+<p>Attributes are the stored values inside an object.<br>
+Methods are <em>functions that belong to an object</em>.</p>
+</section>
+<section id="pandas-lets-you-use-dot-notation" class="level2">
+<h2 class="anchored" data-anchor-id="pandas-lets-you-use-dot-notation">Pandas lets you use dot notation</h2>
+<ul>
+<li>You can use standard Python’s dot notation to access the attributes and methods of any pandas object</li>
+<li>But pandas also uses <code>[ ]</code> notation to access the attributes and methods of a pandas object</li>
+<li>And pandas has a lot of attributes and methods which are a mix of standard Python and specific to pandas</li>
+</ul>
+</section>
+<section id="recall" class="level2">
+<h2 class="anchored" data-anchor-id="recall">Recall</h2>
+<div id="43462514" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">## attribute</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>AAPL.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<pre><code>Index(['Date', 'Open', 'High', 'Low', 'Close', 'Adj Close', 'Volume'], dtype='object')</code></pre>
+</div>
+</div>
+<div id="656268de" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># method </span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>AAPL.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">High</th>
+<th data-quarto-table-cell-role="th">Low</th>
+<th data-quarto-table-cell-role="th">Close</th>
+<th data-quarto-table-cell-role="th">Adj Close</th>
+<th data-quarto-table-cell-role="th">Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>1257.0000</td>
+<td>1257.0000</td>
+<td>1257.0000</td>
+<td>1257.0000</td>
+<td>1257.0000</td>
+<td>1257.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>122.8492</td>
+<td>124.2644</td>
+<td>121.5448</td>
+<td>122.9758</td>
+<td>121.3574</td>
+<td>101637340.8115</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>46.4880</td>
+<td>46.9134</td>
+<td>46.0671</td>
+<td>46.5045</td>
+<td>46.7345</td>
+<td>52605486.5600</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>35.9950</td>
+<td>36.4300</td>
+<td>35.5000</td>
+<td>35.5475</td>
+<td>34.0754</td>
+<td>24048300.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>76.8100</td>
+<td>77.9425</td>
+<td>76.0725</td>
+<td>77.3775</td>
+<td>75.2876</td>
+<td>68034100.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>134.7900</td>
+<td>135.9900</td>
+<td>133.3200</td>
+<td>134.5100</td>
+<td>132.4783</td>
+<td>88636800.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>159.6700</td>
+<td>162.0600</td>
+<td>157.6800</td>
+<td>159.5900</td>
+<td>157.7868</td>
+<td>118994400.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>198.0200</td>
+<td>199.6200</td>
+<td>197.0000</td>
+<td>198.1100</td>
+<td>197.8575</td>
+<td>426510000.0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="indexing-slicing-where-method-matters" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-slicing-where-method-matters">Indexing &amp; Slicing: where method matters</h2>
+<ul>
+<li>Select rows and columns from a dataframe using .iloc and .loc</li>
+<li>Other ways to select rows and columns from a dataframe</li>
+<li>Please choose the method that works best for you</li>
+</ul>
+<p>A general recommendation:</p>
+<pre><code>First select rows (r), then select columns (c)</code></pre>
+<p>The clearest way to do this is with the iloc[] and .loc[] methods:</p>
+<p>df.iloc[rows, columns] using the integer position(s) of the rows and columns</p>
+<p>df.loc[rows, columns] using labels for the rows and columns</p>
+</section>
+<section id="the-.iloc-method-for-dataframes" class="level2">
+<h2 class="anchored" data-anchor-id="the-.iloc-method-for-dataframes">The .iloc method for dataframes</h2>
+<div id="5cbe5dc4" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(AAPL.iloc[<span class="dv">0</span>:<span class="dv">5</span>, ])</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(AAPL.iloc[<span class="dv">0</span>:<span class="dv">5</span>, ])   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         Date    Open    High     Low   Close  Adj Close     Volume
+0  2019-01-02 38.7225 39.7125 38.5575 39.4800    37.8450  148158800
+1  2019-01-03 35.9950 36.4300 35.5000 35.5475    34.0754  365248800
+2  2019-01-04 36.1325 37.1375 35.9500 37.0650    35.5301  234428400
+3  2019-01-07 37.1750 37.2075 36.4750 36.9825    35.4510  219111200
+4  2019-01-08 37.3900 37.9550 37.1300 37.6875    36.1268  164101200</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<pre><code>pandas.core.frame.DataFrame</code></pre>
+</div>
+</div>
+<div id="13bd9d0b" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(AAPL.iloc[:, [<span class="dv">0</span>,<span class="dv">6</span>] ])</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(AAPL.iloc[:, [<span class="dv">0</span>,<span class="dv">6</span>] ])  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Date     Volume
+0     2019-01-02  148158800
+1     2019-01-03  365248800
+2     2019-01-04  234428400
+3     2019-01-07  219111200
+4     2019-01-08  164101200
+...          ...        ...
+1252  2023-12-21   46482500
+1253  2023-12-22   37122800
+1254  2023-12-26   28919300
+1255  2023-12-27   48087700
+1256  2023-12-28   34049900
+
+[1257 rows x 2 columns]</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="34">
+<pre><code>pandas.core.frame.DataFrame</code></pre>
+</div>
+</div>
+<div id="52876378" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(AAPL.iloc[::<span class="dv">10</span>, ::<span class="dv">2</span> ])</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(AAPL.iloc[::<span class="dv">10</span>, ::<span class="dv">2</span>])  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Date     High    Close     Volume
+0     2019-01-02  39.7125  39.4800  148158800
+10    2019-01-16  38.9700  38.7350  122278800
+20    2019-01-31  42.2500  41.6100  162958400
+30    2019-02-14  42.8150  42.7000   87342800
+40    2019-03-01  43.7875  43.7425  103544800
+...          ...      ...      ...        ...
+1210  2023-10-23 174.0100 173.0000   55980100
+1220  2023-11-06 179.4300 179.2300   63841300
+1230  2023-11-20 191.9100 191.4500   46505100
+1240  2023-12-05 194.4000 193.4200   66628400
+1250  2023-12-19 196.9500 196.9400   40714100
+
+[126 rows x 4 columns]</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<pre><code>pandas.core.frame.DataFrame</code></pre>
+</div>
+</div>
+</section>
+<section id="the-index-row-labels" class="level2">
+<h2 class="anchored" data-anchor-id="the-index-row-labels">The Index (row labels)</h2>
+<ul>
+<li>If you don’t set an index, pandas will create one for you, integer starting at 0</li>
+<li>BUT you can set the index, some rules:
+<ul>
+<li>Must be immutable (but you can replace the entire index)</li>
+<li>Must be hashable (strings, numbers, tuples - anything that can be used as a key in a dictionary)</li>
+<li>Must be 1-D</li>
+<li>Should (but not required) be unique - pandas allows duplicate row labels unless you explicitly forbid it</li>
+</ul></li>
+</ul>
+<div id="9bd22db7" class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">## RECALL Date is a string (object) not a date</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>AAPL.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1257 entries, 0 to 1256
+Data columns (total 7 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   Date       1257 non-null   object 
+ 1   Open       1257 non-null   float64
+ 2   High       1257 non-null   float64
+ 3   Low        1257 non-null   float64
+ 4   Close      1257 non-null   float64
+ 5   Adj Close  1257 non-null   float64
+ 6   Volume     1257 non-null   int64  
+dtypes: float64(5), int64(1), object(1)
+memory usage: 68.9+ KB</code></pre>
+</div>
+</div>
+</section>
+<section id="so-much-easier-to-work-with-time-in-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="so-much-easier-to-work-with-time-in-pandas">So much easier to work with time in pandas</h2>
+<ul>
+<li>Pandas has a built-in datetime type</li>
+<li>You will be happier with this one</li>
+<li>https://pandas.pydata.org/docs/reference/api/pandas.to_datetime.html</li>
+</ul>
+<div id="655355f6" class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># FIRST convert Date to datetime</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>AAPL[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(AAPL[<span class="st">'Date'</span>]) <span class="co"># , format='%d-%m-%Y' example if the format is not standard</span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>AAPL[<span class="st">'Date'</span>].dtype <span class="co"># check the type</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="37">
+<pre><code>dtype('&lt;M8[ns]')</code></pre>
+</div>
+</div>
+</section>
+<section id="making-the-index-a-datetime" class="level2">
+<h2 class="anchored" data-anchor-id="making-the-index-a-datetime">Making the index a datetime</h2>
+<ul>
+<li>Now we can set the index to be a datetime</li>
+</ul>
+<div id="afadddfa" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># THEN set the index to Date</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>AAPL <span class="op">=</span> AAPL.set_index(<span class="st">'Date'</span>)</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(AAPL.index) <span class="co"># check</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(AAPL.head()) <span class="co"># check</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>DatetimeIndex(['2019-01-02', '2019-01-03', '2019-01-04', '2019-01-07',
+               '2019-01-08', '2019-01-09', '2019-01-10', '2019-01-11',
+               '2019-01-14', '2019-01-15',
+               ...
+               '2023-12-14', '2023-12-15', '2023-12-18', '2023-12-19',
+               '2023-12-20', '2023-12-21', '2023-12-22', '2023-12-26',
+               '2023-12-27', '2023-12-28'],
+              dtype='datetime64[ns]', name='Date', length=1257, freq=None)
+              Open    High     Low   Close  Adj Close     Volume
+Date                                                            
+2019-01-02 38.7225 39.7125 38.5575 39.4800    37.8450  148158800
+2019-01-03 35.9950 36.4300 35.5000 35.5475    34.0754  365248800
+2019-01-04 36.1325 37.1375 35.9500 37.0650    35.5301  234428400
+2019-01-07 37.1750 37.2075 36.4750 36.9825    35.4510  219111200
+2019-01-08 37.3900 37.9550 37.1300 37.6875    36.1268  164101200</code></pre>
+</div>
+</div>
+</section>
+<section id="slicing-by-date-instead-of-row-number-using-.loc" class="level2">
+<h2 class="anchored" data-anchor-id="slicing-by-date-instead-of-row-number-using-.loc">Slicing by date instead of row number using .loc[]</h2>
+<ul>
+<li>With the new index, we can slice by labels in both the row and column</li>
+<li>Even if you have labels, you can still slice by row number and column number with .iloc[]</li>
+</ul>
+<div id="7db16268" class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>AAPL.loc[<span class="st">'2023-01-01'</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">High</th>
+<th data-quarto-table-cell-role="th">Low</th>
+<th data-quarto-table-cell-role="th">Close</th>
+<th data-quarto-table-cell-role="th">Adj Close</th>
+<th data-quarto-table-cell-role="th">Volume</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-01-03</td>
+<td>130.2800</td>
+<td>130.9000</td>
+<td>124.1700</td>
+<td>125.0700</td>
+<td>124.2163</td>
+<td>112117500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-01-04</td>
+<td>126.8900</td>
+<td>128.6600</td>
+<td>125.0800</td>
+<td>126.3600</td>
+<td>125.4975</td>
+<td>89113600</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-01-05</td>
+<td>127.1300</td>
+<td>127.7700</td>
+<td>124.7600</td>
+<td>125.0200</td>
+<td>124.1666</td>
+<td>80962700</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-01-06</td>
+<td>126.0100</td>
+<td>130.2900</td>
+<td>124.8900</td>
+<td>129.6200</td>
+<td>128.7352</td>
+<td>87754700</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-01-09</td>
+<td>130.4700</td>
+<td>133.4100</td>
+<td>129.8900</td>
+<td>130.1500</td>
+<td>129.2616</td>
+<td>70790800</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-12-21</td>
+<td>196.1000</td>
+<td>197.0800</td>
+<td>193.5000</td>
+<td>194.6800</td>
+<td>194.4319</td>
+<td>46482500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-12-22</td>
+<td>195.1800</td>
+<td>195.4100</td>
+<td>192.9700</td>
+<td>193.6000</td>
+<td>193.3533</td>
+<td>37122800</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-12-26</td>
+<td>193.6100</td>
+<td>193.8900</td>
+<td>192.8300</td>
+<td>193.0500</td>
+<td>192.8040</td>
+<td>28919300</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-12-27</td>
+<td>192.4900</td>
+<td>193.5000</td>
+<td>191.0900</td>
+<td>193.1500</td>
+<td>192.9038</td>
+<td>48087700</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-12-28</td>
+<td>194.1400</td>
+<td>194.6600</td>
+<td>193.1700</td>
+<td>193.5800</td>
+<td>193.3333</td>
+<td>34049900</td>
+</tr>
+</tbody>
+</table>
+
+<p>249 rows × 6 columns</p>
+</div>
+</div>
+</div>
+<div id="e96f94cd" class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># specific dates</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(AAPL.loc[[<span class="st">'2020-03-13'</span>, <span class="st">'2020-03-20'</span>], [<span class="st">'Open'</span>, <span class="st">'Close'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              Open   Close
+Date                      
+2020-03-13 66.2225 69.4925
+2020-03-20 61.7950 57.3100</code></pre>
+</div>
+</div>
+<div id="52451ecb" class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a range of dates</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(AAPL.loc[<span class="st">'2020-03-12'</span>:<span class="st">'2020-03-20'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              Open    High     Low   Close  Adj Close     Volume
+Date                                                            
+2020-03-12 63.9850 67.5000 62.0000 62.0575    60.5247  418474000
+2020-03-13 66.2225 69.9800 63.2375 69.4925    67.7760  370732000
+2020-03-16 60.4875 64.7700 60.0000 60.5525    59.0568  322423600
+2020-03-17 61.8775 64.4025 59.6000 63.2150    61.6536  324056000
+2020-03-18 59.9425 62.5000 59.2800 61.6675    60.1443  300233600
+2020-03-19 61.8475 63.2100 60.6525 61.1950    59.6835  271857200
+2020-03-20 61.7950 62.9575 57.0000 57.3100    55.8944  401693200</code></pre>
+</div>
+</div>
+<div id="716ee698" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># both dimentions</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>AAPL.loc[<span class="st">'2020-03-12'</span>:<span class="st">'2020-03-20'</span>, [<span class="st">'Open'</span>, <span class="st">'Close'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="42">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">Close</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2020-03-12</td>
+<td>63.9850</td>
+<td>62.0575</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2020-03-13</td>
+<td>66.2225</td>
+<td>69.4925</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2020-03-16</td>
+<td>60.4875</td>
+<td>60.5525</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2020-03-17</td>
+<td>61.8775</td>
+<td>63.2150</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2020-03-18</td>
+<td>59.9425</td>
+<td>61.6675</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2020-03-19</td>
+<td>61.8475</td>
+<td>61.1950</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2020-03-20</td>
+<td>61.7950</td>
+<td>57.3100</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="once-you-are-comfortable-with-slicing" class="level2">
+<h2 class="anchored" data-anchor-id="once-you-are-comfortable-with-slicing">Once you are comfortable with slicing</h2>
+<p>Boolean indexing is a very powerful way to filter data.</p>
+<div id="a12b5b97" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>AAPL.loc[AAPL[<span class="st">'Open'</span>] <span class="op">&gt;</span> <span class="dv">180</span>, [<span class="st">'Open'</span>, <span class="st">'Close'</span>]] <span class="co"># boolean indexing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">Close</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2021-12-13</td>
+<td>181.1200</td>
+<td>175.7400</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2021-12-28</td>
+<td>180.1600</td>
+<td>179.2900</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2022-01-04</td>
+<td>182.6300</td>
+<td>179.7000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-06-02</td>
+<td>181.0300</td>
+<td>180.9500</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-06-05</td>
+<td>182.6300</td>
+<td>179.5800</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-12-21</td>
+<td>196.1000</td>
+<td>194.6800</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-12-22</td>
+<td>195.1800</td>
+<td>193.6000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-12-26</td>
+<td>193.6100</td>
+<td>193.0500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-12-27</td>
+<td>192.4900</td>
+<td>193.1500</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-12-28</td>
+<td>194.1400</td>
+<td>193.5800</td>
+</tr>
+</tbody>
+</table>
+
+<p>91 rows × 2 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="remember-what-you-are-creating-when-you-slice" class="level2">
+<h2 class="anchored" data-anchor-id="remember-what-you-are-creating-when-you-slice">Remember what you are creating when you slice</h2>
+<ul>
+<li>You are creating a new object</li>
+<li>You are not modifying the original object</li>
+<li>A single column slice is a Series</li>
+<li>A multiple column slice is a DataFrame</li>
+<li>A single row slice is a Series</li>
+<li>A multiple row slice is a DataFrame</li>
+</ul>
+<div id="5ca3497b" class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(AAPL.loc[<span class="st">'2020-03-12'</span>:<span class="st">'2020-03-20'</span>, <span class="st">'Open'</span>])) <span class="co"># this is a series with only one column</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(AAPL.loc[<span class="st">'2020-03-12'</span>:<span class="st">'2020-03-20'</span>, [<span class="st">'Open'</span>, <span class="st">'Close'</span>]])) <span class="co"># this is a dataframe</span></span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(AAPL.loc[<span class="st">'2020-03-20'</span>, ])) <span class="co"># this is a series with only one row</span></span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(AAPL.loc[<span class="st">'2020-03-12'</span>:<span class="st">'2020-03-20'</span>, ])) <span class="co"># this is a dataframe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.series.Series'&gt;
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+&lt;class 'pandas.core.series.Series'&gt;
+&lt;class 'pandas.core.frame.DataFrame'&gt;</code></pre>
+</div>
+</div>
+<p>Slicing and indexing are important pandas skills</p>
+<p>But it can be confusing, sometimes you see the same results but the programmer is not using .loc or .iloc</p>
+<p>So you think it’s a time saver with less typing?</p>
+<div id="f2e7d9d5" class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>AAPL.Open  <span class="co"># dot notation</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="co">#AAPL.Open[:5]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="45">
+<pre><code>Date
+2019-01-02    38.7225
+2019-01-03    35.9950
+2019-01-04    36.1325
+2019-01-07    37.1750
+2019-01-08    37.3900
+               ...   
+2023-12-21   196.1000
+2023-12-22   195.1800
+2023-12-26   193.6100
+2023-12-27   192.4900
+2023-12-28   194.1400
+Name: Open, Length: 1257, dtype: float64</code></pre>
+</div>
+</div>
+<div id="95061373" class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>AAPL[<span class="st">'Open'</span>] <span class="co"># bracket notation</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="co">#AAPL['Open'][:5]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<pre><code>Date
+2019-01-02    38.7225
+2019-01-03    35.9950
+2019-01-04    36.1325
+2019-01-07    37.1750
+2019-01-08    37.3900
+               ...   
+2023-12-21   196.1000
+2023-12-22   195.1800
+2023-12-26   193.6100
+2023-12-27   192.4900
+2023-12-28   194.1400
+Name: Open, Length: 1257, dtype: float64</code></pre>
+</div>
+</div>
+</section>
+<section id="python-should-be-explicit-and-readable" class="level2">
+<h2 class="anchored" data-anchor-id="python-should-be-explicit-and-readable">Python should be explicit and readable</h2>
+<p>The dot notation is not always explicit and readable * It is not always clear what the programmer is doing (open is not a great name) * It is not always clear what the result will be if there similar named methods and attributes * It can only extract one column at a time (you can’t use it to extract Open and Close at the same time)</p>
+<p>Using the [] notation is more explicit and readable than dot notation</p>
+</section>
+<section id="please-check-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="please-check-your-understanding">Please Check your understanding</h2>
+<ul>
+<li>if I wanted every other row starting with the first row for the columns ‘Open’, ‘Close’ in AAPL, what would I do if there were no .iloc[] or .loc[]?</li>
+<li>if I wanted to only the fourteenth and the fiftieth row for the columns ‘Open’, ‘Close’ in AAPL what would I do if I could not use .iloc[] or .loc[]?</li>
+</ul>
+<div id="f1e4d41e" class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Care to try it?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="takeaway" class="level1">
+<h1>Takeaway</h1>
+<ul>
+<li>Just my opinion. I prefer .iloc[] and .loc[] to dot notation or [] notation, reminds me of R</li>
+<li>I think it is more explicit and readable and it is always written row, column</li>
+<li>If you prefer the [] notation, I suggest:
+<ul>
+<li>Filter rows first []</li>
+<li>Pick columns second with a list inside []</li>
+</ul></li>
+</ul>
+<div id="66894881" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>AAPL[<span class="dv">0</span>:<span class="dv">10</span>][[<span class="st">'Open'</span>, <span class="st">'Close'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">Close</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-02</td>
+<td>38.7225</td>
+<td>39.4800</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-01-03</td>
+<td>35.9950</td>
+<td>35.5475</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-04</td>
+<td>36.1325</td>
+<td>37.0650</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-01-07</td>
+<td>37.1750</td>
+<td>36.9825</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-08</td>
+<td>37.3900</td>
+<td>37.6875</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-01-09</td>
+<td>37.8225</td>
+<td>38.3275</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-10</td>
+<td>38.1250</td>
+<td>38.4500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-01-11</td>
+<td>38.2200</td>
+<td>38.0725</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-14</td>
+<td>37.7125</td>
+<td>37.5000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-01-15</td>
+<td>37.5675</td>
+<td>38.2675</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="extra" class="level2">
+<h2 class="anchored" data-anchor-id="extra">extra</h2>
+<p>If I want to do more with date (such as summarize by month or year) - You could use a resample() method on the index with groupby()</p>
+<p>Instead, I am going to unset the index (so you could change an index) - Create new variables using the date variable - make a new index - We will use groupby() to summarize the data later</p>
+<div id="e649c76e" class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I am creating a new dataframe</span></span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>AAPL_reset <span class="op">=</span> AAPL.reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a94c6a94" class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>AAPL_reset[<span class="st">'Year'</span>] <span class="op">=</span> AAPL_reset[<span class="st">'Date'</span>].dt.year</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>AAPL_reset[<span class="st">'Month'</span>] <span class="op">=</span> AAPL_reset[<span class="st">'Date'</span>].dt.month</span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>AAPL_reset[<span class="st">'Day'</span>] <span class="op">=</span> AAPL_reset[<span class="st">'Date'</span>].dt.day</span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>AAPL_reset[<span class="st">'Weekday'</span>] <span class="op">=</span> AAPL_reset[<span class="st">'Date'</span>].dt.day_name()</span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>AAPL_reset <span class="op">=</span> AAPL_reset.set_index(<span class="st">'Date'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="fe7eece2" class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>AAPL_reset.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">High</th>
+<th data-quarto-table-cell-role="th">Low</th>
+<th data-quarto-table-cell-role="th">Close</th>
+<th data-quarto-table-cell-role="th">Adj Close</th>
+<th data-quarto-table-cell-role="th">Volume</th>
+<th data-quarto-table-cell-role="th">Year</th>
+<th data-quarto-table-cell-role="th">Month</th>
+<th data-quarto-table-cell-role="th">Day</th>
+<th data-quarto-table-cell-role="th">Weekday</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-02</td>
+<td>38.7225</td>
+<td>39.7125</td>
+<td>38.5575</td>
+<td>39.4800</td>
+<td>37.8450</td>
+<td>148158800</td>
+<td>2019</td>
+<td>1</td>
+<td>2</td>
+<td>Wednesday</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-01-03</td>
+<td>35.9950</td>
+<td>36.4300</td>
+<td>35.5000</td>
+<td>35.5475</td>
+<td>34.0754</td>
+<td>365248800</td>
+<td>2019</td>
+<td>1</td>
+<td>3</td>
+<td>Thursday</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-04</td>
+<td>36.1325</td>
+<td>37.1375</td>
+<td>35.9500</td>
+<td>37.0650</td>
+<td>35.5301</td>
+<td>234428400</td>
+<td>2019</td>
+<td>1</td>
+<td>4</td>
+<td>Friday</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2019-01-07</td>
+<td>37.1750</td>
+<td>37.2075</td>
+<td>36.4750</td>
+<td>36.9825</td>
+<td>35.4510</td>
+<td>219111200</td>
+<td>2019</td>
+<td>1</td>
+<td>7</td>
+<td>Monday</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2019-01-08</td>
+<td>37.3900</td>
+<td>37.9550</td>
+<td>37.1300</td>
+<td>37.6875</td>
+<td>36.1268</td>
+<td>164101200</td>
+<td>2019</td>
+<td>1</td>
+<td>8</td>
+<td>Tuesday</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="check-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="check-your-understanding">Check your understanding</h2>
+<p>Using any of the methods we have discussed on either <code>college.csv</code> or the marijuana_business data, please create a new dataframe with the following</p>
+<ol type="1">
+<li>Every other row starting with the first row</li>
+<li>Every other column starting with the first column</li>
+<li>(challenge) set an index other than the default integer index</li>
+</ol>
+<div id="2fb14ec1" class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>college <span class="op">=</span> pd.read_csv(<span class="st">'college.csv'</span>)</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>college.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">INSTNM</th>
+<th data-quarto-table-cell-role="th">CITY</th>
+<th data-quarto-table-cell-role="th">STABBR</th>
+<th data-quarto-table-cell-role="th">ADM_RATE</th>
+<th data-quarto-table-cell-role="th">SATVRMID</th>
+<th data-quarto-table-cell-role="th">SATMTMID</th>
+<th data-quarto-table-cell-role="th">SATWRMID</th>
+<th data-quarto-table-cell-role="th">UGDS</th>
+<th data-quarto-table-cell-role="th">NPT4_PUB</th>
+<th data-quarto-table-cell-role="th">NPT4_PRIV</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">FEMALE</th>
+<th data-quarto-table-cell-role="th">FIRST_GEN</th>
+<th data-quarto-table-cell-role="th">PCT_WHITE</th>
+<th data-quarto-table-cell-role="th">PCT_BLACK</th>
+<th data-quarto-table-cell-role="th">PCT_ASIAN</th>
+<th data-quarto-table-cell-role="th">PCT_HISPANIC</th>
+<th data-quarto-table-cell-role="th">PCT_BA</th>
+<th data-quarto-table-cell-role="th">PCT_GRAD_PROF</th>
+<th data-quarto-table-cell-role="th">PCT_BORN_US</th>
+<th data-quarto-table-cell-role="th">MEDIAN_HH_INC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Alabama A &amp; M University</td>
+<td>Normal</td>
+<td>AL</td>
+<td>0.6622</td>
+<td>475.0000</td>
+<td>460.0000</td>
+<td>414.0000</td>
+<td>5726</td>
+<td>14559.0000</td>
+<td>NaN</td>
+<td>...</td>
+<td>0.5640</td>
+<td>0.3658</td>
+<td>46.8400</td>
+<td>47.9800</td>
+<td>1.4800</td>
+<td>3.7900</td>
+<td>13.0000</td>
+<td>6.8600</td>
+<td>94.7400</td>
+<td>49720.2200</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>University of Alabama at Birmingham</td>
+<td>Birmingham</td>
+<td>AL</td>
+<td>0.8842</td>
+<td>637.0000</td>
+<td>644.0000</td>
+<td>NaN</td>
+<td>12118</td>
+<td>17727.0000</td>
+<td>NaN</td>
+<td>...</td>
+<td>0.6391</td>
+<td>0.3412</td>
+<td>69.0200</td>
+<td>27.7600</td>
+<td>1.1000</td>
+<td>2.0300</td>
+<td>15.9300</td>
+<td>8.5500</td>
+<td>96.5000</td>
+<td>55735.2200</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>University of Alabama in Huntsville</td>
+<td>Huntsville</td>
+<td>AL</td>
+<td>0.7425</td>
+<td>640.0000</td>
+<td>655.0000</td>
+<td>NaN</td>
+<td>6650</td>
+<td>19880.0000</td>
+<td>NaN</td>
+<td>...</td>
+<td>0.4763</td>
+<td>0.3101</td>
+<td>76.3800</td>
+<td>18.9800</td>
+<td>1.4200</td>
+<td>2.5500</td>
+<td>17.6700</td>
+<td>8.9100</td>
+<td>95.2700</td>
+<td>58688.6200</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Alabama State University</td>
+<td>Montgomery</td>
+<td>AL</td>
+<td>0.9564</td>
+<td>488.0000</td>
+<td>457.0000</td>
+<td>NaN</td>
+<td>3322</td>
+<td>13889.0000</td>
+<td>NaN</td>
+<td>...</td>
+<td>0.6134</td>
+<td>0.3434</td>
+<td>42.6900</td>
+<td>52.3200</td>
+<td>1.4100</td>
+<td>4.0900</td>
+<td>11.8100</td>
+<td>6.7600</td>
+<td>94.5300</td>
+<td>46065.2000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>The University of Alabama</td>
+<td>Tuscaloosa</td>
+<td>AL</td>
+<td>0.7582</td>
+<td>610.0000</td>
+<td>610.0000</td>
+<td>540.0000</td>
+<td>32323</td>
+<td>22150.0000</td>
+<td>NaN</td>
+<td>...</td>
+<td>0.6153</td>
+<td>0.2257</td>
+<td>75.3500</td>
+<td>21.0600</td>
+<td>1.2000</td>
+<td>2.4100</td>
+<td>16.4800</td>
+<td>9.2100</td>
+<td>96.0800</td>
+<td>57928.4100</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 25 columns</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="outputting-our-data" class="level1">
+<h1>Outputting our data</h1>
+<ul>
+<li>We can use the to_csv() method to write a DataFrame to a csv file</li>
+<li>We can use the to_excel() method to write a DataFrame to an Excel file</li>
+<li>We can use the to_json() method to write a DataFrame to a json file</li>
+</ul>
+<div id="c93e99bb" class="cell" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># index = FALSE if you don't want your index to be saved</span></span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>AAPL.to_csv(<span class="st">'AAPL_data.csv'</span>)  </span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>AAPL.to_excel(<span class="st">'AAPL_data.xlsx'</span>)</span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install openpyxl</span></span>
+<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a>AAPL.to_json(<span class="st">'AAPL_data.json'</span>, orient<span class="op">=</span><span class="st">'records'</span>, lines<span class="op">=</span><span class="va">False</span>, indent<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="more-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="more-challenges">More challenges</h2>
+<ul>
+<li>http://www.stat.ucla.edu/~vlew/datasets/cpi_cities it doesn’t have an extension, what kind of dataset is it?</li>
+<li>childcare.sav this is an SPSS file. (will need to download it, it’s an IBM product https://www.ibm.com/products/spss-statistics</li>
+<li>https://github.com/cran/spark.sas7bdat/blob/master/inst/extdata/iris.sas7bdat this is a SAS file. (will need to download it (https://www.sas.com/en_us/home.html privately held software company see it mostly as legacy type of data)</li>
+<li>database.sqlite this is a SQLite file, great for practicing SQL on your own computer</li>
+</ul>
+<div id="806c928f" class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Connect</span></span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">'database.sqlite'</span>)</span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. List tables</span></span>
+<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a>tables <span class="op">=</span> pd.read_sql_query(<span class="st">"SELECT name FROM sqlite_master WHERE type='table';"</span>, conn)</span>
+<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tables)</span>
+<span id="cb84-9"><a href="#cb84-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-10"><a href="#cb84-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Read a specific table</span></span>
+<span id="cb84-11"><a href="#cb84-11" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_sql_query(<span class="st">"SELECT * FROM tweets"</span>, conn)</span>
+<span id="cb84-12"><a href="#cb84-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-13"><a href="#cb84-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. View data</span></span>
+<span id="cb84-14"><a href="#cb84-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span>
+<span id="cb84-15"><a href="#cb84-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-16"><a href="#cb84-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Close connection</span></span>
+<span id="cb84-17"><a href="#cb84-17" aria-hidden="true" tabindex="-1"></a>conn.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     name
+0  Tweets
+             tweet_id airline_sentiment  airline_sentiment_confidence  \
+0  567588278875213824           neutral                        1.0000   
+1  567590027375702016          negative                        1.0000   
+2  567591480085463040          negative                        1.0000   
+3  567592368451248130          negative                        1.0000   
+4  567594449874587648          negative                        1.0000   
+
+           negativereason negativereason_confidence    airline  \
+0                                                        Delta   
+1              Can't Tell                    0.6503      Delta   
+2             Late Flight                    0.3460     United   
+3             Late Flight                         1     United   
+4  Customer Service Issue                    0.3451  Southwest   
+
+  airline_sentiment_gold         name negativereason_gold  retweet_count  \
+0                         JetBlueNews                                  0   
+1                           nesi_1992                                  0   
+2                           CPoutloud                                  0   
+3                            brenduch                                  0   
+4                            VahidESQ                                  0   
+
+                                                text tweet_coord  \
+0  @JetBlue's new CEO seeks the right balance to ...               
+1  @JetBlue is REALLY getting on my nerves !! 😡😡 ...               
+2  @united yes. We waited in line for almost an h...               
+3  @united the we got into the gate at IAH on tim...               
+4  @SouthwestAir its cool that my bags take a bit...               
+
+               tweet_created   tweet_location               user_timezone  
+0  2015-02-16 23:36:05 -0800              USA                      Sydney  
+1  2015-02-16 23:43:02 -0800        undecided  Pacific Time (US &amp; Canada)  
+2  2015-02-16 23:48:48 -0800   Washington, DC                              
+3  2015-02-16 23:52:20 -0800                                 Buenos Aires  
+4  2015-02-17 00:00:36 -0800  Los Angeles, CA  Pacific Time (US &amp; Canada)  </code></pre>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
