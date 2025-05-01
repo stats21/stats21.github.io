@@ -1143,7 +1143,7 @@ margin-right: 0; }
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-1-1">Dictionary</a></li><li><a href="#tabset-1-2">Iterate</a></li><li><a href="#tabset-1-3">Filter</a></li><li><a href="#tabset-1-4">Transform</a></li><li><a href="#tabset-1-5">Lookup</a></li><li><a href="#tabset-1-6">Sort</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div id="e486d203" class="cell" data-execution_count="1">
+<div id="43822cad" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>cities <span class="op">=</span> {</span>
@@ -1181,7 +1181,7 @@ margin-right: 0; }
 </div>
 </div>
 <div id="tabset-1-2">
-<div id="621c2c1f" class="cell" data-execution_count="2">
+<div id="27900f36" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="cf">for</span> city, coordinates <span class="kw">in</span> cities.items():</span>
@@ -1208,7 +1208,7 @@ San Francisco: Latitude 37.7749, Longitude -122.4194</code></pre>
 <li>We can use dictionary comprehension to filter</li>
 <li>Syntax is {key: value for key, value in original_dict.items() if condition}</li>
 </ul>
-<div id="8b3803b5" class="cell" data-execution_count="3">
+<div id="cf9a7107" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>filtered_dict <span class="op">=</span> {cityname: coords <span class="cf">for</span> cityname, coords <span class="kw">in</span> cities.items() <span class="cf">if</span> coords[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">40</span>}</span>
@@ -1229,7 +1229,7 @@ Boston: Latitude 42.3601, Longitude -71.0589</code></pre>
 <li>Use dictionary comprehension to transform values</li>
 <li>Here, we are just switching longitude and latitude but you could apply virtually any function</li>
 </ul>
-<div id="6a359c0e" class="cell" data-execution_count="4">
+<div id="51cec996" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>cities_switched <span class="op">=</span> {</span>
@@ -1259,7 +1259,7 @@ San Francisco: Longitude -122.4194, Latitude 37.7749</code></pre>
 <li>Suppose our dictionary was enormous (e.g., every city in the world)</li>
 <li>Dictionaries can perform fast lookups using the get method</li>
 </ul>
-<div id="3a2f9446" class="cell" data-execution_count="5">
+<div id="49786b8d" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>coords <span class="op">=</span> cities.get(<span class="st">&quot;Chicago&quot;</span>)</span>
@@ -1278,7 +1278,7 @@ San Francisco: Longitude -122.4194, Latitude 37.7749</code></pre>
 <li>Recall last lecture we examined the sorted() with lambda (an anonymous function)</li>
 <li>Lambda helps us to sort a dictionary, in this example, on the latitude in reverse order using a single line of code</li>
 </ul>
-<div id="5b4b8beb" class="cell" data-execution_count="6">
+<div id="90dd64d4" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>sorted_cities <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">sorted</span>(cities.items(), key<span class="op">=</span><span class="kw">lambda</span> item: item[<span class="dv">1</span>][<span class="dv">0</span>], reverse<span class="op">=</span><span class="va">True</span>))</span>
@@ -1689,7 +1689,7 @@ dict(sorted(cities.items(), key=get_latitude, reverse=True))</code></pre>
 <li>Everything starts with data and data will help guide the structure of our approach</li>
 <li>While JSON looks complex and messy, it really is orderly and simple</li>
 </ul>
-<div id="2ee2a475" class="cell" data-execution_count="9">
+<div id="e8023f39" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="im">import</span> json</span>
@@ -1721,7 +1721,7 @@ Top-level keys:, dict_keys([&#39;currentPage&#39;, &#39;cases&#39;, &#39;startRe
 <li>Once we have figured out how to read the daily data dump</li>
 <li>We can write a little function so it reads data the same way every time:</li>
 </ul>
-<div id="7c0b05eb" class="cell" data-execution_count="10">
+<div id="bebcba0b" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="im">import</span> json</span>
@@ -1766,7 +1766,7 @@ Top-level keys:, dict_keys([&#39;currentPage&#39;, &#39;cases&#39;, &#39;startRe
 <li>Initially it was not very generalizable</li>
 <li>But once we figured it out, we could improve upon it</li>
 </ul>
-<div id="56cf1726" class="cell" data-execution_count="11">
+<div id="781990b5" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
@@ -1796,7 +1796,7 @@ Counter({&#39;Residence&#39;: 234, &#39;Hospital&#39;: 181, &#39;Street&#39;: 20
 <li>Strings can be cleaned with string methods like .strip(), .title(), .lower()</li>
 <li>Datetime can help us with the birth and death date</li>
 </ul>
-<div id="98bdee5e" class="cell" data-execution_count="12">
+<div id="d14c1160" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="kw">def</span> normalize_place(death_place):</span>
@@ -1818,7 +1818,7 @@ Counter({&#39;Residence&#39;: 234, &#39;Hospital&#39;: 181, &#39;Street&#39;: 20
 <li>it allows us to convert and perform calculations withe dates and times</li>
 <li>here, we were told</li>
 </ul>
-<div id="e1cc867e" class="cell" data-execution_count="13">
+<div id="3e3417de" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
@@ -1864,7 +1864,7 @@ Counter({&#39;Residence&#39;: 234, &#39;Hospital&#39;: 181, &#39;Street&#39;: 20
 </section>
 <section id="attribute-example" class="slide level2">
 <h2>Attribute Example</h2>
-<div id="0da11987" class="cell" data-execution_count="14">
+<div id="2eb4ce48" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="im">import</span> textwrap</span>
@@ -1890,7 +1890,7 @@ __sizeof__  __str__  __subclasshook__  count  index  start  step  stop
 </section>
 <section id="methods-example" class="slide level2">
 <h2>Methods Example</h2>
-<div id="2c5da1b7" class="cell" data-execution_count="15">
+<div id="acc180dc" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>my_list <span class="op">=</span> [<span class="st">&quot;UCLA&quot;</span>, <span class="st">&quot;UCSB&quot;</span>, <span class="st">&quot;UCI&quot;</span>, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCSD&quot;</span>]</span>
@@ -1930,7 +1930,7 @@ insert  pop  remove  reverse  sort
 <li>To start, we’ll keep all of the fields (age and age_string are useless given than your employer wants age recalculated from birth date and death date)</li>
 <li>We can drop them later on</li>
 </ul>
-<div id="89e5431f" class="cell" data-execution_count="16">
+<div id="4b03fcc6" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="kw">class</span> Case:</span>
@@ -1949,7 +1949,7 @@ insert  pop  remove  reverse  sort
 </section>
 <section id="always-start-with-__init__" class="slide level2">
 <h2>Always start with <code>__init__</code></h2>
-<div id="a0e89bc3" class="cell" data-execution_count="17">
+<div id="fa957f77" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="kw">class</span> Case:</span>
@@ -1966,7 +1966,7 @@ insert  pop  remove  reverse  sort
 </section>
 <section id="what-is-self" class="slide level2 smaller">
 <h2>What is self?</h2>
-<div id="9aa33ed7" class="cell" data-execution_count="18">
+<div id="afe153c0" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="kw">class</span> Case:</span>
@@ -1990,7 +1990,7 @@ insert  pop  remove  reverse  sort
 <li>This is instantiation, the act of generating an object from a class.</li>
 <li>The class is called Case</li>
 </ul>
-<div id="edb085d6" class="cell" data-execution_count="19">
+<div id="f7116416" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a>cases <span class="op">=</span> []</span>
@@ -2016,7 +2016,7 @@ insert  pop  remove  reverse  sort
 <span id="cb35-21"><a></a>    <span class="cf">break</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;__main__.Case object at 0x122236120&gt;</code></pre>
+<pre><code>&lt;__main__.Case object at 0x1295fa270&gt;</code></pre>
 </div>
 </div>
 </section>
@@ -2050,7 +2050,7 @@ insert  pop  remove  reverse  sort
 </section>
 <section id="object-from-modified-class-with-str" class="slide level2">
 <h2>Object from modified class with <strong>str</strong></h2>
-<div id="b1cc5bf1" class="cell" data-execution_count="21">
+<div id="921e1bf9" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a>cases <span class="op">=</span> []</span>
