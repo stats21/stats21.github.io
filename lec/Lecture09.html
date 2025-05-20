@@ -1251,7 +1251,7 @@ margin-right: 0; }
 <section id="start-it-up" class="slide level2">
 <h2>Start it up</h2>
 <p>This will be “the way” to work with pandas this quarter</p>
-<div id="80ef7934" class="cell" data-execution_count="1">
+<div id="e2197493" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a></a><span class="im">import</span> json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1292,7 +1292,7 @@ pd.read_csv(&quot;my_whitespace_data.txt&quot;, sep=&#39;\s+&#39;)  # at least o
 </section>
 <section id="useful-pandas-options" class="slide level2">
 <h2>Useful pandas options</h2>
-<div id="6910761a" class="cell" data-execution_count="2">
+<div id="122e7d68" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># useful options</span></span>
 <span id="cb3-2"><a></a>pd.set_option(<span class="st">&#39;display.float_format&#39;</span>, <span class="st">&#39;</span><span class="sc">{:.4f}</span><span class="st">&#39;</span>.<span class="bu">format</span>)</span>
 <span id="cb3-3"><a></a>pd.set_option(<span class="st">&#39;display.max_rows&#39;</span>, <span class="va">None</span>) <span class="co"># defaults to 10</span></span>
@@ -1330,7 +1330,7 @@ pd.read_csv(&quot;my_whitespace_data.txt&quot;, sep=&#39;\s+&#39;)  # at least o
 </section>
 <section id="csv-easiest-example" class="slide level2 smaller">
 <h2>csv easiest example</h2>
-<div id="ef4952df" class="cell" data-execution_count="3">
+<div id="9afba318" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>AAPL <span class="op">=</span> pd.read_csv(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/AAPL.csv&#39;</span>)</span>
 <span id="cb4-2"><a></a>AAPL.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -1430,7 +1430,7 @@ text-align: right;
 </section>
 <section id="info-method" class="slide level2">
 <h2>info method</h2>
-<div id="32cf032e" class="cell" data-execution_count="4">
+<div id="a2af1383" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>AAPL.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -1452,7 +1452,7 @@ memory usage: 68.9+ KB</code></pre>
 </section>
 <section id="describe-method" class="slide level2 smaller">
 <h2>describe method</h2>
-<div id="388cebbc" class="cell" data-execution_count="5">
+<div id="02d739da" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>AAPL.describe() <span class="co"># notice date is not included in the summary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
@@ -1571,7 +1571,7 @@ text-align: right;
 </section>
 <section id="not-sure-about-the-data" class="slide level2 smaller">
 <h2>Not sure about the data</h2>
-<div id="402fd01e" class="cell" data-execution_count="6">
+<div id="ab333d89" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="cf">try</span>:</span>
 <span id="cb8-2"><a></a>    df <span class="op">=</span> pd.read_csv(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/NBA_TEAMS.tsv&#39;</span>, </span>
 <span id="cb8-3"><a></a>                     nrows<span class="op">=</span><span class="dv">5</span>, </span>
@@ -1591,7 +1591,7 @@ Chicago      Bulls  46 111.6000 86.9000 48.0000 28.8000 36.9000 21.5000 81.3000 
 </section>
 <section id="info-method-1" class="slide level2">
 <h2>info method</h2>
-<div id="099b08d9" class="cell" data-execution_count="7">
+<div id="31ab309c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>df.info() <span class="co"># notice the city is not considered part of the team variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -1630,7 +1630,7 @@ memory usage: 640.0+ bytes</code></pre>
 </section>
 <section id="with-correct-separator" class="slide level2 smaller">
 <h2>with correct separator</h2>
-<div id="c3ef7820" class="cell" data-execution_count="8">
+<div id="b995f86a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>nba_teams <span class="op">=</span> pd.read_csv(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/NBA_TEAMS.tsv&#39;</span>, </span>
 <span id="cb12-2"><a></a>                        sep<span class="op">=</span><span class="st">&#39;</span><span class="ch">\t</span><span class="st">&#39;</span>)</span>
 <span id="cb12-3"><a></a>nba_teams.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1769,7 +1769,7 @@ text-align: right;
 </section>
 <section id="check-info-method" class="slide level2">
 <h2>check info() method</h2>
-<div id="b71b0a75" class="cell" data-execution_count="9">
+<div id="5cbdf0c3" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>nba_teams.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -1815,7 +1815,7 @@ memory usage: 3.6+ KB</code></pre>
 </section>
 <section id="uncertain-again-try-read_csv" class="slide level2 smaller">
 <h2>uncertain again try read_csv()</h2>
-<div id="a76c53f9" class="cell" data-execution_count="10">
+<div id="115b122d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="cf">try</span>:</span>
 <span id="cb15-2"><a></a>    df <span class="op">=</span> pd.read_csv(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/DataSift-49de7967b29ac130ab49248db140d634-1389311635.json&#39;</span>, </span>
 <span id="cb15-3"><a></a>                     nrows<span class="op">=</span><span class="dv">2</span>, </span>
@@ -1889,7 +1889,7 @@ memory usage: 3.6+ KB</code></pre>
 </section>
 <section id="pd.read_json" class="slide level2 smaller">
 <h2>pd.read_json()</h2>
-<div id="5a35b3b7" class="cell" data-execution_count="11">
+<div id="afd16973" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>df <span class="op">=</span> pd.read_json(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/DataSift-49de7967b29ac130ab49248db140d634-1389311635.json&#39;</span>)</span>
 <span id="cb17-2"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
@@ -1981,7 +1981,7 @@ text-align: right;
 </section>
 <section id="reading-ames_numeric.txt-headerless" class="slide level2 smaller">
 <h2>reading ames_numeric.txt (headerless)</h2>
-<div id="d12e8480" class="cell" data-execution_count="12">
+<div id="10f8ae07" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>ames <span class="op">=</span> pd.read_csv(<span class="st">&#39;ames_numeric.txt&#39;</span>, </span>
 <span id="cb18-2"><a></a>                   sep <span class="op">=</span> <span class="vs">r&#39;\s+&#39;</span>, </span>
 <span id="cb18-3"><a></a>                   header <span class="op">=</span> <span class="va">None</span>)</span>
@@ -2158,7 +2158,7 @@ text-align: right;
 </section>
 <section id="no-delimiter-example" class="slide level2 smaller">
 <h2>no delimiter example</h2>
-<div id="dc156c95" class="cell" data-execution_count="13">
+<div id="82b39e52" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="cf">try</span>:</span>
 <span id="cb19-2"><a></a>    df <span class="op">=</span> pd.read_csv(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/dataread3.txt&#39;</span>, </span>
 <span id="cb19-3"><a></a>                     nrows<span class="op">=</span><span class="dv">2</span>, sep<span class="op">=</span><span class="vs">r&#39;\s+&#39;</span>, </span>
@@ -2175,7 +2175,7 @@ text-align: right;
 </section>
 <section id="read_fwf-fixed-width-file" class="slide level2 smaller">
 <h2>read_fwf() fixed width file</h2>
-<div id="bd1c5c40" class="cell" data-execution_count="14">
+<div id="413f7d11" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>col_locs <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">2</span>), (<span class="dv">2</span>, <span class="dv">29</span>), (<span class="dv">29</span>, <span class="dv">38</span>), (<span class="dv">38</span>, <span class="dv">52</span>), (<span class="dv">52</span>, <span class="dv">62</span>),  (<span class="dv">62</span>, <span class="dv">65</span>), (<span class="dv">65</span>,<span class="dv">76</span>), (<span class="dv">76</span>,<span class="dv">86</span>), (<span class="dv">86</span>,<span class="dv">88</span>)]</span>
 <span id="cb21-2"><a></a>movies <span class="op">=</span> pd.read_fwf(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/dataread3.txt&#39;</span>, colspecs<span class="op">=</span>col_locs, header<span class="op">=</span><span class="va">None</span>)</span>
 <span id="cb21-3"><a></a><span class="co">#movies.columns = [&#39;RANK&#39;, &#39;TITLE&#39;, &#39;STUDIO&#39;, &#39;GROSS&#39;, &#39;OPEN&#39;, &#39;COS&#39;, &#39;RATIO&#39;, &#39;GENRE&#39;, &#39;OSCARS&#39;]</span></span>
@@ -2217,7 +2217,7 @@ text-align: right;
 <ul>
 <li>no need to fix the NaN values, automatically drops from computation</li>
 </ul>
-<div id="0aa1088e" class="cell" data-execution_count="15">
+<div id="5b7a24fb" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>movies.describe().T </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <div>
@@ -2311,7 +2311,7 @@ text-align: right;
 </section>
 <section id="reading-excel-always-check" class="slide level2 smaller">
 <h2>reading Excel &amp; always check</h2>
-<div id="d120f9ea" class="cell" data-execution_count="16">
+<div id="3841b983" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>sbux <span class="op">=</span> pd.read_excel(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/SBUX.xlsx&#39;</span>)</span>
 <span id="cb25-2"><a></a>sbux.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
@@ -2485,7 +2485,7 @@ text-align: right;
 </section>
 <section id="using-the-info-method-again" class="slide level2">
 <h2>using the info() method again</h2>
-<div id="d8f590a9" class="cell" data-execution_count="17">
+<div id="60aac9dd" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>sbux.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -2521,7 +2521,7 @@ memory usage: 3.8+ MB</code></pre>
 </section>
 <section id="and-describe" class="slide level2 smaller">
 <h2>and describe()</h2>
-<div id="76c7f4ac" class="cell" data-execution_count="18">
+<div id="a37240e1" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>sbux.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <div>
@@ -2613,7 +2613,7 @@ text-align: right;
 </section>
 <section id="revisit-a-json-file" class="slide level2 smaller">
 <h2>Revisit a json file</h2>
-<div id="e0369ac3" class="cell" data-execution_count="19">
+<div id="f16d6456" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>marijuana_biz <span class="op">=</span> pd.read_json(<span class="st">&#39;marijuana_biz.geojson&#39;</span>)</span>
 <span id="cb29-2"><a></a>marijuana_biz.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
@@ -2692,7 +2692,7 @@ text-align: right;
 </section>
 <section id="back-to-the-standard-library" class="slide level2">
 <h2>back to the standard library</h2>
-<div id="1aa9a461" class="cell" data-execution_count="20">
+<div id="442f7e35" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;marijuana_biz.geojson&#39;</span>) <span class="im">as</span> f:</span>
 <span id="cb30-2"><a></a>    data <span class="op">=</span> json.load(f) </span>
 <span id="cb30-3"><a></a></span>
@@ -2708,7 +2708,7 @@ text-align: right;
 <li>In a nested json type of data file, only one portion will have the data you want</li>
 <li>The rest of the data is often metadata</li>
 </ul>
-<div id="6aaff231" class="cell" data-execution_count="21">
+<div id="863215ed" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="bu">print</span>(<span class="bu">type</span>(data[<span class="st">&#39;type&#39;</span>]), <span class="bu">len</span>(data[<span class="st">&#39;type&#39;</span>]))</span>
 <span id="cb32-2"><a></a><span class="bu">print</span>(<span class="bu">type</span>(data[<span class="st">&#39;features&#39;</span>]), <span class="bu">len</span>(data[<span class="st">&#39;features&#39;</span>])) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2719,7 +2719,7 @@ text-align: right;
 </section>
 <section id="check-out-the-list" class="slide level2 smaller">
 <h2>check out the list</h2>
-<div id="990621ba" class="cell" data-execution_count="22">
+<div id="7bf9cf23" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a>data[<span class="st">&#39;features&#39;</span>][<span class="dv">0</span>] <span class="co"># look at the first feature</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>{&#39;type&#39;: &#39;Feature&#39;,
@@ -2750,7 +2750,7 @@ text-align: right;
 <li>The second key is ‘properties’ and it is a dictionary</li>
 <li>The third key is ‘geometry’ and it is a dictionary</li>
 </ul>
-<div id="bb024736" class="cell" data-execution_count="23">
+<div id="482de9ec" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="bu">print</span>(data[<span class="st">&#39;features&#39;</span>][<span class="dv">0</span>][<span class="st">&#39;properties&#39;</span>].keys()) </span>
 <span id="cb36-2"><a></a><span class="bu">print</span>(data[<span class="st">&#39;features&#39;</span>][<span class="dv">0</span>][<span class="st">&#39;geometry&#39;</span>].keys())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2775,7 +2775,7 @@ dict_keys([&#39;type&#39;, &#39;coordinates&#39;])</code></pre>
 <ul>
 <li>recall read it from right to left if it’s still confusing</li>
 </ul>
-<div id="ad597030" class="cell" data-execution_count="24">
+<div id="fc793354" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a>marijuana_biz <span class="op">=</span> pd.json_normalize([feature[<span class="st">&#39;properties&#39;</span>] <span class="cf">for</span> feature <span class="kw">in</span> data[<span class="st">&#39;features&#39;</span>]])</span>
 <span id="cb38-2"><a></a>marijuana_biz.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
@@ -2917,7 +2917,7 @@ text-align: right;
 <li>We can grab the geography data from the json file and convert it to a pandas dataframe too</li>
 <li>Next step (next time) would be to merge the two dataframes</li>
 </ul>
-<div id="7b280ab2" class="cell" data-execution_count="25">
+<div id="347fbd31" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>marijuana_biz_geometry <span class="op">=</span> pd.json_normalize([feature[<span class="st">&#39;geometry&#39;</span>] <span class="cf">for</span> feature <span class="kw">in</span> data[<span class="st">&#39;features&#39;</span>]])</span>
 <span id="cb39-2"><a></a>marijuana_biz_geometry.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
@@ -2989,7 +2989,7 @@ text-align: right;
 <li>DataFrames are objects. And they have methods and attributes</li>
 <li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas-dataframe">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas-dataframe</a></li>
 </ul>
-<div id="f03fe09f" class="cell" data-execution_count="26">
+<div id="cd82b62d" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a><span class="im">import</span> textwrap</span>
 <span id="cb40-2"><a></a></span>
 <span id="cb40-3"><a></a>attrs <span class="op">=</span> <span class="bu">dir</span>(AAPL)</span>
@@ -3070,14 +3070,14 @@ Methods are <em>functions that belong to an object</em>.</p>
 </section>
 <section id="recall" class="slide level2 smaller">
 <h2>Recall</h2>
-<div id="518ed5cc" class="cell" data-execution_count="27">
+<div id="8cdaac5d" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a><span class="co"># attribute</span></span>
 <span id="cb42-2"><a></a>AAPL.columns </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>Index([&#39;Date&#39;, &#39;Open&#39;, &#39;High&#39;, &#39;Low&#39;, &#39;Close&#39;, &#39;Adj Close&#39;, &#39;Volume&#39;], dtype=&#39;object&#39;)</code></pre>
 </div>
 </div>
-<div id="4887f8d5" class="cell" data-execution_count="28">
+<div id="ac378435" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a></a><span class="co"># method</span></span>
 <span id="cb44-2"><a></a>AAPL.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
@@ -3201,7 +3201,7 @@ text-align: right;
 </section>
 <section id="the-.iloc-method-for-dataframes-rows" class="slide level2 smaller">
 <h2>The .iloc method for dataframes: rows</h2>
-<div id="ac190d87" class="cell" data-execution_count="29">
+<div id="872de100" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a></a><span class="bu">print</span>(AAPL.iloc[<span class="dv">0</span>:<span class="dv">5</span>, ])</span>
 <span id="cb46-2"><a></a><span class="bu">type</span>(AAPL.iloc[<span class="dv">0</span>:<span class="dv">5</span>, ])   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3219,7 +3219,7 @@ text-align: right;
 </section>
 <section id="the-.iloc-method-for-dataframes-columns" class="slide level2 smaller">
 <h2>The .iloc method for dataframes: columns</h2>
-<div id="690fe6c3" class="cell" data-execution_count="30">
+<div id="2dd0d5af" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a></a><span class="bu">print</span>(AAPL.iloc[:, [<span class="dv">0</span>,<span class="dv">6</span>] ])</span>
 <span id="cb49-2"><a></a><span class="bu">type</span>(AAPL.iloc[:, [<span class="dv">0</span>,<span class="dv">6</span>] ])  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4489,7 +4489,7 @@ text-align: right;
 </section>
 <section id="the-.iloc-method-for-dataframes-with-steps" class="slide level2 smaller">
 <h2>The .iloc method for dataframes with steps</h2>
-<div id="c33739ae" class="cell" data-execution_count="31">
+<div id="2d74d27c" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a></a><span class="bu">print</span>(AAPL.iloc[::<span class="dv">10</span>, ::<span class="dv">2</span> ])</span>
 <span id="cb52-2"><a></a><span class="bu">type</span>(AAPL.iloc[::<span class="dv">10</span>, ::<span class="dv">2</span>])  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4641,7 +4641,7 @@ text-align: right;
 </section>
 <section id="recall-date-is-a-string-object-not-a-date" class="slide level2 smaller">
 <h2>RECALL Date is a string (object) not a date</h2>
-<div id="c74aeaf6" class="cell" data-execution_count="32">
+<div id="d78e3760" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a>AAPL.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -4674,7 +4674,7 @@ memory usage: 68.9+ KB</code></pre>
 <ul>
 <li>FIRST convert Date to datetime</li>
 </ul>
-<div id="cf19ad69" class="cell" data-execution_count="33">
+<div id="590879e6" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>AAPL[<span class="st">&#39;Date&#39;</span>] <span class="op">=</span> pd.to_datetime(AAPL[<span class="st">&#39;Date&#39;</span>]) </span>
 <span id="cb57-2"><a></a><span class="co"># add , format=&#39;%d-%m-%Y&#39; if the format is not standard</span></span>
 <span id="cb57-3"><a></a>AAPL[<span class="st">&#39;Date&#39;</span>].dtype <span class="co"># check the type</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4688,7 +4688,7 @@ memory usage: 68.9+ KB</code></pre>
 <ul>
 <li>THEN set the index to Date</li>
 </ul>
-<div id="5b5f47e6" class="cell" data-execution_count="34">
+<div id="37a989ba" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a>AAPL <span class="op">=</span> AAPL.set_index(<span class="st">&#39;Date&#39;</span>)</span>
 <span id="cb59-2"><a></a><span class="bu">print</span>(AAPL.index, <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>) <span class="co"># check</span></span>
 <span id="cb59-3"><a></a><span class="bu">print</span>(AAPL.head()) <span class="co"># check</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4713,7 +4713,7 @@ Date
 <li>With the new index, we can slice by labels in both the row and column</li>
 <li>Even if you have labels, you can still slice by row number and column number with .iloc[]</li>
 </ul>
-<div id="57b1e838" class="cell" data-execution_count="35">
+<div id="90252284" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a>AAPL.loc[<span class="st">&#39;2023-01-01&#39;</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="35">
 <div>
@@ -7001,7 +7001,7 @@ text-align: right;
 </section>
 <section id="requesting-specific-dates" class="slide level2">
 <h2>Requesting specific dates</h2>
-<div id="52277be7" class="cell" data-execution_count="36">
+<div id="4c2c84d3" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a></a><span class="bu">print</span>(AAPL.loc[[<span class="st">&#39;2020-03-13&#39;</span>, <span class="st">&#39;2020-03-20&#39;</span>], [<span class="st">&#39;Open&#39;</span>, <span class="st">&#39;Close&#39;</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              Open   Close
@@ -7013,7 +7013,7 @@ Date
 </section>
 <section id="a-range-of-dates" class="slide level2">
 <h2>a range of dates</h2>
-<div id="a6486e3e" class="cell" data-execution_count="37">
+<div id="eb73b12d" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a></a><span class="bu">print</span>(AAPL.loc[<span class="st">&#39;2020-03-12&#39;</span>:<span class="st">&#39;2020-03-20&#39;</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              Open    High     Low   Close  Adj Close     Volume
@@ -7030,7 +7030,7 @@ Date
 </section>
 <section id="both-dimensions" class="slide level2">
 <h2>both dimensions</h2>
-<div id="a684d15a" class="cell" data-execution_count="38">
+<div id="285b2ea3" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a></a>AAPL.loc[<span class="st">&#39;2020-03-12&#39;</span>:<span class="st">&#39;2020-03-20&#39;</span>, [<span class="st">&#39;Open&#39;</span>, <span class="st">&#39;Close&#39;</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
 <div>
@@ -7105,7 +7105,7 @@ text-align: right;
 <section id="once-you-are-comfortable-with-slicing" class="slide level2 smaller">
 <h2>Once you are comfortable with slicing</h2>
 <p>Boolean indexing is a very powerful way to filter data.</p>
-<div id="db6be64f" class="cell" data-execution_count="39">
+<div id="e0ab46b8" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a></a>AAPL.loc[AAPL[<span class="st">&#39;Open&#39;</span>] <span class="op">&gt;</span> <span class="dv">180</span>, [<span class="st">&#39;Open&#39;</span>, <span class="st">&#39;Close&#39;</span>]] <span class="co"># boolean indexing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="39">
 <div>
@@ -7610,7 +7610,7 @@ text-align: right;
 </section>
 <section id="just-to-be-clear" class="slide level2">
 <h2>Just to be clear</h2>
-<div id="3e33c537" class="cell" data-execution_count="40">
+<div id="292c5910" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a></a><span class="bu">print</span>(<span class="bu">type</span>(AAPL.loc[<span class="st">&#39;2020-03-12&#39;</span>:<span class="st">&#39;2020-03-20&#39;</span>, <span class="st">&#39;Open&#39;</span>])) <span class="co"># this is a series with only one column</span></span>
 <span id="cb68-2"><a></a><span class="bu">print</span>(<span class="bu">type</span>(AAPL.loc[<span class="st">&#39;2020-03-12&#39;</span>:<span class="st">&#39;2020-03-20&#39;</span>, [<span class="st">&#39;Open&#39;</span>, <span class="st">&#39;Close&#39;</span>]])) <span class="co"># this is a dataframe</span></span>
 <span id="cb68-3"><a></a><span class="bu">print</span>(<span class="bu">type</span>(AAPL.loc[<span class="st">&#39;2020-03-20&#39;</span>, ])) <span class="co"># this is a series with only one row</span></span>
@@ -7633,7 +7633,7 @@ text-align: right;
 </section>
 <section id="dot-notation-example" class="slide level2">
 <h2>Dot Notation Example</h2>
-<div id="fedbd7c4" class="cell" data-execution_count="41">
+<div id="00aeda6e" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a></a>AAPL.Open  <span class="co"># dot notation</span></span>
 <span id="cb70-2"><a></a><span class="co">#AAPL.Open[:5]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="41">
@@ -8901,7 +8901,7 @@ Name: Open, dtype: float64</code></pre>
 </section>
 <section id="bracket-notation-example" class="slide level2">
 <h2>Bracket Notation Example</h2>
-<div id="44664f23" class="cell" data-execution_count="42">
+<div id="d0ebd5ca" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a></a>AAPL[<span class="st">&#39;Open&#39;</span>] <span class="co"># bracket notation</span></span>
 <span id="cb72-2"><a></a><span class="co">#AAPL[&#39;Open&#39;][:5]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="42">
@@ -10203,7 +10203,7 @@ Name: Open, dtype: float64</code></pre>
 </section>
 <section id="creating-a-new-dataframe" class="slide level2 smaller">
 <h2>Creating a new dataframe</h2>
-<div id="d0a0087f" class="cell" data-execution_count="43">
+<div id="8966fcc0" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a></a>AAPL_reset <span class="op">=</span> AAPL.reset_index()</span>
 <span id="cb74-2"><a></a></span>
 <span id="cb74-3"><a></a>AAPL_reset[<span class="st">&#39;Year&#39;</span>] <span class="op">=</span> AAPL_reset[<span class="st">&#39;Date&#39;</span>].dt.year</span>
@@ -10348,7 +10348,7 @@ text-align: right;
 </section>
 <section id="example-writing-to-your-drive" class="slide level2">
 <h2>Example writing to your drive</h2>
-<div id="4cde6aa5" class="cell" data-execution_count="44">
+<div id="e5c48a79" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a></a><span class="co"># index = FALSE if you don&#39;t want your index to be saved</span></span>
 <span id="cb75-2"><a></a>AAPL.to_csv(<span class="st">&#39;AAPL_data.csv&#39;</span>)  </span>
 <span id="cb75-3"><a></a>AAPL.to_excel(<span class="st">&#39;AAPL_data.xlsx&#39;</span>)</span>
@@ -10367,7 +10367,7 @@ text-align: right;
 </section>
 <section id="example-sqlite-read" class="slide level2 smaller">
 <h2>Example sqlite read</h2>
-<div id="061154ff" class="cell" data-execution_count="45">
+<div id="651e9a8d" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a></a><span class="im">import</span> sqlite3</span>
 <span id="cb76-2"><a></a></span>
 <span id="cb76-3"><a></a><span class="co"># 1. Connect</span></span>

@@ -1152,7 +1152,7 @@ margin-right: 0; }
 <li>NumPy arrays are fixed‑size — once you allocate an ndarray, its total number of elements doesn’t change like a list can.</li>
 <li>A NumPy ndarray allocates one contiguous block of memory sized exactly for its number of elements</li>
 </ul>
-<div id="314f8821" class="cell" data-execution_count="1">
+<div id="a5102a99" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1166,10 +1166,10 @@ margin-right: 0; }
 <span id="cb1-9"><a></a><span class="bu">print</span>(<span class="ss">f&#39;List b: </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">, id: </span><span class="sc">{</span><span class="bu">id</span>(b)<span class="sc">}</span><span class="ss">&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>NumPy ndarray a: [0 1 2 3 4], id: 4955353904
-List b: [0, 1, 2, 3, 4], id: 4361870912
-NumPy ndarray a: [0 1 2 3 4 5], id: 4955354288
-List b: [0, 1, 2, 3, 4, 5], id: 4361870912</code></pre>
+<pre><code>NumPy ndarray a: [0 1 2 3 4], id: 4780838320
+List b: [0, 1, 2, 3, 4], id: 4354569728
+NumPy ndarray a: [0 1 2 3 4 5], id: 4780838704
+List b: [0, 1, 2, 3, 4, 5], id: 4354569728</code></pre>
 </div>
 </div>
 <p>Increasing the size an array (np.append, np.concatenate, np.resize) always returns a new array.</p>
@@ -1183,7 +1183,7 @@ List b: [0, 1, 2, 3, 4, 5], id: 4361870912</code></pre>
 <li>If you mix type, NumPy will pick a single data type that can represent all of the values and convert your data. This is called “upcasting” (coercion)</li>
 </ul></li>
 </ul>
-<div id="9e235b4b" class="cell" data-execution_count="2">
+<div id="91e21552" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>x <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])        <span class="co"># dtype int64</span></span>
@@ -1216,7 +1216,7 @@ a is [&#39;1&#39; &#39;2.0&#39; &#39;(3+0j)&#39; &#39;x&#39;] dtype is &lt;U64 w
 <h2>Multiplication Example (Standard vs Numpy)</h2>
 <div class="columns">
 <div class="column">
-<div id="b9f27a38" class="cell" data-execution_count="3">
+<div id="0fb36594" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
@@ -1237,7 +1237,7 @@ it has length 4</code></pre>
 </div>
 </div>
 </div><div class="column">
-<div id="16a5d0ee" class="cell" data-execution_count="4">
+<div id="f810acb5" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1281,7 +1281,7 @@ it is a 1D array of size
 <ul>
 <li>You can try it for real with in your team in a few minutes</li>
 </ul>
-<div id="d205e201" class="cell" data-execution_count="5">
+<div id="969680f8" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1320,7 +1320,7 @@ it is a 1D array of size
 <li>Numpy uses Python’s built‑in operators</li>
 <li><a href="https://docs.python.org/3/library/operator.html#mapping-operators-to-functions">https://docs.python.org/3/library/operator.html#mapping-operators-to-functions</a></li>
 </ul>
-<div id="56fcc583" class="cell" data-execution_count="6">
+<div id="64caf5d2" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
@@ -1341,14 +1341,14 @@ a**b result [  1  32 729]</code></pre>
 </div>
 </div>
 </section>
-<section id="also-zupports-functional-and-oop-styles" class="slide level2 smaller">
-<h2>Also zupports functional and OOP styles</h2>
+<section id="also-supports-functional-and-oop-styles" class="slide level2 smaller">
+<h2>Also supports functional and OOP styles</h2>
 <ul>
 <li>Numpy has “ufuncs” (universal functions) which utilize vectorization and have a “built-in” feel: <a href="https://numpy.org/doc/stable/reference/ufuncs.html">https://numpy.org/doc/stable/reference/ufuncs.html</a></li>
 </ul>
 <div class="columns">
 <div class="column">
-<div id="e88a1f6c" class="cell" data-execution_count="7">
+<div id="9906a201" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
@@ -1378,7 +1378,7 @@ np.divide(a, b) result [0.25 0.4  0.5 ]</code></pre>
 </div>
 </div>
 </div><div class="column">
-<div id="61b7f79c" class="cell" data-execution_count="8">
+<div id="4079cfc2" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
@@ -1407,7 +1407,7 @@ a.__truediv__(b) result [0.25 0.4  0.5 ]</code></pre>
 <section id="recall-class-methods-attributes" class="slide level2">
 <h2>(recall) Class, methods, attributes</h2>
 <p>All of this in one little object…</p>
-<div id="7cb0af43" class="cell" data-execution_count="9">
+<div id="79e29be7" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>methods <span class="op">=</span> []</span>
@@ -1448,7 +1448,7 @@ Attributes:
 </ul>
 <div class="columns">
 <div class="column">
-<div id="0b17b6d9" class="cell" data-execution_count="10">
+<div id="e3ea467f" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>library(ggplot2)</span>
@@ -1460,7 +1460,7 @@ Attributes:
 </details>
 </div>
 </div><div class="column">
-<div id="137229d6" class="cell" data-execution_count="11">
+<div id="877c6b1f" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>ggplot2::ggplot(data <span class="op">=</span> iris,</span>
@@ -1508,7 +1508,7 @@ Attributes:
 <h2>Basic difference Example</h2>
 <div class="columns">
 <div class="column">
-<div id="4aff34e6" class="cell" data-execution_count="12">
+<div id="110961c7" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>a <span class="op">=</span> np.array(<span class="bu">range</span>(<span class="dv">6</span>))</span>
@@ -1532,7 +1532,7 @@ size :6, shape :(6,), dimension: 1, dtype:int64</code></pre>
 </div>
 </div>
 </div><div class="column">
-<div id="a8c03044" class="cell" data-execution_count="13">
+<div id="2d9adba5" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>a2D <span class="op">=</span> np.array([<span class="bu">range</span>(<span class="dv">6</span>)])</span>
@@ -1572,7 +1572,7 @@ size :6, shape :(1, 6), dimension: 2, dtype:int64</code></pre>
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-1-1">Transpose</a></li><li><a href="#tabset-1-2">Broadcasting</a></li><li><a href="#tabset-1-3">Example 1</a></li><li><a href="#tabset-1-4">Example 2</a></li><li><a href="#tabset-1-5">Example 3</a></li><li><a href="#tabset-1-6">R v Python</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div id="73b46aaa" class="cell" data-execution_count="14">
+<div id="86679749" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>a <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
@@ -1612,7 +1612,7 @@ and b.T shape is (6, 1)</code></pre>
 </ul>
 </div>
 <div id="tabset-1-3">
-<div id="d6a52ddb" class="cell" data-execution_count="15">
+<div id="4625ce6e" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]) <span class="co"># (6,)</span></span>
@@ -1628,7 +1628,7 @@ and b.T shape is (6, 1)</code></pre>
 </div>
 </div>
 <div id="tabset-1-4">
-<div id="1b8ecd30" class="cell" data-execution_count="16">
+<div id="8b468a3f" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
@@ -1665,7 +1665,7 @@ and b.T shape is (6, 1)</code></pre>
 </div>
 </div>
 <div id="tabset-1-5">
-<div id="5f45fa55" class="cell" data-execution_count="17">
+<div id="9cdf741f" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="bu">print</span>(a <span class="op">*</span> b)  <span class="co"># works </span></span>
@@ -1733,7 +1733,7 @@ and b.T shape is (6, 1)</code></pre>
 </ul>
 <div class="columns">
 <div class="column">
-<div id="d96fb8c2" class="cell" data-execution_count="18">
+<div id="b3b68cba" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a>a_T <span class="op">=</span> np.array([<span class="bu">range</span>(<span class="dv">6</span>)]).T</span>
@@ -1767,7 +1767,7 @@ and b_T[::2] is
 </div>
 </div>
 </div><div class="column">
-<div id="56793f67" class="cell" data-execution_count="19">
+<div id="0025d6b8" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>],</span>
@@ -1795,7 +1795,7 @@ and this is a:
 <p>3D and 4D arrays (and of course beyond)</p>
 <div class="columns">
 <div class="column">
-<div id="2b5bd514" class="cell" data-execution_count="20">
+<div id="cd2f5618" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a><span class="co"># A 3×2×4 array: 3 “blocks” of 2×4 matrices</span></span>
@@ -1831,7 +1831,7 @@ and this is a:
 </div>
 </div>
 </div><div class="column">
-<div id="1d5f5887" class="cell" data-execution_count="21">
+<div id="89b1e295" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>b <span class="op">=</span> np.array([</span>
@@ -1912,7 +1912,7 @@ b[1] is [[[ 9 10]
 <li>np.zeros(), np.ones()</li>
 <li>default is float, but can be changed.</li>
 </ul>
-<div id="86a37510" class="cell" data-execution_count="22">
+<div id="ff238e10" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a>a <span class="op">=</span> np.zeros(<span class="dv">12</span>).reshape(<span class="dv">3</span>, <span class="dv">4</span>) </span>
@@ -1947,7 +1947,7 @@ a is np.ones(24).reshape(2, 3, 4)
 </ul>
 <div class="columns">
 <div class="column">
-<div id="af62092c" class="cell" data-execution_count="23">
+<div id="602c1a21" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a>a_full <span class="op">=</span> np.full((<span class="dv">3</span>, <span class="dv">4</span>), <span class="dv">7</span>)</span>
@@ -1967,7 +1967,7 @@ np.full((3, 4), 7)
 </div>
 </div>
 </div><div class="column">
-<div id="ade0a733" class="cell" data-execution_count="24">
+<div id="4a096c09" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="bu">print</span>(<span class="st">&#39;this is b_random also 2D 3,4&#39;</span>)</span>
@@ -1981,9 +1981,9 @@ np.full((3, 4), 7)
 <div class="cell-output cell-output-stdout">
 <pre><code>this is b_random also 2D 3,4
 np.random.randint(1, 100, (3, 4))
-[[79 36 66  7]
- [82 44 24 15]
- [99 62 19 45]]
+[[68 56 88 42]
+ [50 23 57 79]
+ [17 59 17 20]]
 
 this is c_arange using the reshape method
 np.arange(1, 25).reshape(2, 3, 4)
@@ -2004,7 +2004,7 @@ np.arange(1, 25).reshape(2, 3, 4)
 <li>You can also use np.linspace() to create an array with values that are spaced linearly in a specified interval.</li>
 <li>Results in a predictable, even spacing of numeric values for use in plotting, sampling, numerical methods, etc.</li>
 </ul>
-<div id="3239eb1d" class="cell" data-execution_count="25">
+<div id="12a09b76" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2040,7 +2040,7 @@ np.arange(1, 25).reshape(2, 3, 4)
 <li>import matplotlib.pyplot as plt is Matlab in Python</li>
 <li>need plot() with a ; at minimum in Jupyter/Quarto</li>
 </ul>
-<div id="cfa24db9" class="cell" data-execution_count="26">
+<div id="a20a5b8a" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -2055,7 +2055,7 @@ np.arange(1, 25).reshape(2, 3, 4)
 <h2>2D array creation functions</h2>
 <div class="columns">
 <div class="column">
-<div id="58ddd823" class="cell" data-execution_count="27">
+<div id="fa52dedf" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a></a><span class="co"># equivalent of a 1 in math M * I = I * M = M where M is square</span></span>
@@ -2091,7 +2091,7 @@ np.eye(4, 6, k = 1)
 </div>
 </div>
 </div><div class="column">
-<div id="3e249e04" class="cell" data-execution_count="28">
+<div id="f6f01e91" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a>b <span class="op">=</span> np.diag([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
@@ -2134,7 +2134,7 @@ np.diag([1, 2, 3, 4], k = -1)
 <h2>Example using sum</h2>
 <div class="columns">
 <div class="column">
-<div id="3aea0c7b" class="cell" data-execution_count="29">
+<div id="e6b61040" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2149,7 +2149,7 @@ np.diag([1, 2, 3, 4], k = -1)
 </div>
 </div>
 </div><div class="column">
-<div id="2c4e4db9" class="cell" data-execution_count="30">
+<div id="e4aedab6" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a><span class="bu">print</span>(<span class="st">&#39;Sum on Axis=0&#39;</span>)</span>
@@ -2174,19 +2174,19 @@ Sum the flattened array
 <h2>Example using sort</h2>
 <div class="columns">
 <div class="column">
-<div id="f946b7f7" class="cell" data-execution_count="31">
+<div id="bfac6118" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>a <span class="op">=</span> np.array([</span>
-<span id="cb57-2"><a></a>    [  </span>
+<span id="cb57-2"><a></a>    [  <span class="co"># Block 0 (a[0])</span></span>
 <span id="cb57-3"><a></a>    [<span class="dv">20</span>, <span class="dv">17</span>, <span class="dv">14</span>, <span class="dv">19</span>],  </span>
 <span id="cb57-4"><a></a>    [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">22</span>,  <span class="dv">7</span>]</span>
 <span id="cb57-5"><a></a>    ],</span>
-<span id="cb57-6"><a></a>    [  </span>
+<span id="cb57-6"><a></a>    [  <span class="co"># Block 1 (a[1])</span></span>
 <span id="cb57-7"><a></a>    [<span class="dv">12</span>, <span class="dv">18</span>,  <span class="dv">9</span>, <span class="dv">23</span>], </span>
 <span id="cb57-8"><a></a>    [<span class="dv">11</span>,  <span class="dv">8</span>,  <span class="dv">1</span>, <span class="dv">13</span>]</span>
 <span id="cb57-9"><a></a>    ],</span>
-<span id="cb57-10"><a></a>    [  </span>
+<span id="cb57-10"><a></a>    [ <span class="co"># Block 2 (a[2]) </span></span>
 <span id="cb57-11"><a></a>    [<span class="dv">3</span>,  <span class="dv">24</span>, <span class="dv">16</span>,  <span class="dv">4</span>],  </span>
 <span id="cb57-12"><a></a>    [<span class="dv">6</span>,  <span class="dv">2</span>, <span class="dv">15</span>, <span class="dv">21</span>]</span>
 <span id="cb57-13"><a></a>    ]</span>
@@ -2207,20 +2207,22 @@ Sum the flattened array
 </div>
 </div>
 </div><div class="column">
-<div id="4fc975da" class="cell" data-execution_count="32">
+<div id="82ca7c97" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a><span class="bu">print</span>(<span class="st">&#39;Default sort across the last axis is columns within matrices &#39;</span>)</span>
-<span id="cb59-2"><a></a><span class="bu">print</span>(np.sort(a))                </span>
-<span id="cb59-3"><a></a><span class="bu">print</span>(<span class="st">&#39;axis=1 sort across the first axis is rows within matrices&#39;</span>)</span>
-<span id="cb59-4"><a></a><span class="bu">print</span>(np.sort(a, axis<span class="op">=</span><span class="dv">1</span>))    </span>
-<span id="cb59-5"><a></a><span class="bu">print</span>(<span class="st">&#39;axis=0 sorts each r,c across the matrices&#39;</span>)</span>
-<span id="cb59-6"><a></a><span class="bu">print</span>(np.sort(a, axis<span class="op">=</span><span class="dv">0</span>))        </span>
-<span id="cb59-7"><a></a><span class="bu">print</span>(<span class="st">&#39;sort the flattened array&#39;</span>)</span>
-<span id="cb59-8"><a></a><span class="bu">print</span>(np.sort(a, axis<span class="op">=</span><span class="va">None</span>))     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a><span class="bu">print</span>(<span class="st">&quot;apologies for the typos in the original&quot;</span>)</span>
+<span id="cb59-2"><a></a><span class="bu">print</span>(<span class="st">&#39;Default sort across the last axis axis = -1&#39;</span>)</span>
+<span id="cb59-3"><a></a><span class="bu">print</span>(np.sort(a))                </span>
+<span id="cb59-4"><a></a><span class="bu">print</span>(<span class="st">&#39;axis=1 sort across the first axis is rows within matrices&#39;</span>)</span>
+<span id="cb59-5"><a></a><span class="bu">print</span>(np.sort(a, axis<span class="op">=</span><span class="dv">1</span>))    </span>
+<span id="cb59-6"><a></a><span class="bu">print</span>(<span class="st">&#39;axis=0 sorts each r,c across the matrices&#39;</span>)</span>
+<span id="cb59-7"><a></a><span class="bu">print</span>(np.sort(a, axis<span class="op">=</span><span class="dv">0</span>))        </span>
+<span id="cb59-8"><a></a><span class="bu">print</span>(<span class="st">&#39;sort the flattened array&#39;</span>)</span>
+<span id="cb59-9"><a></a><span class="bu">print</span>(np.sort(a, axis<span class="op">=</span><span class="va">None</span>))     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Default sort across the last axis is columns within matrices 
+<pre><code>apologies for the typos in the original
+Default sort across the last axis axis = -1
 [[[14 17 19 20]
   [ 5  7 10 22]]
 
@@ -2272,7 +2274,7 @@ sort the flattened array
 <ul>
 <li>Using NumPy to generate x,y coordinates saved as an ndarray</li>
 </ul>
-<div id="60a0142a" class="cell" data-execution_count="33">
+<div id="4606f24a" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2308,7 +2310,7 @@ This is triangle.shape (2, 4)</code></pre>
 <li>Using NumPy to construct a diagonal array</li>
 <li>Matrix multiply a scaling_matrix and the original triangle</li>
 </ul>
-<div id="79ac3931" class="cell" data-execution_count="34">
+<div id="38e79d25" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a><span class="co"># Define a diagonal scaling matrix</span></span>
@@ -2335,7 +2337,7 @@ This is the result:
 </section>
 <section id="example-1-completed" class="slide level2">
 <h2>Example 1 completed</h2>
-<div id="dee3e278" class="cell" data-execution_count="35">
+<div id="e122a868" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a><span class="co"># Plot together</span></span>
@@ -2366,7 +2368,7 @@ This is the result:
 </section>
 <section id="example-2-1" class="slide level2">
 <h2>Example 2</h2>
-<div id="b15f7425" class="cell" data-execution_count="36">
+<div id="eb962361" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a></a><span class="co"># read an image</span></span>
@@ -2444,7 +2446,7 @@ These are two image_np[0:2, :]</code></pre>
 </section>
 <section id="the-image-in-python" class="slide level2">
 <h2>The image in Python</h2>
-<div id="ef566f45" class="cell" data-execution_count="37">
+<div id="00ca88e1" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a></a><span class="co"># Display the original image</span></span>
@@ -2461,7 +2463,7 @@ These are two image_np[0:2, :]</code></pre>
 <ul>
 <li>change the opacity for part of the image</li>
 </ul>
-<div id="6fd7c0bc" class="cell" data-execution_count="38">
+<div id="afcc594c" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a></a><span class="co"># Get image dimensions</span></span>
@@ -2521,7 +2523,7 @@ This is mask shape (688, 836)
 </section>
 <section id="put-it-all-together" class="slide level2">
 <h2>Put it all together</h2>
-<div id="2656a09c" class="cell" data-execution_count="39">
+<div id="ec4aecaf" class="cell" data-execution_count="39">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a></a><span class="co"># Apply the mask to alpha (it is channel index 3)</span></span>
@@ -2543,7 +2545,7 @@ This is mask shape (688, 836)
 <ul>
 <li>return to slicing for a moment</li>
 </ul>
-<div id="918a5ddc" class="cell" data-execution_count="40">
+<div id="c78548fa" class="cell" data-execution_count="40">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2596,7 +2598,7 @@ This is mask shape (688, 836)
 </section>
 <section id="use-.copy-to-create-copies" class="slide level2">
 <h2>use .copy() to create copies</h2>
-<div id="b3bbea3f" class="cell" data-execution_count="41">
+<div id="aa8bdaa3" class="cell" data-execution_count="41">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a></a>x <span class="op">=</span> np.arange(<span class="dv">2</span>, <span class="dv">25</span>, <span class="dv">2</span>)</span>
@@ -2635,7 +2637,7 @@ This is mask shape (688, 836)
 </ul>
 <div class="columns">
 <div class="column">
-<div id="5625bae7" class="cell" data-execution_count="42">
+<div id="930ac275" class="cell" data-execution_count="42">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a></a><span class="bu">dir</span>(x_2_subset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2814,7 +2816,7 @@ This is mask shape (688, 836)
 </div>
 </div>
 </div><div class="column">
-<div id="74bb03d0" class="cell" data-execution_count="43">
+<div id="4da145d6" class="cell" data-execution_count="43">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a></a><span class="bu">dir</span>(x_2_subset_copy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2996,7 +2998,7 @@ This is mask shape (688, 836)
 </section>
 <section id="saving-arrays" class="slide level2">
 <h2>Saving arrays</h2>
-<div id="e44d2152" class="cell" data-execution_count="44">
+<div id="b9e921f7" class="cell" data-execution_count="44">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a></a>np.save(<span class="st">&#39;meatwad_modified_array.npy&#39;</span>, image_np)</span>
@@ -3040,7 +3042,7 @@ This is mask shape (688, 836)
 <ul>
 <li>This only works for 1D or 2D arrays</li>
 </ul>
-<div id="608ab630" class="cell" data-execution_count="45">
+<div id="0feae638" class="cell" data-execution_count="45">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>],</span>

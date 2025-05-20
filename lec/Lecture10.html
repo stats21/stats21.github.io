@@ -1174,7 +1174,7 @@ margin-right: 0; }
 <li>definitely want the imports</li>
 <li>but options are options</li>
 </ul>
-<div id="933b3394" class="cell" data-execution_count="1">
+<div id="658c1075" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a></a><span class="co">#import textwrap # properly they should be at the top </span></span>
@@ -1207,7 +1207,7 @@ margin-right: 0; }
 <ul>
 <li>A friendly way to access another’s data</li>
 </ul>
-<div id="671c5393" class="cell" data-execution_count="2">
+<div id="1d7d7232" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>wa_elec <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://data.wa.gov/resource/f6w7-q2d2.csv&#39;</span>)</span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;------------ results of .info() -------------&#39;</span>)</span>
@@ -1220,10 +1220,10 @@ Data columns (total 17 columns):
  #   Column                Non-Null Count  Dtype  
 ---  ------                --------------  -----  
  0   vin_1_10              1000 non-null   object 
- 1   county                998 non-null    object 
- 2   city                  998 non-null    object 
+ 1   county                999 non-null    object 
+ 2   city                  999 non-null    object 
  3   state                 1000 non-null   object 
- 4   zip_code              998 non-null    float64
+ 4   zip_code              999 non-null    float64
  5   model_year            1000 non-null   int64  
  6   make                  1000 non-null   object 
  7   model                 1000 non-null   object 
@@ -1231,11 +1231,11 @@ Data columns (total 17 columns):
  9   cafv_type             1000 non-null   object 
  10  electric_range        1000 non-null   int64  
  11  base_msrp             1000 non-null   int64  
- 12  legislative_district  998 non-null    float64
+ 12  legislative_district  995 non-null    float64
  13  dol_vehicle_id        1000 non-null   int64  
- 14  geocoded_column       998 non-null    object 
- 15  electric_utility      998 non-null    object 
- 16  _2020_census_tract    998 non-null    float64
+ 14  geocoded_column       999 non-null    object 
+ 15  electric_utility      999 non-null    object 
+ 16  _2020_census_tract    999 non-null    float64
 dtypes: float64(3), int64(4), object(10)
 memory usage: 132.9+ KB</code></pre>
 </div>
@@ -1243,7 +1243,7 @@ memory usage: 132.9+ KB</code></pre>
 </section>
 <section id="preliminaries-wa-electric" class="slide level2 smaller">
 <h2>Preliminaries WA Electric</h2>
-<div id="00e147e7" class="cell" data-execution_count="3">
+<div id="504d631a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co"># Display the first few rows</span></span>
 <span id="cb4-2"><a></a>wa_elec.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -1286,103 +1286,103 @@ text-align: right;
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>1C4JJXP68P</td>
-<td>Yakima</td>
-<td>Yakima</td>
-<td>WA</td>
-<td>98901.0000</td>
-<td>2023</td>
-<td>JEEP</td>
-<td>WRANGLER</td>
-<td>Plug-in Hybrid Electric Vehicle (PHEV)</td>
-<td>Not eligible due to low battery range</td>
-<td>21</td>
-<td>0</td>
-<td>15.0000</td>
-<td>249905295</td>
-<td>POINT (-120.50729 46.60464)</td>
-<td>PACIFICORP</td>
-<td>53077001601.0000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>1G1FY6S03L</td>
-<td>Kitsap</td>
-<td>Kingston</td>
-<td>WA</td>
-<td>98346.0000</td>
-<td>2020</td>
-<td>CHEVROLET</td>
-<td>BOLT EV</td>
-<td>Battery Electric Vehicle (BEV)</td>
-<td>Clean Alternative Fuel Vehicle Eligible</td>
-<td>259</td>
-<td>0</td>
-<td>23.0000</td>
-<td>141133765</td>
-<td>POINT (-122.4977 47.79802)</td>
-<td>PUGET SOUND ENERGY INC</td>
-<td>53035940000.0000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>KNDCE3LG9K</td>
+<td>5YJ3E1EB6K</td>
 <td>King</td>
 <td>Seattle</td>
 <td>WA</td>
-<td>98125.0000</td>
+<td>98178.0000</td>
 <td>2019</td>
-<td>KIA</td>
-<td>NIRO</td>
+<td>TESLA</td>
+<td>MODEL 3</td>
 <td>Battery Electric Vehicle (BEV)</td>
 <td>Clean Alternative Fuel Vehicle Eligible</td>
-<td>239</td>
+<td>220</td>
 <td>0</td>
-<td>46.0000</td>
-<td>3410074</td>
-<td>POINT (-122.30253 47.72656)</td>
+<td>37.0000</td>
+<td>101250425</td>
+<td>POINT (-122.23825 47.49461)</td>
 <td>CITY OF SEATTLE - (WA)|CITY OF TACOMA - (WA)</td>
-<td>53033000101.0000</td>
+<td>53033011902.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>5YJYGAEE5M</td>
+<td>Yakima</td>
+<td>Selah</td>
+<td>WA</td>
+<td>98942.0000</td>
+<td>2021</td>
+<td>TESLA</td>
+<td>MODEL Y</td>
+<td>Battery Electric Vehicle (BEV)</td>
+<td>Eligibility unknown as battery range has not b...</td>
+<td>0</td>
+<td>0</td>
+<td>15.0000</td>
+<td>224162858</td>
+<td>POINT (-120.53145 46.65405)</td>
+<td>PACIFICORP</td>
+<td>53077003100.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>5YJSA1E65N</td>
+<td>Yakima</td>
+<td>Granger</td>
+<td>WA</td>
+<td>98932.0000</td>
+<td>2022</td>
+<td>TESLA</td>
+<td>MODEL S</td>
+<td>Battery Electric Vehicle (BEV)</td>
+<td>Eligibility unknown as battery range has not b...</td>
+<td>0</td>
+<td>0</td>
+<td>15.0000</td>
+<td>187279214</td>
+<td>POINT (-120.1871 46.33949)</td>
+<td>PACIFICORP</td>
+<td>53077002104.0000</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>1N4AZ0CP8E</td>
-<td>Thurston</td>
-<td>Olympia</td>
+<td>5YJ3E1EBXN</td>
+<td>King</td>
+<td>Bellevue</td>
 <td>WA</td>
-<td>98506.0000</td>
-<td>2014</td>
-<td>NISSAN</td>
-<td>LEAF</td>
+<td>98004.0000</td>
+<td>2022</td>
+<td>TESLA</td>
+<td>MODEL 3</td>
 <td>Battery Electric Vehicle (BEV)</td>
-<td>Clean Alternative Fuel Vehicle Eligible</td>
-<td>84</td>
+<td>Eligibility unknown as battery range has not b...</td>
 <td>0</td>
-<td>22.0000</td>
-<td>182436474</td>
-<td>POINT (-122.87741 47.05997)</td>
-<td>PUGET SOUND ENERGY INC</td>
-<td>53067012100.0000</td>
+<td>0</td>
+<td>41.0000</td>
+<td>219428079</td>
+<td>POINT (-122.1872 47.61001)</td>
+<td>PUGET SOUND ENERGY INC||CITY OF TACOMA - (WA)</td>
+<td>53033023902.0000</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>5YJXCAE29L</td>
-<td>Kitsap</td>
-<td>Silverdale</td>
+<td>JM3KKEHA8S</td>
+<td>Thurston</td>
+<td>Yelm</td>
 <td>WA</td>
-<td>98383.0000</td>
-<td>2020</td>
-<td>TESLA</td>
-<td>MODEL X</td>
-<td>Battery Electric Vehicle (BEV)</td>
-<td>Clean Alternative Fuel Vehicle Eligible</td>
-<td>293</td>
+<td>98597.0000</td>
+<td>2025</td>
+<td>MAZDA</td>
+<td>CX-90</td>
+<td>Plug-in Hybrid Electric Vehicle (PHEV)</td>
+<td>Not eligible due to low battery range</td>
+<td>26</td>
 <td>0</td>
-<td>23.0000</td>
-<td>1843054</td>
-<td>POINT (-122.69275 47.65171)</td>
+<td>2.0000</td>
+<td>277791643</td>
+<td>POINT (-122.60735 46.94239)</td>
 <td>PUGET SOUND ENERGY INC</td>
-<td>53035091206.0000</td>
+<td>53067012412.0000</td>
 </tr>
 </tbody>
 </table>
@@ -1393,7 +1393,7 @@ text-align: right;
 </section>
 <section id="obtain-descriptive-statistics" class="slide level2 smaller">
 <h2>Obtain descriptive statistics</h2>
-<div id="fc47d288" class="cell" data-execution_count="4">
+<div id="0184fbbe" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># descriptive stats</span></span>
 <span id="cb5-2"><a></a>wa_elec.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -1426,83 +1426,83 @@ text-align: right;
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">count</td>
-<td>998.0000</td>
+<td>999.0000</td>
 <td>1000.0000</td>
 <td>1000.0000</td>
 <td>1000.0000</td>
-<td>998.0000</td>
+<td>995.0000</td>
 <td>1000.0000</td>
-<td>998.0000</td>
+<td>999.0000</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">mean</td>
-<td>98246.4088</td>
-<td>2020.6920</td>
-<td>71.5140</td>
-<td>890.9000</td>
-<td>30.0942</td>
-<td>229514304.6040</td>
-<td>53039101262.2986</td>
+<td>98127.0450</td>
+<td>2019.8970</td>
+<td>94.0160</td>
+<td>1188.5500</td>
+<td>26.6402</td>
+<td>223798281.8300</td>
+<td>52871596979.6667</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">std</td>
-<td>285.2181</td>
-<td>3.1999</td>
-<td>98.7196</td>
-<td>7058.8114</td>
-<td>15.2426</td>
-<td>81243483.9211</td>
-<td>16660080.0947</td>
+<td>3180.2279</td>
+<td>3.5255</td>
+<td>102.7652</td>
+<td>8401.2834</td>
+<td>15.4811</td>
+<td>89860022.9678</td>
+<td>2819151894.0460</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">min</td>
-<td>98002.0000</td>
+<td>20817.0000</td>
 <td>2011.0000</td>
 <td>0.0000</td>
 <td>0.0000</td>
 <td>1.0000</td>
-<td>1815593.0000</td>
-<td>53001950200.0000</td>
+<td>226152.0000</td>
+<td>1121010302.0000</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">25%</td>
-<td>98033.0000</td>
+<td>98037.5000</td>
 <td>2018.0000</td>
 <td>0.0000</td>
 <td>0.0000</td>
-<td>18.0000</td>
-<td>186542040.5000</td>
-<td>53033009702.0000</td>
+<td>14.0000</td>
+<td>171168549.5000</td>
+<td>53033022802.5000</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">50%</td>
-<td>98117.5000</td>
-<td>2022.0000</td>
-<td>19.5000</td>
+<td>98166.0000</td>
+<td>2020.0000</td>
+<td>38.0000</td>
 <td>0.0000</td>
-<td>34.0000</td>
-<td>246622155.0000</td>
-<td>53033025152.5000</td>
+<td>23.0000</td>
+<td>237921018.5000</td>
+<td>53035091100.0000</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">75%</td>
 <td>98370.0000</td>
 <td>2023.0000</td>
-<td>125.2500</td>
+<td>210.0000</td>
 <td>0.0000</td>
-<td>45.0000</td>
-<td>270060986.5000</td>
-<td>53035940100.0000</td>
+<td>41.0000</td>
+<td>270030442.0000</td>
+<td>53061052107.0000</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">max</td>
-<td>99371.0000</td>
-<td>2025.0000</td>
-<td>330.0000</td>
+<td>99362.0000</td>
+<td>2026.0000</td>
+<td>337.0000</td>
 <td>69900.0000</td>
 <td>49.0000</td>
-<td>478935460.0000</td>
-<td>53077940008.0000</td>
+<td>478562815.0000</td>
+<td>53077940001.0000</td>
 </tr>
 </tbody>
 </table>
@@ -1592,7 +1592,7 @@ text-align: right;
 <ul>
 <li>let’s look at the ones pandas couldn’t figure out (datatype object)</li>
 </ul>
-<div id="ec682aa7" class="cell" data-execution_count="5">
+<div id="036227d1" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(<span class="ss">f&quot;This is itself a pandas object: </span><span class="sc">{</span><span class="bu">type</span>(wa_elec.dtypes)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
 <span id="cb6-2"><a></a><span class="bu">print</span>()</span>
 <span id="cb6-3"><a></a><span class="bu">print</span>(<span class="ss">f&quot;With an index: </span><span class="sc">{</span>wa_elec<span class="sc">.</span>dtypes<span class="sc">.</span>index<span class="sc">}</span><span class="ss">&quot;</span>)</span>
@@ -1611,7 +1611,7 @@ And values: [dtype(&#39;O&#39;) dtype(&#39;O&#39;) dtype(&#39;O&#39;) dtype(&#39
 </section>
 <section id="a-look-inside-a-pandas-series" class="slide level2 smaller">
 <h2>(3.1) A look inside a pandas series</h2>
-<div id="7d585f40" class="cell" data-execution_count="6">
+<div id="d6d3c9f3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> textwrap</span>
 <span id="cb8-2"><a></a></span>
 <span id="cb8-3"><a></a>attrs <span class="op">=</span> <span class="bu">dir</span>(wa_elec.dtypes)</span>
@@ -1686,28 +1686,28 @@ unique, unstack, update, value_counts, values, var, view, vin_1_10, where, xs, z
 <ul>
 <li>Knowing the number of unique values can help us decide dtype</li>
 </ul>
-<div id="fb2317ac" class="cell" data-execution_count="7">
+<div id="0c020334" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="bu">print</span>(<span class="ss">f&quot;Number of unique values:&quot;</span>) </span>
 <span id="cb10-2"><a></a><span class="bu">print</span>(wa_elec.nunique()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of unique values:
-vin_1_10                 809
-county                    21
-city                     100
-state                      3
-zip_code                 163
-model_year                15
-make                      30
+vin_1_10                 799
+county                    28
+city                     125
+state                      5
+zip_code                 194
+model_year                16
+make                      32
 model                     95
 ev_type                    2
 cafv_type                  3
-electric_range            79
+electric_range            74
 base_msrp                  9
-legislative_district      42
+legislative_district      44
 dol_vehicle_id          1000
-geocoded_column          163
-electric_utility          17
-_2020_census_tract       477
+geocoded_column          194
+electric_utility          20
+_2020_census_tract       551
 dtype: int64</code></pre>
 </div>
 </div>
@@ -1722,7 +1722,7 @@ dtype: int64</code></pre>
 </section>
 <section id="converting-from-object-to-string" class="slide level2">
 <h2>(3.1) Converting from object to string</h2>
-<div id="6193064c" class="cell" data-execution_count="8">
+<div id="ecc790c0" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>wa_elec[<span class="st">&#39;vin_1_10&#39;</span>] <span class="op">=</span> wa_elec[<span class="st">&#39;vin_1_10&#39;</span>].astype(<span class="st">&#39;string&#39;</span>)     </span>
 <span id="cb13-2"><a></a>wa_elec.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
@@ -1752,7 +1752,7 @@ dtype: object</code></pre>
 <ul>
 <li>There is a pandas dataframe method called <strong>select_dtypes</strong></li>
 </ul>
-<div id="05813529" class="cell" data-execution_count="9">
+<div id="b690e9c8" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="bu">print</span>(wa_elec.select_dtypes(include<span class="op">=</span><span class="st">&#39;object&#39;</span>).dtypes)</span>
 <span id="cb15-2"><a></a><span class="bu">print</span>()</span>
 <span id="cb15-3"><a></a><span class="co"># just extract the names</span></span>
@@ -1775,7 +1775,7 @@ Index([&#39;county&#39;, &#39;city&#39;, &#39;state&#39;, &#39;make&#39;, &#39;m
 </section>
 <section id="what-if-you-have-many-columns-to-convert-contd" class="slide level2 smaller">
 <h2>(3.1) What if you have many columns to convert? (cont’d)</h2>
-<div id="f5455c2b" class="cell" data-execution_count="10">
+<div id="dc3ffd91" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="co"># I should have saved it, saving now</span></span>
 <span id="cb17-2"><a></a>my_cols <span class="op">=</span> wa_elec.select_dtypes(include<span class="op">=</span><span class="st">&#39;object&#39;</span>).dtypes.index</span>
 <span id="cb17-3"><a></a></span>
@@ -1804,7 +1804,7 @@ _2020_census_tract             float64
 dtype: object</code></pre>
 </div>
 </div>
-<div id="bb05aa16" class="cell" data-execution_count="11">
+<div id="9e24b2b1" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>------------ results of .info() -------------
 &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -1813,10 +1813,10 @@ Data columns (total 17 columns):
  #   Column                Non-Null Count  Dtype  
 ---  ------                --------------  -----  
  0   vin_1_10              1000 non-null   object 
- 1   county                998 non-null    object 
- 2   city                  998 non-null    object 
+ 1   county                999 non-null    object 
+ 2   city                  999 non-null    object 
  3   state                 1000 non-null   object 
- 4   zip_code              998 non-null    float64
+ 4   zip_code              999 non-null    float64
  5   model_year            1000 non-null   int64  
  6   make                  1000 non-null   object 
  7   model                 1000 non-null   object 
@@ -1824,11 +1824,11 @@ Data columns (total 17 columns):
  9   cafv_type             1000 non-null   object 
  10  electric_range        1000 non-null   int64  
  11  base_msrp             1000 non-null   int64  
- 12  legislative_district  998 non-null    float64
+ 12  legislative_district  995 non-null    float64
  13  dol_vehicle_id        1000 non-null   int64  
- 14  geocoded_column       998 non-null    object 
- 15  electric_utility      998 non-null    object 
- 16  _2020_census_tract    998 non-null    float64
+ 14  geocoded_column       999 non-null    object 
+ 15  electric_utility      999 non-null    object 
+ 16  _2020_census_tract    999 non-null    float64
 dtypes: float64(3), int64(4), object(10)
 memory usage: 132.9+ KB</code></pre>
 </div>
@@ -1841,7 +1841,7 @@ memory usage: 132.9+ KB</code></pre>
 <li>but it’s more like a “way” of doing things</li>
 <li>nothing really new here:</li>
 </ul>
-<div id="8dc6b9c1" class="cell" data-execution_count="12">
+<div id="bc1b1a45" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>mask <span class="op">=</span> wa_elec.dtypes <span class="op">==</span> <span class="st">&#39;object&#39;</span> <span class="co"># how can we create a mask?</span></span>
 <span id="cb20-2"><a></a><span class="bu">print</span>(<span class="ss">f&quot;result of wa_elec.dtypes == &#39;object&#39; is:&quot;</span>)</span>
 <span id="cb20-3"><a></a><span class="bu">print</span>(mask)</span>
@@ -1985,7 +1985,7 @@ dtype: object</code></pre>
 </section>
 <section id="switch-data" class="slide level2 smaller">
 <h2>Switch data</h2>
-<div id="dcdbce53" class="cell" data-execution_count="13">
+<div id="52cad753" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="co"># show_ratings.csv</span></span>
 <span id="cb23-2"><a></a>show_ratings_unclean <span class="op">=</span> pd.read_csv(<span class="st">&#39;show_ratings.csv&#39;</span>)</span>
 <span id="cb23-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;------------ results of .info() -------------&#39;</span>)</span>
@@ -2013,7 +2013,7 @@ memory usage: 282.0+ KB</code></pre>
 </section>
 <section id="take-a-look-at-the-first-few" class="slide level2 smaller">
 <h2>(3.2) take a look at the first few</h2>
-<div id="d30fcfa3" class="cell" data-execution_count="14">
+<div id="311c3922" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="co"># Display the first few rows</span></span>
 <span id="cb25-2"><a></a>show_ratings_unclean.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
@@ -2118,7 +2118,7 @@ text-align: right;
 <ul>
 <li>Poorly read ones may have this issue</li>
 </ul>
-<div id="29af563c" class="cell" data-execution_count="15">
+<div id="622fbf1d" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">--- Columns with all NaN values ---&quot;</span>)</span>
 <span id="cb26-2"><a></a><span class="bu">print</span>(show_ratings_unclean.isnull().<span class="bu">all</span>())</span>
 <span id="cb26-3"><a></a></span>
@@ -2159,7 +2159,7 @@ dtype: int64</code></pre>
 <li>but nearly 90% of “Gross” is missing, doesn’t affect calculations but could be “non-random” (bad)</li>
 <li>“Gross” is also not stored as a numeric column</li>
 </ul>
-<div id="3108da5f" class="cell" data-execution_count="16">
+<div id="c84d5a91" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>show_ratings_unclean[<span class="st">&#39;Gross&#39;</span>].describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>count        460
@@ -2177,7 +2177,7 @@ Name: Gross, dtype: object</code></pre>
 <li>we can put parentheses around the whole thing and break the lines before the “.”</li>
 <li>note the logic - remove bad characters then convert</li>
 </ul>
-<div id="072ed268" class="cell" data-execution_count="17">
+<div id="9abc3c34" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a>show_ratings_unclean[<span class="st">&#39;Gross&#39;</span>] <span class="op">=</span> (</span>
 <span id="cb30-2"><a></a>    show_ratings_unclean[<span class="st">&#39;Gross&#39;</span>]</span>
 <span id="cb30-3"><a></a>    .<span class="bu">str</span>.replace(<span class="vs">r&#39;[\$,]&#39;</span>, <span class="st">&#39;&#39;</span>, regex<span class="op">=</span><span class="va">True</span>)  <span class="co"># remove $ and commas</span></span>
@@ -2191,7 +2191,7 @@ Name: Gross, dtype: object</code></pre>
 <p><a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html">https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html</a></p>
 <pre><code>Series.str.replace(pat, repl, n=-1, case=None, flags=0, regex=False)</code></pre>
 <p>pat - string can be a character sequence or regular expression repl - str or a function (callable)</p>
-<div id="5b46fa54" class="cell" data-execution_count="18">
+<div id="ae2f04a8" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>count         460.0000
 mean     43701869.5652
@@ -2218,11 +2218,11 @@ Name: Gross, dtype: float64</code></pre>
 <ul>
 <li>You can do it for the entire dataframe… but it is better to be more specific about changing a data value.</li>
 </ul>
-<div id="3882e1b7" class="cell" data-execution_count="19">
+<div id="513663db" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="co"># Replace ALL NaN values with 0, not run</span></span>
 <span id="cb33-2"><a></a>df.fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="bd34c154" class="cell" data-execution_count="20">
+<div id="89483f7a" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="co"># replace specific NaN with zero</span></span>
 <span id="cb34-2"><a></a></span>
 <span id="cb34-3"><a></a>show_ratings_unclean[<span class="st">&#39;VOTES&#39;</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
@@ -2247,7 +2247,7 @@ Name: VOTES, dtype: float64</code></pre>
 <ul>
 <li>notice we are using NumPy’s NaN</li>
 </ul>
-<div id="35fdd0e7" class="cell" data-execution_count="21">
+<div id="81542553" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a>show_ratings_unclean[<span class="st">&#39;VOTES&#39;</span>].replace(<span class="dv">0</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb36-2"><a></a></span>
 <span id="cb36-3"><a></a>show_ratings_unclean[<span class="st">&#39;VOTES&#39;</span>].describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2271,7 +2271,7 @@ Name: VOTES, dtype: float64</code></pre>
 <li>Your function writing skills might be handy - picture a situation where you might have a script full of functions like this.</li>
 <li>recall .quantile is a method for pandas series</li>
 </ul>
-<div id="33eb00aa" class="cell" data-execution_count="22">
+<div id="d7f6c76e" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a><span class="kw">def</span> find_outliers_iqr(series):</span>
 <span id="cb38-2"><a></a>    <span class="co">&quot;&quot;&quot;</span></span>
 <span id="cb38-3"><a></a><span class="co">    Returns a boolean Series where True indicates an outlier based on the IQR method.</span></span>
@@ -2290,7 +2290,7 @@ Name: VOTES, dtype: float64</code></pre>
 <li>as a boolean series might tabulate it</li>
 <li>or use it as a mask and subset the data</li>
 </ul>
-<div id="78d58160" class="cell" data-execution_count="23">
+<div id="dcf82d96" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a><span class="bu">print</span>(find_outliers_iqr(show_ratings_unclean[<span class="st">&#39;VOTES&#39;</span>]).value_counts())</span>
 <span id="cb39-2"><a></a></span>
 <span id="cb39-3"><a></a>show_ratings_unclean[find_outliers_iqr(show_ratings_unclean[<span class="st">&#39;VOTES&#39;</span>])].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2404,7 +2404,7 @@ text-align: right;
 <li>the mean and median are very different for VOTES so maybe log transform it</li>
 <li>why you need NumPy <a href="https://numpy.org/doc/stable/reference/routines.math.html#mathematical-functions">https://numpy.org/doc/stable/reference/routines.math.html#mathematical-functions</a></li>
 </ul>
-<div id="e230d956" class="cell" data-execution_count="24">
+<div id="738b4038" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a>show_ratings_unclean[<span class="st">&#39;VOTES&#39;</span>].describe()</span>
 <span id="cb41-2"><a></a>show_ratings_unclean[<span class="st">&#39;log_VOTES&#39;</span>] <span class="op">=</span> np.log(show_ratings_unclean[<span class="st">&#39;VOTES&#39;</span>])</span>
 <span id="cb41-3"><a></a>show_ratings_unclean[[<span class="st">&#39;VOTES&#39;</span>, <span class="st">&#39;log_VOTES&#39;</span>]].describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2485,7 +2485,7 @@ text-align: right;
 </li>
 <li>If you have a few out of many, just use the rename method for dataframes</li>
 </ul>
-<div id="12f0eb80" class="cell" data-execution_count="25">
+<div id="838e9074" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a>show_ratings_unclean.rename(columns<span class="op">=</span>{<span class="st">&#39;VOTES&#39;</span>: <span class="st">&#39;votes&#39;</span>, <span class="st">&#39;log_VOTES&#39;</span>: <span class="st">&#39;log_votes&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb42-2"><a></a>show_ratings_unclean.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2514,7 +2514,7 @@ memory usage: 313.3+ KB</code></pre>
 <ul>
 <li>Simplest way is to reassign all of the .columns (not run)</li>
 </ul>
-<div id="76d1129f" class="cell" data-execution_count="26">
+<div id="c6bc8c7e" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a></a>show_ratings_unclean.rename(<span class="bu">str</span>.lower, axis <span class="op">=</span> <span class="st">&#39;columns&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)  </span>
 <span id="cb44-2"><a></a>show_ratings_unclean.columns</span>
 <span id="cb44-3"><a></a></span>
@@ -2527,7 +2527,7 @@ memory usage: 313.3+ KB</code></pre>
 </section>
 <section id="drop-unnecessary-columns" class="slide level2 smaller">
 <h2>(3.6) Drop unnecessary columns</h2>
-<div id="627a7aec" class="cell" data-execution_count="27">
+<div id="d886e96d" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a></a>sr1 <span class="op">=</span> show_ratings_unclean.drop(<span class="st">&#39;genre&#39;</span>, axis<span class="op">=</span><span class="dv">1</span>) <span class="co"># dropping single column</span></span>
 <span id="cb46-2"><a></a>sr2 <span class="op">=</span> show_ratings_unclean.drop([<span class="st">&#39;one-line&#39;</span>, <span class="st">&#39;stars&#39;</span>], axis<span class="op">=</span><span class="dv">1</span>) <span class="co"># dropping multiple columns</span></span>
 <span id="cb46-3"><a></a><span class="bu">print</span>(sr1.columns)</span>
@@ -2544,7 +2544,7 @@ Index([&#39;show&#39;, &#39;yr.&#39;, &#39;genre&#39;, &#39;rating&#39;, &#39;vo
 <li>How do you represent a variable like ‘genre’ in a model?</li>
 <li>You encode them - force them to numeric by 1 = true 0 = not true</li>
 </ul>
-<div id="7a3b4a7c" class="cell" data-execution_count="28">
+<div id="638d271d" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a></a><span class="bu">print</span>(show_ratings_unclean[<span class="st">&#39;genre&#39;</span>].value_counts().head(<span class="dv">10</span>))</span>
 <span id="cb48-2"><a></a>genres <span class="op">=</span> show_ratings_unclean[<span class="st">&#39;genre&#39;</span>].<span class="bu">str</span>.count(<span class="st">&#39;,&#39;</span>) <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb48-3"><a></a>genres.value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2576,7 +2576,7 @@ Name: count, dtype: int64</code></pre>
 <ul>
 <li>separate out the genres and store in a list</li>
 </ul>
-<div id="588c3bb2" class="cell" data-execution_count="29">
+<div id="696f09c1" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a><span class="co"># Split each string into a list of genres</span></span>
 <span id="cb51-2"><a></a>show_ratings_unclean[<span class="st">&#39;genre_list&#39;</span>] <span class="op">=</span> show_ratings_unclean[<span class="st">&#39;genre&#39;</span>].<span class="bu">str</span>.split(<span class="vs">r&#39;,\s*&#39;</span>)</span>
 <span id="cb51-3"><a></a>show_ratings_unclean[[<span class="st">&#39;genre&#39;</span>,<span class="st">&#39;genre_list&#39;</span>]].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2671,7 +2671,7 @@ text-align: right;
 </section>
 <section id="optional-example" class="slide level2 smaller">
 <h2>(3.7) (optional) Example</h2>
-<div id="d01389c4" class="cell" data-execution_count="30">
+<div id="ec2ca441" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a></a>exploded_genre <span class="op">=</span> show_ratings_unclean.explode(<span class="st">&#39;genre_list&#39;</span>)</span>
 <span id="cb52-2"><a></a><span class="bu">print</span>(exploded_genre.info())</span>
 <span id="cb52-3"><a></a><span class="bu">print</span>(exploded_genre[[<span class="st">&#39;show&#39;</span>, <span class="st">&#39;genre&#39;</span>,<span class="st">&#39;genre_list&#39;</span>, <span class="st">&#39;rating&#39;</span>]].head(<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2714,7 +2714,7 @@ None
 <ul>
 <li>Crosstabulation is related to aggregating the data frame</li>
 </ul>
-<div id="f4ae3e7d" class="cell" data-execution_count="31">
+<div id="a19e1db1" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a></a>genre_dummies <span class="op">=</span> pd.crosstab(exploded_genre.index, exploded_genre[<span class="st">&#39;genre_list&#39;</span>])</span>
 <span id="cb54-2"><a></a>genre_dummies.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
@@ -2954,7 +2954,7 @@ text-align: right;
 </section>
 <section id="optional-join-back-to-original-dataframe" class="slide level2 smaller">
 <h2>(3.7) (optional) Join back to original dataframe</h2>
-<div id="8d8c0386" class="cell" data-execution_count="32">
+<div id="8c2718f8" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a>show_ratings_unclean <span class="op">=</span> show_ratings_unclean.join(genre_dummies)</span>
 <span id="cb55-2"><a></a>show_ratings_unclean.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3008,7 +3008,7 @@ memory usage: 1.2+ MB</code></pre>
 </section>
 <section id="optional-does-not-affect-the-original-values" class="slide level2 smaller">
 <h2>(3.7) (optional) Does not affect the original values</h2>
-<div id="054e4bdf" class="cell" data-execution_count="33">
+<div id="8a3c2d7a" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>show_ratings_unclean.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 <div>
@@ -3352,7 +3352,7 @@ text-align: right;
 </section>
 <section id="optional-see-the-structure" class="slide level2 smaller">
 <h2>(3.7) (optional) See the structure</h2>
-<div id="dcf44faa" class="cell" data-execution_count="34">
+<div id="b3d5a603" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a></a>show_ratings_unclean.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 <div>
@@ -3682,7 +3682,7 @@ text-align: right;
 <ul>
 <li>JSON files have complex structures, geographic coordinates were stored apart from other information</li>
 </ul>
-<div id="8bf38bc0" class="cell" data-execution_count="35">
+<div id="62183dce" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a><span class="im">import</span> json</span>
 <span id="cb59-2"><a></a></span>
 <span id="cb59-3"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;marijuana_biz.geojson&#39;</span>) <span class="im">as</span> f:</span>
@@ -3841,7 +3841,7 @@ text-align: right;
 <li>A simplified merge, we do control over the type of join (left, inner, etc.) the default is left join.</li>
 <li>If you have more than two dataframes, you will need to chain or use a loop or reach for another library</li>
 </ul>
-<div id="c70a0e8d" class="cell" data-execution_count="36">
+<div id="1bd47e6b" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a>marijuana_biz_joined <span class="op">=</span> marijuana_biz.join(marijuana_biz_geometry) <span class="co"># left join</span></span>
 <span id="cb61-2"><a></a></span>
 <span id="cb61-3"><a></a><span class="bu">print</span>(<span class="ss">f&#39;------------ results of .info() -------------&#39;</span>)</span>
@@ -4130,7 +4130,7 @@ text-align: right;
 <li>Like join, if you have more than two dataframes, you will need to chain or use a loop or reach for another library</li>
 <li>We can check. There are 915 businesses</li>
 </ul>
-<div id="873728b5" class="cell" data-execution_count="37">
+<div id="f249cf0c" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a>marijuana_biz[<span class="st">&#39;location_account&#39;</span>].nunique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="36">
 <pre><code>915</code></pre>
@@ -4144,7 +4144,7 @@ text-align: right;
 <li>notice the only overlap in content is “location account”</li>
 <li>When a join or merge involves columns with the same name but different content, pandas will not overwrite one with the other—instead, it automatically renames them using suffixes (e.g., _x, _y) to avoid conflicts.</li>
 </ul>
-<div id="1b429486" class="cell" data-execution_count="38">
+<div id="a4cf6323" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a>mjb1 <span class="op">=</span> marijuana_biz_joined[[<span class="st">&quot;location_account&quot;</span>, <span class="st">&quot;business_name&quot;</span>, <span class="st">&quot;council_district&quot;</span>]]</span>
 <span id="cb65-2"><a></a>mjb2 <span class="op">=</span> marijuana_biz_joined[[<span class="st">&quot;location_account&quot;</span>,<span class="st">&quot;location_description&quot;</span>, <span class="st">&quot;city&quot;</span>, <span class="st">&quot;zip_code&quot;</span>,  <span class="st">&quot;coordinates&quot;</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -4155,7 +4155,7 @@ text-align: right;
 <li>in this example, merging on location_account</li>
 <li>in real life, you might construct a list [ ] containing multiple columns</li>
 </ul>
-<div id="a2367ae2" class="cell" data-execution_count="39">
+<div id="4a679aa2" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a></a>mjb12 <span class="op">=</span> pd.merge(mjb1, mjb2, on<span class="op">=</span><span class="st">&quot;location_account&quot;</span>)</span>
 <span id="cb66-2"><a></a><span class="bu">print</span>(mjb12.info())</span>
 <span id="cb66-3"><a></a><span class="bu">print</span>(mjb12.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4190,7 +4190,7 @@ None
 <li>used when you are combining datasets along their rows or columns</li>
 <li>axis = 1 is different from a join, less control</li>
 </ul>
-<div id="46ce4676" class="cell" data-execution_count="40">
+<div id="10277d3a" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a></a>AAPL <span class="op">=</span> pd.read_csv(<span class="st">&#39;http://www.stat.ucla.edu/~vlew/datasets/AAPL.csv&#39;</span>)</span>
 <span id="cb68-2"><a></a>AAPL_top <span class="op">=</span> AAPL.iloc[<span class="dv">0</span>:<span class="dv">10</span>,]</span>
 <span id="cb68-3"><a></a>AAPL_next <span class="op">=</span> AAPL.iloc[<span class="dv">10</span>:<span class="dv">20</span>,]</span>
@@ -4268,7 +4268,7 @@ None</code></pre>
 <li>pandas has string methods such as str.extract(), str.replace()</li>
 <li>pandas is using re from the Python standard library</li>
 </ul>
-<div id="5ff6717f" class="cell" data-execution_count="41">
+<div id="df7e8dbb" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a></a><span class="co"># 1. Extract start year: first 4-digit number after &#39;(&#39;</span></span>
 <span id="cb70-2"><a></a>show_ratings_unclean[<span class="st">&#39;start&#39;</span>] <span class="op">=</span> show_ratings_unclean[<span class="st">&#39;yr.&#39;</span>].<span class="bu">str</span>.extract(<span class="vs">r&#39;\((\d</span><span class="sc">{4}</span><span class="vs">)&#39;</span>)</span>
 <span id="cb70-3"><a></a></span>
